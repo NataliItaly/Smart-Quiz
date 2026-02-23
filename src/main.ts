@@ -1,5 +1,5 @@
 import './css/styles.css';
-import { Router } from "./scripts/services/router";
+
 
 const app = document.getElementById('app');
 
@@ -8,5 +8,3 @@ if (app) {
 }
 
 
-const router = new Router(routes);
-router.init()

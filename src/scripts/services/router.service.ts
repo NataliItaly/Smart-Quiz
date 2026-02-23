@@ -1,4 +1,4 @@
-
+import { Router } from "./router";
 
 let isAuth: boolean = false;
 
@@ -51,7 +51,8 @@ const routes = [
   { path: "/quiz", render: renderQuiz, protected: true }
 ];
 
-if (route.protected && !isAuth) {
-  navigate("/");
-  return;
-}
+const router = new Router(routes, () => isAuth);
+router.init();
+
+
+
