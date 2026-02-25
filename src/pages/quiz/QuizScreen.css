@@ -34,6 +34,7 @@
 
 .quiz-option:hover {
   background: #f0f0f0;
+  transform: translateY(-2px);
 }
 
 .btn {
@@ -66,4 +67,85 @@
 .quiz-option.wrong {
   background-color: #e74c3c;
   color: white;
+}
+
+.quiz-option {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Правильный ответ — мягкая зелёная вспышка */
+.quiz-option.correct {
+  background-color: #4caf50;
+  color: white;
+  animation: correctPulse 0.4s ease;
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Неправильный — лёгкая вибрация */
+.quiz-option.wrong {
+  background-color: #e74c3c;
+  color: white;
+  animation: wrongShake 0.3s ease;
+}
+
+@keyframes wrongShake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.quiz-question {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quiz-option {
+  animation: fadeInOption 0.3s ease;
+}
+
+@keyframes fadeInOption {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

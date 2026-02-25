@@ -10,7 +10,7 @@ export function quizScreen(): HTMLElement {
 
   // Заголовок вопроса
   const titelEl = document.createElement('h2')
-  titelEl.className = 'quiz-question'
+  titelEl.className = 'quiz-title'
   titelEl.textContent = 'Online test'
 
   const question = {
