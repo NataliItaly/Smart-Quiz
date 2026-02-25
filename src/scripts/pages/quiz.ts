@@ -11,8 +11,6 @@ export function renderQuiz(router: Router): void {
   const backBtn = document.createElement('button')
   backBtn.textContent = 'Back'
   backBtn.id = 'backBtn'
-  backBtn.className = 'btn'
-  backBtn.style.marginTop = '20px'
 
   root.appendChild(backBtn)
 

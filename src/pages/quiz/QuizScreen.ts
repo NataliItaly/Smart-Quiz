@@ -1,3 +1,5 @@
+import { setupCheckLogic } from '../logic/quizCheck'
+import { setupOptionSelection } from '../logic/quizSelection'
 import './QuizScreen.css'
 
 export function QuizScreen(): HTMLElement {
@@ -40,24 +42,24 @@ export function QuizScreen(): HTMLElement {
   // Кнопка Check
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
-  checkBtn.className = 'quiz-check'
+  checkBtn.className = 'btn quiz-check'
 
   // Кнопка Next
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
-  nextBtn.className = 'quiz-next'
+  nextBtn.className = 'btn quiz-next'
   nextBtn.style.display = 'none'
 
   // Кнопка Try Again
   const tryBtn = document.createElement('button')
   tryBtn.textContent = 'Try again'
-  tryBtn.className = 'quiz-try'
+  tryBtn.className = 'btn quiz-try'
   tryBtn.style.display = 'none'
 
   // Кнопка Explain
   const explainBtn = document.createElement('button')
   explainBtn.textContent = 'Explain'
-  explainBtn.className = 'quiz-explain'
+  explainBtn.className = 'btn quiz-explain'
   explainBtn.style.display = 'none'
 
   // Блок объяснения
@@ -77,5 +79,20 @@ export function QuizScreen(): HTMLElement {
   container.appendChild(explainBtn)
   container.appendChild(explainEl)
 
+  let selectedOption: string | null = null
+
+  setupOptionSelection(optionsEl, checkBtn, (value) => {
+    selectedOption = value
+  })
+
+  setupCheckLogic(
+    optionsEl,
+    checkBtn,
+    nextBtn,
+    question.answer,
+    () => selectedOption
+  )
+
   return container
 }
+

@@ -36,11 +36,12 @@
   background: #f0f0f0;
 }
 
-.quiz-check {
+.btn {
   margin-top: 25px;
+  margin-right: 5px;
   padding: 12px;
   font-size: 16px;
-  width: 100%;
+  width: 105px;
   background: #007bff;
   color: white;
   border: none;
@@ -48,6 +49,21 @@
   cursor: pointer;
 }
 
-.quiz-check:hover {
+.btn:hover {
   background: #0069d9;
+}
+
+.quiz-option.selected {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.quiz-option.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.quiz-option.wrong {
+  background-color: #e74c3c;
+  color: white;
 }
