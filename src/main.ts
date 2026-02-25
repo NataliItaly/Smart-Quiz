@@ -1,7 +1,9 @@
 import './css/styles.css';
+import './scripts/services/router.service';
 
-const app = document.getElementById('app');
 
-if (app) {
-  app.innerHTML = `<h1>Smart Quiz is running</h1>`;
-}
+
+
+
+
+
