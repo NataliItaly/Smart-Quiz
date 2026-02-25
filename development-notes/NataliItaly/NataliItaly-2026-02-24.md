@@ -1,4 +1,4 @@
-# 24.02.2026 14.30
+## 24.02.2026 14.30
 
 Holded a meeting with all team members.
 
