@@ -1,6 +1,7 @@
-import { setupCheckLogic } from '../logic/quizCheck'
-import { setupOptionSelection } from '../logic/quizSelection'
-import './quizScreen.css'
+import './quizScreen.css';
+import { setupCheckLogic } from '../logic/quizCheck';
+import { setupOptionSelection } from '../logic/quizSelection';
+
 
 export function quizScreen(): HTMLElement {
   // Корневой контейнер
