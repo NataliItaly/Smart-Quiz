@@ -1,25 +1,43 @@
-export 
-function setupCheckLogic(
+export function setupCheckLogic(
   optionsEl: HTMLElement,
   checkBtn: HTMLButtonElement,
   nextBtn: HTMLButtonElement,
+  tryAgainBtn: HTMLButtonElement,
+  explainBtn: HTMLButtonElement,
   correctAnswer: string,
-  getSelected: () => string | null
+  getSelected: () => string | null,
+  onResult: (isCorrect: boolean) => void
 ): void {
   checkBtn.addEventListener('click', () => {
     const selected = getSelected()
     if (!selected) return
 
-    // подсветка правильного/неправильного
+    let isCorrect = false
+
     optionsEl.querySelectorAll('.quiz-option').forEach((btn) => {
-      if (btn.textContent === correctAnswer) {
+      const text = btn.textContent || ''
+      if (text === correctAnswer) {
         btn.classList.add('correct')
-      } else {
+        if (text === selected) {
+          isCorrect = true
+        }
+      } else if (text === selected) {
         btn.classList.add('wrong')
       }
     })
 
     checkBtn.style.display = 'none'
-    nextBtn.style.display = 'block'
+    explainBtn.style.display = 'inline-block'
+    explainBtn.disabled = false
+
+    if (isCorrect) {
+      nextBtn.style.display = 'inline-block'
+      tryAgainBtn.style.display = 'none'
+    } else {
+      tryAgainBtn.style.display = 'inline-block'
+      nextBtn.style.display = 'none'
+    }
+
+    onResult(isCorrect)
   })
 }

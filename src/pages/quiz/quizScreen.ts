@@ -1,7 +1,8 @@
-import './quizScreen.css';
-import { setupCheckLogic } from '../logic/quizCheck';
-import { setupOptionSelection } from '../logic/quizSelection';
-
+import './quizScreen.css'
+import { setupCheckLogic } from '../logic/quizCheck'
+import { setupOptionSelection } from '../logic/quizSelection'
+import { setupTryAgainLogic } from '../logic/quizTryAgain'
+import { setupExplainLogic } from '../logic/quizExplanation'
 
 export function quizScreen(): HTMLElement {
   // Корневой контейнер
@@ -24,6 +25,10 @@ export function quizScreen(): HTMLElement {
   const progressEl = document.createElement('div')
   progressEl.className = 'quiz-progress'
   progressEl.textContent = 'Вопрос 1 из 30'
+
+  const scoreEl = document.createElement('div')
+  scoreEl.classList.add('quiz-score')
+  scoreEl.textContent = 'Score: 0'
 
   const questionEl = document.createElement('div')
   questionEl.textContent = question.question_ru
@@ -72,6 +77,7 @@ export function quizScreen(): HTMLElement {
 
   container.appendChild(titelEl)
   container.appendChild(progressEl)
+  container.appendChild(scoreEl)
   container.appendChild(questionEl)
   container.appendChild(optionsEl)
   container.appendChild(checkBtn)
@@ -85,15 +91,42 @@ export function quizScreen(): HTMLElement {
   setupOptionSelection(optionsEl, checkBtn, (value) => {
     selectedOption = value
   })
+  let correctCount = 0
 
   setupCheckLogic(
     optionsEl,
     checkBtn,
     nextBtn,
+    tryBtn,
+    explainBtn,
     question.answer,
-    () => selectedOption
+    () => selectedOption,
+    (isCorrect) => {
+      if (isCorrect) {
+      correctCount++
+      scoreEl.textContent = `Score: ${correctCount}`
+    }
+
+    }
+  )
+
+  setupTryAgainLogic(
+    optionsEl,
+    checkBtn,
+    nextBtn,
+    tryBtn,
+    explainBtn,
+    () => {
+      selectedOption = null
+    },
+    explainEl
+  )
+
+  setupExplainLogic(
+    explainBtn,
+    explainEl,
+    'Because 2 + 2 = 4, basic arithmetic.'
   )
 
   return container
 }
-
