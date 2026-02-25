@@ -1,6 +1,6 @@
 import './QuizScreen.css'
 
-export function QuizScreen() {
+export function QuizScreen(): HTMLElement {
   // Корневой контейнер
   const container = document.createElement('div')
   container.className = 'quiz-screen'

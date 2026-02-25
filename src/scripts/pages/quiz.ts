@@ -1,7 +1,7 @@
 import { Router } from '../services/router'
 import { QuizScreen } from '../../pages/quiz/QuizScreen'
 
-export function renderQuiz(router: Router) {
+export function renderQuiz(router: Router): void {
   const root = document.getElementById('app')!
   root.innerHTML = ''
 
@@ -16,7 +16,7 @@ export function renderQuiz(router: Router) {
 
   root.appendChild(backBtn)
 
-  document.getElementById('backBtn')!.onclick = () => {
+  backBtn.onclick = (): void => {
     router.navigate('/dashboard')
   }
 }
