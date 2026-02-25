@@ -5,7 +5,7 @@ function setupCheckLogic(
   nextBtn: HTMLButtonElement,
   correctAnswer: string,
   getSelected: () => string | null
-) {
+): void {
   checkBtn.addEventListener('click', () => {
     const selected = getSelected()
     if (!selected) return

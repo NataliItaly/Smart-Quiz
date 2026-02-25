@@ -1,8 +1,8 @@
 import { setupCheckLogic } from '../logic/quizCheck'
 import { setupOptionSelection } from '../logic/quizSelection'
-import './QuizScreen.css'
+import './quizScreen.css'
 
-export function QuizScreen(): HTMLElement {
+export function quizScreen(): HTMLElement {
   // Корневой контейнер
   const container = document.createElement('div')
   container.className = 'quiz-screen'

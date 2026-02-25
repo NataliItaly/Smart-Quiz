@@ -2,7 +2,7 @@ export function setupOptionSelection(
   optionsEl: HTMLElement,
   checkBtn: HTMLButtonElement,
   onSelect: (value: string) => void
-) {
+): void {
   optionsEl.addEventListener('click', (event) => {
     const target = event.target as HTMLElement
 
