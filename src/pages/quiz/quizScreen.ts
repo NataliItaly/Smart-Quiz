@@ -1,22 +1,17 @@
 import './quizScreen.css'
-import { quizService, type QuizData } from '../../scripts/services/quiz.service'
+import { quizService } from '../../scripts/services/quiz.service'
 import { setupCheckLogic } from '../logic/quizCheck'
 import { setupOptionSelection } from '../logic/quizSelection'
 import { setupTryAgainLogic } from '../logic/quizTryAgain'
 import { setupExplainLogic } from '../logic/quizExplanation'
 
 export async function quizScreen(): Promise<HTMLElement> {
-  const data = await quizService() as unknown as QuizData
-
-  const questions = data.quiz["CSS & SCSS"].easy
-
+  const questions = await quizService()
 
   let currentIndex = 0
   let correctCount = 0
 
   const question = questions[currentIndex]
-  console.log(question)
-
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'
