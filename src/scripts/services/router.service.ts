@@ -1,34 +1,35 @@
-import { type Route, Router } from "./router";
-import { renderLogin } from "../pages/login";
-import { renderDashboard } from "../pages/dashboard";
-import { renderQuiz } from "../pages/quiz";
-import { renderStatistic } from "../pages/statistic";
+import { type Route, Router } from './router'
+import { renderLogin } from '../pages/login'
+import { renderDashboard } from '../pages/dashboard'
+import { renderQuiz } from '../pages/quiz'
+import { renderStatistic } from '../pages/statistic'
 
-let isAuth: boolean = true;
+let isAuth: boolean = true
 
 const routes: Route[] = [
   {
-    path: "/",
+    path: '/',
     render: () => renderLogin(router, (value) => (isAuth = value))
   },
   {
-    path: "/dashboard",
+    path: '/dashboard',
     render: () => renderDashboard(router, (value) => (isAuth = value)),
     protected: true
   },
   {
-    path: "/quiz",
-    render: () => renderQuiz(router),
+    path: '/quiz',
+    render: () => {
+      void renderQuiz(router)
+    },
+
     protected: true
   },
   {
-    path: "/statistic",
+    path: '/statistic',
     render: () => renderStatistic(router),
     protected: true
   }
-];
+]
 
-const router = new Router(routes, () => isAuth);
-router.init();
-
-
+const router = new Router(routes, () => isAuth)
+router.init()

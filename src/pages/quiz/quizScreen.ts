@@ -1,97 +1,93 @@
 import './quizScreen.css'
+import { quizService, type QuizData } from '../../scripts/services/quiz.service'
 import { setupCheckLogic } from '../logic/quizCheck'
 import { setupOptionSelection } from '../logic/quizSelection'
 import { setupTryAgainLogic } from '../logic/quizTryAgain'
 import { setupExplainLogic } from '../logic/quizExplanation'
 
-export function quizScreen(): HTMLElement {
-  // Корневой контейнер
+export async function quizScreen(): Promise<HTMLElement> {
+  const data = await quizService() as unknown as QuizData
+
+  const questions = data.quiz["CSS & SCSS"].easy
+
+
+  let currentIndex = 0
+  let correctCount = 0
+
+  const question = questions[currentIndex]
+  console.log(question)
+
+
   const container = document.createElement('div')
   container.className = 'quiz-screen'
 
-  // Заголовок вопроса
   const titelEl = document.createElement('h2')
   titelEl.className = 'quiz-title'
   titelEl.textContent = 'Online test'
 
-  const question = {
-    id: 'css_28',
-    question_ru: 'Какое свойство меняет прозрачность?',
-    question_en: 'Which property changes opacity?',
-    options: ['opacity', 'transparent', 'visibility', 'alpha'],
-    answer: 'opacity'
-  }
-
   const progressEl = document.createElement('div')
   progressEl.className = 'quiz-progress'
-  progressEl.textContent = 'Вопрос 1 из 30'
+  progressEl.textContent = `Вопрос ${currentIndex + 1} из ${questions.length}`
 
   const scoreEl = document.createElement('div')
   scoreEl.classList.add('quiz-score')
-  scoreEl.textContent = 'Score: 0'
+  scoreEl.textContent = `Score: ${correctCount}`
 
   const questionEl = document.createElement('div')
   questionEl.textContent = question.question_ru
   questionEl.className = 'quiz-question'
 
-  // Контейнер вариантов
   const optionsEl = document.createElement('div')
   optionsEl.className = 'quiz-options'
 
-  question.options.forEach((opt) => {
+  question.options.forEach((opt: string | null) => {
     const btn = document.createElement('button')
     btn.className = 'quiz-option'
     btn.textContent = opt
     optionsEl.appendChild(btn)
   })
 
-  // Кнопка Check
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
 
-  // Кнопка Next
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
   nextBtn.className = 'btn quiz-next'
   nextBtn.style.display = 'none'
 
-  // Кнопка Try Again
   const tryBtn = document.createElement('button')
   tryBtn.textContent = 'Try again'
   tryBtn.className = 'btn quiz-try'
   tryBtn.style.display = 'none'
 
-  // Кнопка Explain
   const explainBtn = document.createElement('button')
   explainBtn.textContent = 'Explain'
   explainBtn.className = 'btn quiz-explain'
   explainBtn.style.display = 'none'
 
-  // Блок объяснения
   const explainEl = document.createElement('p')
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
 
-  // Добавляем элементы в контейнер
-
-  container.appendChild(titelEl)
-  container.appendChild(progressEl)
-  container.appendChild(scoreEl)
-  container.appendChild(questionEl)
-  container.appendChild(optionsEl)
-  container.appendChild(checkBtn)
-  container.appendChild(nextBtn)
-  container.appendChild(tryBtn)
-  container.appendChild(explainBtn)
-  container.appendChild(explainEl)
+  container.append(
+    titelEl,
+    progressEl,
+    scoreEl,
+    questionEl,
+    optionsEl,
+    checkBtn,
+    nextBtn,
+    tryBtn,
+    explainBtn,
+    explainEl
+  )
 
   let selectedOption: string | null = null
 
   setupOptionSelection(optionsEl, checkBtn, (value) => {
     selectedOption = value
   })
-  let correctCount = 0
 
   setupCheckLogic(
     optionsEl,
@@ -103,10 +99,9 @@ export function quizScreen(): HTMLElement {
     () => selectedOption,
     (isCorrect) => {
       if (isCorrect) {
-      correctCount++
-      scoreEl.textContent = `Score: ${correctCount}`
-    }
-
+        correctCount++
+        scoreEl.textContent = `Score: ${correctCount}`
+      }
     }
   )
 

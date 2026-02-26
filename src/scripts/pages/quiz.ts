@@ -1,11 +1,13 @@
 import { Router } from '../services/router'
 import { quizScreen } from '../../pages/quiz/quizScreen'
 
-export function renderQuiz(router: Router): void {
-  const root = document.getElementById('app')!
-  root.innerHTML = ''
+export async function renderQuiz(router: Router): Promise<void>  {
+  const root = document.getElementById('app')
+  if (!root) return;
 
-  const quizEl = quizScreen()
+  root.innerHTML = '';
+
+  const quizEl = await quizScreen()
   root.appendChild(quizEl)
 
   const backBtn = document.createElement('button')
