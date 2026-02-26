@@ -4,7 +4,6 @@ Smart-Quiz RSSchool Final Project Auto Team 7
 The app represent a quizz with questions on HTML, CSS, JS topics.
 User can select questions depending on the dificulty level and topic.
 Progress and history of attempts are saved in localStorage.
-Explain mistake mode with AI
 
 ## Team members:
 - Nataliya Krylova [Git Hub](https://github.com/NataliItaly)
