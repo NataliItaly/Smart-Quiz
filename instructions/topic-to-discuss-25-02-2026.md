@@ -12,4 +12,6 @@ instead of
 )
 ```
 use function setupCheckLogic({a,b,c,d,e,f}) as one parameter object
+
+
 6. What about of keep inside quiz folder all files related to quiz, dashboard -> dashboard etc..?
