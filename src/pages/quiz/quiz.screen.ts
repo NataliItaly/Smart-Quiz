@@ -84,21 +84,37 @@ export async function quizScreen(): Promise<HTMLElement> {
     selectedOption = value
   })
 
-  setupCheckLogic(
-    optionsEl,
-    checkBtn,
-    nextBtn,
-    tryBtn,
-    explainBtn,
-    question.answer,
-    () => selectedOption,
-    (isCorrect) => {
-      if (isCorrect) {
-        correctCount++
-        scoreEl.textContent = `Score: ${correctCount}`
-      }
+  // setupCheckLogic(
+  //   optionsEl,
+  //   checkBtn,
+  //   nextBtn,
+  //   tryBtn,
+  //   explainBtn,
+  //   question.answer,
+  //   () => selectedOption,
+  //   (isCorrect) => {
+  //     if (isCorrect) {
+  //       correctCount++
+  //       scoreEl.textContent = `Score: ${correctCount}`
+  //     }
+  //   }
+  // )
+  
+  setupCheckLogic({
+  optionsEl,
+  checkBtn,
+  nextBtn,
+  tryBtn,
+  explainBtn,
+  correctAnswer: question.answer,
+  getSelected: () => selectedOption,
+  onResult: (isCorrect) => {
+    if (isCorrect) {
+      correctCount++
+      scoreEl.textContent = `Score: ${correctCount}`
     }
-  )
+  }
+})
 
   setupTryAgainLogic(
     optionsEl,
