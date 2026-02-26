@@ -19,4 +19,5 @@ My propositions:
 
 Neccessity to keep another video call to discuss project architechture.
 ### Topics to discuss:
+[topics](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/topic-to-discuss-25-02-2026.md)
 
