@@ -5,6 +5,11 @@ The app represent a quizz with questions on HTML, CSS, JS topics.
 User can select questions depending on the dificulty level and topic.
 Progress and history of attempts are saved in localStorage.
 
+## Deploy link
+
+[Deploy on Netlify](https://smart-quiz-rsschool-auto-team-7.netlify.app/)
+
+
 ## Team members:
 - Nataliya Krylova [Git Hub](https://github.com/NataliItaly)
 - Kateryna Moskalenko [Git Hub](https://github.com/katerynamoskalenko)
