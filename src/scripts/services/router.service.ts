@@ -1,5 +1,5 @@
 import { type Route, Router } from "./router";
-import { renderLogin } from "../pages/login";
+import { renderLogin } from "../pages/login/index";
 import { renderDashboard } from "../pages/dashboard";
 import { renderQuiz } from "../pages/quiz";
 import { renderStatistic } from "../pages/statistic";
