@@ -1,0 +1,28 @@
+name: CI  # workflow's name
+
+on:
+  push:
+    branches: [ develop ]   # when push in develop
+  pull_request:             # when PR in develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # virtual server
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4  # download repository
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint + TypeScript check
+        run: npm run check  # package.json check command = eslint + tsc --noEmit
+
+      - name: Build project
+        run: npm run build
