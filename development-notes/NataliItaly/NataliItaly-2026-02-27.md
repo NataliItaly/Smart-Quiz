@@ -62,3 +62,11 @@ Add brief instruction about deploy process on Netlify
   - eslint installed, version ESLint v10.0.2
   - eslint.config.js is present
   - test running eslint command - eslint finds error
+
+
+3. Complete CI workflow:
+  - created new branch ci-workflow, added ci.yml file with instructions for GitHub workflow
+  - made PR from ci-worflow branch into develop
+  - get team members approvement
+  - merge ci-workflow branch to develop
+  - prepare CI workflow explanation for team members
