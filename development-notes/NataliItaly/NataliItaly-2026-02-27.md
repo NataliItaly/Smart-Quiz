@@ -52,3 +52,6 @@ Relevant lines:
 
 
 Second deploy was successful, [project link](https://smart-quiz-rsschool-auto-team-7.netlify.app/)
+
+Add brief instruction about deploy process on Netlify
+[]()
