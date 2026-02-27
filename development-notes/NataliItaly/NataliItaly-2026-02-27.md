@@ -1,6 +1,6 @@
 ## 27.02.2026
 
-Deploy project on Netlify.
+1. Deploy project on Netlify.
 
  - First deploy was failed:
 
@@ -55,3 +55,10 @@ Second deploy was successful, [project link](https://smart-quiz-rsschool-auto-te
 
 Add brief instruction about deploy process on Netlify
 [Instruction for team members](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/how-to-deploy.md)
+
+
+
+2. Check if eslint settings satisfated task requirements:
+  - eslint installed, version ESLint v10.0.2
+  - eslint.config.js is present
+  - test running eslint command - eslint finds error
