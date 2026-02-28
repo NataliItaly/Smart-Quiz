@@ -1,3 +1,11 @@
+export interface QuizCommonParams {
+  optionsEl: HTMLElement
+  checkBtn: HTMLButtonElement
+  nextBtn: HTMLButtonElement
+  tryBtn: HTMLButtonElement
+  explainBtn: HTMLButtonElement
+}
+
 export function quizSelection(
   optionsEl: HTMLElement,
   checkBtn: HTMLButtonElement,

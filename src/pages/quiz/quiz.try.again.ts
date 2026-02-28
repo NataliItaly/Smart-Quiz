@@ -1,16 +1,26 @@
-export function quizTryAgain(
-  optionsEl: HTMLElement,
-  checkBtn: HTMLButtonElement,
-  nextBtn: HTMLButtonElement,
-  tryBtn: HTMLButtonElement,
-  explainBtn: HTMLButtonElement,
-  clearSelected: () => void,
+import { QuizCommonParams } from './quiz.selection'
+
+export interface TryAgainParams extends QuizCommonParams {
+  clearSelected: () => void
   explainEl: HTMLElement
-): void {
+}
+
+export function quizTryAgain({
+  optionsEl,
+  checkBtn,
+  nextBtn,
+  tryBtn,
+  explainBtn,
+  clearSelected,
+  explainEl
+}: TryAgainParams): void {
   tryBtn.addEventListener('click', () => {
-    optionsEl.querySelectorAll('.quiz-option').forEach((btn) => {
-      btn.classList.remove('selected', 'correct', 'wrong')
-    })
+    optionsEl
+      .querySelectorAll<HTMLButtonElement>('.quiz-option')
+      .forEach((btn) => {
+        btn.classList.remove('selected', 'correct', 'wrong')
+        btn.disabled = false
+      })
 
     clearSelected()
 

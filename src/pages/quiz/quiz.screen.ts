@@ -22,14 +22,14 @@ export async function quizScreen(): Promise<HTMLElement> {
 
   const progressEl = document.createElement('div')
   progressEl.className = 'quiz-progress'
-  progressEl.textContent = `Вопрос ${currentIndex + 1} из ${questions.length}`
+  progressEl.textContent = `Question ${currentIndex + 1} from ${questions.length}`
 
   const scoreEl = document.createElement('div')
   scoreEl.classList.add('quiz-score')
   scoreEl.textContent = `Score: ${correctCount}`
 
   const questionEl = document.createElement('div')
-  questionEl.textContent = question.question_ru
+  questionEl.textContent = question.question_en
   questionEl.className = 'quiz-question'
 
   const optionsEl = document.createElement('div')
@@ -84,55 +84,33 @@ export async function quizScreen(): Promise<HTMLElement> {
     selectedOption = value
   })
 
-  // setupCheckLogic(
-  //   optionsEl,
-  //   checkBtn,
-  //   nextBtn,
-  //   tryBtn,
-  //   explainBtn,
-  //   question.answer,
-  //   () => selectedOption,
-  //   (isCorrect) => {
-  //     if (isCorrect) {
-  //       correctCount++
-  //       scoreEl.textContent = `Score: ${correctCount}`
-  //     }
-  //   }
-  // )
-  
   quizCheck({
-  optionsEl,
-  checkBtn,
-  nextBtn,
-  tryBtn,
-  explainBtn,
-  correctAnswer: question.answer,
-  getSelected: () => selectedOption,
-  onResult: (isCorrect) => {
-    if (isCorrect) {
-      correctCount++
-      scoreEl.textContent = `Score: ${correctCount}`
-    }
-  }
-})
-
-  quizTryAgain(
     optionsEl,
     checkBtn,
     nextBtn,
     tryBtn,
     explainBtn,
-    () => {
-      selectedOption = null
-    },
-    explainEl
-  )
+    correctAnswer: question.answer,
+    getSelected: () => selectedOption,
+    onResult: (isCorrect) => {
+      if (isCorrect) {
+        correctCount++
+        scoreEl.textContent = `Score: ${correctCount}`
+      }
+    }
+  })
 
-  quizExplanation(
-    explainBtn,
-    explainEl,
-    'Because 2 + 2 = 4, basic arithmetic.'
-  )
+quizTryAgain({
+  optionsEl,
+  checkBtn,
+  nextBtn,
+  tryBtn,
+  explainBtn,
+  clearSelected: () => { selectedOption = null },
+  explainEl
+})
+
+  quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
 
   return container
 }
