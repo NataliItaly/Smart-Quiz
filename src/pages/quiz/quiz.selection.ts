@@ -22,6 +22,7 @@ export function quizSelection(
     label.classList.add('selected')
 
     const input = label.querySelector('input') as HTMLInputElement
+
     input.checked = true
 
     checkBtn.disabled = false

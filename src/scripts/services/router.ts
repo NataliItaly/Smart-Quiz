@@ -16,13 +16,13 @@ export class Router {
 
   public init() {
     window.addEventListener("popstate", () => this.handleLocation());
-    window.addEventListener("DOMContentLoaded", () => this.handleLocation());
+    //window.addEventListener("DOMContentLoaded", () => this.handleLocation());
     this.handleLocation();
   }
 
   public navigate(path: string) {
     history.pushState({}, "", path);
-    this.handleLocation();
+    //this.handleLocation();
   }
 
   private handleLocation() {

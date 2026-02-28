@@ -51,7 +51,9 @@ export function quizCheck({
       explainBtn.style.display = 'inline-block'
       explainBtn.disabled = false
     }
+    optionsEl.classList.add('quiz-locked')
 
+    optionsEl.style.pointerEvents = 'none'
     onResult(isCorrect)
   })
 }

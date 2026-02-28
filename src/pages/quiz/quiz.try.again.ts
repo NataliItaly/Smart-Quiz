@@ -15,6 +15,9 @@ export function quizTryAgain({
   explainEl
 }: TryAgainParams): void {
   tryBtn.addEventListener('click', () => {
+    optionsEl.classList.remove('quiz-locked')
+
+    optionsEl.style.pointerEvents = 'auto'
     optionsEl.querySelectorAll('.quiz-option').forEach((label) => {
       label.classList.remove('selected', 'correct', 'wrong')
       const input = label.querySelector('input') as HTMLInputElement

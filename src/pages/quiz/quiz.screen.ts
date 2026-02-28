@@ -28,32 +28,40 @@ export async function quizScreen(): Promise<HTMLElement> {
   scoreEl.classList.add('quiz-score')
   scoreEl.textContent = `Score: ${correctCount}`
 
-  const questionEl = document.createElement('div')
-  questionEl.textContent = question.question_en
-  questionEl.className = 'quiz-question'
+  const fieldset = document.createElement('fieldset')
+  fieldset.className = 'quiz-fieldset'
+
+  const legend = document.createElement('legend')
+  legend.className = 'quiz-question'
+  legend.textContent = question.question_en
+  fieldset.appendChild(legend)
 
   const optionsEl = document.createElement('div')
   optionsEl.className = 'quiz-options'
 
   question.options.forEach((opt: string | null) => {
+    if (!opt) return
+
     const label = document.createElement('label')
     label.className = 'quiz-option'
 
     const input = document.createElement('input')
     input.type = 'radio'
     input.name = `question-${currentIndex}`
-    input.value = opt || ''
+    input.value = opt
 
     label.appendChild(input)
-    if (!opt) return
     label.append(opt)
 
     optionsEl.appendChild(label)
   })
 
+  fieldset.appendChild(optionsEl)
+
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
+  checkBtn.disabled = true
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
@@ -78,8 +86,7 @@ export async function quizScreen(): Promise<HTMLElement> {
     titelEl,
     progressEl,
     scoreEl,
-    questionEl,
-    optionsEl,
+    fieldset,
     checkBtn,
     nextBtn,
     tryBtn,

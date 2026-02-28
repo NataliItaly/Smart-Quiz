@@ -31,6 +31,10 @@
   gap: 12px;
 }
 
+.quiz-option input[type="radio"] {
+  display: none;
+}
+
 .quiz-option {
   padding: 12px;
   font-size: 16px;
@@ -159,3 +163,16 @@
   }
 }
 /**/
+
+/* When options are blocked */
+.quiz-options.quiz-locked .quiz-option {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Убираем hover, чтобы не мигало */
+.quiz-options.quiz-locked .quiz-option:hover {
+  background: inherit;
+  border-color: inherit;
+}
