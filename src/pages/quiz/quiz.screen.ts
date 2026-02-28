@@ -1,9 +1,9 @@
-import './quizScreen.css'
+import '../../css/styles.css'
 import { quizService } from '../../scripts/services/quiz.service'
-import { setupCheckLogic } from '../logic/quizCheck'
-import { setupOptionSelection } from '../logic/quizSelection'
-import { setupTryAgainLogic } from '../logic/quizTryAgain'
-import { setupExplainLogic } from '../logic/quizExplanation'
+import { quizCheck } from './quiz.check'
+import { quizSelection } from './quiz.selection'
+import { quizTryAgain } from './quiz.try.again'
+import { quizExplanation } from './quiz.explanation'
 
 export async function quizScreen(): Promise<HTMLElement> {
   const questions = await quizService()
@@ -80,7 +80,7 @@ export async function quizScreen(): Promise<HTMLElement> {
 
   let selectedOption: string | null = null
 
-  setupOptionSelection(optionsEl, checkBtn, (value) => {
+  quizSelection(optionsEl, checkBtn, (value) => {
     selectedOption = value
   })
 
@@ -100,7 +100,7 @@ export async function quizScreen(): Promise<HTMLElement> {
   //   }
   // )
   
-  setupCheckLogic({
+  quizCheck({
   optionsEl,
   checkBtn,
   nextBtn,
@@ -116,7 +116,7 @@ export async function quizScreen(): Promise<HTMLElement> {
   }
 })
 
-  setupTryAgainLogic(
+  quizTryAgain(
     optionsEl,
     checkBtn,
     nextBtn,
@@ -128,7 +128,7 @@ export async function quizScreen(): Promise<HTMLElement> {
     explainEl
   )
 
-  setupExplainLogic(
+  quizExplanation(
     explainBtn,
     explainEl,
     'Because 2 + 2 = 4, basic arithmetic.'

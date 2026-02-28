@@ -1,4 +1,4 @@
-export function setupTryAgainLogic(
+export function quizTryAgain(
   optionsEl: HTMLElement,
   checkBtn: HTMLButtonElement,
   nextBtn: HTMLButtonElement,

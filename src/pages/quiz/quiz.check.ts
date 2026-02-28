@@ -53,7 +53,7 @@ interface CheckLogicParams {
 //   })
 // }
 
-export function setupCheckLogic({
+export function quizCheck({
   optionsEl,
   checkBtn,
   nextBtn,

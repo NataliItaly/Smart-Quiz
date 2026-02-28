@@ -1,4 +1,4 @@
-export function setupOptionSelection(
+export function quizSelection(
   optionsEl: HTMLElement,
   checkBtn: HTMLButtonElement,
   onSelect: (value: string) => void

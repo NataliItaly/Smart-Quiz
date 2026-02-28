@@ -1,4 +1,4 @@
-export function setupExplainLogic(
+export function quizExplanation(
   explainBtn: HTMLButtonElement,
   explainEl: HTMLElement,
   explanationText: string
