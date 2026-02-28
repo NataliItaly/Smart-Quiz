@@ -1,5 +1,4 @@
-
-import { QuizCommonParams } from "./quiz.selection"
+import { QuizCommonParams } from './quiz.selection'
 
 export interface CheckLogicParams extends QuizCommonParams {
   correctAnswer: string
@@ -30,13 +29,14 @@ export function quizCheck({
     optionsEl
       .querySelectorAll<HTMLButtonElement>('.quiz-option')
       .forEach((btn) => {
-        const text = btn.textContent || ''
+        const input = btn.querySelector('input') as HTMLInputElement
+        const value = input.value
 
-        if (text === selected) {
+        if (value === selected) {
           btn.classList.add(isCorrect ? 'correct' : 'wrong')
         }
 
-        btn.disabled = true
+        input.disabled = true
       })
 
     checkBtn.style.display = 'none'

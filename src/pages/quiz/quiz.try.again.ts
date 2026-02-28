@@ -15,12 +15,12 @@ export function quizTryAgain({
   explainEl
 }: TryAgainParams): void {
   tryBtn.addEventListener('click', () => {
-    optionsEl
-      .querySelectorAll<HTMLButtonElement>('.quiz-option')
-      .forEach((btn) => {
-        btn.classList.remove('selected', 'correct', 'wrong')
-        btn.disabled = false
-      })
+    optionsEl.querySelectorAll('.quiz-option').forEach((label) => {
+      label.classList.remove('selected', 'correct', 'wrong')
+      const input = label.querySelector('input') as HTMLInputElement
+      input.checked = false
+      input.disabled = false
+    })
 
     clearSelected()
 

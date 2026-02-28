@@ -36,10 +36,19 @@ export async function quizScreen(): Promise<HTMLElement> {
   optionsEl.className = 'quiz-options'
 
   question.options.forEach((opt: string | null) => {
-    const btn = document.createElement('button')
-    btn.className = 'quiz-option'
-    btn.textContent = opt
-    optionsEl.appendChild(btn)
+    const label = document.createElement('label')
+    label.className = 'quiz-option'
+
+    const input = document.createElement('input')
+    input.type = 'radio'
+    input.name = `question-${currentIndex}`
+    input.value = opt || ''
+
+    label.appendChild(input)
+    if (!opt) return
+    label.append(opt)
+
+    optionsEl.appendChild(label)
   })
 
   const checkBtn = document.createElement('button')
@@ -100,15 +109,17 @@ export async function quizScreen(): Promise<HTMLElement> {
     }
   })
 
-quizTryAgain({
-  optionsEl,
-  checkBtn,
-  nextBtn,
-  tryBtn,
-  explainBtn,
-  clearSelected: () => { selectedOption = null },
-  explainEl
-})
+  quizTryAgain({
+    optionsEl,
+    checkBtn,
+    nextBtn,
+    tryBtn,
+    explainBtn,
+    clearSelected: () => {
+      selectedOption = null
+    },
+    explainEl
+  })
 
   quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
 

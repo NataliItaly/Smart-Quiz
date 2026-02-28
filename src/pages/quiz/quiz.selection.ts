@@ -12,18 +12,19 @@ export function quizSelection(
   onSelect: (value: string) => void
 ): void {
   optionsEl.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement
+    const label = (event.target as HTMLElement).closest('.quiz-option')
+    if (!label) return
 
-    if (!target.classList.contains('quiz-option')) return
-
-    optionsEl.querySelectorAll('.quiz-option').forEach((btn) => {
-      btn.classList.remove('selected')
+    optionsEl.querySelectorAll('.quiz-option').forEach((el) => {
+      el.classList.remove('selected')
     })
 
-    target.classList.add('selected')
+    label.classList.add('selected')
+
+    const input = label.querySelector('input') as HTMLInputElement
+    input.checked = true
 
     checkBtn.disabled = false
-
-    onSelect(target.textContent || '')
+    onSelect(input.value)
   })
 }
