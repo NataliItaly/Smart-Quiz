@@ -1,0 +1,3504 @@
+{
+  "quiz": {
+    "HTML": {
+      "easy": [
+        {
+          "id": 1,
+          "question_ru": "Какой тег используется для создания гиперссылки?",
+          "question_en": "Which tag is used to create a hyperlink?",
+          "options": ["<link>", "<a>", "<href>", "<url>"],
+          "answer": "<a>"
+        },
+        {
+          "id": 2,
+          "question_ru": "Какой тег задаёт заголовок страницы в браузере?",
+          "question_en": "Which tag sets the page title in the browser?",
+          "options": ["<title>", "<head>", "<h1>", "<meta>"],
+          "answer": "<title>"
+        },
+        {
+          "id": 3,
+          "question_ru": "Какой тег используется для вставки изображения?",
+          "question_en": "Which tag is used to insert an image?",
+          "options": ["<img>", "<picture>", "<src>", "<figure>"],
+          "answer": "<img>"
+        },
+        {
+          "id": 4,
+          "question_ru": "Какой тег задаёт абзац текста?",
+          "question_en": "Which tag defines a paragraph of text?",
+          "options": ["<p>", "<div>", "<span>", "<section>"],
+          "answer": "<p>"
+        },
+        {
+          "id": 5,
+          "question_ru": "Какой атрибут указывает адрес изображения в теге <img>?",
+          "question_en": "Which attribute specifies the image URL in the <img> tag?",
+          "options": ["alt", "src", "href", "link"],
+          "answer": "src"
+        },
+        {
+          "id": 6,
+          "question_ru": "Какой тег используется для заголовка первого уровня?",
+          "question_en": "Which tag is used for a first-level heading?",
+          "options": ["<h1>", "<h2>", "<header>", "<title>"],
+          "answer": "<h1>"
+        },
+        {
+          "id": 7,
+          "question_ru": "Какой тег используется для создания списка с маркерами?",
+          "question_en": "Which tag is used to create an unordered list?",
+          "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+          "answer": "<ul>"
+        },
+        {
+          "id": 8,
+          "question_ru": "Какой тег используется для элемента списка?",
+          "question_en": "Which tag is used for a list item?",
+          "options": ["<li>", "<ul>", "<ol>", "<item>"],
+          "answer": "<li>"
+        },
+        {
+          "id": 9,
+          "question_ru": "Какой тег используется для вставки горизонтальной линии?",
+          "question_en": "Which tag is used to insert a horizontal line?",
+          "options": ["<hr>", "<line>", "<br>", "<border>"],
+          "answer": "<hr>"
+        },
+        {
+          "id": 10,
+          "question_ru": "Какой тег используется для вставки разрыва строки?",
+          "question_en": "Which tag is used to insert a line break?",
+          "options": ["<br>", "<hr>", "<p>", "<break>"],
+          "answer": "<br>"
+        },
+        {
+          "id": 11,
+          "question_ru": "Какой тег используется для выделения текста жирным?",
+          "question_en": "Which tag is used to make text bold?",
+          "options": ["<b>", "<strong>", "<em>", "<bold>"],
+          "answer": "<b>"
+        },
+        {
+          "id": 12,
+          "question_ru": "Какой тег используется для выделения текста курсивом?",
+          "question_en": "Which tag is used to make text italic?",
+          "options": ["<i>", "<em>", "<italic>", "<style>"],
+          "answer": "<i>"
+        },
+        {
+          "id": 13,
+          "question_ru": "Какой тег используется для вставки комментария?",
+          "question_en": "Which syntax is used to insert a comment in HTML?",
+          "options": [
+            "<!-- comment -->",
+            "// comment",
+            "/* comment */",
+            "<comment>"
+          ],
+          "answer": "<!-- comment -->"
+        },
+        {
+          "id": 14,
+          "question_ru": "Какой тег используется для вставки таблицы?",
+          "question_en": "Which tag is used to create a table?",
+          "options": ["<table>", "<tab>", "<tr>", "<td>"],
+          "answer": "<table>"
+        },
+        {
+          "id": 15,
+          "question_ru": "Какой тег используется для строки таблицы?",
+          "question_en": "Which tag is used for a table row?",
+          "options": ["<tr>", "<td>", "<row>", "<table>"],
+          "answer": "<tr>"
+        },
+        {
+          "id": 16,
+          "question_ru": "Какой тег используется для ячейки таблицы?",
+          "question_en": "Which tag is used for a table cell?",
+          "options": ["<td>", "<tr>", "<cell>", "<table>"],
+          "answer": "<td>"
+        },
+        {
+          "id": 17,
+          "question_ru": "Какой тег используется для заголовка таблицы?",
+          "question_en": "Which tag is used for a table header?",
+          "options": ["<th>", "<td>", "<tr>", "<thead>"],
+          "answer": "<th>"
+        },
+        {
+          "id": 18,
+          "question_ru": "Какой тег используется для объединения заголовков таблицы?",
+          "question_en": "Which tag groups table headers?",
+          "options": ["<thead>", "<tbody>", "<tfoot>", "<th>"],
+          "answer": "<thead>"
+        },
+        {
+          "id": 19,
+          "question_ru": "Какой тег используется для основного содержимого таблицы?",
+          "question_en": "Which tag is used for the main table content?",
+          "options": ["<tbody>", "<thead>", "<tfoot>", "<tr>"],
+          "answer": "<tbody>"
+        },
+        {
+          "id": 20,
+          "question_ru": "Какой тег используется для нижней части таблицы?",
+          "question_en": "Which tag is used for the table footer?",
+          "options": ["<tfoot>", "<thead>", "<tbody>", "<tr>"],
+          "answer": "<tfoot>"
+        },
+        {
+          "id": 21,
+          "question_ru": "Какой тег используется для формы?",
+          "question_en": "Which tag is used to create a form?",
+          "options": ["<form>", "<input>", "<fieldset>", "<label>"],
+          "answer": "<form>"
+        },
+        {
+          "id": 22,
+          "question_ru": "Какой тег используется для поля ввода?",
+          "question_en": "Which tag is used for an input field?",
+          "options": ["<input>", "<form>", "<field>", "<textbox>"],
+          "answer": "<input>"
+        },
+        {
+          "id": 23,
+          "question_ru": "Какой тег используется для кнопки?",
+          "question_en": "Which tag is used to create a button?",
+          "options": ["<button>", "<input>", "<submit>", "<click>"],
+          "answer": "<button>"
+        },
+        {
+          "id": 24,
+          "question_ru": "Какой тег используется для метки поля формы?",
+          "question_en": "Which tag is used for a form label?",
+          "options": ["<label>", "<span>", "<form>", "<input>"],
+          "answer": "<label>"
+        },
+        {
+          "id": 25,
+          "question_ru": "Какой тег используется для выбора из списка?",
+          "question_en": "Which tag is used to create a dropdown list?",
+          "options": ["<select>", "<option>", "<list>", "<dropdown>"],
+          "answer": "<select>"
+        },
+        {
+          "id": 26,
+          "question_ru": "Какой тег используется для варианта в списке?",
+          "question_en": "Which tag is used for an option in a dropdown?",
+          "options": ["<option>", "<select>", "<item>", "<choice>"],
+          "answer": "<option>"
+        },
+        {
+          "id": 27,
+          "question_ru": "Какой тег используется для вставки аудио?",
+          "question_en": "Which tag is used to embed audio?",
+          "options": ["<audio>", "<sound>", "<media>", "<music>"],
+          "answer": "<audio>"
+        },
+        {
+          "id": 28,
+          "question_ru": "Какой тег используется для вставки видео?",
+          "question_en": "Which tag is used to embed video?",
+          "options": ["<video>", "<movie>", "<media>", "<iframe>"],
+          "answer": "<video>"
+        },
+        {
+          "id": 29,
+          "question_ru": "Какой тег используется для вставки изображения с подписью?",
+          "question_en": "Which tag is used to insert an image with a caption?",
+          "options": ["<figure>", "<img>", "<caption>", "<picture>"],
+          "answer": "<figure>"
+        }
+      ],
+      "medium": [
+        {
+          "id": 31,
+          "question_ru": "Какой тег используется для создания нумерованного списка?",
+          "question_en": "Which tag is used to create an ordered list?",
+          "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+          "answer": "<ol>"
+        },
+        {
+          "id": 32,
+          "question_ru": "Какой атрибут тега <input> делает поле обязательным?",
+          "question_en": "Which <input> attribute makes a field required?",
+          "options": ["required", "mandatory", "validate", "must"],
+          "answer": "required"
+        },
+        {
+          "id": 33,
+          "question_ru": "Какой тег используется для вставки видео?",
+          "question_en": "Which tag is used to embed video?",
+          "options": ["<video>", "<media>", "<movie>", "<iframe>"],
+          "answer": "<video>"
+        },
+        {
+          "id": 34,
+          "question_ru": "Какой тег используется для объединения строк в таблице?",
+          "question_en": "Which attribute merges rows in a table?",
+          "options": ["rowspan", "colspan", "merge", "span"],
+          "answer": "rowspan"
+        },
+        {
+          "id": 35,
+          "question_ru": "Какой тег используется для семантического блока навигации?",
+          "question_en": "Which tag defines a semantic navigation block?",
+          "options": ["<nav>", "<menu>", "<header>", "<aside>"],
+          "answer": "<nav>"
+        },
+        {
+          "id": 36,
+          "question_ru": "Какой тег используется для семантического блока статьи?",
+          "question_en": "Which tag defines a semantic article block?",
+          "options": ["<article>", "<section>", "<main>", "<div>"],
+          "answer": "<article>"
+        },
+        {
+          "id": 37,
+          "question_ru": "Какой тег используется для семантического блока раздела?",
+          "question_en": "Which tag defines a semantic section block?",
+          "options": ["<section>", "<div>", "<article>", "<main>"],
+          "answer": "<section>"
+        },
+        {
+          "id": 38,
+          "question_ru": "Какой тег используется для боковой панели?",
+          "question_en": "Which tag is used for a sidebar?",
+          "options": ["<aside>", "<section>", "<nav>", "<div>"],
+          "answer": "<aside>"
+        },
+        {
+          "id": 39,
+          "question_ru": "Какой тег используется для заголовка документа?",
+          "question_en": "Which tag defines the document header?",
+          "options": ["<header>", "<head>", "<title>", "<h1>"],
+          "answer": "<header>"
+        },
+        {
+          "id": 40,
+          "question_ru": "Какой тег используется для нижнего колонтитула?",
+          "question_en": "Which tag defines the document footer?",
+          "options": ["<footer>", "<bottom>", "<end>", "<aside>"],
+          "answer": "<footer>"
+        },
+        {
+          "id": 41,
+          "question_ru": "Какой тег используется для вставки скрипта?",
+          "question_en": "Which tag is used to insert a script?",
+          "options": ["<script>", "<code>", "<js>", "<program>"],
+          "answer": "<script>"
+        },
+        {
+          "id": 42,
+          "question_ru": "Какой тег используется для подключения внешнего CSS?",
+          "question_en": "Which tag is used to link external CSS?",
+          "options": ["<link>", "<style>", "<css>", "<import>"],
+          "answer": "<link>"
+        },
+        {
+          "id": 43,
+          "question_ru": "Какой тег используется для встроенных стилей?",
+          "question_en": "Which tag is used for inline styles?",
+          "options": ["<style>", "<css>", "<link>", "<script>"],
+          "answer": "<style>"
+        },
+        {
+          "id": 44,
+          "question_ru": "Какой тег используется для вставки метаданных?",
+          "question_en": "Which tag is used to insert metadata?",
+          "options": ["<meta>", "<head>", "<data>", "<info>"],
+          "answer": "<meta>"
+        },
+        {
+          "id": 45,
+          "question_ru": "Какой тег используется для вставки заголовка документа?",
+          "question_en": "Which tag defines the document title?",
+          "options": ["<title>", "<head>", "<h1>", "<meta>"],
+          "answer": "<title>"
+        },
+        {
+          "id": 46,
+          "question_ru": "Какой тег используется для вставки блока цитаты?",
+          "question_en": "Which tag is used for a blockquote?",
+          "options": ["<blockquote>", "<quote>", "<cite>", "<q>"],
+          "answer": "<blockquote>"
+        },
+        {
+          "id": 47,
+          "question_ru": "Какой тег используется для короткой цитаты?",
+          "question_en": "Which tag is used for an inline quote?",
+          "options": ["<q>", "<blockquote>", "<cite>", "<quote>"],
+          "answer": "<q>"
+        },
+        {
+          "id": 48,
+          "question_ru": "Какой тег используется для указания источника цитаты?",
+          "question_en": "Which tag is used to cite a source?",
+          "options": ["<cite>", "<source>", "<ref>", "<q>"],
+          "answer": "<cite>"
+        },
+        {
+          "id": 49,
+          "question_ru": "Какой тег используется для вставки изображения с подписью?",
+          "question_en": "Which tag is used to insert an image with a caption?",
+          "options": ["<figure>", "<img>", "<caption>", "<picture>"],
+          "answer": "<figure>"
+        },
+        {
+          "id": 50,
+          "question_ru": "Какой тег используется для подписи изображения?",
+          "question_en": "Which tag is used for an image caption?",
+          "options": ["<figcaption>", "<caption>", "<label>", "<note>"],
+          "answer": "<figcaption>"
+        },
+        {
+          "id": 51,
+          "question_ru": "Какой тег используется для вставки прогресса?",
+          "question_en": "Which tag is used to display progress?",
+          "options": ["<progress>", "<meter>", "<bar>", "<status>"],
+          "answer": "<progress>"
+        },
+        {
+          "id": 52,
+          "question_ru": "Какой тег используется для вставки измерителя?",
+          "question_en": "Which tag is used to display a measurement?",
+          "options": ["<meter>", "<progress>", "<bar>", "<status>"],
+          "answer": "<meter>"
+        },
+        {
+          "id": 53,
+          "question_ru": "Какой тег используется для вставки времени?",
+          "question_en": "Which tag is used to display time?",
+          "options": ["<time>", "<date>", "<clock>", "<span>"],
+          "answer": "<time>"
+        },
+        {
+          "id": 54,
+          "question_ru": "Какой тег используется для вставки адреса?",
+          "question_en": "Which tag is used to display an address?",
+          "options": ["<address>", "<location>", "<place>", "<contact>"],
+          "answer": "<address>"
+        },
+        {
+          "id": 55,
+          "question_ru": "Какой тег используется для вставки контактной информации?",
+          "question_en": "Which tag is used for contact information?",
+          "options": ["<address>", "<contact>", "<info>", "<footer>"],
+          "answer": "<address>"
+        },
+        {
+          "id": 56,
+          "question_ru": "Какой тег используется для вставки списка определений?",
+          "question_en": "Which tag is used for a definition list?",
+          "options": ["<dl>", "<ul>", "<ol>", "<list>"],
+          "answer": "<dl>"
+        },
+        {
+          "id": 57,
+          "question_ru": "Какой тег используется для термина в списке определений?",
+          "question_en": "Which tag is used for a term in a definition list?",
+          "options": ["<dt>", "<dd>", "<dl>", "<term>"],
+          "answer": "<dt>"
+        },
+        {
+          "id": 58,
+          "question_ru": "Какой тег используется для описания термина?",
+          "question_en": "Which tag is used for a description in a definition list?",
+          "options": ["<dd>", "<dt>", "<dl>", "<desc>"],
+          "answer": "<dd>"
+        },
+        {
+          "id": 59,
+          "question_ru": "Какой тег используется для вставки области ввода текста?",
+          "question_en": "Which tag is used for a text area?",
+          "options": ["<textarea>", "<input>", "<form>", "<field>"],
+          "answer": "<textarea>"
+        }
+      ],
+      "hard": [
+        {
+          "id": 61,
+          "question_ru": "Какой тег используется для встраивания другого HTML-документа?",
+          "question_en": "Which tag is used to embed another HTML document?",
+          "options": ["<iframe>", "<embed>", "<object>", "<include>"],
+          "answer": "<iframe>"
+        },
+        {
+          "id": 62,
+          "question_ru": "Какой атрибут указывает уникальный идентификатор элемента?",
+          "question_en": "Which attribute specifies a unique element identifier?",
+          "options": ["id", "class", "name", "key"],
+          "answer": "id"
+        },
+        {
+          "id": 63,
+          "question_ru": "Какой тег используется для семантического блока основного контента?",
+          "question_en": "Which tag defines the main semantic content block?",
+          "options": ["<main>", "<section>", "<article>", "<body>"],
+          "answer": "<main>"
+        },
+        {
+          "id": 64,
+          "question_ru": "Какой тег используется для вставки SVG-графики?",
+          "question_en": "Which tag is used to embed SVG graphics?",
+          "options": ["<svg>", "<canvas>", "<img>", "<vector>"],
+          "answer": "<svg>"
+        },
+        {
+          "id": 65,
+          "question_ru": "Какой тег используется для рисования с помощью JavaScript?",
+          "question_en": "Which tag is used for drawing with JavaScript?",
+          "options": ["<canvas>", "<svg>", "<paint>", "<draw>"],
+          "answer": "<canvas>"
+        },
+        {
+          "id": 66,
+          "question_ru": "Какой атрибут используется для указания языка документа?",
+          "question_en": "Which attribute specifies the document language?",
+          "options": ["lang", "xml:lang", "locale", "language"],
+          "answer": "lang"
+        },
+        {
+          "id": 67,
+          "question_ru": "Какой тег используется для вставки шаблона, который не отображается сразу?",
+          "question_en": "Which tag defines a template that is not rendered immediately?",
+          "options": ["<template>", "<script>", "<style>", "<hidden>"],
+          "answer": "<template>"
+        },
+        {
+          "id": 68,
+          "question_ru": "Какой тег используется для вставки элемента, который будет позже активирован через JavaScript?",
+          "question_en": "Which tag defines an element to be activated later via JavaScript?",
+          "options": ["<slot>", "<template>", "<shadow>", "<placeholder>"],
+          "answer": "<slot>"
+        },
+        {
+          "id": 69,
+          "question_ru": "Какой тег используется для теневой DOM?",
+          "question_en": "Which tag is used for shadow DOM?",
+          "options": ["<shadow>", "<slot>", "<template>", "<dom>"],
+          "answer": "<shadow>"
+        },
+        {
+          "id": 70,
+          "question_ru": "Какой тег используется для вставки элемента управления диапазоном?",
+          "question_en": "Which tag is used for a range control?",
+          "options": [
+            "<input type='range'>",
+            "<slider>",
+            "<progress>",
+            "<meter>"
+          ],
+          "answer": "<input type='range'>"
+        },
+        {
+          "id": 71,
+          "question_ru": "Какой тег используется для вставки элемента выбора цвета?",
+          "question_en": "Which tag is used for a color picker?",
+          "options": [
+            "<input type='color'>",
+            "<color>",
+            "<picker>",
+            "<palette>"
+          ],
+          "answer": "<input type='color'>"
+        },
+        {
+          "id": 72,
+          "question_ru": "Какой тег используется для вставки элемента выбора даты?",
+          "question_en": "Which tag is used for a date picker?",
+          "options": [
+            "<input type='date'>",
+            "<calendar>",
+            "<time>",
+            "<picker>"
+          ],
+          "answer": "<input type='date'>"
+        },
+        {
+          "id": 73,
+          "question_ru": "Какой тег используется для вставки элемента выбора времени?",
+          "question_en": "Which tag is used for a time picker?",
+          "options": ["<input type='time'>", "<clock>", "<date>", "<picker>"],
+          "answer": "<input type='time'>"
+        },
+        {
+          "id": 74,
+          "question_ru": "Какой тег используется для вставки элемента выбора файла?",
+          "question_en": "Which tag is used for a file input?",
+          "options": ["<input type='file'>", "<file>", "<upload>", "<browse>"],
+          "answer": "<input type='file'>"
+        },
+        {
+          "id": 75,
+          "question_ru": "Какой тег используется для вставки элемента выбора электронной почты?",
+          "question_en": "Which tag is used for an email input?",
+          "options": [
+            "<input type='email'>",
+            "<mail>",
+            "<address>",
+            "<contact>"
+          ],
+          "answer": "<input type='email'>"
+        },
+        {
+          "id": 76,
+          "question_ru": "Какой тег используется для вставки элемента выбора URL?",
+          "question_en": "Which tag is used for a URL input?",
+          "options": ["<input type='url'>", "<link>", "<href>", "<address>"],
+          "answer": "<input type='url'>"
+        },
+        {
+          "id": 77,
+          "question_ru": "Какой тег используется для вставки элемента выбора числа?",
+          "question_en": "Which tag is used for a number input?",
+          "options": ["<input type='number'>", "<digit>", "<count>", "<value>"],
+          "answer": "<input type='number'>"
+        },
+        {
+          "id": 78,
+          "question_ru": "Какой тег используется для вставки элемента поиска?",
+          "question_en": "Which tag is used for a search input?",
+          "options": ["<input type='search'>", "<find>", "<lookup>", "<query>"],
+          "answer": "<input type='search'>"
+        },
+        {
+          "id": 79,
+          "question_ru": "Какой тег используется для вставки элемента телефона?",
+          "question_en": "Which tag is used for a telephone input?",
+          "options": ["<input type='tel'>", "<phone>", "<contact>", "<number>"],
+          "answer": "<input type='tel'>"
+        },
+        {
+          "id": 80,
+          "question_ru": "Какой тег используется для вставки элемента пароля?",
+          "question_en": "Which tag is used for a password input?",
+          "options": [
+            "<input type='password'>",
+            "<secret>",
+            "<lock>",
+            "<secure>"
+          ],
+          "answer": "<input type='password'>"
+        },
+        {
+          "id": 81,
+          "question_ru": "Какой тег используется для вставки элемента скрытого поля?",
+          "question_en": "Which tag is used for a hidden input?",
+          "options": [
+            "<input type='hidden'>",
+            "<secret>",
+            "<invisible>",
+            "<none>"
+          ],
+          "answer": "<input type='hidden'>"
+        },
+        {
+          "id": 82,
+          "question_ru": "Какой тег используется для вставки элемента загрузки?",
+          "question_en": "Which tag is used for a submit button?",
+          "options": [
+            "<input type='submit'>",
+            "<button>",
+            "<send>",
+            "<upload>"
+          ],
+          "answer": "<input type='submit'>"
+        },
+        {
+          "id": 83,
+          "question_ru": "Какой тег используется для вставки элемента сброса формы?",
+          "question_en": "Which tag is used for a reset button?",
+          "options": [
+            "<input type='reset'>",
+            "<clear>",
+            "<button>",
+            "<delete>"
+          ],
+          "answer": "<input type='reset'>"
+        },
+        {
+          "id": 84,
+          "question_ru": "Какой тег используется для вставки элемента выбора нескольких файлов?",
+          "question_en": "Which tag is used for multiple file input?",
+          "options": [
+            "<input type='file' multiple>",
+            "<upload>",
+            "<files>",
+            "<multi>"
+          ],
+          "answer": "<input type='file' multiple>"
+        },
+        {
+          "id": 85,
+          "question_ru": "Какой тег используется для вставки элемента выбора диапазона дат?",
+          "question_en": "Which tag is used for a date range input?",
+          "options": [
+            "<input type='date'>",
+            "<daterange>",
+            "<calendar>",
+            "<range>"
+          ],
+          "answer": "<input type='date'>"
+        },
+        {
+          "id": 86,
+          "question_ru": "Какой тег используется для вставки элемента выбора месяца?",
+          "question_en": "Which tag is used for a month input?",
+          "options": ["<input type='month'>", "<calendar>", "<date>", "<time>"],
+          "answer": "<input type='month'>"
+        },
+        {
+          "id": 87,
+          "question_ru": "Какой тег используется для вставки элемента выбора недели?",
+          "question_en": "Which tag is used for a week input?",
+          "options": ["<input type='week'>", "<calendar>", "<date>", "<time>"],
+          "answer": "<input type='week'>"
+        }
+      ]
+    },
+    "CSS & SCSS": {
+      "easy": [
+        {
+          "id": "css_1",
+          "question_ru": "Как расшифровывается CSS?",
+          "question_en": "What does CSS stand for?",
+          "options": [
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+          ],
+          "answer": "Cascading Style Sheets"
+        },
+        {
+          "id": "css_2",
+          "question_ru": "Какой HTML-тег используется для определения внутренних стилей?",
+          "question_en": "Which HTML tag is used to define internal styles?",
+          "options": ["<script>", "<css>", "<style>", "<design>"],
+          "answer": "<style>"
+        },
+        {
+          "id": "css_3",
+          "question_ru": "Какой атрибут используется для встроенных (inline) стилей?",
+          "question_en": "Which attribute is used to define inline styles?",
+          "options": ["class", "styles", "font", "style"],
+          "answer": "style"
+        },
+        {
+          "id": "css_4",
+          "question_ru": "Какое свойство меняет цвет текста?",
+          "question_en": "Which property is used to change the text color?",
+          "options": ["text-color", "color", "fgcolor", "font-color"],
+          "answer": "color"
+        },
+        {
+          "id": "css_5",
+          "question_ru": "Какое свойство отвечает за размер текста?",
+          "question_en": "Which property controls the text size?",
+          "options": ["text-size", "font-style", "font-size", "size"],
+          "answer": "font-size"
+        },
+        {
+          "id": "css_6",
+          "question_ru": "Как сделать текст жирным?",
+          "question_en": "How do you make the text bold?",
+          "options": [
+            "font-weight: bold",
+            "style: bold",
+            "font: bold",
+            "text-decoration: bold"
+          ],
+          "answer": "font-weight: bold"
+        },
+        {
+          "id": "css_7",
+          "question_ru": "Какое свойство меняет цвет фона?",
+          "question_en": "Which property changes the background color?",
+          "options": ["color", "background-color", "bgcolor", "back-style"],
+          "answer": "background-color"
+        },
+        {
+          "id": "css_8",
+          "question_ru": "Как убрать подчеркивание ссылок?",
+          "question_en": "How do you remove the underline from links?",
+          "options": [
+            "text-decoration: none",
+            "text-style: no-underline",
+            "decoration: no",
+            "link-style: none"
+          ],
+          "answer": "text-decoration: none"
+        },
+        {
+          "id": "css_9",
+          "question_ru": "Какое свойство делает текст курсивом?",
+          "question_en": "Which property makes text italic?",
+          "options": [
+            "font-weight",
+            "text-transform",
+            "font-style",
+            "font-variant"
+          ],
+          "answer": "font-style"
+        },
+        {
+          "id": "css_10",
+          "question_ru": "Как выбрать элемент с id='header'?",
+          "question_en": "How do you select an element with id='header'?",
+          "options": [".header", "header", "#header", "*header"],
+          "answer": "#header"
+        },
+        {
+          "id": "css_11",
+          "question_ru": "Как выбрать элементы с классом 'menu'?",
+          "question_en": "How do you select elements with class 'menu'?",
+          "options": [".menu", "#menu", "menu", "*menu"],
+          "answer": ".menu"
+        },
+        {
+          "id": "css_12",
+          "question_ru": "Какое свойство добавляет тень тексту?",
+          "question_en": "Which property adds a shadow to text?",
+          "options": [
+            "shadow-text",
+            "text-shadow",
+            "font-shadow",
+            "box-shadow"
+          ],
+          "answer": "text-shadow"
+        },
+        {
+          "id": "css_13",
+          "question_ru": "Как сделать все буквы заглавными?",
+          "question_en": "How do you make the text uppercase?",
+          "options": [
+            "text-style: uppercase",
+            "font-transform: capitalize",
+            "text-transform: uppercase",
+            "text-case: upper"
+          ],
+          "answer": "text-transform: uppercase"
+        },
+        {
+          "id": "css_14",
+          "question_ru": "Какое свойство управляет отступом ВНУТРИ элемента?",
+          "question_en": "Which property controls the padding INSIDE an element?",
+          "options": ["margin", "padding", "border", "spacing"],
+          "answer": "padding"
+        },
+        {
+          "id": "css_15",
+          "question_ru": "Какое свойство управляет внешним отступом?",
+          "question_en": "Which property controls the external margin?",
+          "options": ["padding", "spacing", "margin", "border-spacing"],
+          "answer": "margin"
+        },
+        {
+          "id": "css_16",
+          "question_ru": "Как задать рамку элементу?",
+          "question_en": "How do you specify a border for an element?",
+          "options": ["border", "outline", "stroke", "frame"],
+          "answer": "border"
+        },
+        {
+          "id": "css_17",
+          "question_ru": "Какое значение display скрывает элемент?",
+          "question_en": "Which display value hides an element?",
+          "options": ["hidden", "none", "invisible", "block: none"],
+          "answer": "none"
+        },
+        {
+          "id": "css_18",
+          "question_ru": "Какое свойство меняет шрифт?",
+          "question_en": "Which property is used to change the font?",
+          "options": ["font-family", "font-type", "font-style", "text-font"],
+          "answer": "font-family"
+        },
+        {
+          "id": "css_19",
+          "question_ru": "Как отцентровать текст?",
+          "question_en": "How do you center text?",
+          "options": [
+            "align: center",
+            "text-align: center",
+            "margin: auto",
+            "text-center: yes"
+          ],
+          "answer": "text-align: center"
+        },
+        {
+          "id": "css_20",
+          "question_ru": "Как закруглить углы?",
+          "question_en": "How do you round the corners?",
+          "options": [
+            "border-radius",
+            "corner-radius",
+            "border-round",
+            "box-radius"
+          ],
+          "answer": "border-radius"
+        },
+        {
+          "id": "css_21",
+          "question_ru": "Какое свойство управляет слоями (Z-ось)?",
+          "question_en": "Which property manages stacking order (Z-axis)?",
+          "options": ["layer", "order", "z-index", "stack"],
+          "answer": "z-index"
+        },
+        {
+          "id": "css_22",
+          "question_ru": "Как вставить комментарий в CSS?",
+          "question_en": "How do you insert a comment in CSS?",
+          "options": [
+            "// comment",
+            "/* comment */",
+            "<!-- comment -->",
+            "# comment"
+          ],
+          "answer": "/* comment */"
+        },
+        {
+          "id": "css_23",
+          "question_ru": "Какое свойство задает ширину?",
+          "question_en": "Which property sets the width?",
+          "options": ["height", "width", "breadth", "size"],
+          "answer": "width"
+        },
+        {
+          "id": "css_24",
+          "question_ru": "Какое свойство задает высоту?",
+          "question_en": "Which property sets the height?",
+          "options": ["width", "depth", "height", "tall"],
+          "answer": "height"
+        },
+        {
+          "id": "css_25",
+          "question_ru": "Какое позиционирование по умолчанию?",
+          "question_en": "What is the default position value?",
+          "options": ["relative", "absolute", "fixed", "static"],
+          "answer": "static"
+        },
+        {
+          "id": "css_26",
+          "question_ru": "Как включить Flexbox?",
+          "question_en": "How do you enable Flexbox?",
+          "options": [
+            "flex: box",
+            "display: flex",
+            "mode: flex",
+            "align: flex"
+          ],
+          "answer": "display: flex"
+        },
+        {
+          "id": "css_27",
+          "question_ru": "Как выбрать ВСЕ элементы?",
+          "question_en": "How do you select ALL elements?",
+          "options": ["all", "body", "*", "html"],
+          "answer": "*"
+        },
+        {
+          "id": "css_28",
+          "question_ru": "Какое свойство меняет прозрачность?",
+          "question_en": "Which property changes opacity?",
+          "options": ["opacity", "transparent", "visibility", "alpha"],
+          "answer": "opacity"
+        },
+        {
+          "id": "css_29",
+          "question_ru": "Как задать цвет рамки?",
+          "question_en": "How do you set the border color?",
+          "options": [
+            "border-style",
+            "border-color",
+            "color-border",
+            "border-width"
+          ],
+          "answer": "border-color"
+        },
+        {
+          "id": "css_30",
+          "question_ru": "Где подключается внешний CSS?",
+          "question_en": "Where is an external CSS file linked?",
+          "options": [
+            "Inside <body>",
+            "At the end of <body>",
+            "Inside <head>",
+            "After <html>"
+          ],
+          "answer": "Inside <head>"
+        }
+      ],
+      "medium": [
+        {
+          "id": "css_mid_1",
+          "question_ru": "Какой селектор имеет самый высокий приоритет (специфичность)?",
+          "question_en": "Which selector has the highest specificity?",
+          "options": ["div.menu", "#header", "nav li", "div > p"],
+          "answer": "#header"
+        },
+        {
+          "id": "css_mid_2",
+          "question_ru": "Какое свойство Flexbox управляет распределением свободного пространства между элементами вдоль главной оси?",
+          "question_en": "Which Flexbox property controls the distribution of space between items along the main axis?",
+          "options": [
+            "align-items",
+            "align-content",
+            "justify-content",
+            "flex-direction"
+          ],
+          "answer": "justify-content"
+        },
+        {
+          "id": "css_mid_3",
+          "question_ru": "Что делает свойство 'box-sizing: border-box;'?",
+          "question_en": "What does the 'box-sizing: border-box;' property do?",
+          "options_ru": [
+            "Добавляет рамку ко всем элементам",
+            "Включает padding и border в общую ширину и высоту элемента",
+            "Удаляет внешние отступы (margin)",
+            "Делает границы элемента невидимыми"
+          ],
+          "options_en": [
+            "Adds a border",
+            "Includes padding and border in width",
+            "Removes margins",
+            "Makes borders invisible"
+          ],
+          "answer_ru": "Включает padding и border в общую ширину и высоту элемента",
+          "answer_en": "Includes padding and border in width"
+        },
+        {
+          "id": "css_mid_4",
+          "question_ru": "Какое значение свойства 'position' позволяет элементу оставаться на месте при прокрутке страницы относительно окна браузера?",
+          "question_en": "Which 'position' value keeps an element in place relative to the browser window during scrolling?",
+          "options": ["relative", "absolute", "sticky", "fixed"],
+          "answer": "fixed"
+        },
+        {
+          "id": "css_mid_5",
+          "question_ru": "В чем разница между единицами 'em' и 'rem'?",
+          "question_en": "What is the difference between 'em' and 'rem' units?",
+          "options_ru": [
+            "em зависит от родителя, rem от корневого элемента (html)",
+            "rem зависит от родителя, em от корневого элемента",
+            "em используется для шрифтов, rem для отступов",
+            "Никакой разницы нет"
+          ],
+          "options_en": [
+            "em from parent, rem from root",
+            "rem from parent, em from root",
+            "em for fonts, rem for margins",
+            "No difference"
+          ],
+          "answer_en": "em from parent, rem from root",
+          "answer_ru": "em зависит от родителя, rem от корневого элемента (html)"
+        },
+        {
+          "id": "css_mid_6",
+          "question_ru": "Какое свойство используется для создания сетки в CSS Grid?",
+          "question_en": "Which property is used to create a grid in CSS Grid?",
+          "options": [
+            "display: table",
+            "display: grid-layout",
+            "display: grid",
+            "grid-template: active"
+          ],
+          "answer": "display: grid"
+        },
+        {
+          "id": "css_mid_7",
+          "question_ru": "Какая функция в CSS позволяет выполнять математические вычисления (например, сложение разных единиц)?",
+          "question_en": "Which CSS function allows you to perform mathematical calculations (e.g., adding different units)?",
+          "options": ["sum()", "calc()", "math()", "compute()"],
+          "answer": "calc()"
+        },
+        {
+          "id": "css_mid_8",
+          "question_ru": "Для чего используется псевдоэлемент '::after'?",
+          "question_en": "What is the '::after' pseudo-element used for?",
+          "options_ru": [
+            "Для выбора последнего дочернего элемента",
+            "Для вставки контента после содержимого элемента",
+            "Для изменения стиля после клика",
+            "Для применения стилей к следующему соседу"
+          ],
+          "options_en": [
+            "Selecting last child",
+            "Inserting content after content",
+            "Style after click",
+            "Neighbor style"
+          ],
+          "answer_en": "Inserting content after content",
+          "answer_ru": "Для вставки контента после содержимого элемента"
+        },
+        {
+          "id": "css_mid_9",
+          "question_ru": "Какое свойство Flexbox заставляет элементы переноситься на новую строку?",
+          "question_en": "Which Flexbox property causes items to wrap to a new line?",
+          "options": ["flex-flow", "flex-wrap", "display-wrap", "wrap-content"],
+          "answer": "flex-wrap"
+        },
+        {
+          "id": "css_mid_10",
+          "question_ru": "Что означает селектор 'div + p'?",
+          "question_en": "What does the 'div + p' selector mean?",
+          "options_ru": [
+            "Все элементы <p> внутри <div>",
+            "Первый элемент <p> сразу после <div>",
+            "Все элементы <p>, которые являются соседями <div>",
+            "<div> и <p> одновременно"
+          ],
+          "options_en": [
+            "p inside div",
+            "First p immediately after div",
+            "All p neighbors of div",
+            "div and p together"
+          ],
+          "answer_en": "First p immediately after div",
+          "answer_ru": "Первый элемент <p> сразу после <div>"
+        },
+        {
+          "id": "css_mid_11",
+          "question_ru": "Какое свойство управляет порядком элементов во Flex-контейнере без изменения HTML?",
+          "question_en": "Which property controls the order of items in a Flex container without changing HTML?",
+          "options": ["z-index", "flex-order", "order", "index"],
+          "answer": "order"
+        },
+        {
+          "id": "css_mid_12",
+          "question_ru": "Как расшифровывается HSL?",
+          "question_en": "What does HSL stand for?",
+          "options": [
+            "High, Soft, Light",
+            "Hue, Saturation, Lightness",
+            "Heavy, Solid, Layer",
+            "Home, Style, Logo"
+          ],
+          "answer": "Hue, Saturation, Lightness"
+        },
+        {
+          "id": "css_mid_13",
+          "question_ru": "Какое свойство определяет, как контент должен заполнять контейнер (актуально для img)?",
+          "question_en": "Which property defines how content should fill its container (relevant for img)?",
+          "options": [
+            "object-fit",
+            "image-size",
+            "content-fill",
+            "display-mode"
+          ],
+          "answer": "object-fit"
+        },
+        {
+          "id": "css_mid_14",
+          "question_ru": "Какой псевдокласс используется для стилизации элементов, когда на них наведен курсор?",
+          "question_en": "Which pseudo-class is used to style elements when the mouse is over them?",
+          "options": [":focus", ":active", ":hover", ":visited"],
+          "answer": ":hover"
+        },
+        {
+          "id": "css_mid_15",
+          "question_ru": "Какое свойство Grid задает расстояние между колонками и строками?",
+          "question_en": "Which Grid property sets the distance between columns and rows?",
+          "options": ["grid-spacing", "gap", "grid-margin", "cell-padding"],
+          "answer": "gap"
+        },
+        {
+          "id": "css_mid_16",
+          "question_ru": "Что делает свойство 'pointer-events: none;'?",
+          "question_en": "What does 'pointer-events: none;' do?",
+          "options_ru": [
+            "Меняет курсор на стрелку",
+            "Запрещает элементу реагировать на клики мыши",
+            "Скрывает указатель мыши",
+            "Отключает тачпад"
+          ],
+          "options_en": [
+            "Changes cursor",
+            "Ignores clicks",
+            "Hides mouse",
+            "Disables touch"
+          ],
+          "answer_en": "Ignores clicks",
+          "answer_ru": "Запрещает элементу реагировать на клики мыши"
+        },
+        {
+          "id": "css_mid_17",
+          "question_ru": "Какое значение 'overflow' добавляет полосы прокрутки только при необходимости?",
+          "question_en": "Which 'overflow' value adds scrollbars only when necessary?",
+          "options": ["scroll", "hidden", "visible", "auto"],
+          "answer": "auto"
+        },
+        {
+          "id": "css_mid_18",
+          "question_ru": "Какое свойство позволяет плавно изменять значения CSS-свойств в течение времени?",
+          "question_en": "Which property allows you to change CSS property values smoothly over time?",
+          "options": ["animation", "transition", "transform", "morph"],
+          "answer": "transition"
+        },
+        {
+          "id": "css_mid_19",
+          "question_ru": "Как выбрать каждый второй элемент списка (li)?",
+          "question_en": "How to select every second list item (li)?",
+          "options": [
+            "li:even",
+            "li:nth-child(2n)",
+            "li:nth-child(2)",
+            "li:every(2)"
+          ],
+          "answer": "li:nth-child(2n)"
+        },
+        {
+          "id": "css_mid_20",
+          "question_ru": "Какое свойство используется для изменения направления осей во Flexbox?",
+          "question_en": "Which property is used to change the axis direction in Flexbox?",
+          "options": ["flex-direction", "flex-axis", "direction", "orient"],
+          "answer": "flex-direction"
+        },
+        {
+          "id": "css_mid_21",
+          "question_ru": "Как называется правило для создания анимаций по ключевым кадрам?",
+          "question_en": "What is the rule for creating animations using keyframes?",
+          "options": ["@animate", "@keyframes", "@steps", "@motion"],
+          "answer": "@keyframes"
+        },
+        {
+          "id": "css_mid_22",
+          "question_ru": "Что произойдет с 'position: absolute', если у всех родителей 'position: static'?",
+          "question_en": "What happens to 'position: absolute' if all parents have 'position: static'?",
+          "options_ru": [
+            "Элемент исчезнет",
+            "Он будет позиционироваться относительно body/окна",
+            "Он станет position: relative",
+            "Браузер выдаст ошибку"
+          ],
+          "options_en": [
+            "Will disappear",
+            "Position relative to window/body",
+            "Will become relative",
+            "Error"
+          ],
+          "answer_en": "Position relative to window/body",
+          "answer_ru": "Он будет позиционироваться относительно body/окна"
+        },
+        {
+          "id": "css_mid_23",
+          "question_ru": "Какое свойство управляет прозрачностью только фона, не затрагивая текст?",
+          "question_en": "Which property controls the opacity of only the background without affecting the text?",
+          "options": [
+            "opacity",
+            "background-color: rgba()",
+            "filter: alpha()",
+            "background-opacity"
+          ],
+          "answer": "background-color: rgba()"
+        },
+        {
+          "id": "css_mid_24",
+          "question_ru": "Какое свойство 'display' позволяет элементу вести себя как блочный, но при этом течь в строке?",
+          "question_en": "Which 'display' value makes an element behave like a block but flow in a line?",
+          "options": ["block", "inline", "inline-block", "flex-inline"],
+          "answer": "inline-block"
+        },
+        {
+          "id": "css_mid_25",
+          "question_ru": "Какое CSS-свойство позволяет обрезать текст многоточием при переполнении?",
+          "question_en": "Which CSS property allows truncating text with an ellipsis on overflow?",
+          "options": [
+            "text-overflow",
+            "overflow-text",
+            "text-cut",
+            "white-space"
+          ],
+          "answer": "text-overflow"
+        },
+        {
+          "id": "css_mid_26",
+          "question_ru": "Для чего используется правило '@media'?",
+          "question_en": "What is the '@media' rule used for?",
+          "options_ru": [
+            "Для импорта видео",
+            "Для создания адаптивного дизайна под разные экраны",
+            "Для подключения шрифтов",
+            "Для оптимизации изображений"
+          ],
+          "options_en": ["Video", "Responsiveness", "Fonts", "Images"],
+          "answer_en": "Responsiveness",
+          "answer_ru": "Для создания адаптивного дизайна под разные экраны"
+        },
+        {
+          "id": "css_mid_27",
+          "question_ru": "Какое свойство 'align-items' выравнивает элементы по базовой линии текста?",
+          "question_en": "Which 'align-items' property value aligns items based on their text baseline?",
+          "options": ["center", "stretch", "baseline", "flex-start"],
+          "answer": "baseline"
+        },
+        {
+          "id": "css_mid_28",
+          "question_ru": "Что делает свойство 'visibility: hidden;' в отличие от 'display: none;'?",
+          "question_en": "What does 'visibility: hidden;' do differently than 'display: none;'?",
+          "options_ru": [
+            "Удаляет элемент из кода",
+            "Скрывает элемент, но сохраняет занимаемое им место",
+            "Делает элемент прозрачным для кликов",
+            "Никакой разницы нет"
+          ],
+          "options_en": [
+            "Deletes code",
+            "Hides but keeps space",
+            "Blocks clicks",
+            "No difference"
+          ],
+          "answer_en": "Hides but keeps space",
+          "answer_ru": "Скрывает элемент, но сохраняет занимаемое им место"
+        },
+        {
+          "id": "css_mid_29",
+          "question_ru": "Какой псевдокласс выбирает элемент, если он является ЕДИНСТВЕННЫМ ребенком родителя?",
+          "question_en": "Which pseudo-class selects an element if it is the ONLY child of its parent?",
+          "options": [
+            ":single-child",
+            ":only-child",
+            ":first-child",
+            ":last-child"
+          ],
+          "answer": ":only-child"
+        },
+        {
+          "id": "css_mid_30",
+          "question_ru": "Какое свойство позволяет масштабировать, поворачивать или наклонять элемент?",
+          "question_en": "Which property allows you to scale, rotate, or tilt an element?",
+          "options": ["transition", "transform", "translate", "modify"],
+          "answer": "transform"
+        }
+      ],
+      "hard": [
+        {
+          "id": "css_hard_1",
+          "question_ru": "Что делает селектор ':has(> img)'?",
+          "question_en": "What does the ':has(> img)' selector do?",
+          "options_ru": [
+            "Выбирает все картинки внутри родителя",
+            "Выбирает родителя, если у него есть прямой потомок img",
+            "Выбирает соседний элемент после картинки",
+            "Выбирает только первую картинку в блоке"
+          ],
+          "options_en": [
+            "Selects all images inside a parent",
+            "Selects the parent if it has a direct child img",
+            "Selects the next sibling after an image",
+            "Selects only the first image in a block"
+          ],
+          "answer_ru": "Выбирает родителя, если у него есть прямой потомок img",
+          "answer_en": "Selects the parent if it has a direct child img"
+        },
+        {
+          "id": "css_hard_2",
+          "question_ru": "В чем главное отличие '@container' от '@media'?",
+          "question_en": "What is the main difference between '@container' and '@media'?",
+          "options_ru": [
+            "Media быстрее работает",
+            "Container адаптируется под размер родителя, а не окна",
+            "Container работает только для мобильных устройств",
+            "Media позволяет использовать переменные"
+          ],
+          "options_en": [
+            "Media is faster",
+            "Container adapts to the parent size, not the viewport",
+            "Container only works for mobile devices",
+            "Media allows using variables"
+          ],
+          "answer_ru": "Container адаптируется под размер родителя, а не окна",
+          "answer_en": "Container adapts to the parent size, not the viewport"
+        },
+        {
+          "id": "css_hard_3",
+          "question_ru": "Какая директива SCSS используется для создания переиспользуемых блоков кода с аргументами?",
+          "question_en": "Which SCSS directive is used to create reusable code blocks with arguments?",
+          "options_ru": ["@function", "@mixin", "@import", "@extend"],
+          "options_en": ["@function", "@mixin", "@import", "@extend"],
+          "answer_ru": "@mixin",
+          "answer_en": "@mixin"
+        },
+        {
+          "id": "css_hard_4",
+          "question_ru": "Что делает функция 'clamp(1rem, 5vw, 3rem)'?",
+          "question_en": "What does the function 'clamp(1rem, 5vw, 3rem)' do?",
+          "options_ru": [
+            "Складывает три значения",
+            "Ограничивает размер в диапазоне между min и max",
+            "Выбирает случайное значение",
+            "Округляет значение до целого"
+          ],
+          "options_en": [
+            "Adds three values together",
+            "Limits the size within a range between min and max",
+            "Selects a random value",
+            "Rounds the value to an integer"
+          ],
+          "answer_ru": "Ограничивает размер в диапазоне между min и max",
+          "answer_en": "Limits the size within a range between min and max"
+        },
+        {
+          "id": "css_hard_5",
+          "question_ru": "Что означает символ '&' в SCSS внутри селектора?",
+          "question_en": "What does the '&' symbol mean in SCSS inside a selector?",
+          "options_ru": [
+            "Создает новую переменную",
+            "Ссылается на родительский селектор",
+            "Обозначает логическое И",
+            "Импортирует внешний файл"
+          ],
+          "options_en": [
+            "Creates a new variable",
+            "References the parent selector",
+            "Represents a logical AND",
+            "Imports an external file"
+          ],
+          "answer_ru": "Ссылается на родительский селектор",
+          "answer_en": "References the parent selector"
+        },
+        {
+          "id": "css_hard_6",
+          "question_ru": "Для чего используется CSS свойство 'aspect-ratio'?",
+          "question_en": "What is the CSS property 'aspect-ratio' used for?",
+          "options_ru": [
+            "Настройка прозрачности",
+            "Поддержание пропорций элемента (например, 16/9)",
+            "Изменение угла наклона",
+            "Управление скоростью анимации"
+          ],
+          "options_en": [
+            "Setting transparency",
+            "Maintaining element proportions (e.g., 16/9)",
+            "Changing the tilt angle",
+            "Controlling animation speed"
+          ],
+          "answer_ru": "Поддержание пропорций элемента (например, 16/9)",
+          "answer_en": "Maintaining element proportions (e.g., 16/9)"
+        },
+        {
+          "id": "css_hard_7",
+          "question_ru": "Что такое CSS Layers (@layer)?",
+          "question_en": "What are CSS Layers (@layer)?",
+          "options_ru": [
+            "Новый вид z-index",
+            "Инструмент для управления приоритетом стилей",
+            "Настройка для 3D трансформаций",
+            "Способ группировки медиа запросов"
+          ],
+          "options_en": [
+            "A new kind of z-index",
+            "A tool for managing style priority",
+            "A setting for 3D transformations",
+            "A way to group media queries"
+          ],
+          "answer_ru": "Инструмент для управления приоритетом стилей",
+          "answer_en": "A tool for managing style priority"
+        },
+        {
+          "id": "css_hard_8",
+          "question_ru": "Как в современном CSS записать медиа запрос ширины от 400px до 800px?",
+          "question_en": "How to write a media query for width between 400px and 800px in modern CSS?",
+          "options_ru": [
+            "(400px <= width <= 800px)",
+            "(width: 400px - 800px)",
+            "media-range: 400-800",
+            "between(400px, 800px)"
+          ],
+          "options_en": [
+            "(400px <= width <= 800px)",
+            "(width: 400px - 800px)",
+            "media-range: 400-800",
+            "between(400px, 800px)"
+          ],
+          "answer_ru": "(400px <= width <= 800px)",
+          "answer_en": "(400px <= width <= 800px)"
+        },
+        {
+          "id": "css_hard_9",
+          "question_ru": "Что делает функция 'minmax(100px, 1fr)' в CSS Grid?",
+          "question_en": "What does 'minmax(100px, 1fr)' do in CSS Grid?",
+          "options_ru": [
+            "Задает фиксированный размер 100px",
+            "Задает диапазон размера от 100px до всей доступной области",
+            "Выбирает среднее значение между 100px и 1fr",
+            "Создает колонку, которая всегда равна 100px"
+          ],
+          "options_en": [
+            "Sets a fixed size of 100px",
+            "Defines a size range from 100px to all available space",
+            "Selects the average value between 100px and 1fr",
+            "Creates a column that is always 100px"
+          ],
+          "answer_ru": "Задает диапазон размера от 100px до всей доступной области",
+          "answer_en": "Defines a size range from 100px to all available space"
+        },
+        {
+          "id": "css_hard_10",
+          "question_ru": "Какое преимущество дает использование цветового пространства OKLCH?",
+          "question_en": "What is the advantage of using the OKLCH color space?",
+          "options_ru": [
+            "Оно короче записывается",
+            "Оно воспринимается глазом равномерно по яркости",
+            "Работает только в старых браузерах",
+            "Поддерживает только черно-белые цвета"
+          ],
+          "options_en": [
+            "It has a shorter syntax",
+            "It is perceptually uniform in brightness",
+            "It only works in old browsers",
+            "It only supports black and white colors"
+          ],
+          "answer_ru": "Оно воспринимается глазом равномерно по яркости",
+          "answer_en": "It is perceptually uniform in brightness"
+        },
+        {
+          "id": "css_hard_11",
+          "question_ru": "Для чего в SCSS используется директива '@extend'?",
+          "question_en": "What is the '@extend' directive used for in SCSS?",
+          "options_ru": [
+            "Для создания циклов",
+            "Для наследования свойств одного селектора другим",
+            "Для математических вычислений",
+            "Для подключения внешних шрифтов"
+          ],
+          "options_en": [
+            "For creating loops",
+            "For inheriting properties from one selector to another",
+            "For mathematical calculations",
+            "For connecting external fonts"
+          ],
+          "answer_ru": "Для наследования свойств одного селектора другим",
+          "answer_en": "For inheriting properties from one selector to another"
+        },
+        {
+          "id": "css_hard_12",
+          "question_ru": "Что делает CSS свойство 'scroll-behavior: smooth;'?",
+          "question_en": "What does 'scroll-behavior: smooth;' do?",
+          "options_ru": [
+            "Ускоряет загрузку страницы",
+            "Включает плавную прокрутку по якорным ссылкам",
+            "Скрывает полосу прокрутки",
+            "Автоматически прокручивает страницу вниз"
+          ],
+          "options_en": [
+            "Speeds up page loading",
+            "Enables smooth scrolling for anchor links",
+            "Hides the scrollbar",
+            "Automatically scrolls the page down"
+          ],
+          "answer_ru": "Включает плавную прокрутку по якорным ссылкам",
+          "answer_en": "Enables smooth scrolling for anchor links"
+        },
+        {
+          "id": "css_hard_13",
+          "question_ru": "Какой результат даст 'calc(100% - 20px)'?",
+          "question_en": "What is the result of 'calc(100% - 20px)'?",
+          "options_ru": [
+            "Ошибка синтаксиса",
+            "Вычислит ширину элемента минус 20 пикселей",
+            "Всегда возвращает 80%",
+            "Удалит 20 пикселей из HTML"
+          ],
+          "options_en": [
+            "Syntax error",
+            "Calculates element width minus 20 pixels",
+            "Always returns 80%",
+            "Deletes 20 pixels from HTML"
+          ],
+          "answer_ru": "Вычислит ширину элемента минус 20 пикселей",
+          "answer_en": "Calculates element width minus 20 pixels"
+        },
+        {
+          "id": "css_hard_14",
+          "question_ru": "Как в SCSS объявить переменную?",
+          "question_en": "How to declare a variable in SCSS?",
+          "options_ru": [
+            "var color = red;",
+            "--color: red;",
+            "$color: red;",
+            "@color: red;"
+          ],
+          "options_en": [
+            "var color = red;",
+            "--color: red;",
+            "$color: red;",
+            "@color: red;"
+          ],
+          "answer_ru": "$color: red;",
+          "answer_en": "$color: red;"
+        },
+        {
+          "id": "css_hard_15",
+          "question_ru": "Что делает селектор ':nth-of-type(3)'?",
+          "question_en": "What does the ':nth-of-type(3)' selector do?",
+          "options_ru": [
+            "Выбирает каждого третьего ребенка",
+            "Выбирает третий элемент указанного типа",
+            "Выбирает три первых элемента",
+            "Выбирает элемент с id='3'"
+          ],
+          "options_en": [
+            "Selects every third child",
+            "Selects the third element of the specified type",
+            "Selects the first three elements",
+            "Selects the element with id='3'"
+          ],
+          "answer_ru": "Выбирает третий элемент указанного типа",
+          "answer_en": "Selects the third element of the specified type"
+        },
+        {
+          "id": "css_hard_16",
+          "question_ru": "Какое свойство в CSS Grid позволяет элементу занимать несколько колонок?",
+          "question_en": "Which property in CSS Grid allows an element to span multiple columns?",
+          "options_ru": [
+            "grid-column",
+            "column-span",
+            "flex-grow",
+            "grid-template"
+          ],
+          "options_en": [
+            "grid-column",
+            "column-span",
+            "flex-grow",
+            "grid-template"
+          ],
+          "answer_ru": "grid-column",
+          "answer_en": "grid-column"
+        },
+        {
+          "id": "css_hard_17",
+          "question_ru": "Что делает свойство 'will-change'?",
+          "question_en": "What does the 'will-change' property do?",
+          "options_ru": [
+            "Меняет стиль элемента в будущем",
+            "Подсказывает браузеру подготовиться к анимации свойства",
+            "Сбрасывает все текущие изменения",
+            "Заменяет одну переменную на другую"
+          ],
+          "options_en": [
+            "Changes element style in the future",
+            "Hints to the browser to prepare for an animation",
+            "Resets all current changes",
+            "Replaces one variable with another"
+          ],
+          "answer_ru": "Подсказывает браузеру подготовиться к анимации свойства",
+          "answer_en": "Hints to the browser to prepare for an animation"
+        },
+        {
+          "id": "css_hard_18",
+          "question_ru": "Как в SCSS использовать цикл для генерации классов?",
+          "question_en": "How to use a loop in SCSS to generate classes?",
+          "options_ru": ["@for", "@loop", "@repeat", "@while"],
+          "options_en": ["@for", "@loop", "@repeat", "@while"],
+          "answer_ru": "@for",
+          "answer_en": "@for"
+        },
+        {
+          "id": "css_hard_19",
+          "question_ru": "Что делает функция 'lighten($color, 10%)' в SCSS?",
+          "question_en": "What does the 'lighten($color, 10%)' function do in SCSS?",
+          "options_ru": [
+            "Меняет прозрачность",
+            "Делает цвет светлее на 10%",
+            "Добавляет белый фон",
+            "Уменьшает вес шрифта"
+          ],
+          "options_en": [
+            "Changes opacity",
+            "Makes the color 10% lighter",
+            "Adds a white background",
+            "Reduces font weight"
+          ],
+          "answer_ru": "Делает цвет светлее на 10%",
+          "answer_en": "Makes the color 10% lighter"
+        },
+        {
+          "id": "css_hard_20",
+          "question_ru": "Что такое семантическое свойство 'color-scheme'?",
+          "question_en": "What is the semantic property 'color-scheme'?",
+          "options_ru": [
+            "Выбор палитры для сайта",
+            "Указывает браузеру, поддерживает ли страница темную тему",
+            "Меняет цвет всех картинок",
+            "Генератор случайных цветов"
+          ],
+          "options_en": [
+            "Selecting a palette for the site",
+            "Indicates if the page supports dark/light mode",
+            "Changes the color of all images",
+            "A random color generator"
+          ],
+          "answer_ru": "Указывает браузеру, поддерживает ли страница темную тему",
+          "answer_en": "Indicates if the page supports dark/light mode"
+        },
+        {
+          "id": "css_hard_21",
+          "question_ru": "Что делает функция 'map-get($map, $key)' в SCSS?",
+          "question_en": "What does the 'map-get($map, $key)' function do in SCSS?",
+          "options_ru": [
+            "Создает карту сайта",
+            "Извлекает значение из словаря (map) по ключу",
+            "Удаляет ключ из карты",
+            "Рисует карту в фоне"
+          ],
+          "options_en": [
+            "Creates a site map",
+            "Extracts a value from a map by key",
+            "Remoses a key from the map",
+            "Draws a map in the background"
+          ],
+          "answer_ru": "Извлекает значение из словаря (map) по ключу",
+          "answer_en": "Extracts a value from a map by key"
+        },
+        {
+          "id": "css_hard_22",
+          "question_ru": "Для чего используется свойство 'all: unset;'?",
+          "question_en": "What is the 'all: unset;' property used for?",
+          "options_ru": [
+            "Удаления всех элементов",
+            "Сброса всех свойств элемента до начальных значений",
+            "Отключения JavaScript",
+            "Центрирования всего контента"
+          ],
+          "options_en": [
+            "Deleting all elements",
+            "Resetting all properties of an element to default values",
+            "Disabling JavaScript",
+            "Centering all content"
+          ],
+          "answer_ru": "Сброса всех свойств элемента до начальных значений",
+          "answer_en": "Resetting all properties of an element to default values"
+        },
+        {
+          "id": "css_hard_23",
+          "question_ru": "Что означает селектор 'li:not(.active)'?",
+          "question_en": "What does the 'li:not(.active)' selector mean?",
+          "options_ru": [
+            "Выбирает все li с классом active",
+            "Выбирает все li, у которых нет класса active",
+            "Выбирает li внутри блока .active",
+            "Скрывает li без класса active"
+          ],
+          "options_en": [
+            "Selects all li with class active",
+            "Selects all li that do not have the class active",
+            "Selects li inside an .active block",
+            "Hides li without the active class"
+          ],
+          "answer_ru": "Выбирает все li, у которых нет класса active",
+          "answer_en": "Selects all li that do not have the class active"
+        },
+        {
+          "id": "css_hard_24",
+          "question_ru": "Какое свойство в CSS позволяет обрезать контент по сложной фигуре?",
+          "question_en": "Which CSS property allows clipping content into complex shapes?",
+          "options_ru": [
+            "border-radius",
+            "clip-path",
+            "overflow",
+            "shape-outside"
+          ],
+          "options_en": [
+            "border-radius",
+            "clip-path",
+            "overflow",
+            "shape-outside"
+          ],
+          "answer_ru": "clip-path",
+          "answer_en": "clip-path"
+        },
+        {
+          "id": "css_hard_25",
+          "question_ru": "Что делает псевдокласс ':focus-within'?",
+          "question_en": "What does the ':focus-within' pseudo-class do?",
+          "options_ru": [
+            "Срабатывает, если элемент в фокусе",
+            "Срабатывает на родителе, если любой его потомок получил фокус",
+            "Фокусируется на тексте внутри",
+            "Запрещает фокусировку"
+          ],
+          "options_en": [
+            "Applies if the element is focused",
+            "Applies to a parent if any of its descendants gain focus",
+            "Focuses on internal text",
+            "Disables focusing"
+          ],
+          "answer_ru": "Срабатывает на родителе, если любой его потомок получил фокус",
+          "answer_en": "Applies to a parent if any of its descendants gain focus"
+        },
+        {
+          "id": "css_hard_26",
+          "question_ru": "Как в SCSS импортировать файл так, чтобы он не компилировался в отдельный CSS?",
+          "question_en": "How to import a file in SCSS so it doesn't compile into a separate CSS?",
+          "options_ru": [
+            "Добавить префикс подчеркивания к имени файла (_file.scss)",
+            "Использовать @import-hidden",
+            "Заархивировать файл",
+            "Назвать файл .scss-temp"
+          ],
+          "options_en": [
+            "Add an underscore prefix to the filename (_file.scss)",
+            "Use @import-hidden",
+            "Archive the file",
+            "Name the file .scss-temp"
+          ],
+          "answer_ru": "Добавить префикс подчеркивания к имени файла (_file.scss)",
+          "answer_en": "Add an underscore prefix to the filename (_file.scss)"
+        },
+        {
+          "id": "css_hard_27",
+          "question_ru": "Что делает свойство 'hyphens: auto;'?",
+          "question_en": "What does the 'hyphens: auto;' property do?",
+          "options_ru": [
+            "Удаляет все тире",
+            "Автоматически расставляет переносы слов в тексте",
+            "Заменяет пробелы на дефисы",
+            "Ничего не делает"
+          ],
+          "options_en": [
+            "Removes all hyphens",
+            "Automatically inserts hyphens for word wrapping",
+            "Replaces spaces with hyphens",
+            "Does nothing"
+          ],
+          "answer_ru": "Автоматически расставляет переносы слов в тексте",
+          "answer_en": "Automatically inserts hyphens for word wrapping"
+        },
+        {
+          "id": "css_hard_28",
+          "ru": {
+            "question": "Какое свойство определяет поведение элемента при перекрытии его другими элементами?",
+            "options": [
+              "isolation",
+              "z-index",
+              "mix-blend-mode",
+              "pointer-events"
+            ],
+            "answer": "isolation"
+          },
+          "question_ru": "Что делает свойство 'isolation: isolate;'?",
+          "question_en": "What does 'isolation: isolate;' do?",
+          "options_ru": [
+            "Отключает интернет",
+            "Создает новый контекст наложения для mix-blend-mode",
+            "Скрывает элемент от поисковиков",
+            "Делает элемент прозрачным"
+          ],
+          "options_en": [
+            "Disconnects internet",
+            "Creates a new stacking context for mix-blend-mode",
+            "Hides the element from SEO",
+            "Makes the element transparent"
+          ],
+          "answer_ru": "Создает новый контекст наложения для mix-blend-mode",
+          "answer_en": "Creates a new stacking context for mix-blend-mode"
+        },
+        {
+          "id": "css_hard_29",
+          "question_ru": "Как в SCSS передать блок стилей внутрь миксина?",
+          "question_en": "How to pass a block of styles into a mixin in SCSS?",
+          "options_ru": ["@content", "@slot", "@inject", "@put"],
+          "options_en": ["@content", "@slot", "@inject", "@put"],
+          "answer_ru": "@content",
+          "answer_en": "@content"
+        },
+        {
+          "id": "css_hard_30",
+          "question_ru": "Какое свойство позволяет сделать фон элемента размытым (Glassmorphism)?",
+          "question_en": "Which property allows blurring the background of an element (Glassmorphism)?",
+          "options_ru": [
+            "filter: blur()",
+            "backdrop-filter: blur()",
+            "background-blur",
+            "opacity"
+          ],
+          "options_en": [
+            "filter: blur()",
+            "backdrop-filter: blur()",
+            "background-blur",
+            "opacity"
+          ],
+          "answer_ru": "backdrop-filter: blur()",
+          "answer_en": "backdrop-filter: blur()"
+        }
+      ]
+    },
+    "JS & TS": {
+      "easy": [
+        {
+          "id": "js_easy_1",
+          "question_ru": "Что делает оператор '===' в JavaScript?",
+          "question_en": "What does the '===' operator do in JavaScript?",
+          "options_ru": [
+            "Сравнивает значения без учета типа",
+            "Сравнивает значения и типы",
+            "Присваивает значение переменной",
+            "Проверяет только тип"
+          ],
+          "options_en": [
+            "Compares values without type",
+            "Compares both values and types",
+            "Assigns a value to a variable",
+            "Checks only type"
+          ],
+          "answer_ru": "Сравнивает значения и типы",
+          "answer_en": "Compares both values and types"
+        },
+        {
+          "id": "js_easy_2",
+          "question_ru": "Что возвращает typeof null?",
+          "question_en": "What does typeof null return?",
+          "options_ru": ["null", "object", "undefined", "string"],
+          "options_en": ["null", "object", "undefined", "string"],
+          "answer_ru": "object",
+          "answer_en": "object"
+        },
+        {
+          "id": "js_easy_3",
+          "question_ru": "Как добавить элемент в конец массива?",
+          "question_en": "How do you add an element to the end of an array?",
+          "options_ru": ["push()", "pop()", "shift()", "unshift()"],
+          "options_en": ["push()", "pop()", "shift()", "unshift()"],
+          "answer_ru": "push()",
+          "answer_en": "push()"
+        },
+        {
+          "id": "js_easy_4",
+          "question_ru": "Что делает JSON.stringify?",
+          "question_en": "What does JSON.stringify do?",
+          "options_ru": [
+            "Преобразует объект в строку JSON",
+            "Преобразует строку в объект",
+            "Сохраняет данные в localStorage",
+            "Удаляет объект"
+          ],
+          "options_en": [
+            "Converts an object to a JSON string",
+            "Converts a string to an object",
+            "Saves data to localStorage",
+            "Deletes an object"
+          ],
+          "answer_ru": "Преобразует объект в строку JSON",
+          "answer_en": "Converts an object to a JSON string"
+        },
+        {
+          "id": "js_easy_5",
+          "question_ru": "Как округлить число до ближайшего целого?",
+          "question_en": "How do you round a number to the nearest integer?",
+          "options_ru": [
+            "Math.floor()",
+            "Math.ceil()",
+            "Math.round()",
+            "parseInt()"
+          ],
+          "options_en": [
+            "Math.floor()",
+            "Math.ceil()",
+            "Math.round()",
+            "parseInt()"
+          ],
+          "answer_ru": "Math.round()",
+          "answer_en": "Math.round()"
+        },
+        {
+          "id": "js_easy_6",
+          "question_ru": "Как удалить последний элемент массива?",
+          "question_en": "How do you remove the last element of an array?",
+          "options_ru": ["push()", "pop()", "shift()", "splice()"],
+          "options_en": ["push()", "pop()", "shift()", "splice()"],
+          "answer_ru": "pop()",
+          "answer_en": "pop()"
+        },
+        {
+          "id": "js_easy_7",
+          "question_ru": "Что делает функция alert()?",
+          "question_en": "What does the alert() function do?",
+          "options_ru": [
+            "Выводит сообщение в консоль",
+            "Показывает всплывающее окно",
+            "Сохраняет данные",
+            "Удаляет переменную"
+          ],
+          "options_en": [
+            "Logs a message to console",
+            "Shows a popup window",
+            "Saves data",
+            "Deletes a variable"
+          ],
+          "answer_ru": "Показывает всплывающее окно",
+          "answer_en": "Shows a popup window"
+        },
+        {
+          "id": "js_easy_8",
+          "question_ru": "Как проверить длину строки?",
+          "question_en": "How do you check the length of a string?",
+          "options_ru": [
+            "string.size",
+            "string.length",
+            "string.count()",
+            "string.len()"
+          ],
+          "options_en": [
+            "string.size",
+            "string.length",
+            "string.count()",
+            "string.len()"
+          ],
+          "answer_ru": "string.length",
+          "answer_en": "string.length"
+        },
+        {
+          "id": "js_easy_9",
+          "question_ru": "Что делает оператор '||'?",
+          "question_en": "What does the '||' operator do?",
+          "options_ru": [
+            "Возвращает первое ложное значение",
+            "Возвращает первое истинное значение",
+            "Сравнивает типы",
+            "Присваивает значение"
+          ],
+          "options_en": [
+            "Returns the first false value",
+            "Returns the first true value",
+            "Compares types",
+            "Assigns a value"
+          ],
+          "answer_ru": "Возвращает первое истинное значение",
+          "answer_en": "Returns the first true value"
+        },
+        {
+          "id": "js_easy_10",
+          "question_ru": "Как объединить два массива?",
+          "question_en": "How do you merge two arrays?",
+          "options_ru": ["concat()", "merge()", "join()", "combine()"],
+          "options_en": ["concat()", "merge()", "join()", "combine()"],
+          "answer_ru": "concat()",
+          "answer_en": "concat()"
+        },
+        {
+          "id": "js_easy_11",
+          "question_ru": "Что делает Math.random()?",
+          "question_en": "What does Math.random() do?",
+          "options_ru": [
+            "Возвращает случайное число от 0 до 1",
+            "Возвращает целое число",
+            "Округляет число",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Returns a random number between 0 and 1",
+            "Returns an integer",
+            "Rounds a number",
+            "Creates an array"
+          ],
+          "answer_ru": "Возвращает случайное число от 0 до 1",
+          "answer_en": "Returns a random number between 0 and 1"
+        },
+        {
+          "id": "js_easy_12",
+          "question_ru": "Как получить последний элемент массива?",
+          "question_en": "How do you get the last element of an array?",
+          "options_ru": [
+            "array.last()",
+            "array[array.length - 1]",
+            "array.end()",
+            "array.pop()"
+          ],
+          "options_en": [
+            "array.last()",
+            "array[array.length - 1]",
+            "array.end()",
+            "array.pop()"
+          ],
+          "answer_ru": "array[array.length - 1]",
+          "answer_en": "array[array.length - 1]"
+        },
+        {
+          "id": "js_easy_13",
+          "question_ru": "Что делает Array.includes()?",
+          "question_en": "What does Array.includes() do?",
+          "options_ru": [
+            "Проверяет наличие элемента",
+            "Добавляет элемент",
+            "Удаляет элемент",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Checks if an element exists",
+            "Adds an element",
+            "Removes an element",
+            "Sorts the array"
+          ],
+          "answer_ru": "Проверяет наличие элемента",
+          "answer_en": "Checks if an element exists"
+        },
+        {
+          "id": "js_easy_14",
+          "question_ru": "Как объявить функцию в JavaScript?",
+          "question_en": "How do you declare a function in JavaScript?",
+          "options_ru": [
+            "function myFunc() {}",
+            "func myFunc() {}",
+            "def myFunc() {}",
+            "fn myFunc() {}"
+          ],
+          "options_en": [
+            "function myFunc() {}",
+            "func myFunc() {}",
+            "def myFunc() {}",
+            "fn myFunc() {}"
+          ],
+          "answer_ru": "function myFunc() {}",
+          "answer_en": "function myFunc() {}"
+        },
+        {
+          "id": "js_easy_15",
+          "question_ru": "Что делает Array.filter()?",
+          "question_en": "What does Array.filter() do?",
+          "options_ru": [
+            "Создает новый массив с элементами, прошедшими проверку",
+            "Удаляет все элементы",
+            "Сортирует массив",
+            "Объединяет массивы"
+          ],
+          "options_en": [
+            "Creates a new array with elements that pass a test",
+            "Removes all elements",
+            "Sorts the array",
+            "Merges arrays"
+          ],
+          "answer_ru": "Создает новый массив с элементами, прошедшими проверку",
+          "answer_en": "Creates a new array with elements that pass a test"
+        },
+
+        {
+          "id": "js_easy_16",
+          "question_ru": "Что делает Array.map()?",
+          "question_en": "What does Array.map() do?",
+          "options_ru": [
+            "Создает новый массив, применяя функцию к каждому элементу",
+            "Удаляет элементы массива",
+            "Сортирует массив",
+            "Объединяет массивы"
+          ],
+          "options_en": [
+            "Creates a new array by applying a function to each element",
+            "Removes elements from the array",
+            "Sorts the array",
+            "Merges arrays"
+          ],
+          "answer_ru": "Создает новый массив, применяя функцию к каждому элементу",
+          "answer_en": "Creates a new array by applying a function to each element"
+        },
+        {
+          "id": "js_easy_17",
+          "question_ru": "Что такое undefined?",
+          "question_en": "What is undefined?",
+          "options_ru": [
+            "Значение переменной, которой не присвоено значение",
+            "Ошибка выполнения",
+            "Тип данных",
+            "Функция"
+          ],
+          "options_en": [
+            "A variable that has not been assigned a value",
+            "A runtime error",
+            "A data type",
+            "A function"
+          ],
+          "answer_ru": "Значение переменной, которой не присвоено значение",
+          "answer_en": "A variable that has not been assigned a value"
+        },
+        {
+          "id": "js_easy_18",
+          "question_ru": "Как объявить объект в JavaScript?",
+          "question_en": "How do you declare an object in JavaScript?",
+          "options_ru": [
+            "let obj = {}",
+            "let obj = []",
+            "let obj = ()",
+            "let obj = <>"
+          ],
+          "options_en": [
+            "let obj = {}",
+            "let obj = []",
+            "let obj = ()",
+            "let obj = <>"
+          ],
+          "answer_ru": "let obj = {}",
+          "answer_en": "let obj = {}"
+        },
+        {
+          "id": "js_easy_19",
+          "question_ru": "Что делает оператор '&&'?",
+          "question_en": "What does the '&&' operator do?",
+          "options_ru": [
+            "Возвращает первое ложное значение",
+            "Возвращает первое истинное значение",
+            "Сравнивает типы",
+            "Присваивает значение"
+          ],
+          "options_en": [
+            "Returns the first false value",
+            "Returns the first true value",
+            "Compares types",
+            "Assigns a value"
+          ],
+          "answer_ru": "Возвращает первое ложное значение",
+          "answer_en": "Returns the first false value"
+        },
+        {
+          "id": "js_easy_20",
+          "question_ru": "Что делает setTimeout?",
+          "question_en": "What does setTimeout do?",
+          "options_ru": [
+            "Выполняет функцию через заданное время",
+            "Останавливает выполнение программы",
+            "Удаляет переменную",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Executes a function after a specified time",
+            "Stops program execution",
+            "Deletes a variable",
+            "Creates an array"
+          ],
+          "answer_ru": "Выполняет функцию через заданное время",
+          "answer_en": "Executes a function after a specified time"
+        },
+        {
+          "id": "js_easy_21",
+          "question_ru": "Что делает Array.shift()?",
+          "question_en": "What does Array.shift() do?",
+          "options_ru": [
+            "Удаляет первый элемент массива",
+            "Удаляет последний элемент массива",
+            "Добавляет элемент в конец",
+            "Добавляет элемент в начало"
+          ],
+          "options_en": [
+            "Removes the first element of the array",
+            "Removes the last element of the array",
+            "Adds an element to the end",
+            "Adds an element to the beginning"
+          ],
+          "answer_ru": "Удаляет первый элемент массива",
+          "answer_en": "Removes the first element of the array"
+        },
+        {
+          "id": "js_easy_22",
+          "question_ru": "Что делает Array.unshift()?",
+          "question_en": "What does Array.unshift() do?",
+          "options_ru": [
+            "Добавляет элемент в начало массива",
+            "Добавляет элемент в конец массива",
+            "Удаляет элемент",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Adds an element to the beginning of the array",
+            "Adds an element to the end of the array",
+            "Removes an element",
+            "Sorts the array"
+          ],
+          "answer_ru": "Добавляет элемент в начало массива",
+          "answer_en": "Adds an element to the beginning of the array"
+        },
+        {
+          "id": "js_easy_23",
+          "question_ru": "Что делает parseInt()?",
+          "question_en": "What does parseInt() do?",
+          "options_ru": [
+            "Преобразует строку в целое число",
+            "Преобразует число в строку",
+            "Округляет число",
+            "Удаляет пробелы"
+          ],
+          "options_en": [
+            "Converts a string to an integer",
+            "Converts a number to a string",
+            "Rounds a number",
+            "Removes spaces"
+          ],
+          "answer_ru": "Преобразует строку в целое число",
+          "answer_en": "Converts a string to an integer"
+        },
+        {
+          "id": "js_easy_24",
+          "question_ru": "Что делает Array.join()?",
+          "question_en": "What does Array.join() do?",
+          "options_ru": [
+            "Объединяет элементы массива в строку",
+            "Объединяет два массива",
+            "Удаляет элементы массива",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Joins array elements into a string",
+            "Merges two arrays",
+            "Removes array elements",
+            "Sorts the array"
+          ],
+          "answer_ru": "Объединяет элементы массива в строку",
+          "answer_en": "Joins array elements into a string"
+        },
+        {
+          "id": "js_easy_25",
+          "question_ru": "Что делает Array.reverse()?",
+          "question_en": "What does Array.reverse() do?",
+          "options_ru": [
+            "Меняет порядок элементов массива на обратный",
+            "Удаляет элементы массива",
+            "Сортирует массив по возрастанию",
+            "Объединяет массивы"
+          ],
+          "options_en": [
+            "Reverses the order of array elements",
+            "Removes array elements",
+            "Sorts the array in ascending order",
+            "Merges arrays"
+          ],
+          "answer_ru": "Меняет порядок элементов массива на обратный",
+          "answer_en": "Reverses the order of array elements"
+        },
+
+        {
+          "id": "js_easy_26",
+          "question_ru": "Что делает Array.slice()?",
+          "question_en": "What does Array.slice() do?",
+          "options_ru": [
+            "Возвращает часть массива",
+            "Удаляет элементы массива",
+            "Сортирует массив",
+            "Объединяет массивы"
+          ],
+          "options_en": [
+            "Returns a portion of the array",
+            "Removes elements from the array",
+            "Sorts the array",
+            "Merges arrays"
+          ],
+          "answer_ru": "Возвращает часть массива",
+          "answer_en": "Returns a portion of the array"
+        },
+        {
+          "id": "js_easy_27",
+          "question_ru": "Что делает Array.splice()?",
+          "question_en": "What does Array.splice() do?",
+          "options_ru": [
+            "Изменяет массив, добавляя или удаляя элементы",
+            "Создает новый массив",
+            "Сортирует массив",
+            "Объединяет массивы"
+          ],
+          "options_en": [
+            "Changes the array by adding or removing elements",
+            "Creates a new array",
+            "Sorts the array",
+            "Merges arrays"
+          ],
+          "answer_ru": "Изменяет массив, добавляя или удаляя элементы",
+          "answer_en": "Changes the array by adding or removing elements"
+        },
+        {
+          "id": "js_easy_28",
+          "question_ru": "Что делает isNaN()?",
+          "question_en": "What does isNaN() do?",
+          "options_ru": [
+            "Проверяет, является ли значение числом",
+            "Проверяет, является ли значение NaN",
+            "Преобразует строку в число",
+            "Удаляет переменную"
+          ],
+          "options_en": [
+            "Checks if a value is a number",
+            "Checks if a value is NaN",
+            "Converts a string to a number",
+            "Deletes a variable"
+          ],
+          "answer_ru": "Проверяет, является ли значение NaN",
+          "answer_en": "Checks if a value is NaN"
+        },
+        {
+          "id": "js_easy_29",
+          "question_ru": "Что делает Number()?",
+          "question_en": "What does Number() do?",
+          "options_ru": [
+            "Преобразует значение в число",
+            "Преобразует число в строку",
+            "Округляет число",
+            "Удаляет переменную"
+          ],
+          "options_en": [
+            "Converts a value to a number",
+            "Converts a number to a string",
+            "Rounds a number",
+            "Deletes a variable"
+          ],
+          "answer_ru": "Преобразует значение в число",
+          "answer_en": "Converts a value to a number"
+        },
+        {
+          "id": "js_easy_30",
+          "question_ru": "Что делает Boolean()?",
+          "question_en": "What does Boolean() do?",
+          "options_ru": [
+            "Преобразует значение в логический тип",
+            "Преобразует число в строку",
+            "Удаляет переменную",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Converts a value to a boolean",
+            "Converts a number to a string",
+            "Deletes a variable",
+            "Creates an array"
+          ],
+          "answer_ru": "Преобразует значение в логический тип",
+          "answer_en": "Converts a value to a boolean"
+        }
+      ],
+      "medium": [
+        {
+          "id": "js_medium_1",
+          "question_ru": "Что такое замыкание (closure) в JavaScript?",
+          "question_en": "What is a closure in JavaScript?",
+          "options_ru": [
+            "Функция внутри другой функции, имеющая доступ к её переменным",
+            "Функция без параметров",
+            "Функция, которая возвращает объект",
+            "Функция, которая выполняется один раз"
+          ],
+          "options_en": [
+            "A function inside another function that has access to its variables",
+            "A function without parameters",
+            "A function that returns an object",
+            "A function that executes once"
+          ],
+          "answer_ru": "Функция внутри другой функции, имеющая доступ к её переменным",
+          "answer_en": "A function inside another function that has access to its variables"
+        },
+        {
+          "id": "js_medium_2",
+          "question_ru": "Как работает ключевое слово 'this' в JavaScript?",
+          "question_en": "How does the 'this' keyword work in JavaScript?",
+          "options_ru": [
+            "Ссылается на глобальный объект или текущий контекст",
+            "Всегда указывает на window",
+            "Указывает на родительскую функцию",
+            "Указывает на первый аргумент"
+          ],
+          "options_en": [
+            "Refers to the global object or current context",
+            "Always points to window",
+            "Points to the parent function",
+            "Points to the first argument"
+          ],
+          "answer_ru": "Ссылается на глобальный объект или текущий контекст",
+          "answer_en": "Refers to the global object or current context"
+        },
+        {
+          "id": "js_medium_3",
+          "question_ru": "Что такое прототипное наследование?",
+          "question_en": "What is prototypal inheritance?",
+          "options_ru": [
+            "Механизм, при котором объекты наследуют свойства от других объектов",
+            "Наследование классов",
+            "Копирование всех свойств объекта",
+            "Создание массива из объекта"
+          ],
+          "options_en": [
+            "A mechanism where objects inherit properties from other objects",
+            "Class inheritance",
+            "Copying all properties of an object",
+            "Creating an array from an object"
+          ],
+          "answer_ru": "Механизм, при котором объекты наследуют свойства от других объектов",
+          "answer_en": "A mechanism where objects inherit properties from other objects"
+        },
+        {
+          "id": "js_medium_4",
+          "question_ru": "Что такое промисы (Promises)?",
+          "question_en": "What are Promises in JavaScript?",
+          "options_ru": [
+            "Объекты для обработки асинхронных операций",
+            "Функции для работы с массивами",
+            "Методы для работы с объектами",
+            "События DOM"
+          ],
+          "options_en": [
+            "Objects for handling asynchronous operations",
+            "Functions for working with arrays",
+            "Methods for working with objects",
+            "DOM events"
+          ],
+          "answer_ru": "Объекты для обработки асинхронных операций",
+          "answer_en": "Objects for handling asynchronous operations"
+        },
+        {
+          "id": "js_medium_5",
+          "question_ru": "Как работает async/await?",
+          "question_en": "How does async/await work?",
+          "options_ru": [
+            "Позволяет писать асинхронный код в синхронном стиле",
+            "Создает новый массив",
+            "Удаляет переменные",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Allows writing asynchronous code in synchronous style",
+            "Creates a new array",
+            "Deletes variables",
+            "Sorts an array"
+          ],
+          "answer_ru": "Позволяет писать асинхронный код в синхронном стиле",
+          "answer_en": "Allows writing asynchronous code in synchronous style"
+        },
+        {
+          "id": "js_medium_6",
+          "question_ru": "Что делает Array.reduce()?",
+          "question_en": "What does Array.reduce() do?",
+          "options_ru": [
+            "Сводит массив к одному значению, применяя функцию",
+            "Удаляет элементы массива",
+            "Сортирует массив",
+            "Объединяет массивы"
+          ],
+          "options_en": [
+            "Reduces an array to a single value by applying a function",
+            "Removes elements from the array",
+            "Sorts the array",
+            "Merges arrays"
+          ],
+          "answer_ru": "Сводит массив к одному значению, применяя функцию",
+          "answer_en": "Reduces an array to a single value by applying a function"
+        },
+        {
+          "id": "js_medium_7",
+          "question_ru": "Что такое event bubbling?",
+          "question_en": "What is event bubbling?",
+          "options_ru": [
+            "Процесс, при котором событие поднимается от дочернего элемента к родительскому",
+            "Событие, которое выполняется один раз",
+            "Событие, которое всегда выполняется в глобальном контексте",
+            "Событие, которое не может быть остановлено"
+          ],
+          "options_en": [
+            "Process where an event propagates from child to parent element",
+            "An event that executes once",
+            "An event that always executes in global context",
+            "An event that cannot be stopped"
+          ],
+          "answer_ru": "Процесс, при котором событие поднимается от дочернего элемента к родительскому",
+          "answer_en": "Process where an event propagates from child to parent element"
+        },
+        {
+          "id": "js_medium_8",
+          "question_ru": "Как работают методы call, apply и bind?",
+          "question_en": "How do call, apply, and bind work?",
+          "options_ru": [
+            "Позволяют явно задавать контекст выполнения функции",
+            "Создают новый массив",
+            "Удаляют переменные",
+            "Сортируют массив"
+          ],
+          "options_en": [
+            "Allow explicitly setting the function execution context",
+            "Create a new array",
+            "Delete variables",
+            "Sort an array"
+          ],
+          "answer_ru": "Позволяют явно задавать контекст выполнения функции",
+          "answer_en": "Allow explicitly setting the function execution context"
+        },
+        {
+          "id": "js_medium_9",
+          "question_ru": "Что такое hoisting?",
+          "question_en": "What is hoisting?",
+          "options_ru": [
+            "Механизм, при котором объявления переменных и функций поднимаются в начало области видимости",
+            "Удаление переменных",
+            "Сортировка массива",
+            "Создание объекта"
+          ],
+          "options_en": [
+            "Mechanism where variable and function declarations are moved to the top of scope",
+            "Deleting variables",
+            "Sorting an array",
+            "Creating an object"
+          ],
+          "answer_ru": "Механизм, при котором объявления переменных и функций поднимаются в начало области видимости",
+          "answer_en": "Mechanism where variable and function declarations are moved to the top of scope"
+        },
+        {
+          "id": "js_medium_10",
+          "question_ru": "Что делает try...catch?",
+          "question_en": "What does try...catch do?",
+          "options_ru": [
+            "Обрабатывает ошибки выполнения",
+            "Удаляет переменные",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Handles runtime errors",
+            "Deletes variables",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Обрабатывает ошибки выполнения",
+          "answer_en": "Handles runtime errors"
+        },
+        {
+          "id": "js_medium_11",
+          "question_ru": "Что такое strict mode в JavaScript?",
+          "question_en": "What is strict mode in JavaScript?",
+          "options_ru": [
+            "Режим, который делает код более безопасным и строгим",
+            "Режим для работы с массивами",
+            "Режим для работы с DOM",
+            "Режим для асинхронного кода"
+          ],
+          "options_en": [
+            "Mode that makes code safer and stricter",
+            "Mode for working with arrays",
+            "Mode for working with DOM",
+            "Mode for asynchronous code"
+          ],
+          "answer_ru": "Режим, который делает код более безопасным и строгим",
+          "answer_en": "Mode that makes code safer and stricter"
+        },
+        {
+          "id": "js_medium_12",
+          "question_ru": "Что делает Object.assign()?",
+          "question_en": "What does Object.assign() do?",
+          "options_ru": [
+            "Копирует свойства одного объекта в другой",
+            "Удаляет объект",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Copies properties from one object to another",
+            "Deletes an object",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Копирует свойства одного объекта в другой",
+          "answer_en": "Copies properties from one object to another"
+        },
+        {
+          "id": "js_medium_13",
+          "question_ru": "Что такое shallow copy и deep copy?",
+          "question_en": "What are shallow copy and deep copy?",
+          "options_ru": [
+            "Shallow копирует только верхний уровень, deep копирует все уровни",
+            "Оба копируют полностью",
+            "Shallow копирует массивы, deep — объекты",
+            "Shallow копирует числа, deep — строки"
+          ],
+          "options_en": [
+            "Shallow copies only the top level, deep copies all levels",
+            "Both copy everything fully",
+            "Shallow copies arrays, deep copies objects",
+            "Shallow copies numbers, deep copies strings"
+          ],
+          "answer_ru": "Shallow копирует только верхний уровень, deep копирует все уровни",
+          "answer_en": "Shallow copies only the top level, deep copies all levels"
+        },
+        {
+          "id": "js_medium_14",
+          "question_ru": "Что делает setInterval()?",
+          "question_en": "What does setInterval() do?",
+          "options_ru": [
+            "Выполняет функцию через регулярные промежутки времени",
+            "Выполняет функцию один раз",
+            "Удаляет переменные",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Executes a function at regular intervals",
+            "Executes a function once",
+            "Deletes variables",
+            "Creates an array"
+          ],
+          "answer_ru": "Выполняет функцию через регулярные промежутки времени",
+          "answer_en": "Executes a function at regular intervals"
+        },
+        {
+          "id": "js_medium_15",
+          "question_ru": "Что такое debounce?",
+          "question_en": "What is debounce?",
+          "options_ru": [
+            "Ограничение частоты вызова функции",
+            "Удаление переменных",
+            "Сортировка массива",
+            "Создание объекта"
+          ],
+          "options_en": [
+            "Limits how often a function is called",
+            "Deletes variables",
+            "Sorts an array",
+            "Creates an object"
+          ],
+          "answer_ru": "Ограничение частоты вызова функции",
+          "answer_en": "Limits how often a function is called"
+        },
+        {
+          "id": "js_medium_16",
+          "question_ru": "Что делает localStorage?",
+          "question_en": "What does localStorage do?",
+          "options_ru": [
+            "Хранит данные в браузере без срока действия",
+            "Хранит данные только до закрытия вкладки",
+            "Удаляет переменные",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Stores data in the browser with no expiration",
+            "Stores data only until the tab is closed",
+            "Deletes variables",
+            "Creates an array"
+          ],
+          "answer_ru": "Хранит данные в браузере без срока действия",
+          "answer_en": "Stores data in the browser with no expiration"
+        },
+        {
+          "id": "js_medium_17",
+          "question_ru": "Что делает sessionStorage?",
+          "question_en": "What does sessionStorage do?",
+          "options_ru": [
+            "Хранит данные до закрытия вкладки",
+            "Хранит данные навсегда",
+            "Удаляет переменные",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Stores data until the tab is closed",
+            "Stores data permanently",
+            "Deletes variables",
+            "Creates an array"
+          ],
+          "answer_ru": "Хранит данные до закрытия вкладки",
+          "answer_en": "Stores data until the tab is closed"
+        },
+        {
+          "id": "js_medium_18",
+          "question_ru": "Что делает fetch API?",
+          "question_en": "What does the fetch API do?",
+          "options_ru": [
+            "Позволяет выполнять HTTP-запросы",
+            "Создает массив",
+            "Удаляет переменные",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Allows performing HTTP requests",
+            "Creates an array",
+            "Deletes variables",
+            "Sorts an array"
+          ],
+          "answer_ru": "Позволяет выполнять HTTP-запросы",
+          "answer_en": "Allows performing HTTP requests"
+        },
+        {
+          "id": "js_medium_19",
+          "question_ru": "Что такое CORS?",
+          "question_en": "What is CORS?",
+          "options_ru": [
+            "Механизм контроля доступа между разными доменами",
+            "Метод сортировки массива",
+            "Функция для работы с объектами",
+            "Событие DOM"
+          ],
+          "options_en": [
+            "Mechanism for controlling access between different domains",
+            "Array sorting method",
+            "Function for working with objects",
+            "DOM event"
+          ],
+          "answer_ru": "Механизм контроля доступа между разными доменами",
+          "answer_en": "Mechanism for controlling access between different domains"
+        },
+        {
+          "id": "js_medium_20",
+          "question_ru": "Что такое event delegation?",
+          "question_en": "What is event delegation?",
+          "options_ru": [
+            "Техника обработки событий через родительский элемент",
+            "Событие, которое выполняется один раз",
+            "Событие, которое всегда выполняется в глобальном контексте",
+            "Событие, которое нельзя остановить"
+          ],
+          "options_en": [
+            "Technique of handling events through a parent element",
+            "An event that executes once",
+            "An event that always executes in global context",
+            "An event that cannot be stopped"
+          ],
+          "answer_ru": "Техника обработки событий через родительский элемент",
+          "answer_en": "Technique of handling events through a parent element"
+        },
+
+        {
+          "id": "js_medium_11",
+          "question_ru": "Что такое strict mode в JavaScript?",
+          "question_en": "What is strict mode in JavaScript?",
+          "options_ru": [
+            "Режим, который делает код более безопасным и строгим",
+            "Режим для работы с массивами",
+            "Режим для работы с DOM",
+            "Режим для асинхронного кода"
+          ],
+          "options_en": [
+            "Mode that makes code safer and stricter",
+            "Mode for working with arrays",
+            "Mode for working with DOM",
+            "Mode for asynchronous code"
+          ],
+          "answer_ru": "Режим, который делает код более безопасным и строгим",
+          "answer_en": "Mode that makes code safer and stricter"
+        },
+        {
+          "id": "js_medium_12",
+          "question_ru": "Что делает Object.assign()?",
+          "question_en": "What does Object.assign() do?",
+          "options_ru": [
+            "Копирует свойства одного объекта в другой",
+            "Удаляет объект",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Copies properties from one object to another",
+            "Deletes an object",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Копирует свойства одного объекта в другой",
+          "answer_en": "Copies properties from one object to another"
+        },
+        {
+          "id": "js_medium_13",
+          "question_ru": "Что такое shallow copy и deep copy?",
+          "question_en": "What are shallow copy and deep copy?",
+          "options_ru": [
+            "Shallow копирует только верхний уровень, deep копирует все уровни",
+            "Оба копируют полностью",
+            "Shallow копирует массивы, deep — объекты",
+            "Shallow копирует числа, deep — строки"
+          ],
+          "options_en": [
+            "Shallow copies only the top level, deep copies all levels",
+            "Both copy everything fully",
+            "Shallow copies arrays, deep copies objects",
+            "Shallow copies numbers, deep copies strings"
+          ],
+          "answer_ru": "Shallow копирует только верхний уровень, deep копирует все уровни",
+          "answer_en": "Shallow copies only the top level, deep copies all levels"
+        },
+        {
+          "id": "js_medium_14",
+          "question_ru": "Что делает setInterval()?",
+          "question_en": "What does setInterval() do?",
+          "options_ru": [
+            "Выполняет функцию через регулярные промежутки времени",
+            "Выполняет функцию один раз",
+            "Удаляет переменные",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Executes a function at regular intervals",
+            "Executes a function once",
+            "Deletes variables",
+            "Creates an array"
+          ],
+          "answer_ru": "Выполняет функцию через регулярные промежутки времени",
+          "answer_en": "Executes a function at regular intervals"
+        },
+        {
+          "id": "js_medium_15",
+          "question_ru": "Что такое debounce?",
+          "question_en": "What is debounce?",
+          "options_ru": [
+            "Ограничение частоты вызова функции",
+            "Удаление переменных",
+            "Сортировка массива",
+            "Создание объекта"
+          ],
+          "options_en": [
+            "Limits how often a function is called",
+            "Deletes variables",
+            "Sorts an array",
+            "Creates an object"
+          ],
+          "answer_ru": "Ограничение частоты вызова функции",
+          "answer_en": "Limits how often a function is called"
+        },
+        {
+          "id": "js_medium_16",
+          "question_ru": "Что делает localStorage?",
+          "question_en": "What does localStorage do?",
+          "options_ru": [
+            "Хранит данные в браузере без срока действия",
+            "Хранит данные только до закрытия вкладки",
+            "Удаляет переменные",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Stores data in the browser with no expiration",
+            "Stores data only until the tab is closed",
+            "Deletes variables",
+            "Creates an array"
+          ],
+          "answer_ru": "Хранит данные в браузере без срока действия",
+          "answer_en": "Stores data in the browser with no expiration"
+        },
+        {
+          "id": "js_medium_17",
+          "question_ru": "Что делает sessionStorage?",
+          "question_en": "What does sessionStorage do?",
+          "options_ru": [
+            "Хранит данные до закрытия вкладки",
+            "Хранит данные навсегда",
+            "Удаляет переменные",
+            "Создает массив"
+          ],
+          "options_en": [
+            "Stores data until the tab is closed",
+            "Stores data permanently",
+            "Deletes variables",
+            "Creates an array"
+          ],
+          "answer_ru": "Хранит данные до закрытия вкладки",
+          "answer_en": "Stores data until the tab is closed"
+        },
+        {
+          "id": "js_medium_18",
+          "question_ru": "Что делает fetch API?",
+          "question_en": "What does the fetch API do?",
+          "options_ru": [
+            "Позволяет выполнять HTTP-запросы",
+            "Создает массив",
+            "Удаляет переменные",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Allows performing HTTP requests",
+            "Creates an array",
+            "Deletes variables",
+            "Sorts an array"
+          ],
+          "answer_ru": "Позволяет выполнять HTTP-запросы",
+          "answer_en": "Allows performing HTTP requests"
+        },
+        {
+          "id": "js_medium_19",
+          "question_ru": "Что такое CORS?",
+          "question_en": "What is CORS?",
+          "options_ru": [
+            "Механизм контроля доступа между разными доменами",
+            "Метод сортировки массива",
+            "Функция для работы с объектами",
+            "Событие DOM"
+          ],
+          "options_en": [
+            "Mechanism for controlling access between different domains",
+            "Array sorting method",
+            "Function for working with objects",
+            "DOM event"
+          ],
+          "answer_ru": "Механизм контроля доступа между разными доменами",
+          "answer_en": "Mechanism for controlling access between different domains"
+        },
+        {
+          "id": "js_medium_20",
+          "question_ru": "Что такое event delegation?",
+          "question_en": "What is event delegation?",
+          "options_ru": [
+            "Техника обработки событий через родительский элемент",
+            "Событие, которое выполняется один раз",
+            "Событие, которое всегда выполняется в глобальном контексте",
+            "Событие, которое нельзя остановить"
+          ],
+          "options_en": [
+            "Technique of handling events through a parent element",
+            "An event that executes once",
+            "An event that always executes in global context",
+            "An event that cannot be stopped"
+          ],
+          "answer_ru": "Техника обработки событий через родительский элемент",
+          "answer_en": "Technique of handling events through a parent element"
+        }
+      ],
+      "hard": [
+        {
+          "id": "ts_1",
+          "question_ru": "Что такое TypeScript и чем он отличается от JavaScript?",
+          "question_en": "What is TypeScript and how is it different from JavaScript?",
+          "options_ru": [
+            "Язык надстройка над JavaScript с типизацией",
+            "Новый язык без связи с JS",
+            "Фреймворк для работы с DOM",
+            "Библиотека для работы с массивами"
+          ],
+          "options_en": [
+            "A superset of JavaScript with typing",
+            "A new language unrelated to JS",
+            "A framework for working with DOM",
+            "A library for working with arrays"
+          ],
+          "answer_ru": "Язык надстройка над JavaScript с типизацией",
+          "answer_en": "A superset of JavaScript with typing"
+        },
+        {
+          "id": "ts_2",
+          "question_ru": "Как объявить переменную типа string?",
+          "question_en": "How do you declare a variable of type string?",
+          "options_ru": [
+            "let name: string = 'Hello'",
+            "let name = 'Hello'",
+            "let name: number = 'Hello'",
+            "let name: any = 'Hello'"
+          ],
+          "options_en": [
+            "let name: string = 'Hello'",
+            "let name = 'Hello'",
+            "let name: number = 'Hello'",
+            "let name: any = 'Hello'"
+          ],
+          "answer_ru": "let name: string = 'Hello'",
+          "answer_en": "let name: string = 'Hello'"
+        },
+        {
+          "id": "ts_3",
+          "question_ru": "Что такое тип any?",
+          "question_en": "What is the any type?",
+          "options_ru": [
+            "Тип, который отключает проверку типов",
+            "Тип для строк",
+            "Тип для чисел",
+            "Тип для объектов"
+          ],
+          "options_en": [
+            "A type that disables type checking",
+            "A type for strings",
+            "A type for numbers",
+            "A type for objects"
+          ],
+          "answer_ru": "Тип, который отключает проверку типов",
+          "answer_en": "A type that disables type checking"
+        },
+        {
+          "id": "ts_4",
+          "question_ru": "Что такое unknown?",
+          "question_en": "What is unknown?",
+          "options_ru": [
+            "Безопасный аналог any",
+            "Тип для строк",
+            "Тип для чисел",
+            "Тип для массивов"
+          ],
+          "options_en": [
+            "A safer alternative to any",
+            "A type for strings",
+            "A type for numbers",
+            "A type for arrays"
+          ],
+          "answer_ru": "Безопасный аналог any",
+          "answer_en": "A safer alternative to any"
+        },
+        {
+          "id": "ts_5",
+          "question_ru": "Какой тип используется для значений, которые никогда не возвращаются?",
+          "question_en": "Which type is used for values that never return?",
+          "options_ru": ["any", "unknown", "never", "void"],
+          "options_en": ["any", "unknown", "never", "void"],
+          "answer_ru": "never",
+          "answer_en": "never"
+        },
+        {
+          "id": "ts_6",
+          "question_ru": "Как объявить интерфейс?",
+          "question_en": "How do you declare an interface?",
+          "options_ru": [
+            "interface User { name: string }",
+            "class User { name: string }",
+            "type User = { name: string }",
+            "function User() {}"
+          ],
+          "options_en": [
+            "interface User { name: string }",
+            "class User { name: string }",
+            "type User = { name: string }",
+            "function User() {}"
+          ],
+          "answer_ru": "interface User { name: string }",
+          "answer_en": "interface User { name: string }"
+        },
+        {
+          "id": "ts_7",
+          "question_ru": "В чем отличие type от interface?",
+          "question_en": "What is the difference between type and interface?",
+          "options_ru": [
+            "type может объединять типы, interface — расширять",
+            "Они полностью одинаковы",
+            "interface используется только для массивов",
+            "type используется только для чисел"
+          ],
+          "options_en": [
+            "type can combine types, interface can extend",
+            "They are completely identical",
+            "interface is only for arrays",
+            "type is only for numbers"
+          ],
+          "answer_ru": "type может объединять типы, interface — расширять",
+          "answer_en": "type can combine types, interface can extend"
+        },
+        {
+          "id": "ts_8",
+          "question_ru": "Что такое enum?",
+          "question_en": "What is an enum?",
+          "options_ru": [
+            "Перечисление фиксированных значений",
+            "Функция",
+            "Массив",
+            "Объект"
+          ],
+          "options_en": [
+            "A set of fixed values",
+            "A function",
+            "An array",
+            "An object"
+          ],
+          "answer_ru": "Перечисление фиксированных значений",
+          "answer_en": "A set of fixed values"
+        },
+        {
+          "id": "ts_9",
+          "question_ru": "Что такое tuple?",
+          "question_en": "What is a tuple?",
+          "options_ru": [
+            "Массив фиксированной длины с определенными типами",
+            "Обычный массив",
+            "Объект",
+            "Функция"
+          ],
+          "options_en": [
+            "An array of fixed length with specific types",
+            "A regular array",
+            "An object",
+            "A function"
+          ],
+          "answer_ru": "Массив фиксированной длины с определенными типами",
+          "answer_en": "An array of fixed length with specific types"
+        },
+        {
+          "id": "ts_10",
+          "question_ru": "Что делает readonly?",
+          "question_en": "What does readonly do?",
+          "options_ru": [
+            "Делает свойство доступным только для чтения",
+            "Удаляет свойство",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Makes a property read-only",
+            "Deletes a property",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Делает свойство доступным только для чтения",
+          "answer_en": "Makes a property read-only"
+        },
+
+        {
+          "id": "ts_11",
+          "question_ru": "Что такое optional properties в интерфейсе?",
+          "question_en": "What are optional properties in an interface?",
+          "options_ru": [
+            "Свойства, которые могут быть не указаны",
+            "Свойства, которые всегда обязательны",
+            "Свойства только для массивов",
+            "Свойства только для чисел"
+          ],
+          "options_en": [
+            "Properties that may be omitted",
+            "Properties that are always required",
+            "Properties only for arrays",
+            "Properties only for numbers"
+          ],
+          "answer_ru": "Свойства, которые могут быть не указаны",
+          "answer_en": "Properties that may be omitted"
+        },
+        {
+          "id": "ts_12",
+          "question_ru": "Что такое union types?",
+          "question_en": "What are union types?",
+          "options_ru": [
+            "Тип, который может быть одним из нескольких",
+            "Тип только для строк",
+            "Тип только для чисел",
+            "Тип только для объектов"
+          ],
+          "options_en": [
+            "A type that can be one of several types",
+            "A type only for strings",
+            "A type only for numbers",
+            "A type only for objects"
+          ],
+          "answer_ru": "Тип, который может быть одним из нескольких",
+          "answer_en": "A type that can be one of several types"
+        },
+        {
+          "id": "ts_13",
+          "question_ru": "Что такое intersection types?",
+          "question_en": "What are intersection types?",
+          "options_ru": [
+            "Тип, объединяющий несколько типов",
+            "Тип только для массивов",
+            "Тип только для строк",
+            "Тип только для чисел"
+          ],
+          "options_en": [
+            "A type that combines multiple types",
+            "A type only for arrays",
+            "A type only for strings",
+            "A type only for numbers"
+          ],
+          "answer_ru": "Тип, объединяющий несколько типов",
+          "answer_en": "A type that combines multiple types"
+        },
+        {
+          "id": "ts_14",
+          "question_ru": "Что такое type inference?",
+          "question_en": "What is type inference?",
+          "options_ru": [
+            "Автоматическое определение типа компилятором",
+            "Ручное указание типа",
+            "Удаление типа",
+            "Создание массива"
+          ],
+          "options_en": [
+            "Automatic determination of type by the compiler",
+            "Manual type declaration",
+            "Removing a type",
+            "Creating an array"
+          ],
+          "answer_ru": "Автоматическое определение типа компилятором",
+          "answer_en": "Automatic determination of type by the compiler"
+        },
+        {
+          "id": "ts_15",
+          "question_ru": "Что такое type assertion?",
+          "question_en": "What is type assertion?",
+          "options_ru": [
+            "Принудительное указание типа для значения",
+            "Удаление типа",
+            "Создание массива",
+            "Сортировка массива"
+          ],
+          "options_en": [
+            "Forcing a type on a value",
+            "Removing a type",
+            "Creating an array",
+            "Sorting an array"
+          ],
+          "answer_ru": "Принудительное указание типа для значения",
+          "answer_en": "Forcing a type on a value"
+        },
+        {
+          "id": "ts_16",
+          "question_ru": "Что делает 'as const'?",
+          "question_en": "What does 'as const' do?",
+          "options_ru": [
+            "Делает значения неизменяемыми и фиксированными",
+            "Удаляет переменные",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Makes values immutable and fixed",
+            "Deletes variables",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Делает значения неизменяемыми и фиксированными",
+          "answer_en": "Makes values immutable and fixed"
+        },
+        {
+          "id": "ts_17",
+          "question_ru": "Что такое generic types?",
+          "question_en": "What are generic types?",
+          "options_ru": [
+            "Типы, которые позволяют использовать параметры для гибкости",
+            "Типы только для строк",
+            "Типы только для чисел",
+            "Типы только для объектов"
+          ],
+          "options_en": [
+            "Types that allow parameters for flexibility",
+            "Types only for strings",
+            "Types only for numbers",
+            "Types only for objects"
+          ],
+          "answer_ru": "Типы, которые позволяют использовать параметры для гибкости",
+          "answer_en": "Types that allow parameters for flexibility"
+        },
+        {
+          "id": "ts_18",
+          "question_ru": "Что делает Partial<T>?",
+          "question_en": "What does Partial<T> do?",
+          "options_ru": [
+            "Делает все свойства типа необязательными",
+            "Удаляет свойства",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Makes all properties of a type optional",
+            "Deletes properties",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Делает все свойства типа необязательными",
+          "answer_en": "Makes all properties of a type optional"
+        },
+        {
+          "id": "ts_19",
+          "question_ru": "Что делает Pick<T, K>?",
+          "question_en": "What does Pick<T, K> do?",
+          "options_ru": [
+            "Создает тип с выбранными свойствами",
+            "Удаляет свойства",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Creates a type with selected properties",
+            "Deletes properties",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Создает тип с выбранными свойствами",
+          "answer_en": "Creates a type with selected properties"
+        },
+        {
+          "id": "ts_20",
+          "question_ru": "Что делает Omit<T, K>?",
+          "question_en": "What does Omit<T, K> do?",
+          "options_ru": [
+            "Создает тип без указанных свойств",
+            "Удаляет все свойства",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Creates a type without specified properties",
+            "Deletes all properties",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Создает тип без указанных свойств",
+          "answer_en": "Creates a type without specified properties"
+        },
+
+        {
+          "id": "ts_21",
+          "question_ru": "Что делает Record<K, T>?",
+          "question_en": "What does Record<K, T> do?",
+          "options_ru": [
+            "Создает тип объекта с ключами K и значениями T",
+            "Удаляет свойства",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Creates an object type with keys K and values T",
+            "Deletes properties",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Создает тип объекта с ключами K и значениями T",
+          "answer_en": "Creates an object type with keys K and values T"
+        },
+        {
+          "id": "ts_22",
+          "question_ru": "Что делает keyof?",
+          "question_en": "What does keyof do?",
+          "options_ru": [
+            "Возвращает тип, представляющий ключи объекта",
+            "Удаляет ключи",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Returns a type representing the keys of an object",
+            "Deletes keys",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Возвращает тип, представляющий ключи объекта",
+          "answer_en": "Returns a type representing the keys of an object"
+        },
+        {
+          "id": "ts_23",
+          "question_ru": "Что делает typeof в TypeScript?",
+          "question_en": "What does typeof do in TypeScript?",
+          "options_ru": [
+            "Возвращает тип значения",
+            "Удаляет переменные",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Returns the type of a value",
+            "Deletes variables",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Возвращает тип значения",
+          "answer_en": "Returns the type of a value"
+        },
+        {
+          "id": "ts_24",
+          "question_ru": "Что такое conditional types?",
+          "question_en": "What are conditional types?",
+          "options_ru": [
+            "Типы, которые зависят от условия",
+            "Типы только для строк",
+            "Типы только для чисел",
+            "Типы только для объектов"
+          ],
+          "options_en": [
+            "Types that depend on a condition",
+            "Types only for strings",
+            "Types only for numbers",
+            "Types only for objects"
+          ],
+          "answer_ru": "Типы, которые зависят от условия",
+          "answer_en": "Types that depend on a condition"
+        },
+        {
+          "id": "ts_25",
+          "question_ru": "Что такое mapped types?",
+          "question_en": "What are mapped types?",
+          "options_ru": [
+            "Типы, которые создаются путем перебора ключей",
+            "Типы только для массивов",
+            "Типы только для строк",
+            "Типы только для чисел"
+          ],
+          "options_en": [
+            "Types created by iterating over keys",
+            "Types only for arrays",
+            "Types only for strings",
+            "Types only for numbers"
+          ],
+          "answer_ru": "Типы, которые создаются путем перебора ключей",
+          "answer_en": "Types created by iterating over keys"
+        },
+        {
+          "id": "ts_26",
+          "question_ru": "Что такое utility types?",
+          "question_en": "What are utility types?",
+          "options_ru": [
+            "Готовые встроенные типы для упрощения работы",
+            "Типы только для строк",
+            "Типы только для чисел",
+            "Типы только для объектов"
+          ],
+          "options_en": [
+            "Built-in types that simplify work",
+            "Types only for strings",
+            "Types only for numbers",
+            "Types only for objects"
+          ],
+          "answer_ru": "Готовые встроенные типы для упрощения работы",
+          "answer_en": "Built-in types that simplify work"
+        },
+        {
+          "id": "ts_27",
+          "question_ru": "Что такое decorators?",
+          "question_en": "What are decorators?",
+          "options_ru": [
+            "Специальные аннотации для классов и методов",
+            "Функции для массивов",
+            "Методы для объектов",
+            "События DOM"
+          ],
+          "options_en": [
+            "Special annotations for classes and methods",
+            "Functions for arrays",
+            "Methods for objects",
+            "DOM events"
+          ],
+          "answer_ru": "Специальные аннотации для классов и методов",
+          "answer_en": "Special annotations for classes and methods"
+        },
+        {
+          "id": "ts_28",
+          "question_ru": "Что такое namespace?",
+          "question_en": "What is a namespace?",
+          "options_ru": [
+            "Механизм организации кода в логические блоки",
+            "Функция для массивов",
+            "Метод для объектов",
+            "Событие DOM"
+          ],
+          "options_en": [
+            "A mechanism for organizing code into logical blocks",
+            "A function for arrays",
+            "A method for objects",
+            "A DOM event"
+          ],
+          "answer_ru": "Механизм организации кода в логические блоки",
+          "answer_en": "A mechanism for organizing code into logical blocks"
+        },
+        {
+          "id": "ts_29",
+          "question_ru": "Что такое ambient declarations (.d.ts)?",
+          "question_en": "What are ambient declarations (.d.ts)?",
+          "options_ru": [
+            "Файлы для описания типов внешних библиотек",
+            "Файлы для хранения данных",
+            "Файлы для массивов",
+            "Файлы для строк"
+          ],
+          "options_en": [
+            "Files for describing types of external libraries",
+            "Files for storing data",
+            "Files for arrays",
+            "Files for strings"
+          ],
+          "answer_ru": "Файлы для описания типов внешних библиотек",
+          "answer_en": "Files for describing types of external libraries"
+        },
+        {
+          "id": "ts_30",
+          "question_ru": "Что делает strictNullChecks?",
+          "question_en": "What does strictNullChecks do?",
+          "options_ru": [
+            "Включает строгую проверку null и undefined",
+            "Удаляет переменные",
+            "Создает массив",
+            "Сортирует массив"
+          ],
+          "options_en": [
+            "Enables strict checking for null and undefined",
+            "Deletes variables",
+            "Creates an array",
+            "Sorts an array"
+          ],
+          "answer_ru": "Включает строгую проверку null и undefined",
+          "answer_en": "Enables strict checking for null and undefined"
+        }
+      ]
+    }
+  }
+}
