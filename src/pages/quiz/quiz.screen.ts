@@ -140,8 +140,11 @@ export async function quizScreen(): Promise<HTMLElement> {
         explainEl
       }),
     container,
-    optionsEl
-    //quizSelection
+    optionsEl,
+    checkBtn,
+    tryBtn,
+    explainBtn,
+    explainEl
   })
 
   quizTryAgain({

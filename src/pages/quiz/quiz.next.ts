@@ -1,5 +1,5 @@
 import { Question } from '../../scripts/services/quiz.service'
-//import { resetUIState, updateUIState } from './quiz.state'
+import { applyUIState, updateUIState } from './quiz.state'
 
 export interface QuizNextParams {
   nextBtn: HTMLButtonElement
@@ -9,7 +9,10 @@ export interface QuizNextParams {
   setIndex: (value: number) => void
   quizRenderQuestion: () => void
   optionsEl: HTMLElement
-  //quizSelection: (optionsEl: HTMLElement, cb: (v: string) => void) => void
+  checkBtn: HTMLButtonElement
+  tryBtn: HTMLButtonElement
+  explainBtn: HTMLButtonElement
+  explainEl: HTMLElement
 }
 
 export function quizNext({
@@ -19,8 +22,11 @@ export function quizNext({
   setIndex,
   quizRenderQuestion,
   container,
- // optionsEl
-  //quizSelection
+  optionsEl,
+  checkBtn,
+  tryBtn,
+  explainBtn,
+  explainEl
 }: QuizNextParams): void {
   nextBtn.addEventListener('click', () => {
     const current = getIndex()
@@ -33,12 +39,32 @@ export function quizNext({
 
     setIndex(next)
 
-    //resetUIState()
+    updateUIState({
+      isChecked: false,
+      isCorrect: null,
+      selectedOption: null,
+      showNext: false,
+      showTryAgain: false,
+      showExplain: false,
+      showExplanation: false
+    })
+
+    // unlock option
+    optionsEl.classList.remove('quiz-locked')
+    optionsEl.style.pointerEvents = 'auto'
+    optionsEl.querySelectorAll('input').forEach((input) => {
+      input.disabled = false
+      input.checked = false
+    })
 
     quizRenderQuestion()
 
-    // quizSelection(optionsEl, (value: string) => {
-    //   updateUIState({ selectedOption: value })
-    // })
+    applyUIState({
+      checkBtn,
+      nextBtn,
+      tryBtn,
+      explainBtn,
+      explainEl
+    })
   })
 }
