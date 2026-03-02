@@ -1,8 +1,10 @@
 import { QuizCommonParams } from './quiz.selection'
+import { applyUIState, getUIState, updateUIState } from './quiz.state'
 
 export interface CheckLogicParams extends QuizCommonParams {
-  correctAnswer: string
-  getSelected: () => string | null
+  optionsEl: HTMLElement
+  explainEl: HTMLElement
+  getCorrectAnswer: () => string
   onResult: (isCorrect: boolean) => void
 }
 
@@ -12,15 +14,16 @@ export function quizCheck({
   nextBtn,
   tryBtn,
   explainBtn,
-  correctAnswer,
-  getSelected,
+  explainEl,
+  getCorrectAnswer,
   onResult
 }: CheckLogicParams): void {
   checkBtn.addEventListener('click', () => {
-    const selected = getSelected()
+    const selected = getUIState().selectedOption
+
     if (!selected) return
 
-    const isCorrect = selected === correctAnswer
+    const isCorrect = selected === getCorrectAnswer()
 
     optionsEl.querySelectorAll('.quiz-option').forEach((btn) => {
       btn.classList.remove('correct', 'wrong')
@@ -39,20 +42,27 @@ export function quizCheck({
         input.disabled = true
       })
 
-    checkBtn.style.display = 'none'
+    updateUIState({
+      isChecked: true,
+      isCorrect,
+      showNext: isCorrect,
+      showTryAgain: !isCorrect,
+      showExplain: true,
+      showExplanation: false
+    })
 
-    if (isCorrect) {
-      nextBtn.style.display = 'inline-block'
-      tryBtn.style.display = 'none'
-      explainBtn.style.display = 'none'
-    } else {
-      nextBtn.style.display = 'none'
-      tryBtn.style.display = 'inline-block'
-      explainBtn.style.display = 'inline-block'
-      explainBtn.disabled = false
-    }
+    applyUIState({
+      checkBtn,
+      nextBtn,
+      tryBtn,
+      explainBtn,
+      explainEl
+    })
+
     optionsEl.classList.add('quiz-locked')
-
+console.log("selected:", selected)
+console.log("correct:", getCorrectAnswer())
+console.log("equal:", selected === getCorrectAnswer())
     optionsEl.style.pointerEvents = 'none'
     onResult(isCorrect)
   })

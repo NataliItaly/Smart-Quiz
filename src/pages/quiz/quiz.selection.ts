@@ -8,7 +8,6 @@ export interface QuizCommonParams {
 
 export function quizSelection(
   optionsEl: HTMLElement,
-  checkBtn: HTMLButtonElement,
   onSelect: (value: string) => void
 ): void {
   optionsEl.addEventListener('click', (event) => {
@@ -25,7 +24,8 @@ export function quizSelection(
 
     input.checked = true
 
-    checkBtn.disabled = false
     onSelect(input.value)
+    console.log("selectedOption:", input.value)
+    
   })
 }

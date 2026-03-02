@@ -16,7 +16,7 @@ export class Router {
 
   public init() {
     window.addEventListener("popstate", () => this.handleLocation());
-    //window.addEventListener("DOMContentLoaded", () => this.handleLocation());
+    window.addEventListener("DOMContentLoaded", () => this.handleLocation());
     this.handleLocation();
   }
 

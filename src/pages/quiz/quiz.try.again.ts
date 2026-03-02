@@ -1,4 +1,5 @@
 import { QuizCommonParams } from './quiz.selection'
+import { applyUIState, updateUIState } from './quiz.state'
 
 export interface TryAgainParams extends QuizCommonParams {
   clearSelected: () => void
@@ -15,7 +16,9 @@ export function quizTryAgain({
   explainEl
 }: TryAgainParams): void {
   tryBtn.addEventListener('click', () => {
+    // unblock option
     optionsEl.classList.remove('quiz-locked')
+    optionsEl.style.pointerEvents = 'auto'
 
     optionsEl.style.pointerEvents = 'auto'
     optionsEl.querySelectorAll('.quiz-option').forEach((label) => {
@@ -27,14 +30,22 @@ export function quizTryAgain({
 
     clearSelected()
 
-    checkBtn.style.display = 'inline-block'
-    checkBtn.disabled = true
+    updateUIState({
+      isChecked: false,
+      isCorrect: null,
+      selectedOption: null,
+      showNext: false,
+      showTryAgain: false,
+      showExplain: false,
+      showExplanation: false
+    })
 
-    tryBtn.style.display = 'none'
-    nextBtn.style.display = 'none'
-
-    explainBtn.style.display = 'none'
-    explainBtn.disabled = true
-    explainEl.style.display = 'none'
+    applyUIState({
+      checkBtn,
+      nextBtn,
+      tryBtn,
+      explainBtn,
+      explainEl
+    })
   })
 }

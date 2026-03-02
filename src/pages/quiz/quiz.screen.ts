@@ -1,17 +1,22 @@
 import '../../css/styles.css'
-import { quizService } from '../../scripts/services/quiz.service'
 import { quizCheck } from './quiz.check'
 import { quizSelection } from './quiz.selection'
 import { quizTryAgain } from './quiz.try.again'
 import { quizExplanation } from './quiz.explanation'
+import { quizNext } from './quiz.next'
+import {
+  getIndex,
+  setIndex,
+  getScore,
+  setScore,
+  updateUIState,
+  applyUIState
+} from './quiz.state'
+import { quizRenderQuestion } from './quiz.render.question'
+import { quizService } from '../../scripts/services/quiz.service'
 
 export async function quizScreen(): Promise<HTMLElement> {
   const questions = await quizService()
-
-  let currentIndex = 0
-  let correctCount = 0
-
-  const question = questions[currentIndex]
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'
@@ -22,39 +27,20 @@ export async function quizScreen(): Promise<HTMLElement> {
 
   const progressEl = document.createElement('div')
   progressEl.className = 'quiz-progress'
-  progressEl.textContent = `Question ${currentIndex + 1} from ${questions.length}`
 
   const scoreEl = document.createElement('div')
   scoreEl.classList.add('quiz-score')
-  scoreEl.textContent = `Score: ${correctCount}`
 
   const fieldset = document.createElement('fieldset')
   fieldset.className = 'quiz-fieldset'
 
   const legend = document.createElement('legend')
   legend.className = 'quiz-question'
-  legend.textContent = question.question_en
+
   fieldset.appendChild(legend)
 
   const optionsEl = document.createElement('div')
   optionsEl.className = 'quiz-options'
-
-  question.options.forEach((opt: string | null) => {
-    if (!opt) return
-
-    const label = document.createElement('label')
-    label.className = 'quiz-option'
-
-    const input = document.createElement('input')
-    input.type = 'radio'
-    input.name = `question-${currentIndex}`
-    input.value = opt
-
-    label.appendChild(input)
-    label.append(opt)
-
-    optionsEl.appendChild(label)
-  })
 
   fieldset.appendChild(optionsEl)
 
@@ -82,6 +68,19 @@ export async function quizScreen(): Promise<HTMLElement> {
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
 
+  quizRenderQuestion({
+    questions,
+    progressEl,
+    scoreEl,
+    legend,
+    optionsEl,
+    checkBtn,
+    nextBtn,
+    tryBtn,
+    explainBtn,
+    explainEl
+  })
+
   container.append(
     titelEl,
     progressEl,
@@ -94,10 +93,16 @@ export async function quizScreen(): Promise<HTMLElement> {
     explainEl
   )
 
-  let selectedOption: string | null = null
+  quizSelection(optionsEl, (value) => {
+    updateUIState({ selectedOption: value })
 
-  quizSelection(optionsEl, checkBtn, (value) => {
-    selectedOption = value
+    applyUIState({
+      checkBtn,
+      nextBtn,
+      tryBtn,
+      explainBtn,
+      explainEl
+    })
   })
 
   quizCheck({
@@ -106,14 +111,37 @@ export async function quizScreen(): Promise<HTMLElement> {
     nextBtn,
     tryBtn,
     explainBtn,
-    correctAnswer: question.answer,
-    getSelected: () => selectedOption,
+    explainEl,
+    getCorrectAnswer: () => questions[getIndex()].answer,
     onResult: (isCorrect) => {
       if (isCorrect) {
-        correctCount++
-        scoreEl.textContent = `Score: ${correctCount}`
+        setScore(getScore() + 1)
+        scoreEl.textContent = `Score: ${getScore()}`
       }
     }
+  })
+
+  quizNext({
+    nextBtn,
+    questions,
+    getIndex,
+    setIndex,
+    quizRenderQuestion: () =>
+      quizRenderQuestion({
+        questions,
+        progressEl,
+        scoreEl,
+        legend,
+        optionsEl,
+        checkBtn,
+        nextBtn,
+        tryBtn,
+        explainBtn,
+        explainEl
+      }),
+    container,
+    optionsEl
+    //quizSelection
   })
 
   quizTryAgain({
@@ -122,9 +150,7 @@ export async function quizScreen(): Promise<HTMLElement> {
     nextBtn,
     tryBtn,
     explainBtn,
-    clearSelected: () => {
-      selectedOption = null
-    },
+    clearSelected: () => updateUIState({ selectedOption: null }),
     explainEl
   })
 
