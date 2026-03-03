@@ -11,7 +11,7 @@ Progress and history of attempts are saved in localStorage.
 
 
 ## Team members:
-- Nataliya Krylova [Git Hub](https://github.com/NataliItaly)
+- Nataliya Krylova [Git Hub](https://github.com/NataliItaly) - team lead 
 - Kateryna Moskalenko [Git Hub](https://github.com/katerynamoskalenko)
 - Daria Pusovskaya [Git Hub](https://github.com/dariapusovskaya)
 
@@ -26,3 +26,7 @@ Progress and history of attempts are saved in localStorage.
 `cd Smart-Quiz`
 
 **Node version 18+ / 20+**
+
+## Project structure
+<img width="310" height="561" alt="project-structure" src="https://github.com/user-attachments/assets/3f70ac37-0184-4819-bf04-f90812a9f97c" />
+
