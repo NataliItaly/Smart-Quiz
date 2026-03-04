@@ -31,7 +31,7 @@
   gap: 12px;
 }
 
-.quiz-option input[type="radio"] {
+.quiz-option input[type='radio'] {
   display: none;
 }
 
@@ -89,7 +89,6 @@
     transform 0.2s ease;
 }
 
-
 .quiz-option.correct {
   background-color: #4caf50;
   color: white;
@@ -107,7 +106,6 @@
     transform: scale(1);
   }
 }
-
 
 .quiz-option.wrong {
   background-color: #e74c3c;
@@ -176,3 +174,18 @@
   background: inherit;
   border-color: inherit;
 }
+
+/* EXPLAIN AI*/
+
+.explain {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3f3f3;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.hidden {
+    display: none;
+  }

@@ -14,10 +14,11 @@ import {
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
 import { quizService } from '../../scripts/services/quiz.service'
+import { createExplainContainer } from '../explain/create.explain.container'
 
 export async function quizScreen(): Promise<HTMLElement> {
   const questions = await quizService()
-  console.log("questions:", questions)
+  console.log('questions:', questions)
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'
@@ -93,6 +94,8 @@ export async function quizScreen(): Promise<HTMLElement> {
     explainBtn,
     explainEl
   )
+  // modal Explain 
+  container.appendChild(createExplainContainer())
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })
@@ -158,7 +161,7 @@ export async function quizScreen(): Promise<HTMLElement> {
     explainEl
   })
 
-  quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
+  quizExplanation(explainBtn, () => questions[getIndex()])
 
   return container
 }

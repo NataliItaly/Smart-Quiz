@@ -1,11 +1,19 @@
+import { explainationHandler } from '../explain/explaination.handler'
+import { Question } from '../../scripts/services/quiz.service'
+import { getUIState } from './quiz.state'
+
 export function quizExplanation(
   explainBtn: HTMLButtonElement,
-  explainEl: HTMLElement,
-  explanationText: string
+  getCurrentQuestion: () => Question
 ): void {
-  explainEl.textContent = explanationText
-
   explainBtn.addEventListener('click', () => {
-    explainEl.style.display = 'block'
+    const currentQuestion = getCurrentQuestion()
+    console.log("currentQuestion:", currentQuestion)
+    const selectedAnswer = getUIState().selectedOption
+    console.log("selectedAnswer:", selectedAnswer)
+
+    if (currentQuestion && selectedAnswer) {
+      explainationHandler(currentQuestion, selectedAnswer)
+    }
   })
 }

@@ -31,7 +31,11 @@ export function explainationHandler(
 ): void {
   const payload = buildExplainPayload(currentQuestion, selectedAnswer)
   const isCorrect = payload.userAnswer === payload.correctAnswer
+  console.log("isCorrect:", isCorrect)
+
 
   const explanation = mockExplainResponse(isCorrect)
+  console.log("explanation:", explanation)
+
   showExplain(explanation)
 }
