@@ -17,6 +17,7 @@ import { quizService } from '../../scripts/services/quiz.service'
 
 export async function quizScreen(): Promise<HTMLElement> {
   const questions = await quizService()
+  console.log("questions:", questions)
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'
