@@ -1,13 +1,22 @@
-import { Router } from "../services/router";
+import { Router } from '../services/router'
+import { quizScreen } from '../../pages/quiz/quiz.screen'
 
-export function renderQuiz(router: Router) {
-  const root = document.getElementById("app")!;
-  root.innerHTML = `
-    <h1>Quiz Page</h1>
-    <button id="backBtn">Back</button>
-  `;
+export async function renderQuiz(router: Router): Promise<void>  {
+  const root = document.getElementById('app')
+  if (!root) return;
 
-  document.getElementById("backBtn")!.onclick = () => {
-    router.navigate("/dashboard");
-  };
+  root.innerHTML = '';
+
+  const quizEl = await quizScreen()
+  root.appendChild(quizEl)
+
+  const backBtn = document.createElement('button')
+  backBtn.textContent = 'Back'
+  backBtn.id = 'backBtn'
+
+  root.appendChild(backBtn)
+
+  backBtn.onclick = (): void => {
+    router.navigate('/dashboard')
+  }
 }
