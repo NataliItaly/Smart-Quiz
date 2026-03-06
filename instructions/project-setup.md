@@ -105,66 +105,38 @@ TS только проверяет типы.
 
 7. Включает максимально строгую типизацию:
 
-  ```"strict": true,
-  "noImplicitAny": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "noFallthroughCasesInSwitch": true
-  ```
+```"strict": true,
+"noImplicitAny": true,
+"noUnusedLocals": true,
+"noUnusedParameters": true,
+"noFallthroughCasesInSwitch": true
+```
 
-      ```strict: true``` - строгий режим,
-      
-      `noImplicitAny: true` - тип any запрещен
-      
-      `noUnusedLocals` - запрет на неиспользуемые переменные
-      
-      `noUnusedParameters` запрет лишних аргументов в функциях
-      
-      `noFallthroughCasesInSwitch` - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
+`strict: true` - строгий режим,
+
+`noImplicitAny: true` - тип any запрещен
+
+`noUnusedLocals` - запрет на неиспользуемые переменные
+
+`noUnusedParameters` запрет лишних аргументов в функциях
+
+`noFallthroughCasesInSwitch` - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
   
       если fallthrough сделан намеренно, можно написать комментарий:
 
-      ```case 1:
-        console.log('one');
-        // falls through
-      case 2:
-        console.log('two');
-        break;
-      
-7. Включает максимально строгую типизацию:
-
-  ```"strict": true,
-  "noImplicitAny": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "noFallthroughCasesInSwitch": true
-  ```
-
-      `strict: true` - строгий режим,
-      
-      `noImplicitAny: true` - тип any запрещен
-      
-      `noUnusedLocals` - запрет на неиспользуемые переменные
-      
-      `noUnusedParameters` запрет лишних аргументов в функциях
-      
-      `noFallthroughCasesInSwitch` - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
-  
-      если fallthrough сделан намеренно, можно написать комментарий:
-
-      ```case 1:
-        console.log('one');
-        // falls through
-      case 2:
-        console.log('two');
-        break;
-      ```
+```case 1:
+  console.log('one');
+  // falls through
+case 2:
+  console.log('two');
+  break;
+```
       *TypeScript это допускает, если есть специальный комментарий.*
 
-      `"include": ["src"]` - TypeScript проверяет только папку src.
-      *TypeScript это допускает, если есть специальный комментарий.*
+`"include": ["src"]` - TypeScript проверяет только папку src.
+*TypeScript это допускает, если есть специальный комментарий.*
 
-      `"include": ["src"]` - TypeScript проверяет только папку src.
+`"include": ["src"]` - TypeScript проверяет только папку src.
 
 
 ## Конфигурация ESLint
