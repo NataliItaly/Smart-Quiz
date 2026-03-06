@@ -112,11 +112,15 @@ TS только проверяет типы.
   "noFallthroughCasesInSwitch": true
   ```
 
-      - ```strict: true``` - строгий режим,
-      - `noImplicitAny: true` - тип any запрещен
-      - `noUnusedLocals` - запрет на неиспользуемые переменные
-      - `noUnusedParameters` запрет лишних аргументов в функциях
-      - `noFallthroughCasesInSwitch` - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
+      ```strict: true``` - строгий режим,
+      
+      `noImplicitAny: true` - тип any запрещен
+      
+      `noUnusedLocals` - запрет на неиспользуемые переменные
+      
+      `noUnusedParameters` запрет лишних аргументов в функциях
+      
+      `noFallthroughCasesInSwitch` - срабатывает тогда, когда в case нет break, return, throw или другого завершения — и выполнение «проваливается» в следующий case.
   
       если fallthrough сделан намеренно, можно написать комментарий:
 
@@ -129,7 +133,7 @@ TS только проверяет типы.
       ```
       *TypeScript это допускает, если есть специальный комментарий.*
 
-      - `"include": ["src"]` - TypeScript проверяет только папку src.
+      `"include": ["src"]` - TypeScript проверяет только папку src.
 
 
 ## Конфигурация ESLint
