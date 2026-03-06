@@ -63,17 +63,17 @@
 
 Объяснение:
 
-vite -	сборщик
+- vite -	сборщик
 
-typescript -	типизация
+- typescript -	типизация
 
-eslint -	проверка кода
+- eslint -	проверка кода
 
-prettier -	форматирование
+- prettier -	форматирование
 
-husky	git hooks - запускает ESLint перед каждым коммитом, что предотвращает добавление кода с ошибками в репозиторий
+- husky	git hooks - запускает ESLint перед каждым коммитом, что предотвращает добавление кода с ошибками в репозиторий
 
-@typescript-eslint -	интеграция ESLint + TS
+- @typescript-eslint -	интеграция ESLint + TS
 
 
 
@@ -112,7 +112,7 @@ TS только проверяет типы.
   "noFallthroughCasesInSwitch": true
   ```
 
-      - `strict: true` - строгий режим,
+      - ```strict: true``` - строгий режим,
       - `noImplicitAny: true` - тип any запрещен
       - `noUnusedLocals` - запрет на неиспользуемые переменные
       - `noUnusedParameters` запрет лишних аргументов в функциях
