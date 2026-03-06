@@ -6,4 +6,3 @@ Prepare for the team meeting, list of topics to discuss:
 - Prepare for final presentation - use instructions folder
 - Discuss on implementing AI features
 - How to use GitHub issues
-
