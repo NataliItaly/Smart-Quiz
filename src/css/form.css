@@ -1,4 +1,6 @@
-.form {}
+.form {
+  display: flex;
+}
 
 .form__row {}
 
