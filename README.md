@@ -36,7 +36,7 @@ Progress and history of attempts are saved in localStorage.
 [YouTube link](....)
 
 - Kateryna Moskalenko: ... component
-[YouTube link](....)
+[YouTube link](https://youtu.be/BviLZIucVFM)
 
 - Daria Pusovskaya:   ... component
 [YouTube link](https://youtu.be/7Q8zDLoT4E0)
