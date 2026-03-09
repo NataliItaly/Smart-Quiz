@@ -27,18 +27,12 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
 
   root.append(dashboard);
 
-  /* root.innerHTML = `
-    <h1>Dashboard</h1>
-    <button id="logoutBtn">Logout</button>
-    <button id="quizBtn">Go to Quiz</button>
-  `; */
-
-  document.getElementById("dashboard-logout-btn")!.onclick = () => {
+  document.getElementById("dashboard-logout-btn")!.onclick = (): void => {
     setAuth(false);
     router.navigate("/");
   };
 
-  document.getElementById("dashboard-quiz-btn")!.onclick = () => {
+  document.getElementById("dashboard-quiz-btn")!.onclick = (): void => {
     router.navigate("/quiz");
   };
 }
