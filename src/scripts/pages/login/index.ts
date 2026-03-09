@@ -2,9 +2,10 @@ import { Router } from "../../services/router";
 import { renderLoginForm } from "./LoginForm";
 import type { RegisterData } from "./types";
 import { LoginData } from "./types";
+import { StoredUser } from "./types";
 import { renderRegisterForm } from "./RegisterForm";
 
-export function renderLogin(router: Router, setAuth: (value: boolean) => void) {
+export function renderLogin(router: Router, setAuth: (value: boolean) => void): void {
     const root = document.getElementById("app")!;
     root.innerHTML = '';
 
@@ -43,12 +44,17 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void) {
     formContainer.className = 'form-container';
     container.appendChild(formContainer);
     
-    const handleAuthSuccess = (userName: string) => {
+    const handleAuthSuccess = (userName: string): void => {
         localStorage.setItem('currentUser', userName);
         
-        const users = JSON.parse(localStorage.getItem('quiz_users') || '[]');
-        if (!users.includes(userName)) {
-            users.push(userName);
+        const users: StoredUser[] = JSON.parse(localStorage.getItem('quiz_users') || '[]') as StoredUser[];
+        const userExists = users.some((u: StoredUser) => u.email === userName || u.name === userName);
+        
+        if (!userExists) {
+            users.push({ 
+                email: userName, 
+                name: userName 
+            });
             localStorage.setItem('quiz_users', JSON.stringify(users));
         }
         
@@ -61,33 +67,32 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void) {
         router.navigate('/dashboard');
     };
 
-
-    const renderForm = () => {
+    const renderForm = (): void => {
         formContainer.innerHTML = '';
         subtitle.textContent = currentMode === 'login' ? 'Вход' : 'Регистрация';
         loginSwitchBtn.className = currentMode === 'login' ? 'active' : '';
         registerSwitchBtn.className = currentMode === 'register' ? 'active' : '';
         
         if (currentMode === 'login') {
-            renderLoginForm(formContainer, (data: LoginData) => {
+            renderLoginForm(formContainer, (data: LoginData): void => {
                 console.log('Попытка входа:', data);
 
-                const users = JSON.parse(localStorage.getItem('quiz_users') || '[]');
+                const users: StoredUser[] = JSON.parse(localStorage.getItem('quiz_users') || '[]') as StoredUser[];
 
                 if (data.email && data.password.length >= 3) {
-                    const existingUser = users.find((u: any) => 
-                        typeof u === 'string' ? u === data.email : u.email === data.email
-                );
+                    const existingUser = users.find((u: StoredUser): boolean => 
+                        u.email === data.email || u.name === data.email
+                    );
 
-                if (existingUser) {
-                     handleAuthSuccess(existingUser.name || existingUser);
+                    if (existingUser) {
+                        handleAuthSuccess(existingUser.name || existingUser.email);
+                    } else {
+                        alert('Пользователь не найден. Попробуйте зарегистрироваться.');
+                    } 
                 } else {
-                    alert('Пользователь не найден. Попробуйте зарегистрироваться.'); // change for popup
-                } 
-            } else {
-                alert('Неверный формат email или пароль слишком короткий');
-            }
-        });
+                    alert('Неверный формат email или пароль слишком короткий');
+                }
+            });
         } else {
             renderRegisterForm(formContainer, (data: RegisterData) => {
                 console.log('Регистрация:', data);

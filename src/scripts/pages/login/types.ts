@@ -3,6 +3,11 @@ export interface User {
     email?: string;
 }
 
+export interface StoredUser {
+    name?: string;
+    email: string;
+    password?: string;
+}
 export interface LoginData {
     email: string;
     password: string;
