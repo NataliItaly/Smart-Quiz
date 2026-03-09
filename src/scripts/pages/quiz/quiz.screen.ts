@@ -13,7 +13,7 @@ import {
   applyUIState
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
-import { quizService } from '../../scripts/services/quiz.service'
+import { quizService } from '../../services/quiz.service'
 
 export async function quizScreen(): Promise<HTMLElement> {
   const questions = await quizService()

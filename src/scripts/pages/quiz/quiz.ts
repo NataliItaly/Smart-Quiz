@@ -1,5 +1,5 @@
-import { Router } from '../services/router'
-import { quizScreen } from '../../pages/quiz/quiz.screen'
+import { Router } from '../../services/router'
+import { quizScreen } from './quiz.screen'
 
 export async function renderQuiz(router: Router): Promise<void>  {
   const root = document.getElementById('app')
