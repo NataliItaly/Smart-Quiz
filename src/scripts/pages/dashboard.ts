@@ -3,8 +3,11 @@ import { filters } from "../components.ts/filters";
 import { createElement } from "../utils/createElement";
 import { getUser } from "../states/userState";
 
+
 export function renderDashboard(router: Router, setAuth: (value: boolean) => void): void {
   const dashboard = createElement({tag: 'div', className: 'dashboard', id: 'dashboard'});
+
+  // header
   const dashboardHeader = createElement({tag: 'header', className: 'header', id: 'dashboard-header'});
 
   const userName = getUser().name;
@@ -18,6 +21,7 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
   const dashboardTitle = createElement({tag: 'h1', className: 'dashboard__title', id: 'dashboard-title', text: 'Dashboard'});
   const dashboardQuizBtn = createElement({tag: 'button', className: 'btn', id: 'dashboard-quiz-btn', text: 'Go to Quiz'});
 
+  // filters form
   const filtersEl = filters();
 
   dashboardContent.append(dashboardTitle, filtersEl, dashboardQuizBtn);
