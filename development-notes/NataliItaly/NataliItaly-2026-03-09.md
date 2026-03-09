@@ -13,6 +13,7 @@
 ```@import './reset.css';
    @import './quiz.css';
 ```
+3. Instruction [css-flow.md](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/css-flow.md)
 
 3. Fix dashboard and quiz intersection questions:
   - review quiz types and states
