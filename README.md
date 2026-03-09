@@ -30,3 +30,14 @@ Progress and history of attempts are saved in localStorage.
 ## Project structure
 <img width="310" height="561" alt="project-structure" src="https://github.com/user-attachments/assets/3f70ac37-0184-4819-bf04-f90812a9f97c" />
 
+## Components presentation
+
+- Nataliya Krylova: Dashboard component
+[YouTube link](....)
+
+- Kateryna Moskalenko: ... component
+[YouTube link](....)
+
+- Daria Pusovskaya:   ... component
+[YouTube link](....)
+
