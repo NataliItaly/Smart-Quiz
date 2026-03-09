@@ -33,14 +33,12 @@ export async function explainationHandler(
   currentQuestion: Question,
   selectedAnswer: string
 ): Promise<void> {
-
   const payload = buildExplainPayload(currentQuestion, selectedAnswer)
 
-
-   try {
-    const response = await fetch("/.netlify/functions/explain", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+  try {
+    const response = await fetch('/.netlify/functions/explain', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         question: payload.question,
         answer: payload.userAnswer
@@ -48,18 +46,11 @@ export async function explainationHandler(
     })
 
     const data = (await response.json()) as ExplainResponse
-    console.log("BACKEND RESPONSE:", data)
+    console.log('BACKEND RESPONSE:', data)
 
-      //show & explainn back
+    //show & explainn back
     showExplain(data.message)
-
   } catch (error) {
-    console.error("FETCH ERROR:", error)
+    console.error('FETCH ERROR:', error)
   }
-
-  // const isCorrect = payload.userAnswer === payload.correctAnswer
-
-  // const explanation = mockExplainResponse(isCorrect)
-
-
 }
