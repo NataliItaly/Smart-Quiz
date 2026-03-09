@@ -1,6 +1,7 @@
 export interface Question {
   id: string
-  question_ru: string
+  topic: string          
+  difficulty: string     
   question_en: string
   options: string[]
   answer: string

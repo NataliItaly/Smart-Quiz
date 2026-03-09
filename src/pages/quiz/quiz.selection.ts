@@ -25,7 +25,5 @@ export function quizSelection(
     input.checked = true
 
     onSelect(input.value)
-    console.log("selectedOption:", input.value)
-    
   })
 }
