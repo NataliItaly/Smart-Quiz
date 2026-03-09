@@ -33,7 +33,7 @@ Progress and history of attempts are saved in localStorage.
 ## Components presentation
 
 - Nataliya Krylova: Dashboard component
-[YouTube link](....)
+[YouTube link](https://youtu.be/CX-lkU0616c)
 
 - Kateryna Moskalenko: ... component
 [YouTube link](https://youtu.be/BviLZIucVFM)
