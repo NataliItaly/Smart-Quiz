@@ -17,6 +17,7 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
 
   const dashboardTitle = createElement({tag: 'h1', className: 'dashboard__title', id: 'dashboard-title', text: 'Dashboard'});
   const dashboardQuizBtn = createElement({tag: 'button', className: 'btn', id: 'dashboard-quiz-btn', text: 'Go to Quiz'});
+
   const filtersEl = filters();
 
   dashboardContent.append(dashboardTitle, filtersEl, dashboardQuizBtn);
