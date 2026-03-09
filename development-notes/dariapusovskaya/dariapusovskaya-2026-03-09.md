@@ -4,7 +4,7 @@
 
 - Added password validation
 
-- Recorded checkpoint #3 video (link: )
+- Recorded checkpoint #3 video (link: https://youtu.be/7Q8zDLoT4E0 )
 
 - i will fix registered user lookup in Local Storage (ETA: 2-3 days)
 
