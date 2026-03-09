@@ -14,9 +14,12 @@ export async function quizService(): Promise<Question[]> {
 
   for (const category of Object.keys(data.quiz) as Category[]) {
     for (const level of Object.keys(data.quiz[category]) as Level[]) {
-      allQuestions.push(...data.quiz[category][level])
+      const questions = data.quiz[category][level];
+
+      const enlarged = questions.map(q => ({...q, category, level}))
+      allQuestions.push(...enlarged);
     }
   }
 
-  return allQuestions
+  return allQuestions;
 }

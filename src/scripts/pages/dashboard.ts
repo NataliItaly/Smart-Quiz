@@ -13,10 +13,10 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
 
   dashboardHeader.append(userGreetings, logoutBtn);
 
-  const dashboardContent = createElement({tag: 'div', className: 'dashboard_content', id: 'dashboard-content'});
+  const dashboardContent = createElement({tag: 'div', className: 'dashboard__content', id: 'dashboard-content'});
 
   const dashboardTitle = createElement({tag: 'h1', className: 'dashboard__title', id: 'dashboard-title', text: 'Dashboard'});
-  const dashboardQuizBtn = createElement({tag: 'button', className: 'dashboard__btn', id: 'dashboard-quiz-btn', text: 'Go to Quiz'});
+  const dashboardQuizBtn = createElement({tag: 'button', className: 'btn', id: 'dashboard-quiz-btn', text: 'Go to Quiz'});
   const filtersEl = filters();
 
   dashboardContent.append(dashboardTitle, filtersEl, dashboardQuizBtn);
