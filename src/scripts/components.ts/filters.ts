@@ -1,6 +1,8 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
-import { filterQuestions } from "../utils/filter.questions";
+import { questionFilter, QuestionsState } from "../states/questionsState";
+import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
+
 
 export function filters(): HTMLFormElement {
   const filterForm = createElement({tag: 'form', className: 'form', id: 'filter-form'});
@@ -36,7 +38,11 @@ export function filters(): HTMLFormElement {
 
     if (!choosenCategory && !choosenLevel) return;
 
-    filterQuestions(choosenCategory, choosenLevel);
+    QuestionsState.selectedCategory = toCategory(choosenCategory);
+    QuestionsState.selectedLevel = toLevel(choosenLevel);
+
+    questionFilter.category = toCategory(choosenCategory);
+    questionFilter.level = toLevel(choosenLevel);
 
   });
 
