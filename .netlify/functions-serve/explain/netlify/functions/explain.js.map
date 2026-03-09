@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sources": ["file:///D:/RSS/final_Quizz/Smart-Quizz/netlify/functions/explain.js"],
-  "sourceRoot": "C:/Users/SAMSUN~1/AppData/Local/Temp/tmp-85272-3ukn1EPpcrd6",
-  "sourcesContent": ["//import fetch from \"node-fetch\"\r\n\r\nexport async function handler(event, context) {\r\n  // 1. \u041F\u0440\u0438\u0439\u043C\u0430\u0454\u043C\u043E \u0434\u0430\u043D\u0456 \u0437 \u0444\u0440\u043E\u043D\u0442\u0435\u043D\u0434\u0443\r\n  const { question, answer } = JSON.parse(event.body)\r\n\r\n  // 2. \u0422\u0443\u0442 \u0431\u0443\u0434\u0435 \u0432\u0438\u043A\u043B\u0438\u043A AI (\u0434\u043E\u0434\u0430\u043C\u043E \u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443 \u043A\u0440\u043E\u0446\u0456)\r\n\r\n  // 3. \u0422\u0438\u043C\u0447\u0430\u0441\u043E\u0432\u0430 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C, \u0449\u043E\u0431 \u043F\u0435\u0440\u0435\u0432\u0456\u0440\u0438\u0442\u0438, \u0449\u043E \u0432\u0441\u0435 \u043F\u0440\u0430\u0446\u044E\u0454\r\n  return {\r\n    statusCode: 200,\r\n    headers: { 'Content-Type': 'application/json; charset=utf-8' },\r\n    body: JSON.stringify({\r\n      receivedQuestion: question,\r\n      receivedAnswer: answer,\r\n      message: \"Backend \u043E\u0442\u0440\u0438\u043C\u0430\u0432 \u0434\u0430\u043D\u0456!\"\r\n    })\r\n  }\r\n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,eAAsB,QAAQ,OAAO,SAAS;AAE5C,QAAM,EAAE,UAAU,OAAO,IAAI,KAAK,MAAM,MAAM,IAAI;AAKlD,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,SAAS,EAAE,gBAAgB,kCAAkC;AAAA,IAC7D,MAAM,KAAK,UAAU;AAAA,MACnB,kBAAkB;AAAA,MAClB,gBAAgB;AAAA,MAChB,SAAS;AAAA,IACX,CAAC;AAAA,EACH;AACF;",
-  "names": []
-}
