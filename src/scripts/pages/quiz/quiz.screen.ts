@@ -13,10 +13,13 @@ import {
   applyUIState
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
-import { quizService } from '../../services/quiz.service'
+import { QuestionsState } from '../../states/questionsState';
+//import { quizService } from '../../services/quiz.service'
 
-export async function quizScreen(): Promise<HTMLElement> {
-  const questions = await quizService()
+
+export function quizScreen(): HTMLElement {
+  const questions = QuestionsState.currentQuestions.length > 0 ? QuestionsState.currentQuestions : QuestionsState.allQuestions; //await quizService()
+
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'
