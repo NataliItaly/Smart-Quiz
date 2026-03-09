@@ -1,7 +1,7 @@
 import { type Route, Router } from './router'
 import { renderLogin } from '../pages/login'
 import { renderDashboard } from '../pages/dashboard'
-import { renderQuiz } from '../pages/quiz'
+import { renderQuiz } from '../pages/quiz/quiz'
 import { renderStatistic } from '../pages/statistic'
 
 let isAuth: boolean = true
@@ -18,7 +18,7 @@ const routes: Route[] = [
   },
   {
     path: '/quiz',
-    render: () => {
+    render: (): void => {
       void renderQuiz(router)
     },
 
