@@ -1,3 +1,6 @@
+## Component's Presentation
+[Dashboard Component Presentation](https://youtu.be/CX-lkU0616c)
+
 ## Prepare for team meeting
 
 ### Questions to discuss next meeting:
