@@ -10,7 +10,7 @@
 
 ![main.ts](./main-ts.png)
 
-![styles.css](./styles-scc.png)
+![styles.css](./styles-css.png)
 
 
 
