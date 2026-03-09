@@ -1,8 +1,8 @@
-import type { LoginData, SubmitHandler } from "./types";
+import type { LoginData, LoginSubmitHandler } from "./types";
 
 export function renderLoginForm( 
     container: HTMLElement,
-    onSubmit: SubmitHandler
+    onSubmit: LoginSubmitHandler
 ) {
     container.innerHTML = '';
 

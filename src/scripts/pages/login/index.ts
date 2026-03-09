@@ -1,4 +1,8 @@
 import { Router } from "../../services/router";
+import { renderLoginForm } from "./LoginForm";
+import type { RegisterData } from "./types";
+import { LoginData } from "./types";
+import { renderRegisterForm } from "./RegisterForm";
 
 export function renderLogin(router: Router, setAuth: (value: boolean) => void) {
     const root = document.getElementById("app")!;
@@ -38,45 +42,62 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void) {
     const formContainer = document.createElement('div');
     formContainer.className = 'form-container';
     container.appendChild(formContainer);
+    
+    const handleAuthSuccess = (userName: string) => {
+        localStorage.setItem('currentUser', userName);
+        
+        const users = JSON.parse(localStorage.getItem('quiz_users') || '[]');
+        if (!users.includes(userName)) {
+            users.push(userName);
+            localStorage.setItem('quiz_users', JSON.stringify(users));
+        }
+        
+        const resultsKey = `results_${userName}`;
+        if (!localStorage.getItem(resultsKey)) {
+            localStorage.setItem(resultsKey, JSON.stringify([]));
+        }
+        
+        setAuth(true);
+        router.navigate('/dashboard');
+    };
+
 
     const renderForm = () => {
         formContainer.innerHTML = '';
         subtitle.textContent = currentMode === 'login' ? 'Вход' : 'Регистрация';
         loginSwitchBtn.className = currentMode === 'login' ? 'active' : '';
         registerSwitchBtn.className = currentMode === 'register' ? 'active' : '';
-
+        
         if (currentMode === 'login') {
-            formContainer.innerHTML = `
-            <div class="login-form">
-            <input type="email" id="email" placeholder="Email" />
-            <input type="password" id="password" placeholder="Пароль" />
-            <button id="submitLogin">Войти</button>
-            </div>
-            `;
+            renderLoginForm(formContainer, (data: LoginData) => {
+                console.log('Попытка входа:', data);
 
-            const submitBtn = document.getElementById('submitLogin');
-            if (submitBtn) {
-                submitBtn.onclick = () => {
-                    console.log('Вход:', currentMode);
-                };
+                const users = JSON.parse(localStorage.getItem('quiz_users') || '[]');
+
+                if (data.email && data.password.length >= 3) {
+                    const existingUser = users.find((u: any) => 
+                        typeof u === 'string' ? u === data.email : u.email === data.email
+                );
+
+                if (existingUser) {
+                     handleAuthSuccess(existingUser.name || existingUser);
+                } else {
+                    alert('Пользователь не найден. Попробуйте зарегистрироваться.'); // change for popup
+                } 
+            } else {
+                alert('Неверный формат email или пароль слишком короткий');
             }
-
+        });
         } else {
-            formContainer.innerHTML = `
-             <div class="register-form">
-             <input type="text" id="name" placeholder="Имя" />
-             <input type="email" id="email" placeholder="Email" />
-             <input type="password" id="password" placeholder="Пароль" />
-             <button id="submitRegister">Зарегистрироваться</button>
-             </div>
-             `;
+            renderRegisterForm(formContainer, (data: RegisterData) => {
+                console.log('Регистрация:', data);
 
-             const submitBtn = document.getElementById('submitRegister');
-             if (submitBtn) {
-                submitBtn.onclick = () => {
-                    console.log('Регистрация:', currentMode);
-                };
-             }
+                if (data.name && data.email && data.password.length >= 3) {
+                    handleAuthSuccess(data.name);
+                } else {
+                    alert('Заполните все поля (пароль минимум 3 символа)');
+                }
+            });
         }
     };
 
