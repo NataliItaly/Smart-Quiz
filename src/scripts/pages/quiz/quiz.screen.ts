@@ -1,4 +1,4 @@
-import '../../css/styles.css'
+import '../../../css/styles.css';
 import { quizCheck } from './quiz.check'
 import { quizSelection } from './quiz.selection'
 import { quizTryAgain } from './quiz.try.again'
