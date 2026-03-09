@@ -39,12 +39,3 @@ export function showExplain(text: string): void {
   container.classList.remove('hidden')
 }
 
-// async function testBackend() {
-//   const res = await fetch("/.netlify/functions/explain")
-//   const data = await res.json()
-//   console.log(data)
-// }
-
-// testBackend()
-
-//

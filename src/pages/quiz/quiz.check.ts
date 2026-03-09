@@ -60,9 +60,7 @@ export function quizCheck({
     })
 
     optionsEl.classList.add('quiz-locked')
-console.log("selected:", selected)
-console.log("correct:", getCorrectAnswer())
-console.log("equal:", selected === getCorrectAnswer())
+
     optionsEl.style.pointerEvents = 'none'
     onResult(isCorrect)
   })

@@ -1,7 +1,11 @@
-import { mockExplainResponse } from './mock.explain.response'
 import { showExplain } from './create.explain.container'
 import { Question } from '../../scripts/services/quiz.service'
 
+interface ExplainResponse {
+  receivedQuestion: string
+  receivedAnswer: string
+  message: string
+}
 export interface ExplainPayload {
   topic: string
   difficulty: string
@@ -25,17 +29,37 @@ export function buildExplainPayload(
   }
 }
 
-export function explainationHandler(
+export async function explainationHandler(
   currentQuestion: Question,
   selectedAnswer: string
-): void {
+): Promise<void> {
+
   const payload = buildExplainPayload(currentQuestion, selectedAnswer)
-  const isCorrect = payload.userAnswer === payload.correctAnswer
-  console.log("isCorrect:", isCorrect)
 
 
-  const explanation = mockExplainResponse(isCorrect)
-  console.log("explanation:", explanation)
+   try {
+    const response = await fetch("/.netlify/functions/explain", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        question: payload.question,
+        answer: payload.userAnswer
+      })
+    })
 
-  showExplain(explanation)
+    const data = (await response.json()) as ExplainResponse
+    console.log("BACKEND RESPONSE:", data)
+
+      //show & explainn back
+    showExplain(data.message)
+
+  } catch (error) {
+    console.error("FETCH ERROR:", error)
+  }
+
+  // const isCorrect = payload.userAnswer === payload.correctAnswer
+
+  // const explanation = mockExplainResponse(isCorrect)
+
+
 }

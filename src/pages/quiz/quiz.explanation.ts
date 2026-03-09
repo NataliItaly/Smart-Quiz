@@ -8,12 +8,11 @@ export function quizExplanation(
 ): void {
   explainBtn.addEventListener('click', () => {
     const currentQuestion = getCurrentQuestion()
-    console.log("currentQuestion:", currentQuestion)
+
     const selectedAnswer = getUIState().selectedOption
-    console.log("selectedAnswer:", selectedAnswer)
 
     if (currentQuestion && selectedAnswer) {
-      explainationHandler(currentQuestion, selectedAnswer)
+      void explainationHandler(currentQuestion, selectedAnswer)
     }
   })
 }
