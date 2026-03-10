@@ -8,15 +8,16 @@ import { filterQuestions } from "../utils/filter.questions";
 export function filters(): HTMLFormElement {
   const filterForm = createElement({tag: 'form', className: 'form', id: 'filter-form'});
 
-  const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['random', 'easy', 'medium', 'hard']};
+  const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard']};
 
   (Object.keys(filterOptions) as (keyof FilterOptions)[]).forEach(option => {
     const formRow = createElement({tag: 'div', className: 'form__row'});
-    const label: HTMLLabelElement = createElement({tag: 'label', className: 'form__label'});
+    const label: HTMLLabelElement = createElement({tag: 'label', className: 'form__label', text: `Choose ${option}`});
     const select: HTMLSelectElement = createElement({tag: 'select', className: 'form__select', id: option});
 
     filterOptions[option].forEach(opt => {
-      const optionEl: HTMLOptionElement = createElement({tag: 'option', className: 'form__option', id: opt.toLowerCase(), text: opt, attributes: {value: opt}})
+      const optionEl: HTMLOptionElement = createElement({tag: 'option', className: 'form__option', id: opt.toLowerCase(), text: opt});
+      optionEl.value = opt === 'All' ? '' : opt;
       select.append(optionEl);
     });
     formRow.append(label, select);
