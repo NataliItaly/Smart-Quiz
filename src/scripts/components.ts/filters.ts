@@ -12,7 +12,7 @@ export function filters(): HTMLFormElement {
 
   (Object.keys(filterOptions) as (keyof FilterOptions)[]).forEach(option => {
     const formRow = createElement({tag: 'div', className: 'form__row'});
-    const label: HTMLLabelElement = createElement({tag: 'label', className: 'form__label', text: `Choose ${option}`});
+    const label: HTMLLabelElement = createElement({tag: 'label', className: 'form__label', text: `Choose ${option}`, attributes: {for: option}});
     const select: HTMLSelectElement = createElement({tag: 'select', className: 'form__select', id: option});
 
     filterOptions[option].forEach(opt => {
