@@ -6,10 +6,10 @@
 *Vitest работает на том же движке, поэтому почти не требует настройки.*
 
 Чтобы добавить Vitest setup в наш проект:
-1. использовала команды: 
+1. использовала команды:
 
 `npm install -D vitest`
-  
+
 `npm install -D jsdom`
 
 Что такое jsdom?
@@ -28,8 +28,8 @@ document.querySelector('.app')
 - UI компонентов
 - рендеринга элементов
 
-2. Добавлена строка в packaje.json 
-  
+2. Добавлена строка в packaje.json
+
 `"test": "vitest"`
 
 3. Добавлен минимальный конфиг - vitest.config.ts
@@ -41,7 +41,7 @@ document.querySelector('.app')
 1. Запустить команды:
 
 `git pull`
-  
+
 `npm install`
 
 2. Проверить, что в папке src появилась папка tests. В папке tests есть файл с примерами тестов example.test.ts
@@ -52,7 +52,9 @@ document.querySelector('.app')
 
 4. Если все настроено верно вы увидите примерный вывод:
 
-5. Пишите ваши тесты в папку tests. Структура: 
+[!example tests output](./assets/example-output.png)
+
+5. Пишите ваши тесты в папку tests. Структура:
 
 ```src
  ├─ tests
