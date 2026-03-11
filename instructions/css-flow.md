@@ -8,7 +8,7 @@
 
 Пример:
 
-![main.ts](./main-ts.png)
+![main.ts](.assets/main-ts.png)
 
 ![styles.css](./assets/styles-css.png)
 
