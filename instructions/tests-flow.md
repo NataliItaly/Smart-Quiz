@@ -52,7 +52,7 @@ document.querySelector('.app')
 
 4. Если все настроено верно вы увидите примерный вывод:
 
-[!example tests output](./assets/example-output.png)
+![example tests output](./assets/example-output.png)
 
 5. Пишите ваши тесты в папку tests. Структура:
 
