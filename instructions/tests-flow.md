@@ -6,18 +6,34 @@
 *Vitest работает на том же движке, поэтому почти не требует настройки.*
 
 Чтобы добавить Vitest setup в наш проект:
-- использовала команды: 
+1. использовала команды: 
 
 `npm install -D vitest`
   
 `npm install -D jsdom`
 
-- Добавлена строка в packaje.json 
+Что такое jsdom?
+
+По умолчанию Vitest запускается в Node environment, где нет:
+- document
+- window
+- HTMLElement
+Наш проект работает с DOM, jsdom эмулирует браузер:
+```document.createElement('div')
+document.querySelector('.app')
+```
+
+Поэтому теперь можно тестировать функции вроде:
+- createElement
+- UI компонентов
+- рендеринга элементов
+
+2. Добавлена строка в packaje.json 
   
 `"test": "vitest"`
 
-- Добавлен минимальный конфиг - vitest.config.ts
-- Добавлена папка test с примером тестового файла
+3. Добавлен минимальный конфиг - vitest.config.ts
+4. Добавлена папка test с примером тестового файла example.test.ts
 
 
 ### Как добавить настройки Vitest локально:
