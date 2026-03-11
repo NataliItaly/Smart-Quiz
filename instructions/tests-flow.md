@@ -62,3 +62,22 @@ document.querySelector('.app')
  │   ├─ your.test.ts
  │   └─ anotheryour.test.ts
  ```
+
+## Как писать тесты
+
+1. Каждый член команды создаёт свою ветку / ветки и добавляет тесты, например:
+
+```feature/filter-tests
+feature/quiz-tests
+feature/dom-tests
+```
+2. Внутри ветки добавляем свои файлы:
+
+```src/tests/
+  filters.test.ts
+  quiz.test.ts
+```
+3. Делаем коммит в своей ветке.
+4. Создаем Pull Request в develop.
+5. При merge их тесты становятся доступными для всей команды.
+6. Остальные после git pull и npm install сразу видят новые тесты и могут запускать их локально
