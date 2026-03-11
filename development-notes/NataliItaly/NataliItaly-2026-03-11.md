@@ -10,7 +10,11 @@ Point to discuss:
 
 2. Working on Vitest settings.
 - Vitest test framework was choosen because of full compatiility with TS and Vite
-- Installation:   `npm install -D vitest` `npm install -D jsdom`
+- Installation:
+```npm install -D vitest
+```
+```npm install -D jsdom
+```
 - Add  `"test": "vitest run",` to package.json
 - Create vitest.config.ts file.
 Eslint error:
