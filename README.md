@@ -41,3 +41,10 @@ Progress and history of attempts are saved in localStorage.
 - Daria Pusovskaya:   ... component
 [YouTube link](https://youtu.be/7Q8zDLoT4E0)
 
+## Testing
+To run tests locally:
+`npm test`
+
+Expected output:
+
+<img width="575" height="283" alt="Screenshot 2026-03-11 012224" src="https://github.com/user-attachments/assets/c38fb28a-9fab-4efc-8c08-1ba911234de5" />
