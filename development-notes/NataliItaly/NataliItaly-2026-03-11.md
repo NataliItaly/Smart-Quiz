@@ -35,3 +35,6 @@ Error meaning: *ESLint checks the vitest.config.ts file, but this file is not in
   - window
   - HTMLElement
 **jsdom emulates browser**
+
+3. Add tests instruction for team members:
+[test-flow.md](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/tests-flow.ts)
