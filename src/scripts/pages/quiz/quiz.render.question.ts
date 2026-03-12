@@ -1,4 +1,4 @@
-import { Question } from '../../scripts/services/quiz.service'
+import { Question } from './quiz.types'
 import { applyUIState, getIndex, getScore } from './quiz.state'
 
 export interface QuizRenderParams {
