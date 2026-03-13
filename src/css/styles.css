@@ -205,6 +205,22 @@
   width: 100%;
 }
 
+
+/* warning about exit site quiz while proccess*/
 .hidden {
     display: none;
   }
+  
+  .quiz-warning {
+  display: none;
+  background: #ffdddd;
+  color: #a30000;
+  padding: 10px 15px;
+  border: 1px solid #ffaaaa;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.quiz-warning.show {
+  display: block;
+}

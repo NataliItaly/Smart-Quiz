@@ -22,6 +22,21 @@ export async function quizScreen(): Promise<HTMLElement> {
   const container = document.createElement('div')
   container.className = 'quiz-screen'
 
+  /* -----------------------------
+     WARNING PANEL (uses .hidden)
+  ----------------------------- */
+  // const warningEl = document.createElement('div')
+  // warningEl.className = 'quiz-warning hidden'
+  // warningEl.textContent = 'You left the page while taking the quiz!!!'
+  // container.appendChild(warningEl)
+
+  // const showWarning = () => {
+  //   warningEl.classList.remove('hidden')
+  //   lockQuizUI()
+  // }
+
+  // initQuizProtection(showWarning)
+
   const titelEl = document.createElement('h2')
   titelEl.className = 'quiz-title'
   titelEl.textContent = 'Online test'
@@ -65,6 +80,22 @@ export async function quizScreen(): Promise<HTMLElement> {
   explainBtn.className = 'btn quiz-explain'
   explainBtn.style.display = 'none'
 
+  // function lockQuizUI() {
+  //   updateUIState({ locked: true })
+
+  //   applyUIState({
+  //     checkBtn,
+  //     nextBtn,
+  //     tryBtn,
+  //     explainBtn,
+  //     explainEl
+  //   })
+
+  //   optionsEl.querySelectorAll('button').forEach((btn) => {
+  //     btn.disabled = true
+  //   })
+  // }
+
   const explainEl = document.createElement('p')
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
@@ -93,7 +124,7 @@ export async function quizScreen(): Promise<HTMLElement> {
     explainBtn,
     explainEl
   )
-  // modal Explain 
+  // modal Explain
   container.appendChild(createExplainContainer())
 
   quizSelection(optionsEl, (value) => {
