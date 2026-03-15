@@ -13,9 +13,9 @@
 
 
 ### Code Review
-1. Review on PR
+1. Review on PR by Kateryna Moskalenko, Quiz component
 [Feature/quiz screen: feat(quiz): implement Check, next Try Again, Explain, score tracking #4](https://github.com/NataliItaly/Smart-Quiz/pull/4)
-1. Proposed:
+Proposed:
 2.1. Functionality:
   - keep the Check button disabled when no answer is selected,
   - after pressing Check button, show whether the answer was correct or not.
