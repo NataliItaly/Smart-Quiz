@@ -23,7 +23,11 @@ export interface Question {
   question_ru: string;
   question_en: string;
   options: string[];
+  options_ru?: string[];
+  options_en?: string[];
   answer: string;
+  answer_ru?: string;
+  answer_en?: string;
   category: Category;
   level: Level;
 }
