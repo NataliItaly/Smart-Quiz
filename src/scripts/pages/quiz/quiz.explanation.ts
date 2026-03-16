@@ -1,5 +1,5 @@
 import { explainationHandler } from '../explain/explaination.handler'
-import { Question } from '../../scripts/services/quiz.service'
+import { Question } from '../../services/quiz.service'
 import { getUIState } from './quiz.state'
 
 export function quizExplanation(

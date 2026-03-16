@@ -14,18 +14,18 @@ export class Router {
     this.isAuth = isAuth;
   }
 
-  public init() {
+  public init(): void {
     window.addEventListener("popstate", () => this.handleLocation());
     window.addEventListener("DOMContentLoaded", () => this.handleLocation());
     this.handleLocation();
   }
 
-  public navigate(path: string) {
+  public navigate(path: string): void {
     history.pushState({}, "", path);
     this.handleLocation();
   }
 
-  private handleLocation() {
+  private handleLocation(): void {
     const path = window.location.pathname;
     const route = this.routes.find(r => r.path === path);
 
