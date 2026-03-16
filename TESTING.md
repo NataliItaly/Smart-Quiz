@@ -12,5 +12,6 @@ Testing:
 - localStorage saving
 - form switching
 (file: scr/tests/example.test.ts)
+(PR: https://github.com/NataliItaly/Smart-Quiz/pull/36)
 
 
