@@ -15,8 +15,6 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void): 
     root.appendChild(container);
 
     let currentMode: 'login' | 'register' = 'login';
-
-    // const userData: { name?: string; email?: string; password?: string } = {}; - use it in future
     console.log('router and setAuth will be using in future', router, setAuth);
 
     const title = document.createElement('h1');

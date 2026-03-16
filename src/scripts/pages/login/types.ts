@@ -19,7 +19,7 @@ export interface RegisterData {
     password: string;
 }
 
-// export type SubmitHandler = (data: LoginData | RegisterData) => void; // for the func-s that forms will call on submit
+// for the func-s that forms will call on submit
 
 export type LoginSubmitHandler = (data: LoginData) => void;
 export type RegisterSubmitHandler = (data: RegisterData) => void;
