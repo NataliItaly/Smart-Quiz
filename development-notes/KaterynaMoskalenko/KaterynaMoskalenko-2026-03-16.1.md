@@ -1,23 +1,6 @@
-Фреймворк: vitest 
+## 16.03.2026
 
-Запустить: npm test
-
-Участники:
-
-- @dariapusovskaya 
-
-Testing:
-- form rendering 
-- button interactions
-- localStorage saving
-- form switching
-(file: scr/tests/example.test.ts)
-(PR: https://github.com/NataliItaly/Smart-Quiz/pull/36)
-
-
-- @katerynamoskalenko
-
-- API logic
+ API logic
 - correct data handling
 - successful responses
 - error responses
@@ -35,4 +18,8 @@ file: scr/tests/quiz.api.test.ts
 file: scr/tests/quiz.applyUIState.test.ts
 file: scr/tests/quiz.test.ts)
 https://github.com/NataliItaly/Smart-Quiz/pull/39
+
+Фреймворк: vitest 
+
+Запустить: npm test
 
