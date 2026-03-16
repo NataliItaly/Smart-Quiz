@@ -36,3 +36,23 @@ file: scr/tests/quiz.applyUIState.test.ts
 file: scr/tests/quiz.test.ts)
 https://github.com/NataliItaly/Smart-Quiz/pull/39
 
+- @NataliItaly
+
+1. Filters form:
+
+- filters form with id 'filter-form' exists,
+- selects with id 'category' and 'level' exist,
+- 4 options exist ( 'All', 'HTML', 'CSS & SCSS', 'JS & TS' ),
+- submit button with id 'filter-btn' exists
+- prevent submit with both filters empty
+  
+2. Create element function:
+
+- create HTML element with correct tag, class, id, text content
+- accept class as string array of strings
+- set correct attributes for HTML element
+
+(files: scr/tests/create-element.test.ts, src/tests/filters-form.test.ts)
+PR: https://github.com/NataliItaly/Smart-Quiz/pull/35
+[PR link](https://github.com/NataliItaly/Smart-Quiz/pull/35)
+
