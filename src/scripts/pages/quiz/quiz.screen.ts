@@ -13,18 +13,13 @@ import {
   applyUIState
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
-<<<<<<< HEAD:src/pages/quiz/quiz.screen.ts
-import { quizService } from '../../scripts/services/quiz.service'
 import { createExplainContainer } from '../explain/create.explain.container'
-=======
 import { QuestionsState } from '../../states/questionsState';
-//import { quizService } from '../../services/quiz.service'
+
 
 
 export function quizScreen(): HTMLElement {
   const questions = QuestionsState.currentQuestions.length > 0 ? QuestionsState.currentQuestions : QuestionsState.allQuestions; //await quizService()
->>>>>>> develop:src/scripts/pages/quiz/quiz.screen.ts
-
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'

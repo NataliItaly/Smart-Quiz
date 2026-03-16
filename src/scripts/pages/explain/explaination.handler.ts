@@ -1,5 +1,5 @@
 import { showExplain } from './create.explain.container'
-import { Question } from '../../scripts/services/quiz.service'
+import { Question } from '../quiz/quiz.types'
 
 interface ExplainResponse {
   receivedQuestion: string

@@ -1,24 +1,21 @@
-<<<<<<< HEAD
-export interface Question {
-  id: string
-  topic: string          
-  difficulty: string     
-  question_en: string
-  options: string[]
-  answer: string
-}
+// export interface Question {
+//   id: string
+//   topic: string          
+//   difficulty: string     
+//   question_en: string
+//   options: string[]
+//   answer: string
+// }
 
-export interface QuizData {
-  quiz: {
-    [category: string]: {
-      [difficulty: string]: Question[]
-    }
-  }
-}
+// export interface QuizData {
+//   quiz: {
+//     [category: string]: {
+//       [difficulty: string]: Question[]
+//     }
+//   }
+// }
 
-=======
 import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types"
->>>>>>> develop
 export async function quizService(): Promise<Question[]> {
   const res = await fetch('/data/quiz_questions.json')
   if (!res.ok) {
@@ -41,3 +38,7 @@ export async function quizService(): Promise<Question[]> {
 
   return allQuestions;
 }
+
+
+
+
