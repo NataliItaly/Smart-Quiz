@@ -3,12 +3,19 @@
 ### Tests
 1. Write tests with use of Vitest test framework
 2. Testing functionality:
+  2.1. Filters form:
   - filters form with id 'filter-form' exists,
   - selects with id 'category' and 'level' exist,
   - 4 options exist ( 'All', 'HTML', 'CSS & SCSS', 'JS & TS' ),
   - submit button with id 'filter-btn' exists
   - prevent submit with both filters empty
-3. Open PR from test-dashboard branch to develop
+
+  2.2. Create element function:
+  - create HTML element with correct tag, class, id, text content
+  - accept class as string array of strings
+  - set correct attributes for HTML element
+
+1. Open PR from test-dashboard branch to develop
 [PR](https://github.com/NataliItaly/Smart-Quiz/pull/35)
 
 
