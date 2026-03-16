@@ -52,7 +52,16 @@ https://github.com/NataliItaly/Smart-Quiz/pull/39
 - accept class as string array of strings
 - set correct attributes for HTML element
 
-(files: scr/tests/create-element.test.ts, src/tests/filters-form.test.ts)
-PR: https://github.com/NataliItaly/Smart-Quiz/pull/35
+3. Add tests for questions filtering:
+
+- returns all data if no filters was applied
+- returns questions array by category only, level only, category and level
+- returns empty array if no match was found
+
+(files: scr/tests/create-element.test.ts, src/tests/filters-form.test.ts, src/tests/questions-filter.test.ts)
+PRs: 
+- https://github.com/NataliItaly/Smart-Quiz/pull/35
+- https://github.com/NataliItaly/Smart-Quiz/pull/40
 [PR link](https://github.com/NataliItaly/Smart-Quiz/pull/35)
+[PR link](https://github.com/NataliItaly/Smart-Quiz/pull/40)
 
