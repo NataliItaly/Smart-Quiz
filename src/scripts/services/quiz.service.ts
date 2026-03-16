@@ -1,19 +1,3 @@
-// export interface Question {
-//   id: string
-//   topic: string          
-//   difficulty: string     
-//   question_en: string
-//   options: string[]
-//   answer: string
-// }
-
-// export interface QuizData {
-//   quiz: {
-//     [category: string]: {
-//       [difficulty: string]: Question[]
-//     }
-//   }
-// }
 
 import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types"
 export async function quizService(): Promise<Question[]> {
