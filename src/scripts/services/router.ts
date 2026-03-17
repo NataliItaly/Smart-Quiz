@@ -8,10 +8,12 @@ export type Route = {
 export class Router {
   private routes: Route[];
   private isAuth: () => boolean;
+  private notFound: () => void;
 
-   constructor(routes: Route[], isAuth: () => boolean) {
+   constructor(routes: Route[], isAuth: () => boolean, notFound: () => void) {
     this.routes = routes;
     this.isAuth = isAuth;
+    this.notFound = notFound;
   }
 
   public init(): void {
@@ -30,7 +32,7 @@ export class Router {
     const route = this.routes.find(r => r.path === path);
 
     if (!route) {
-      document.getElementById("app")!.innerHTML = "<h1>404</h1>";
+      this.notFound();
       return;
     }
 
