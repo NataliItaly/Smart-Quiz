@@ -1,3 +1,4 @@
+import { describe, test, expect, beforeEach } from "vitest";
 import { updateUIState, resetUIState, applyUIState } from "../scripts/pages/quiz/quiz.state";
 
 describe("applyUIState — component logic / state management", () => {
