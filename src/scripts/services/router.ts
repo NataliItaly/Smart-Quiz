@@ -1,3 +1,5 @@
+import { setCurrentRoute, getCurrentRoute } from "../states/routeState";
+
 export type Route = {
   path: string;
   render: () => void;
@@ -24,12 +26,29 @@ export class Router {
 
   public navigate(path: string): void {
     history.pushState({}, "", path);
+
+    // set full route
+    setCurrentRoute(window.location.pathname + window.location.hash)
     this.handleLocation();
   }
 
   private handleLocation(): void {
+    const fullPath = window.location.pathname + window.location.hash;
+    console.log('pathname', window.location.pathname)
+    console.log('hash', window.location.hash)
+
+    // don't save the same route twice
+    if (getCurrentRoute() !== fullPath) {
+      setCurrentRoute(fullPath);
+    }
+
     const path = window.location.pathname;
     const route = this.routes.find(r => r.path === path);
+    console.log('route', route)
+
+    // save current route
+    //setCurrentRoute(window.location.pathname + window.location.hash);
+
 
     if (!route) {
       this.notFound();
