@@ -9,7 +9,7 @@ import { getCurrentRoute } from '../states/routeState';
 
 let isAuth: boolean = true
 
-export function initRouter() {
+export function initRouter(): void {
   const savedRoute = getCurrentRoute();
 
   if (savedRoute && savedRoute !== window.location.pathname + window.location.hash) {
