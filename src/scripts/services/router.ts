@@ -47,7 +47,7 @@ export class Router {
     console.log('route', route)
 
     // save current route
-    //setCurrentRoute(window.location.pathname + window.location.hash);
+    setCurrentRoute(window.location.pathname + window.location.hash);
 
 
     if (!route) {
