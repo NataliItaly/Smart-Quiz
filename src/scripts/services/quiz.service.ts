@@ -1,4 +1,5 @@
 import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types"
+
 export async function quizService(): Promise<Question[]> {
   const res = await fetch('/data/quiz_questions.json')
   if (!res.ok) {
