@@ -32,7 +32,7 @@ export class Router {
     this.handleLocation();
   }
 
-  private handleLocation(): void {
+  public handleLocation(): void {
     const fullPath = window.location.pathname + window.location.hash;
     console.log('pathname', window.location.pathname)
     console.log('hash', window.location.hash)

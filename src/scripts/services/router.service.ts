@@ -5,16 +5,16 @@ import { renderQuiz } from '../pages/quiz/quiz';
 import { renderStatistic } from '../pages/statistic';
 import { render404Page } from '../pages/404/404';
 import { setIndex } from '../pages/quiz/quiz.state';
-import { getCurrentRoute } from '../states/routeState';
+//import { getCurrentRoute, setCurrentRoute } from '../states/routeState';
 
 let isAuth: boolean = true
 
 export function initRouter(): void {
-  const savedRoute = getCurrentRoute();
+  //const savedRoute = getCurrentRoute();
 
-  if (savedRoute && savedRoute !== window.location.pathname + window.location.hash) {
+ /*  if (savedRoute && savedRoute !== window.location.pathname + window.location.hash) {
     history.replaceState({}, '', savedRoute);
-  }
+  } */
 
   const routes: Route[] = [
     {
@@ -46,6 +46,7 @@ export function initRouter(): void {
     }
   ]
 
-  const router = new Router(routes, () => isAuth, () => render404Page(router))
+  const router = new Router(routes, () => isAuth, () => render404Page(router));
+
   router.init()
 }
