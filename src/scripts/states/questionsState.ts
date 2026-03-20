@@ -11,7 +11,6 @@ export const questionFilter: QuestionsFilter = {
 }
 
 export const QuestionsState = {
-  allQuestions: [] as Question[],
   currentQuestions: [] as Question[],
   selectedCategory: undefined as Category | undefined,
   selectedLevel: undefined as Level | undefined

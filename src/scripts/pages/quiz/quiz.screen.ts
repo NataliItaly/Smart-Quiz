@@ -1,4 +1,5 @@
 import '../../../css/styles.css';
+import { renderLoader } from '../../components.ts/loader';
 import { quizCheck } from './quiz.check'
 import { quizSelection } from './quiz.selection'
 import { quizTryAgain } from './quiz.try.again'
@@ -13,154 +14,166 @@ import {
   applyUIState
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
-import { QuestionsState } from '../../states/questionsState';
-//import { quizService } from '../../services/quiz.service'
+
+import { quizService } from '../../services/quiz.service'
 
 
 export function quizScreen(): HTMLElement {
-  const questions = QuestionsState.currentQuestions.length > 0 ? QuestionsState.currentQuestions : QuestionsState.allQuestions; //await quizService()
-
+  //QuestionsState.currentQuestions.length > 0 ? QuestionsState.currentQuestions : QuestionsState.allQuestions;
 
   const container = document.createElement('div')
   container.className = 'quiz-screen'
 
-  const titelEl = document.createElement('h2')
-  titelEl.className = 'quiz-title'
-  titelEl.textContent = 'Online test'
+  const loader = renderLoader();
+  container.append(loader);
 
-  const progressEl = document.createElement('div')
-  progressEl.className = 'quiz-progress'
+  quizService().then((questions) => {
+    container.innerHTML = '';
 
-  const scoreEl = document.createElement('div')
-  scoreEl.classList.add('quiz-score')
+    const titelEl = document.createElement('h2')
+    titelEl.className = 'quiz-title'
+    titelEl.textContent = 'Online test'
 
-  const fieldset = document.createElement('fieldset')
-  fieldset.className = 'quiz-fieldset'
+    const progressEl = document.createElement('div')
+    progressEl.className = 'quiz-progress'
 
-  const legend = document.createElement('legend')
-  legend.className = 'quiz-question'
+    const scoreEl = document.createElement('div')
+    scoreEl.classList.add('quiz-score')
 
-  fieldset.appendChild(legend)
+    const fieldset = document.createElement('fieldset')
+    fieldset.className = 'quiz-fieldset'
 
-  const optionsEl = document.createElement('div')
-  optionsEl.className = 'quiz-options'
+    const legend = document.createElement('legend')
+    legend.className = 'quiz-question'
 
-  fieldset.appendChild(optionsEl)
+    fieldset.appendChild(legend)
 
-  const checkBtn = document.createElement('button')
-  checkBtn.textContent = 'Check'
-  checkBtn.className = 'btn quiz-check'
-  checkBtn.disabled = true
+    const optionsEl = document.createElement('div')
+    optionsEl.className = 'quiz-options'
 
-  const nextBtn = document.createElement('button')
-  nextBtn.textContent = 'Next'
-  nextBtn.className = 'btn quiz-next'
-  nextBtn.style.display = 'none'
+    fieldset.appendChild(optionsEl)
 
-  const tryBtn = document.createElement('button')
-  tryBtn.textContent = 'Try again'
-  tryBtn.className = 'btn quiz-try'
-  tryBtn.style.display = 'none'
+    const checkBtn = document.createElement('button')
+    checkBtn.textContent = 'Check'
+    checkBtn.className = 'btn quiz-check'
+    checkBtn.disabled = true
 
-  const explainBtn = document.createElement('button')
-  explainBtn.textContent = 'Explain'
-  explainBtn.className = 'btn quiz-explain'
-  explainBtn.style.display = 'none'
+    const nextBtn = document.createElement('button')
+    nextBtn.textContent = 'Next'
+    nextBtn.className = 'btn quiz-next'
+    nextBtn.style.display = 'none'
 
-  const explainEl = document.createElement('p')
-  explainEl.className = 'quiz-explanation'
-  explainEl.style.display = 'none'
+    const tryBtn = document.createElement('button')
+    tryBtn.textContent = 'Try again'
+    tryBtn.className = 'btn quiz-try'
+    tryBtn.style.display = 'none'
 
-  quizRenderQuestion({
-    questions,
-    progressEl,
-    scoreEl,
-    legend,
-    optionsEl,
-    checkBtn,
-    nextBtn,
-    tryBtn,
-    explainBtn,
-    explainEl
-  })
+    const explainBtn = document.createElement('button')
+    explainBtn.textContent = 'Explain'
+    explainBtn.className = 'btn quiz-explain'
+    explainBtn.style.display = 'none'
 
-  container.append(
-    titelEl,
-    progressEl,
-    scoreEl,
-    fieldset,
-    checkBtn,
-    nextBtn,
-    tryBtn,
-    explainBtn,
-    explainEl
-  )
+    const explainEl = document.createElement('p')
+    explainEl.className = 'quiz-explanation'
+    explainEl.style.display = 'none'
 
-  quizSelection(optionsEl, (value) => {
-    updateUIState({ selectedOption: value })
-
-    applyUIState({
+    quizRenderQuestion({
+      questions,
+      progressEl,
+      scoreEl,
+      legend,
+      optionsEl,
       checkBtn,
       nextBtn,
       tryBtn,
       explainBtn,
       explainEl
     })
-  })
 
-  quizCheck({
-    optionsEl,
-    checkBtn,
-    nextBtn,
-    tryBtn,
-    explainBtn,
-    explainEl,
-    getCorrectAnswer: () => questions[getIndex()].answer,
-    onResult: (isCorrect) => {
-      if (isCorrect) {
-        setScore(getScore() + 1)
-        scoreEl.textContent = `Score: ${getScore()}`
-      }
-    }
-  })
+    container.append(
+      titelEl,
+      progressEl,
+      scoreEl,
+      fieldset,
+      checkBtn,
+      nextBtn,
+      tryBtn,
+      explainBtn,
+      explainEl
+    )
 
-  quizNext({
-    nextBtn,
-    questions,
-    getIndex,
-    setIndex,
-    quizRenderQuestion: () =>
-      quizRenderQuestion({
-        questions,
-        progressEl,
-        scoreEl,
-        legend,
-        optionsEl,
+    quizSelection(optionsEl, (value) => {
+      updateUIState({ selectedOption: value })
+
+      applyUIState({
         checkBtn,
         nextBtn,
         tryBtn,
         explainBtn,
         explainEl
-      }),
-    container,
-    optionsEl,
-    checkBtn,
-    tryBtn,
-    explainBtn,
-    explainEl
-  })
+      })
+    })
 
-  quizTryAgain({
-    optionsEl,
-    checkBtn,
-    nextBtn,
-    tryBtn,
-    explainBtn,
-    clearSelected: () => updateUIState({ selectedOption: null }),
-    explainEl
-  })
+    quizCheck({
+      optionsEl,
+      checkBtn,
+      nextBtn,
+      tryBtn,
+      explainBtn,
+      explainEl,
+      getCorrectAnswer: () => questions[getIndex()].answer,
+      onResult: (isCorrect) => {
+        if (isCorrect) {
+          setScore(getScore() + 1)
+          scoreEl.textContent = `Score: ${getScore()}`
+        }
+      }
+    })
 
-  quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
+    quizNext({
+      nextBtn,
+      questions,
+      getIndex,
+      setIndex,
+      quizRenderQuestion: () =>
+        quizRenderQuestion({
+          questions,
+          progressEl,
+          scoreEl,
+          legend,
+          optionsEl,
+          checkBtn,
+          nextBtn,
+          tryBtn,
+          explainBtn,
+          explainEl
+        }),
+        container,
+        optionsEl,
+        checkBtn,
+        tryBtn,
+        explainBtn,
+        explainEl
+      })
+
+      quizTryAgain({
+        optionsEl,
+        checkBtn,
+        nextBtn,
+        tryBtn,
+        explainBtn,
+        clearSelected: () => updateUIState({ selectedOption: null }),
+        explainEl
+      })
+
+      quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
+    }).catch((err: unknown) => {
+      if (err instanceof Error) {
+        container.innerHTML = `<p class="error">${err.message}</p>`
+      } else {
+        container.innerHTML = `<p class="error">Some error was occured</p>`
+      }
+    });
 
   return container
 }
