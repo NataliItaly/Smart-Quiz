@@ -42,10 +42,8 @@ export function filters(): HTMLFormElement {
 
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
-
-    //const filteredQuestions = filterQuestions(QuestionsState.selectedCategory, QuestionsState.selectedLevel)
-    //QuestionsState.currentQuestions = filteredQuestions;
-
+    const startingQuestions = [...QuestionsState.currentQuestions]
+    console.log('starting questions', startingQuestions)
     console.log('quest state', QuestionsState)
   });
 

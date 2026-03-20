@@ -34,8 +34,6 @@ export class Router {
 
   public handleLocation(): void {
     const fullPath = window.location.pathname + window.location.hash;
-    console.log('pathname', window.location.pathname)
-    console.log('hash', window.location.hash)
 
     // don't save the same route twice
     if (getCurrentRoute() !== fullPath) {
@@ -44,7 +42,6 @@ export class Router {
 
     const path = window.location.pathname;
     const route = this.routes.find(r => r.path === path);
-    console.log('route', route)
 
     // save current route
     setCurrentRoute(window.location.pathname + window.location.hash);
