@@ -2,7 +2,6 @@ import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
 import { questionFilter, QuestionsState } from "../states/questionsState";
 import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
-import { filterQuestions } from "../utils/filter.questions";
 
 
 export function filters(): HTMLFormElement {
@@ -44,8 +43,8 @@ export function filters(): HTMLFormElement {
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
 
-    const filteredQuestions = filterQuestions(QuestionsState.selectedCategory, QuestionsState.selectedLevel)
-    QuestionsState.currentQuestions = filteredQuestions;
+    //const filteredQuestions = filterQuestions(QuestionsState.selectedCategory, QuestionsState.selectedLevel)
+    //QuestionsState.currentQuestions = filteredQuestions;
 
     console.log('quest state', QuestionsState)
   });
