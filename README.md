@@ -48,3 +48,6 @@ To run tests locally:
 Expected output:
 
 <img width="575" height="283" alt="Screenshot 2026-03-11 012224" src="https://github.com/user-attachments/assets/c38fb28a-9fab-4efc-8c08-1ba911234de5" />
+
+## Week 5 Checkpoint
+Implementing Page Not Found (404) functionality, loading, error handling, [YouTube demonstration link](https://youtu.be/dvX3uxiGYV0) 
