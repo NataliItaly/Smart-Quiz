@@ -14,8 +14,8 @@ import {
   applyUIState
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
-
-import { quizService } from '../../services/quiz.service'
+import { filterQuestions } from '../../utils/filter.questions';
+import { QuestionsState } from '../../states/questionsState';
 
 
 export function quizScreen(): HTMLElement {
@@ -27,7 +27,10 @@ export function quizScreen(): HTMLElement {
   const loader = renderLoader();
   container.append(loader);
 
-  quizService().then((questions) => {
+  filterQuestions(QuestionsState.selectedCategory, QuestionsState.selectedLevel).then((questions) => {
+    QuestionsState.currentQuestions = questions;
+    console.log('questions from quiz screen', questions)
+
     container.innerHTML = '';
 
     const titelEl = document.createElement('h2')

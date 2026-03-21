@@ -1,4 +1,4 @@
-import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types"
+import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types";
 
 export function quizService(): Promise<Question[]> {
   return new Promise((resolve, reject) => {
@@ -23,7 +23,7 @@ export function quizService(): Promise<Question[]> {
             allQuestions.push(...enlarged);
           }
         }
-
+        console.log('all questitons from quiz service', allQuestions)
         resolve(allQuestions);
       } catch(err) {
         if (err instanceof Error) {

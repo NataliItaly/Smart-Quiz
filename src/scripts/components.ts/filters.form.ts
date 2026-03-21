@@ -39,6 +39,7 @@ export function renderFiltersForm(): HTMLFormElement {
 
     QuestionsState.selectedCategory = toCategory(choosenCategory);
     QuestionsState.selectedLevel = toLevel(choosenLevel);
+    QuestionsState.currentQuestions = [];
 
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
