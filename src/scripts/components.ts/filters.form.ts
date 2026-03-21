@@ -4,7 +4,7 @@ import { questionFilter, QuestionsState } from "../states/questionsState";
 import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
 
 
-export function filters(): HTMLFormElement {
+export function renderFiltersForm(): HTMLFormElement {
   const filterForm = createElement({tag: 'form', className: 'form', id: 'filter-form'});
 
   const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard']};
