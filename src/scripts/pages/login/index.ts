@@ -4,6 +4,7 @@ import type { RegisterData } from "./types";
 import { LoginData } from "./types";
 import { StoredUser } from "./types";
 import { renderRegisterForm } from "./RegisterForm";
+import { Popup } from "../../components.ts/popup";
 
 export function renderLogin(router: Router, setAuth: (value: boolean) => void): void {
     const root = document.getElementById("app")!;
@@ -42,21 +43,18 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void): 
     formContainer.className = 'form-container';
     container.appendChild(formContainer);
     
-    const handleAuthSuccess = (userName: string): void => {
-        localStorage.setItem('currentUser', userName);
+    const handleAuthSuccess = (user: StoredUser): void => {
+        localStorage.setItem('currentUser',JSON.stringify(user));
         
         const users: StoredUser[] = JSON.parse(localStorage.getItem('quiz_users') || '[]') as StoredUser[];
-        const userExists = users.some((u: StoredUser) => u.email === userName || u.name === userName);
+        const userExists = users.some((u: StoredUser)  => u.email === user.email);
         
         if (!userExists) {
-            users.push({ 
-                email: userName, 
-                name: userName 
-            });
+            users.push(user);
             localStorage.setItem('quiz_users', JSON.stringify(users));
         }
         
-        const resultsKey = `results_${userName}`;
+        const resultsKey = `results_${user.email}`;
         if (!localStorage.getItem(resultsKey)) {
             localStorage.setItem(resultsKey, JSON.stringify([]));
         }
@@ -78,17 +76,25 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void): 
                 const users: StoredUser[] = JSON.parse(localStorage.getItem('quiz_users') || '[]') as StoredUser[];
 
                 if (data.email && data.password.length >= 3) {
-                    const existingUser = users.find((u: StoredUser): boolean => 
-                        u.email === data.email || u.name === data.email
+                    const existingUser = users.find((u: StoredUser): boolean =>  
+                        u.email === data.email
                     );
 
                     if (existingUser) {
-                        handleAuthSuccess(existingUser.name || existingUser.email);
+                        handleAuthSuccess(existingUser);
                     } else {
-                        alert('Пользователь не найден. Попробуйте зарегистрироваться.');
+                        Popup.show({
+                            message: 'Пользователь не найден. Попробуйте зарегистрироваться.',
+                            type: 'error',
+                            duration: 3000
+                        });
                     } 
                 } else {
-                    alert('Неверный формат email или пароль слишком короткий');
+                    Popup.show({
+                        message: 'Неверный формат email или пароль слишком короткий (минимум 3 символа)',
+                        type: 'error',
+                        duration: 3000
+                    });
                 }
             });
         } else {
@@ -96,9 +102,13 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void): 
                 console.log('Регистрация:', data);
 
                 if (data.name && data.email && data.password.length >= 3) {
-                    handleAuthSuccess(data.name);
+                    handleAuthSuccess({ name: data.name, email: data.email });
                 } else {
-                    alert('Заполните все поля (пароль минимум 3 символа)');
+                    Popup.show({
+                        message: 'Заполните все поля (пароль минимум 3 символа)',
+                        type: 'error',
+                        duration: 3000
+                    });
                 }
             });
         }

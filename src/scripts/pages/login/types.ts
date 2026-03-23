@@ -4,7 +4,7 @@ export interface User {
 }
 
 export interface StoredUser {
-    name?: string;
+    name: string;
     email: string;
     password?: string;
 }
