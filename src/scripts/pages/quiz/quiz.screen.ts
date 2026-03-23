@@ -31,7 +31,7 @@ export function quizScreen(): HTMLElement {
     QuestionsState.currentQuestions = questions;
     console.log('questions from quiz screen', questions)
 
-    container.innerHTML = '';
+    //container.innerHTML = '';
 
     const titelEl = document.createElement('h2')
     titelEl.className = 'quiz-title'
