@@ -1,9 +1,9 @@
 import { Router } from "../services/router";
 
-export function renderStatistic(router: Router) {
+export function renderQuiz(router: Router) {
   const root = document.getElementById("app")!;
   root.innerHTML = `
-    <h1>Statistic Page</h1>
+    <h1>Quiz Page</h1>
     <button id="backBtn">Back</button>
   `;
 
