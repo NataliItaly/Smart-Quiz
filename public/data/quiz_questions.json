@@ -961,7 +961,7 @@
             "Удаляет внешние отступы (margin)",
             "Делает границы элемента невидимыми"
           ],
-          "options_en": [
+          "options": [
             "Adds a border",
             "Includes padding and border in width",
             "Removes margins",
@@ -987,7 +987,7 @@
             "em используется для шрифтов, rem для отступов",
             "Никакой разницы нет"
           ],
-          "options_en": [
+          "options": [
             "em from parent, rem from root",
             "rem from parent, em from root",
             "em for fonts, rem for margins",
@@ -1025,7 +1025,7 @@
             "Для изменения стиля после клика",
             "Для применения стилей к следующему соседу"
           ],
-          "options_en": [
+          "options": [
             "Selecting last child",
             "Inserting content after content",
             "Style after click",
@@ -1051,7 +1051,7 @@
             "Все элементы <p>, которые являются соседями <div>",
             "<div> и <p> одновременно"
           ],
-          "options_en": [
+          "options": [
             "p inside div",
             "First p immediately after div",
             "All p neighbors of div",
@@ -1115,7 +1115,7 @@
             "Скрывает указатель мыши",
             "Отключает тачпад"
           ],
-          "options_en": [
+          "options": [
             "Changes cursor",
             "Ignores clicks",
             "Hides mouse",
@@ -1174,7 +1174,7 @@
             "Он станет position: relative",
             "Браузер выдаст ошибку"
           ],
-          "options_en": [
+          "options": [
             "Will disappear",
             "Position relative to window/body",
             "Will become relative",
@@ -1224,7 +1224,7 @@
             "Для подключения шрифтов",
             "Для оптимизации изображений"
           ],
-          "options_en": ["Video", "Responsiveness", "Fonts", "Images"],
+          "options": ["Video", "Responsiveness", "Fonts", "Images"],
           "answer_en": "Responsiveness",
           "answer_ru": "Для создания адаптивного дизайна под разные экраны"
         },
@@ -1245,7 +1245,7 @@
             "Делает элемент прозрачным для кликов",
             "Никакой разницы нет"
           ],
-          "options_en": [
+          "options": [
             "Deletes code",
             "Hides but keeps space",
             "Blocks clicks",
@@ -1285,7 +1285,7 @@
             "Выбирает соседний элемент после картинки",
             "Выбирает только первую картинку в блоке"
           ],
-          "options_en": [
+          "options": [
             "Selects all images inside a parent",
             "Selects the parent if it has a direct child img",
             "Selects the next sibling after an image",
@@ -1304,7 +1304,7 @@
             "Container работает только для мобильных устройств",
             "Media позволяет использовать переменные"
           ],
-          "options_en": [
+          "options": [
             "Media is faster",
             "Container adapts to the parent size, not the viewport",
             "Container only works for mobile devices",
@@ -1318,7 +1318,7 @@
           "question_ru": "Какая директива SCSS используется для создания переиспользуемых блоков кода с аргументами?",
           "question_en": "Which SCSS directive is used to create reusable code blocks with arguments?",
           "options_ru": ["@function", "@mixin", "@import", "@extend"],
-          "options_en": ["@function", "@mixin", "@import", "@extend"],
+          "options": ["@function", "@mixin", "@import", "@extend"],
           "answer_ru": "@mixin",
           "answer_en": "@mixin"
         },
@@ -1332,7 +1332,7 @@
             "Выбирает случайное значение",
             "Округляет значение до целого"
           ],
-          "options_en": [
+          "options": [
             "Adds three values together",
             "Limits the size within a range between min and max",
             "Selects a random value",
@@ -1351,7 +1351,7 @@
             "Обозначает логическое И",
             "Импортирует внешний файл"
           ],
-          "options_en": [
+          "options": [
             "Creates a new variable",
             "References the parent selector",
             "Represents a logical AND",
@@ -1370,7 +1370,7 @@
             "Изменение угла наклона",
             "Управление скоростью анимации"
           ],
-          "options_en": [
+          "options": [
             "Setting transparency",
             "Maintaining element proportions (e.g., 16/9)",
             "Changing the tilt angle",
@@ -1389,7 +1389,7 @@
             "Настройка для 3D трансформаций",
             "Способ группировки медиа запросов"
           ],
-          "options_en": [
+          "options": [
             "A new kind of z-index",
             "A tool for managing style priority",
             "A setting for 3D transformations",
@@ -1408,7 +1408,7 @@
             "media-range: 400-800",
             "between(400px, 800px)"
           ],
-          "options_en": [
+          "options": [
             "(400px <= width <= 800px)",
             "(width: 400px - 800px)",
             "media-range: 400-800",
@@ -1427,7 +1427,7 @@
             "Выбирает среднее значение между 100px и 1fr",
             "Создает колонку, которая всегда равна 100px"
           ],
-          "options_en": [
+          "options": [
             "Sets a fixed size of 100px",
             "Defines a size range from 100px to all available space",
             "Selects the average value between 100px and 1fr",
@@ -1446,7 +1446,7 @@
             "Работает только в старых браузерах",
             "Поддерживает только черно-белые цвета"
           ],
-          "options_en": [
+          "options": [
             "It has a shorter syntax",
             "It is perceptually uniform in brightness",
             "It only works in old browsers",
@@ -1465,7 +1465,7 @@
             "Для математических вычислений",
             "Для подключения внешних шрифтов"
           ],
-          "options_en": [
+          "options": [
             "For creating loops",
             "For inheriting properties from one selector to another",
             "For mathematical calculations",
@@ -1484,7 +1484,7 @@
             "Скрывает полосу прокрутки",
             "Автоматически прокручивает страницу вниз"
           ],
-          "options_en": [
+          "options": [
             "Speeds up page loading",
             "Enables smooth scrolling for anchor links",
             "Hides the scrollbar",
@@ -1503,7 +1503,7 @@
             "Всегда возвращает 80%",
             "Удалит 20 пикселей из HTML"
           ],
-          "options_en": [
+          "options": [
             "Syntax error",
             "Calculates element width minus 20 pixels",
             "Always returns 80%",
@@ -1522,7 +1522,7 @@
             "$color: red;",
             "@color: red;"
           ],
-          "options_en": [
+          "options": [
             "var color = red;",
             "--color: red;",
             "$color: red;",
@@ -1541,7 +1541,7 @@
             "Выбирает три первых элемента",
             "Выбирает элемент с id='3'"
           ],
-          "options_en": [
+          "options": [
             "Selects every third child",
             "Selects the third element of the specified type",
             "Selects the first three elements",
@@ -1560,7 +1560,7 @@
             "flex-grow",
             "grid-template"
           ],
-          "options_en": [
+          "options": [
             "grid-column",
             "column-span",
             "flex-grow",
@@ -1579,7 +1579,7 @@
             "Сбрасывает все текущие изменения",
             "Заменяет одну переменную на другую"
           ],
-          "options_en": [
+          "options": [
             "Changes element style in the future",
             "Hints to the browser to prepare for an animation",
             "Resets all current changes",
@@ -1593,7 +1593,7 @@
           "question_ru": "Как в SCSS использовать цикл для генерации классов?",
           "question_en": "How to use a loop in SCSS to generate classes?",
           "options_ru": ["@for", "@loop", "@repeat", "@while"],
-          "options_en": ["@for", "@loop", "@repeat", "@while"],
+          "options": ["@for", "@loop", "@repeat", "@while"],
           "answer_ru": "@for",
           "answer_en": "@for"
         },
@@ -1607,7 +1607,7 @@
             "Добавляет белый фон",
             "Уменьшает вес шрифта"
           ],
-          "options_en": [
+          "options": [
             "Changes opacity",
             "Makes the color 10% lighter",
             "Adds a white background",
@@ -1626,7 +1626,7 @@
             "Меняет цвет всех картинок",
             "Генератор случайных цветов"
           ],
-          "options_en": [
+          "options": [
             "Selecting a palette for the site",
             "Indicates if the page supports dark/light mode",
             "Changes the color of all images",
@@ -1645,7 +1645,7 @@
             "Удаляет ключ из карты",
             "Рисует карту в фоне"
           ],
-          "options_en": [
+          "options": [
             "Creates a site map",
             "Extracts a value from a map by key",
             "Remoses a key from the map",
@@ -1664,7 +1664,7 @@
             "Отключения JavaScript",
             "Центрирования всего контента"
           ],
-          "options_en": [
+          "options": [
             "Deleting all elements",
             "Resetting all properties of an element to default values",
             "Disabling JavaScript",
@@ -1683,7 +1683,7 @@
             "Выбирает li внутри блока .active",
             "Скрывает li без класса active"
           ],
-          "options_en": [
+          "options": [
             "Selects all li with class active",
             "Selects all li that do not have the class active",
             "Selects li inside an .active block",
@@ -1702,7 +1702,7 @@
             "overflow",
             "shape-outside"
           ],
-          "options_en": [
+          "options": [
             "border-radius",
             "clip-path",
             "overflow",
@@ -1721,7 +1721,7 @@
             "Фокусируется на тексте внутри",
             "Запрещает фокусировку"
           ],
-          "options_en": [
+          "options": [
             "Applies if the element is focused",
             "Applies to a parent if any of its descendants gain focus",
             "Focuses on internal text",
@@ -1740,7 +1740,7 @@
             "Заархивировать файл",
             "Назвать файл .scss-temp"
           ],
-          "options_en": [
+          "options": [
             "Add an underscore prefix to the filename (_file.scss)",
             "Use @import-hidden",
             "Archive the file",
@@ -1759,7 +1759,7 @@
             "Заменяет пробелы на дефисы",
             "Ничего не делает"
           ],
-          "options_en": [
+          "options": [
             "Removes all hyphens",
             "Automatically inserts hyphens for word wrapping",
             "Replaces spaces with hyphens",
@@ -1788,7 +1788,7 @@
             "Скрывает элемент от поисковиков",
             "Делает элемент прозрачным"
           ],
-          "options_en": [
+          "options": [
             "Disconnects internet",
             "Creates a new stacking context for mix-blend-mode",
             "Hides the element from SEO",
@@ -1802,7 +1802,7 @@
           "question_ru": "Как в SCSS передать блок стилей внутрь миксина?",
           "question_en": "How to pass a block of styles into a mixin in SCSS?",
           "options_ru": ["@content", "@slot", "@inject", "@put"],
-          "options_en": ["@content", "@slot", "@inject", "@put"],
+          "options": ["@content", "@slot", "@inject", "@put"],
           "answer_ru": "@content",
           "answer_en": "@content"
         },
@@ -1816,7 +1816,7 @@
             "background-blur",
             "opacity"
           ],
-          "options_en": [
+          "options": [
             "filter: blur()",
             "backdrop-filter: blur()",
             "background-blur",
@@ -1839,7 +1839,7 @@
             "Присваивает значение переменной",
             "Проверяет только тип"
           ],
-          "options_en": [
+          "options": [
             "Compares values without type",
             "Compares both values and types",
             "Assigns a value to a variable",
@@ -1853,7 +1853,7 @@
           "question_ru": "Что возвращает typeof null?",
           "question_en": "What does typeof null return?",
           "options_ru": ["null", "object", "undefined", "string"],
-          "options_en": ["null", "object", "undefined", "string"],
+          "options": ["null", "object", "undefined", "string"],
           "answer_ru": "object",
           "answer_en": "object"
         },
@@ -1862,7 +1862,7 @@
           "question_ru": "Как добавить элемент в конец массива?",
           "question_en": "How do you add an element to the end of an array?",
           "options_ru": ["push()", "pop()", "shift()", "unshift()"],
-          "options_en": ["push()", "pop()", "shift()", "unshift()"],
+          "options": ["push()", "pop()", "shift()", "unshift()"],
           "answer_ru": "push()",
           "answer_en": "push()"
         },
@@ -1876,7 +1876,7 @@
             "Сохраняет данные в localStorage",
             "Удаляет объект"
           ],
-          "options_en": [
+          "options": [
             "Converts an object to a JSON string",
             "Converts a string to an object",
             "Saves data to localStorage",
@@ -1895,7 +1895,7 @@
             "Math.round()",
             "parseInt()"
           ],
-          "options_en": [
+          "options": [
             "Math.floor()",
             "Math.ceil()",
             "Math.round()",
@@ -1909,7 +1909,7 @@
           "question_ru": "Как удалить последний элемент массива?",
           "question_en": "How do you remove the last element of an array?",
           "options_ru": ["push()", "pop()", "shift()", "splice()"],
-          "options_en": ["push()", "pop()", "shift()", "splice()"],
+          "options": ["push()", "pop()", "shift()", "splice()"],
           "answer_ru": "pop()",
           "answer_en": "pop()"
         },
@@ -1923,7 +1923,7 @@
             "Сохраняет данные",
             "Удаляет переменную"
           ],
-          "options_en": [
+          "options": [
             "Logs a message to console",
             "Shows a popup window",
             "Saves data",
@@ -1942,7 +1942,7 @@
             "string.count()",
             "string.len()"
           ],
-          "options_en": [
+          "options": [
             "string.size",
             "string.length",
             "string.count()",
@@ -1961,7 +1961,7 @@
             "Сравнивает типы",
             "Присваивает значение"
           ],
-          "options_en": [
+          "options": [
             "Returns the first false value",
             "Returns the first true value",
             "Compares types",
@@ -1975,7 +1975,7 @@
           "question_ru": "Как объединить два массива?",
           "question_en": "How do you merge two arrays?",
           "options_ru": ["concat()", "merge()", "join()", "combine()"],
-          "options_en": ["concat()", "merge()", "join()", "combine()"],
+          "options": ["concat()", "merge()", "join()", "combine()"],
           "answer_ru": "concat()",
           "answer_en": "concat()"
         },
@@ -1989,7 +1989,7 @@
             "Округляет число",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Returns a random number between 0 and 1",
             "Returns an integer",
             "Rounds a number",
@@ -2008,7 +2008,7 @@
             "array.end()",
             "array.pop()"
           ],
-          "options_en": [
+          "options": [
             "array.last()",
             "array[array.length - 1]",
             "array.end()",
@@ -2027,7 +2027,7 @@
             "Удаляет элемент",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Checks if an element exists",
             "Adds an element",
             "Removes an element",
@@ -2046,7 +2046,7 @@
             "def myFunc() {}",
             "fn myFunc() {}"
           ],
-          "options_en": [
+          "options": [
             "function myFunc() {}",
             "func myFunc() {}",
             "def myFunc() {}",
@@ -2065,7 +2065,7 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Creates a new array with elements that pass a test",
             "Removes all elements",
             "Sorts the array",
@@ -2085,7 +2085,7 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Creates a new array by applying a function to each element",
             "Removes elements from the array",
             "Sorts the array",
@@ -2104,7 +2104,7 @@
             "Тип данных",
             "Функция"
           ],
-          "options_en": [
+          "options": [
             "A variable that has not been assigned a value",
             "A runtime error",
             "A data type",
@@ -2123,7 +2123,7 @@
             "let obj = ()",
             "let obj = <>"
           ],
-          "options_en": [
+          "options": [
             "let obj = {}",
             "let obj = []",
             "let obj = ()",
@@ -2142,7 +2142,7 @@
             "Сравнивает типы",
             "Присваивает значение"
           ],
-          "options_en": [
+          "options": [
             "Returns the first false value",
             "Returns the first true value",
             "Compares types",
@@ -2161,7 +2161,7 @@
             "Удаляет переменную",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Executes a function after a specified time",
             "Stops program execution",
             "Deletes a variable",
@@ -2180,7 +2180,7 @@
             "Добавляет элемент в конец",
             "Добавляет элемент в начало"
           ],
-          "options_en": [
+          "options": [
             "Removes the first element of the array",
             "Removes the last element of the array",
             "Adds an element to the end",
@@ -2199,7 +2199,7 @@
             "Удаляет элемент",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Adds an element to the beginning of the array",
             "Adds an element to the end of the array",
             "Removes an element",
@@ -2218,7 +2218,7 @@
             "Округляет число",
             "Удаляет пробелы"
           ],
-          "options_en": [
+          "options": [
             "Converts a string to an integer",
             "Converts a number to a string",
             "Rounds a number",
@@ -2237,7 +2237,7 @@
             "Удаляет элементы массива",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Joins array elements into a string",
             "Merges two arrays",
             "Removes array elements",
@@ -2256,7 +2256,7 @@
             "Сортирует массив по возрастанию",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Reverses the order of array elements",
             "Removes array elements",
             "Sorts the array in ascending order",
@@ -2276,7 +2276,7 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Returns a portion of the array",
             "Removes elements from the array",
             "Sorts the array",
@@ -2295,7 +2295,7 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Changes the array by adding or removing elements",
             "Creates a new array",
             "Sorts the array",
@@ -2314,7 +2314,7 @@
             "Преобразует строку в число",
             "Удаляет переменную"
           ],
-          "options_en": [
+          "options": [
             "Checks if a value is a number",
             "Checks if a value is NaN",
             "Converts a string to a number",
@@ -2333,7 +2333,7 @@
             "Округляет число",
             "Удаляет переменную"
           ],
-          "options_en": [
+          "options": [
             "Converts a value to a number",
             "Converts a number to a string",
             "Rounds a number",
@@ -2352,7 +2352,7 @@
             "Удаляет переменную",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Converts a value to a boolean",
             "Converts a number to a string",
             "Deletes a variable",
@@ -2373,7 +2373,7 @@
             "Функция, которая возвращает объект",
             "Функция, которая выполняется один раз"
           ],
-          "options_en": [
+          "options": [
             "A function inside another function that has access to its variables",
             "A function without parameters",
             "A function that returns an object",
@@ -2392,7 +2392,7 @@
             "Указывает на родительскую функцию",
             "Указывает на первый аргумент"
           ],
-          "options_en": [
+          "options": [
             "Refers to the global object or current context",
             "Always points to window",
             "Points to the parent function",
@@ -2411,7 +2411,7 @@
             "Копирование всех свойств объекта",
             "Создание массива из объекта"
           ],
-          "options_en": [
+          "options": [
             "A mechanism where objects inherit properties from other objects",
             "Class inheritance",
             "Copying all properties of an object",
@@ -2430,7 +2430,7 @@
             "Методы для работы с объектами",
             "События DOM"
           ],
-          "options_en": [
+          "options": [
             "Objects for handling asynchronous operations",
             "Functions for working with arrays",
             "Methods for working with objects",
@@ -2449,7 +2449,7 @@
             "Удаляет переменные",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Allows writing asynchronous code in synchronous style",
             "Creates a new array",
             "Deletes variables",
@@ -2468,7 +2468,7 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Reduces an array to a single value by applying a function",
             "Removes elements from the array",
             "Sorts the array",
@@ -2487,7 +2487,7 @@
             "Событие, которое всегда выполняется в глобальном контексте",
             "Событие, которое не может быть остановлено"
           ],
-          "options_en": [
+          "options": [
             "Process where an event propagates from child to parent element",
             "An event that executes once",
             "An event that always executes in global context",
@@ -2506,7 +2506,7 @@
             "Удаляют переменные",
             "Сортируют массив"
           ],
-          "options_en": [
+          "options": [
             "Allow explicitly setting the function execution context",
             "Create a new array",
             "Delete variables",
@@ -2525,7 +2525,7 @@
             "Сортировка массива",
             "Создание объекта"
           ],
-          "options_en": [
+          "options": [
             "Mechanism where variable and function declarations are moved to the top of scope",
             "Deleting variables",
             "Sorting an array",
@@ -2544,7 +2544,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Handles runtime errors",
             "Deletes variables",
             "Creates an array",
@@ -2563,7 +2563,7 @@
             "Режим для работы с DOM",
             "Режим для асинхронного кода"
           ],
-          "options_en": [
+          "options": [
             "Mode that makes code safer and stricter",
             "Mode for working with arrays",
             "Mode for working with DOM",
@@ -2582,7 +2582,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Copies properties from one object to another",
             "Deletes an object",
             "Creates an array",
@@ -2601,7 +2601,7 @@
             "Shallow копирует массивы, deep — объекты",
             "Shallow копирует числа, deep — строки"
           ],
-          "options_en": [
+          "options": [
             "Shallow copies only the top level, deep copies all levels",
             "Both copy everything fully",
             "Shallow copies arrays, deep copies objects",
@@ -2620,7 +2620,7 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Executes a function at regular intervals",
             "Executes a function once",
             "Deletes variables",
@@ -2639,7 +2639,7 @@
             "Сортировка массива",
             "Создание объекта"
           ],
-          "options_en": [
+          "options": [
             "Limits how often a function is called",
             "Deletes variables",
             "Sorts an array",
@@ -2658,7 +2658,7 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data in the browser with no expiration",
             "Stores data only until the tab is closed",
             "Deletes variables",
@@ -2677,7 +2677,7 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data until the tab is closed",
             "Stores data permanently",
             "Deletes variables",
@@ -2696,7 +2696,7 @@
             "Удаляет переменные",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Allows performing HTTP requests",
             "Creates an array",
             "Deletes variables",
@@ -2715,7 +2715,7 @@
             "Функция для работы с объектами",
             "Событие DOM"
           ],
-          "options_en": [
+          "options": [
             "Mechanism for controlling access between different domains",
             "Array sorting method",
             "Function for working with objects",
@@ -2734,7 +2734,7 @@
             "Событие, которое всегда выполняется в глобальном контексте",
             "Событие, которое нельзя остановить"
           ],
-          "options_en": [
+          "options": [
             "Technique of handling events through a parent element",
             "An event that executes once",
             "An event that always executes in global context",
@@ -2754,7 +2754,7 @@
             "Режим для работы с DOM",
             "Режим для асинхронного кода"
           ],
-          "options_en": [
+          "options": [
             "Mode that makes code safer and stricter",
             "Mode for working with arrays",
             "Mode for working with DOM",
@@ -2773,7 +2773,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Copies properties from one object to another",
             "Deletes an object",
             "Creates an array",
@@ -2792,7 +2792,7 @@
             "Shallow копирует массивы, deep — объекты",
             "Shallow копирует числа, deep — строки"
           ],
-          "options_en": [
+          "options": [
             "Shallow copies only the top level, deep copies all levels",
             "Both copy everything fully",
             "Shallow copies arrays, deep copies objects",
@@ -2811,7 +2811,7 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Executes a function at regular intervals",
             "Executes a function once",
             "Deletes variables",
@@ -2830,7 +2830,7 @@
             "Сортировка массива",
             "Создание объекта"
           ],
-          "options_en": [
+          "options": [
             "Limits how often a function is called",
             "Deletes variables",
             "Sorts an array",
@@ -2849,7 +2849,7 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data in the browser with no expiration",
             "Stores data only until the tab is closed",
             "Deletes variables",
@@ -2868,7 +2868,7 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data until the tab is closed",
             "Stores data permanently",
             "Deletes variables",
@@ -2887,7 +2887,7 @@
             "Удаляет переменные",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Allows performing HTTP requests",
             "Creates an array",
             "Deletes variables",
@@ -2906,7 +2906,7 @@
             "Функция для работы с объектами",
             "Событие DOM"
           ],
-          "options_en": [
+          "options": [
             "Mechanism for controlling access between different domains",
             "Array sorting method",
             "Function for working with objects",
@@ -2925,7 +2925,7 @@
             "Событие, которое всегда выполняется в глобальном контексте",
             "Событие, которое нельзя остановить"
           ],
-          "options_en": [
+          "options": [
             "Technique of handling events through a parent element",
             "An event that executes once",
             "An event that always executes in global context",
@@ -2946,7 +2946,7 @@
             "Фреймворк для работы с DOM",
             "Библиотека для работы с массивами"
           ],
-          "options_en": [
+          "options": [
             "A superset of JavaScript with typing",
             "A new language unrelated to JS",
             "A framework for working with DOM",
@@ -2965,7 +2965,7 @@
             "let name: number = 'Hello'",
             "let name: any = 'Hello'"
           ],
-          "options_en": [
+          "options": [
             "let name: string = 'Hello'",
             "let name = 'Hello'",
             "let name: number = 'Hello'",
@@ -2984,7 +2984,7 @@
             "Тип для чисел",
             "Тип для объектов"
           ],
-          "options_en": [
+          "options": [
             "A type that disables type checking",
             "A type for strings",
             "A type for numbers",
@@ -3003,7 +3003,7 @@
             "Тип для чисел",
             "Тип для массивов"
           ],
-          "options_en": [
+          "options": [
             "A safer alternative to any",
             "A type for strings",
             "A type for numbers",
@@ -3017,7 +3017,7 @@
           "question_ru": "Какой тип используется для значений, которые никогда не возвращаются?",
           "question_en": "Which type is used for values that never return?",
           "options_ru": ["any", "unknown", "never", "void"],
-          "options_en": ["any", "unknown", "never", "void"],
+          "options": ["any", "unknown", "never", "void"],
           "answer_ru": "never",
           "answer_en": "never"
         },
@@ -3031,7 +3031,7 @@
             "type User = { name: string }",
             "function User() {}"
           ],
-          "options_en": [
+          "options": [
             "interface User { name: string }",
             "class User { name: string }",
             "type User = { name: string }",
@@ -3050,7 +3050,7 @@
             "interface используется только для массивов",
             "type используется только для чисел"
           ],
-          "options_en": [
+          "options": [
             "type can combine types, interface can extend",
             "They are completely identical",
             "interface is only for arrays",
@@ -3069,7 +3069,7 @@
             "Массив",
             "Объект"
           ],
-          "options_en": [
+          "options": [
             "A set of fixed values",
             "A function",
             "An array",
@@ -3088,7 +3088,7 @@
             "Объект",
             "Функция"
           ],
-          "options_en": [
+          "options": [
             "An array of fixed length with specific types",
             "A regular array",
             "An object",
@@ -3107,7 +3107,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Makes a property read-only",
             "Deletes a property",
             "Creates an array",
@@ -3127,7 +3127,7 @@
             "Свойства только для массивов",
             "Свойства только для чисел"
           ],
-          "options_en": [
+          "options": [
             "Properties that may be omitted",
             "Properties that are always required",
             "Properties only for arrays",
@@ -3146,7 +3146,7 @@
             "Тип только для чисел",
             "Тип только для объектов"
           ],
-          "options_en": [
+          "options": [
             "A type that can be one of several types",
             "A type only for strings",
             "A type only for numbers",
@@ -3165,7 +3165,7 @@
             "Тип только для строк",
             "Тип только для чисел"
           ],
-          "options_en": [
+          "options": [
             "A type that combines multiple types",
             "A type only for arrays",
             "A type only for strings",
@@ -3184,7 +3184,7 @@
             "Удаление типа",
             "Создание массива"
           ],
-          "options_en": [
+          "options": [
             "Automatic determination of type by the compiler",
             "Manual type declaration",
             "Removing a type",
@@ -3203,7 +3203,7 @@
             "Создание массива",
             "Сортировка массива"
           ],
-          "options_en": [
+          "options": [
             "Forcing a type on a value",
             "Removing a type",
             "Creating an array",
@@ -3222,7 +3222,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Makes values immutable and fixed",
             "Deletes variables",
             "Creates an array",
@@ -3241,7 +3241,7 @@
             "Типы только для чисел",
             "Типы только для объектов"
           ],
-          "options_en": [
+          "options": [
             "Types that allow parameters for flexibility",
             "Types only for strings",
             "Types only for numbers",
@@ -3260,7 +3260,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Makes all properties of a type optional",
             "Deletes properties",
             "Creates an array",
@@ -3279,7 +3279,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Creates a type with selected properties",
             "Deletes properties",
             "Creates an array",
@@ -3298,7 +3298,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Creates a type without specified properties",
             "Deletes all properties",
             "Creates an array",
@@ -3318,7 +3318,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Creates an object type with keys K and values T",
             "Deletes properties",
             "Creates an array",
@@ -3337,7 +3337,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Returns a type representing the keys of an object",
             "Deletes keys",
             "Creates an array",
@@ -3356,7 +3356,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Returns the type of a value",
             "Deletes variables",
             "Creates an array",
@@ -3375,7 +3375,7 @@
             "Типы только для чисел",
             "Типы только для объектов"
           ],
-          "options_en": [
+          "options": [
             "Types that depend on a condition",
             "Types only for strings",
             "Types only for numbers",
@@ -3394,7 +3394,7 @@
             "Типы только для строк",
             "Типы только для чисел"
           ],
-          "options_en": [
+          "options": [
             "Types created by iterating over keys",
             "Types only for arrays",
             "Types only for strings",
@@ -3413,7 +3413,7 @@
             "Типы только для чисел",
             "Типы только для объектов"
           ],
-          "options_en": [
+          "options": [
             "Built-in types that simplify work",
             "Types only for strings",
             "Types only for numbers",
@@ -3432,7 +3432,7 @@
             "Методы для объектов",
             "События DOM"
           ],
-          "options_en": [
+          "options": [
             "Special annotations for classes and methods",
             "Functions for arrays",
             "Methods for objects",
@@ -3451,7 +3451,7 @@
             "Метод для объектов",
             "Событие DOM"
           ],
-          "options_en": [
+          "options": [
             "A mechanism for organizing code into logical blocks",
             "A function for arrays",
             "A method for objects",
@@ -3470,7 +3470,7 @@
             "Файлы для массивов",
             "Файлы для строк"
           ],
-          "options_en": [
+          "options": [
             "Files for describing types of external libraries",
             "Files for storing data",
             "Files for arrays",
@@ -3489,7 +3489,7 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Enables strict checking for null and undefined",
             "Deletes variables",
             "Creates an array",

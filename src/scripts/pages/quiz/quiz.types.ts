@@ -22,6 +22,7 @@ export interface Question {
   id: string | number;
   question_ru: string;
   question_en: string;
+  options__ru?: string;
   options: string[];
   answer: string;
   category: Category;
