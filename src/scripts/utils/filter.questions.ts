@@ -2,7 +2,6 @@ import { Category, Level, Question } from "../pages/quiz/quiz.types";
 import { quizService } from "../services/quiz.service";
 
 export async function filterQuestions(category?: Category, level?: Level): Promise<Question[]> {
-  //const allQuestions = QuestionsState.allQuestions;
   const allQuestions = await quizService()
 
   if (category) {

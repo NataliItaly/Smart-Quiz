@@ -1,6 +1,6 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
-import { questionFilter, QuestionsState } from "../states/questionsState";
+import { questionFilter, updateQuiz } from "../states/questionsState";
 import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
 
 
@@ -37,15 +37,13 @@ export function renderFiltersForm(): HTMLFormElement {
 
     if (!choosenCategory && !choosenLevel) return;
 
-    QuestionsState.selectedCategory = toCategory(choosenCategory);
-    QuestionsState.selectedLevel = toLevel(choosenLevel);
-    QuestionsState.currentQuestions = [];
+    updateQuiz({currentQuestions: [], selectedCategory: toCategory(choosenCategory), selectedLevel: toLevel(choosenLevel)});
 
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
-    const startingQuestions = [...QuestionsState.currentQuestions]
+    /* const startingQuestions = [...getQuiz()?.currentQuestions]
     console.log('starting questions', startingQuestions)
-    console.log('quest state', QuestionsState)
+    console.log('quest state', QuestionsState) */
   });
 
 
