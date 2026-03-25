@@ -13,16 +13,31 @@ import {
   applyUIState
 } from './quiz.state'
 import { quizRenderQuestion } from './quiz.render.question'
+import { createExplainContainer } from '../explain/create.explain.container'
 import { QuestionsState } from '../../states/questionsState';
-//import { quizService } from '../../services/quiz.service'
+
 
 
 export function quizScreen(): HTMLElement {
   const questions = QuestionsState.currentQuestions.length > 0 ? QuestionsState.currentQuestions : QuestionsState.allQuestions; //await quizService()
 
-
   const container = document.createElement('div')
   container.className = 'quiz-screen'
+
+  /* -----------------------------
+     WARNING PANEL (uses .hidden)
+  ----------------------------- */
+  // const warningEl = document.createElement('div')
+  // warningEl.className = 'quiz-warning hidden'
+  // warningEl.textContent = 'You left the page while taking the quiz!!!'
+  // container.appendChild(warningEl)
+
+  // const showWarning = () => {
+  //   warningEl.classList.remove('hidden')
+  //   lockQuizUI()
+  // }
+
+  // initQuizProtection(showWarning)
 
   const titelEl = document.createElement('h2')
   titelEl.className = 'quiz-title'
@@ -67,6 +82,22 @@ export function quizScreen(): HTMLElement {
   explainBtn.className = 'btn quiz-explain'
   explainBtn.style.display = 'none'
 
+  // function lockQuizUI() {
+  //   updateUIState({ locked: true })
+
+  //   applyUIState({
+  //     checkBtn,
+  //     nextBtn,
+  //     tryBtn,
+  //     explainBtn,
+  //     explainEl
+  //   })
+
+  //   optionsEl.querySelectorAll('button').forEach((btn) => {
+  //     btn.disabled = true
+  //   })
+  // }
+
   const explainEl = document.createElement('p')
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
@@ -95,6 +126,8 @@ export function quizScreen(): HTMLElement {
     explainBtn,
     explainEl
   )
+  // modal Explain
+  container.appendChild(createExplainContainer())
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })
@@ -160,7 +193,7 @@ export function quizScreen(): HTMLElement {
     explainEl
   })
 
-  quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
+  quizExplanation(explainBtn, () => questions[getIndex()])
 
   return container
 }
