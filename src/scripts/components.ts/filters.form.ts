@@ -1,7 +1,7 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
 import { questionFilter, updateQuiz } from "../states/questionsState";
-import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
+import { toCategory, toLevel } from "../utils/filter.options.types.converter";
 
 
 export function renderFiltersForm(): HTMLFormElement {
