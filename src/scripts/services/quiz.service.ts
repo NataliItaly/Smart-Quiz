@@ -23,7 +23,7 @@ export function quizService(): Promise<Question[]> {
             allQuestions.push(...enlarged);
           }
         }
-        console.log('all questitons from quiz service', allQuestions)
+
         resolve(allQuestions);
       } catch(err) {
         if (err instanceof Error) {
