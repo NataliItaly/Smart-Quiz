@@ -1225,7 +1225,7 @@
             "Для оптимизации изображений"
           ],
           "options": ["Video", "Responsiveness", "Fonts", "Images"],
-          "answer": "Responsiveness",
+          "answer": "Responsiveness"
           "answer_ru": "Для создания адаптивного дизайна под разные экраны"
         },
         {
