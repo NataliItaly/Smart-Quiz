@@ -19,11 +19,18 @@ export interface FilterOptions {
 }
 
 export interface Question {
+  difficulty: string;
+  topic: string;
   id: string | number;
   question_ru: string;
   question_en: string;
+  options__ru?: string;
   options: string[];
+  options_ru?: string[];
+  options_en?: string[];
   answer: string;
+  answer_ru?: string;
+  answer_en?: string;
   category: Category;
   level: Level;
 }

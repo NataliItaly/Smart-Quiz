@@ -1,11 +1,18 @@
+import { explainationHandler } from '../explain/explaination.handler'
+import { Question } from '../quiz/quiz.types'
+import { getUIState } from './quiz.state'
+
 export function quizExplanation(
   explainBtn: HTMLButtonElement,
-  explainEl: HTMLElement,
-  explanationText: string
+  getCurrentQuestion: () => Question
 ): void {
-  explainEl.textContent = explanationText
-
   explainBtn.addEventListener('click', () => {
-    explainEl.style.display = 'block'
+    const currentQuestion = getCurrentQuestion()
+
+    const selectedAnswer = getUIState().selectedOption
+
+    if (currentQuestion && selectedAnswer) {
+      void explainationHandler(currentQuestion, selectedAnswer)
+    }
   })
 }
