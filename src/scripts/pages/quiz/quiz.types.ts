@@ -1,7 +1,6 @@
 export type Category = 'HTML' | 'CSS & SCSS' | 'JS & TS';
 export type Level = 'easy' | 'medium' | 'hard';
 
-
 export type QuizData = Record<Category, Record<Level, Question[]>>;
 
 export interface QuizResponse {
@@ -19,8 +18,8 @@ export interface FilterOptions {
 }
 
 export interface Question {
-  difficulty: string;
-  topic: string;
+  difficulty?: string;
+  topic?: string;
   id: string | number;
   question_ru: string;
   question_en: string;

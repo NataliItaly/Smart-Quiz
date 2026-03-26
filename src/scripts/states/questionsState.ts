@@ -6,10 +6,9 @@ export interface QuestionsFilter {
 }
 
 export interface QuestionsState {
-  readonly currentQuestions: Question[] | null;
-  readonly selectedCategory: Category | undefined;
-  readonly selectedLevel: Level | undefined;
-  //isFirstFetch: boolean;
+  readonly currentQuestions: Question[] | null
+  readonly selectedCategory: Category | undefined // topic
+  readonly selectedLevel: Level | undefined // dificulty
 }
 
 export const questionFilter: QuestionsFilter = {

@@ -12,7 +12,6 @@ import {
 import { quizCheck } from "./quiz.check";
 import { quizNext } from "./quiz.next";
 import { quizTryAgain } from "./quiz.try.again";
-import { quizExplanation } from "./quiz.explanation";
 
 
 export function renderQuizContainer(container: HTMLElement, questions: Question[]): void {
@@ -155,5 +154,5 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     explainEl
   })
 
-  quizExplanation(explainBtn, explainEl, 'Because 2 + 2 = 4, basic arithmetic.')
+  //quizExplanation(explainBtn, () => questions)
 }

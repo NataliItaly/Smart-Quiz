@@ -2,36 +2,38 @@ import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.type
 
 export function quizService(): Promise<Question[]> {
   return new Promise((resolve, reject) => {
-    setTimeout(async function ()  {
-      try {
-        const res = await fetch('/data/quiz_questions.json')
+    setTimeout( () => {
+      void (async function () {
+        try {
+          const res = await fetch('/data/quiz_questions.json')
 
-        if (!res.ok) {
-          throw new Error('Failed to load quiz questions')
-        }
+          if (!res.ok) {
+            throw new Error('Failed to load quiz questions')
+          }
 
-        const json: unknown = await res.json();
-        const data = json as QuizResponse;
+          const json: unknown = await res.json()
+          const data = json as QuizResponse
 
-        const allQuestions: Question[] = []
+          const allQuestions: Question[] = []
 
-        for (const category of Object.keys(data.quiz) as Category[]) {
-          for (const level of Object.keys(data.quiz[category]) as Level[]) {
-            const questions = data.quiz[category][level];
+          for (const category of Object.keys(data.quiz) as Category[]) {
+            for (const level of Object.keys(data.quiz[category]) as Level[]) {
+              const questions = data.quiz[category][level]
 
-            const enlarged = questions.map(q => ({...q, category, level}))
-            allQuestions.push(...enlarged);
+              const enlarged = questions.map((q) => ({ ...q, category, level }))
+              allQuestions.push(...enlarged)
+            }
+          }
+
+          resolve(allQuestions)
+        } catch (err) {
+          if (err instanceof Error) {
+            reject(err)
+          } else {
+            reject(new Error(String(err)))
           }
         }
-
-        resolve(allQuestions);
-      } catch(err) {
-        if (err instanceof Error) {
-          reject(err);
-        } else {
-          reject(new Error(String(err)))
-        }
-      }
+      })()
     }, 2000);
   });
 }
