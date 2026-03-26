@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { filterQuestions } from "../scripts/utils/filter.questions";
-import { QuestionsState } from "../scripts/states/questionsState";
+import { updateQuiz } from "../scripts/states/questionsState";
 import { Category, Level, Question } from "../scripts/pages/quiz/quiz.types";
 
 describe("filterQuestions", () => {
@@ -41,18 +41,18 @@ describe("filterQuestions", () => {
     }
   ]
   beforeEach(() => {
-    QuestionsState.allQuestions = mockQuestions;
+    updateQuiz({currentQuestions: mockQuestions});
   });
 
-  it("returns all questions when no filters provided", () => {
-    const result = filterQuestions();
+  it("returns all questions when no filters provided", async () => {
+    const result = await filterQuestions();
 
     expect(result).toEqual(mockQuestions);
     expect(result.length).toBe(3);
   });
 
-  it("filters by category only", () => {
-    const result = filterQuestions("HTML" as Category);
+  it("filters by category only", async () => {
+    const result = await filterQuestions("HTML" as Category);
 
     expect(result).toEqual([
       mockQuestions[0],
@@ -60,8 +60,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("filters by category only", () => {
-    const result = filterQuestions("CSS & SCSS" as Category);
+  it("filters by category only", async () => {
+    const result = await filterQuestions("CSS & SCSS" as Category);
 
     expect(result).toEqual([
       mockQuestions[1],
@@ -69,8 +69,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("filters by category only", () => {
-    const result = filterQuestions("JS & TS" as Category);
+  it("filters by category only", async () => {
+    const result = await filterQuestions("JS & TS" as Category);
 
     expect(result).toEqual([
       mockQuestions[2],
@@ -78,8 +78,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("filters by level only", () => {
-    const result = filterQuestions(undefined, "easy" as Level);
+  it("filters by level only", async () => {
+    const result = await filterQuestions(undefined, "easy" as Level);
 
     expect(result).toEqual([
       mockQuestions[0]
@@ -87,8 +87,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("filters by level only", () => {
-    const result = filterQuestions(undefined, "medium" as Level);
+  it("filters by level only", async () => {
+    const result = await filterQuestions(undefined, "medium" as Level);
 
     expect(result).toEqual([
       mockQuestions[1]
@@ -96,8 +96,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("filters by level only", () => {
-    const result = filterQuestions(undefined, "hard" as Level);
+  it("filters by level only", async () => {
+    const result = await filterQuestions(undefined, "hard" as Level);
 
     expect(result).toEqual([
       mockQuestions[2]
@@ -105,8 +105,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("filters by category and level", () => {
-    const result = filterQuestions("HTML" as Category, "easy" as Level);
+  it("filters by category and level", async () => {
+    const result = await filterQuestions("HTML" as Category, "easy" as Level);
 
     expect(result).toEqual([
       mockQuestions[0],
