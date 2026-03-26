@@ -167,10 +167,10 @@ Merge-коммит появился бы на feature, но с локально 
 
 
 ### Локальная подготовка перед коммитом
-Всегда перед началом работы обновляйте свою ветку разработки:
+Всегда перед началом работы обновляй свою ветку разработки:
 git checkout develop
 git pull origin develop
 git checkout feature/my-feature
-git rebase develop   # или merge develop, если вы предпочитаете merge
+git rebase develop   # или merge develop, если предпочитаешь merge
 
 
