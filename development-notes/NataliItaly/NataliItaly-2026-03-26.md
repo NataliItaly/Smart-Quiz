@@ -11,12 +11,12 @@ What we must know:
 **Husky was checking the old condition, but CI was already checking the new one**
 
 ### Prepare an instruction git workflow:
-(How to avoid merge conflicts)[]
+[How to avoid merge conflicts](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/avoid-merge-conflicts.md)
 
 ### To do:
 
 1. Fix quiz questions array - I think it's better to shuffle it, so choosing same filters user see different questions (the same questions will be random shuffled)
-   
+
 
 ### Team work:
 
