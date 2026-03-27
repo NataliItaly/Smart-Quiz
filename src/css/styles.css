@@ -3,6 +3,8 @@
 @import './dashboard.css';
 @import './form.css';
 @import './quiz.css';
+@import './login.css';
+@import './popup.css';
 
 .btn {
   margin-top: 25px;

@@ -1,20 +1,41 @@
 import { type Route, Router } from './router'
-import { renderLogin } from '../pages/login'
+import { renderLogin } from '../pages/login/index'
+import { StoredUser } from '../pages/login/types'
 import { renderDashboard } from '../pages/dashboard'
 import { renderQuiz } from '../pages/quiz/quiz'
 import { renderStatistic } from '../pages/statistic'
 
-let isAuth: boolean = true
+
+function checkAuth(): boolean {
+  const currentUser = localStorage.getItem('currentUser');
+  if (!currentUser) return false;
+
+  try {
+    const user = JSON.parse(currentUser) as StoredUser;
+    return !!user.email;
+  } catch {
+    return false;
+  }
+}
+
+let isAuth: boolean = checkAuth();
+
+const setAuth = (value: boolean): void => {
+  isAuth = value;
+  if (!value) {
+    localStorage.removeItem('currentUser');
+  }
+};
 
 export function initRouter() {
   const routes: Route[] = [
     {
       path: '/',
-      render: () => renderLogin(router, (value) => (isAuth = value))
+      render: () => renderLogin(router, setAuth)
     },
     {
       path: '/dashboard',
-      render: () => renderDashboard(router, (value) => (isAuth = value)),
+      render: () => renderDashboard(router, setAuth),
       protected: true
     },
     {

@@ -9,10 +9,6 @@ export function renderRegisterForm(
   const form = document.createElement('form');
   form.className = 'register-form';
 
-  const title = document.createElement('h3');
-  title.textContent = 'Регистрация';
-  form.appendChild(title);
-
   // for name
   const nameGroup = document.createElement('div');
   nameGroup.className = 'form-group';
