@@ -7,8 +7,8 @@ interface ExplainResponse {
   message: string
 }
 export interface ExplainPayload {
-  topic: string
-  difficulty: string
+  topic: string | undefined
+  difficulty: string | undefined
   question: string
   options: string[]
   userAnswer: string
