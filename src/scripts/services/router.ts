@@ -1,3 +1,5 @@
+import { setCurrentRoute, getCurrentRoute } from "../states/routeState";
+
 export type Route = {
   path: string;
   render: () => void;
@@ -8,10 +10,12 @@ export type Route = {
 export class Router {
   private routes: Route[];
   private isAuth: () => boolean;
+  private notFound: () => void;
 
-   constructor(routes: Route[], isAuth: () => boolean) {
+   constructor(routes: Route[], isAuth: () => boolean, notFound: () => void) {
     this.routes = routes;
     this.isAuth = isAuth;
+    this.notFound = notFound;
   }
 
   public init(): void {
@@ -22,15 +26,29 @@ export class Router {
 
   public navigate(path: string): void {
     history.pushState({}, "", path);
+
+    // set full route
+    setCurrentRoute(window.location.pathname + window.location.hash)
     this.handleLocation();
   }
 
-  private handleLocation(): void {
+  public handleLocation(): void {
+    const fullPath = window.location.pathname + window.location.hash;
+
+    // don't save the same route twice
+    if (getCurrentRoute() !== fullPath) {
+      setCurrentRoute(fullPath);
+    }
+
     const path = window.location.pathname;
     const route = this.routes.find(r => r.path === path);
 
+    // save current route
+    setCurrentRoute(window.location.pathname + window.location.hash);
+
+
     if (!route) {
-      document.getElementById("app")!.innerHTML = "<h1>404</h1>";
+      this.notFound();
       return;
     }
 

@@ -1,24 +1,27 @@
-import { Question } from "../pages/quiz/quiz.types";
+/* import { Question } from "../pages/quiz/quiz.types";
 
-export function loadQuiz(): Question[] | [] {
+let quiz: Question[] | null = null;
+
+function loadQuiz(): Question[] | null {
   try {
     const stored = localStorage.getItem('quiz');
 
     if (!stored) {
-      return [];
+      return null;
     }
 
     const parsed = JSON.parse(stored) as Question[];
     return parsed;
   } catch {
-    return [];
+    return null;
   }
 }
 
-let quiz: Question[] = loadQuiz();
-
-export function getQuiz(): Question[] {
-  return quiz;
+export function getQuiz(): Question[] | null {
+  if (quiz === null) {
+    quiz = loadQuiz();
+  }
+  return quiz ? [...quiz] : null;
 }
 
 export function setQuiz(quizObj: Question[]): void {
@@ -27,6 +30,6 @@ export function setQuiz(quizObj: Question[]): void {
 }
 
 export function clearQuiz(): void {
-  quiz = [];
+  quiz = null;
   localStorage.removeItem('quiz');
-}
+} */

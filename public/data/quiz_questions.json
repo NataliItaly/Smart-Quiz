@@ -968,7 +968,7 @@
             "Makes borders invisible"
           ],
           "answer_ru": "Включает padding и border в общую ширину и высоту элемента",
-          "answer_en": "Includes padding and border in width"
+          "answer": "Includes padding and border in width"
         },
         {
           "id": "css_mid_4",
@@ -993,7 +993,7 @@
             "em for fonts, rem for margins",
             "No difference"
           ],
-          "answer_en": "em from parent, rem from root",
+          "answer": "em from parent, rem from root",
           "answer_ru": "em зависит от родителя, rem от корневого элемента (html)"
         },
         {
@@ -1031,7 +1031,7 @@
             "Style after click",
             "Neighbor style"
           ],
-          "answer_en": "Inserting content after content",
+          "answer": "Inserting content after content",
           "answer_ru": "Для вставки контента после содержимого элемента"
         },
         {
@@ -1057,7 +1057,7 @@
             "All p neighbors of div",
             "div and p together"
           ],
-          "answer_en": "First p immediately after div",
+          "answer": "First p immediately after div",
           "answer_ru": "Первый элемент <p> сразу после <div>"
         },
         {
@@ -1121,7 +1121,7 @@
             "Hides mouse",
             "Disables touch"
           ],
-          "answer_en": "Ignores clicks",
+          "answer": "Ignores clicks",
           "answer_ru": "Запрещает элементу реагировать на клики мыши"
         },
         {
@@ -1180,7 +1180,7 @@
             "Will become relative",
             "Error"
           ],
-          "answer_en": "Position relative to window/body",
+          "answer": "Position relative to window/body",
           "answer_ru": "Он будет позиционироваться относительно body/окна"
         },
         {
@@ -1225,7 +1225,7 @@
             "Для оптимизации изображений"
           ],
           "options": ["Video", "Responsiveness", "Fonts", "Images"],
-          "answer_en": "Responsiveness",
+          "answer": "Responsiveness"
           "answer_ru": "Для создания адаптивного дизайна под разные экраны"
         },
         {
@@ -1251,7 +1251,7 @@
             "Blocks clicks",
             "No difference"
           ],
-          "answer_en": "Hides but keeps space",
+          "answer": "Hides but keeps space",
           "answer_ru": "Скрывает элемент, но сохраняет занимаемое им место"
         },
         {
@@ -1292,7 +1292,7 @@
             "Selects only the first image in a block"
           ],
           "answer_ru": "Выбирает родителя, если у него есть прямой потомок img",
-          "answer_en": "Selects the parent if it has a direct child img"
+          "answer": "Selects the parent if it has a direct child img"
         },
         {
           "id": "css_hard_2",
@@ -1311,7 +1311,7 @@
             "Media allows using variables"
           ],
           "answer_ru": "Container адаптируется под размер родителя, а не окна",
-          "answer_en": "Container adapts to the parent size, not the viewport"
+          "answer": "Container adapts to the parent size, not the viewport"
         },
         {
           "id": "css_hard_3",
@@ -1320,7 +1320,7 @@
           "options_ru": ["@function", "@mixin", "@import", "@extend"],
           "options": ["@function", "@mixin", "@import", "@extend"],
           "answer_ru": "@mixin",
-          "answer_en": "@mixin"
+          "answer": "@mixin"
         },
         {
           "id": "css_hard_4",
@@ -1339,7 +1339,7 @@
             "Rounds the value to an integer"
           ],
           "answer_ru": "Ограничивает размер в диапазоне между min и max",
-          "answer_en": "Limits the size within a range between min and max"
+          "answer": "Limits the size within a range between min and max"
         },
         {
           "id": "css_hard_5",
@@ -1358,7 +1358,7 @@
             "Imports an external file"
           ],
           "answer_ru": "Ссылается на родительский селектор",
-          "answer_en": "References the parent selector"
+          "answer": "References the parent selector"
         },
         {
           "id": "css_hard_6",
@@ -1377,7 +1377,7 @@
             "Controlling animation speed"
           ],
           "answer_ru": "Поддержание пропорций элемента (например, 16/9)",
-          "answer_en": "Maintaining element proportions (e.g., 16/9)"
+          "answer": "Maintaining element proportions (e.g., 16/9)"
         },
         {
           "id": "css_hard_7",
@@ -1396,7 +1396,7 @@
             "A way to group media queries"
           ],
           "answer_ru": "Инструмент для управления приоритетом стилей",
-          "answer_en": "A tool for managing style priority"
+          "answer": "A tool for managing style priority"
         },
         {
           "id": "css_hard_8",
@@ -1415,7 +1415,7 @@
             "between(400px, 800px)"
           ],
           "answer_ru": "(400px <= width <= 800px)",
-          "answer_en": "(400px <= width <= 800px)"
+          "answer": "(400px <= width <= 800px)"
         },
         {
           "id": "css_hard_9",
@@ -1434,7 +1434,7 @@
             "Creates a column that is always 100px"
           ],
           "answer_ru": "Задает диапазон размера от 100px до всей доступной области",
-          "answer_en": "Defines a size range from 100px to all available space"
+          "answer": "Defines a size range from 100px to all available space"
         },
         {
           "id": "css_hard_10",
@@ -1453,7 +1453,7 @@
             "It only supports black and white colors"
           ],
           "answer_ru": "Оно воспринимается глазом равномерно по яркости",
-          "answer_en": "It is perceptually uniform in brightness"
+          "answer": "It is perceptually uniform in brightness"
         },
         {
           "id": "css_hard_11",
@@ -1472,7 +1472,7 @@
             "For connecting external fonts"
           ],
           "answer_ru": "Для наследования свойств одного селектора другим",
-          "answer_en": "For inheriting properties from one selector to another"
+          "answer": "For inheriting properties from one selector to another"
         },
         {
           "id": "css_hard_12",
@@ -1491,7 +1491,7 @@
             "Automatically scrolls the page down"
           ],
           "answer_ru": "Включает плавную прокрутку по якорным ссылкам",
-          "answer_en": "Enables smooth scrolling for anchor links"
+          "answer": "Enables smooth scrolling for anchor links"
         },
         {
           "id": "css_hard_13",
@@ -1510,7 +1510,7 @@
             "Deletes 20 pixels from HTML"
           ],
           "answer_ru": "Вычислит ширину элемента минус 20 пикселей",
-          "answer_en": "Calculates element width minus 20 pixels"
+          "answer": "Calculates element width minus 20 pixels"
         },
         {
           "id": "css_hard_14",
@@ -1529,7 +1529,7 @@
             "@color: red;"
           ],
           "answer_ru": "$color: red;",
-          "answer_en": "$color: red;"
+          "answer": "$color: red;"
         },
         {
           "id": "css_hard_15",
@@ -1548,7 +1548,7 @@
             "Selects the element with id='3'"
           ],
           "answer_ru": "Выбирает третий элемент указанного типа",
-          "answer_en": "Selects the third element of the specified type"
+          "answer": "Selects the third element of the specified type"
         },
         {
           "id": "css_hard_16",
@@ -1567,7 +1567,7 @@
             "grid-template"
           ],
           "answer_ru": "grid-column",
-          "answer_en": "grid-column"
+          "answer": "grid-column"
         },
         {
           "id": "css_hard_17",
@@ -1586,7 +1586,7 @@
             "Replaces one variable with another"
           ],
           "answer_ru": "Подсказывает браузеру подготовиться к анимации свойства",
-          "answer_en": "Hints to the browser to prepare for an animation"
+          "answer": "Hints to the browser to prepare for an animation"
         },
         {
           "id": "css_hard_18",
@@ -1595,7 +1595,7 @@
           "options_ru": ["@for", "@loop", "@repeat", "@while"],
           "options": ["@for", "@loop", "@repeat", "@while"],
           "answer_ru": "@for",
-          "answer_en": "@for"
+          "answer": "@for"
         },
         {
           "id": "css_hard_19",
@@ -1614,7 +1614,7 @@
             "Reduces font weight"
           ],
           "answer_ru": "Делает цвет светлее на 10%",
-          "answer_en": "Makes the color 10% lighter"
+          "answer": "Makes the color 10% lighter"
         },
         {
           "id": "css_hard_20",
@@ -1633,7 +1633,7 @@
             "A random color generator"
           ],
           "answer_ru": "Указывает браузеру, поддерживает ли страница темную тему",
-          "answer_en": "Indicates if the page supports dark/light mode"
+          "answer": "Indicates if the page supports dark/light mode"
         },
         {
           "id": "css_hard_21",
@@ -1652,7 +1652,7 @@
             "Draws a map in the background"
           ],
           "answer_ru": "Извлекает значение из словаря (map) по ключу",
-          "answer_en": "Extracts a value from a map by key"
+          "answer": "Extracts a value from a map by key"
         },
         {
           "id": "css_hard_22",
@@ -1671,7 +1671,7 @@
             "Centering all content"
           ],
           "answer_ru": "Сброса всех свойств элемента до начальных значений",
-          "answer_en": "Resetting all properties of an element to default values"
+          "answer": "Resetting all properties of an element to default values"
         },
         {
           "id": "css_hard_23",
@@ -1690,7 +1690,7 @@
             "Hides li without the active class"
           ],
           "answer_ru": "Выбирает все li, у которых нет класса active",
-          "answer_en": "Selects all li that do not have the class active"
+          "answer": "Selects all li that do not have the class active"
         },
         {
           "id": "css_hard_24",
@@ -1709,7 +1709,7 @@
             "shape-outside"
           ],
           "answer_ru": "clip-path",
-          "answer_en": "clip-path"
+          "answer": "clip-path"
         },
         {
           "id": "css_hard_25",
@@ -1728,7 +1728,7 @@
             "Disables focusing"
           ],
           "answer_ru": "Срабатывает на родителе, если любой его потомок получил фокус",
-          "answer_en": "Applies to a parent if any of its descendants gain focus"
+          "answer": "Applies to a parent if any of its descendants gain focus"
         },
         {
           "id": "css_hard_26",
@@ -1747,7 +1747,7 @@
             "Name the file .scss-temp"
           ],
           "answer_ru": "Добавить префикс подчеркивания к имени файла (_file.scss)",
-          "answer_en": "Add an underscore prefix to the filename (_file.scss)"
+          "answer": "Add an underscore prefix to the filename (_file.scss)"
         },
         {
           "id": "css_hard_27",
@@ -1766,7 +1766,7 @@
             "Does nothing"
           ],
           "answer_ru": "Автоматически расставляет переносы слов в тексте",
-          "answer_en": "Automatically inserts hyphens for word wrapping"
+          "answer": "Automatically inserts hyphens for word wrapping"
         },
         {
           "id": "css_hard_28",
@@ -1795,7 +1795,7 @@
             "Makes the element transparent"
           ],
           "answer_ru": "Создает новый контекст наложения для mix-blend-mode",
-          "answer_en": "Creates a new stacking context for mix-blend-mode"
+          "answer": "Creates a new stacking context for mix-blend-mode"
         },
         {
           "id": "css_hard_29",
@@ -1804,7 +1804,7 @@
           "options_ru": ["@content", "@slot", "@inject", "@put"],
           "options": ["@content", "@slot", "@inject", "@put"],
           "answer_ru": "@content",
-          "answer_en": "@content"
+          "answer": "@content"
         },
         {
           "id": "css_hard_30",
@@ -1823,7 +1823,7 @@
             "opacity"
           ],
           "answer_ru": "backdrop-filter: blur()",
-          "answer_en": "backdrop-filter: blur()"
+          "answer": "backdrop-filter: blur()"
         }
       ]
     },
@@ -1846,7 +1846,7 @@
             "Checks only type"
           ],
           "answer_ru": "Сравнивает значения и типы",
-          "answer_en": "Compares both values and types"
+          "answer": "Compares both values and types"
         },
         {
           "id": "js_easy_2",
@@ -1855,7 +1855,7 @@
           "options_ru": ["null", "object", "undefined", "string"],
           "options": ["null", "object", "undefined", "string"],
           "answer_ru": "object",
-          "answer_en": "object"
+          "answer": "object"
         },
         {
           "id": "js_easy_3",
@@ -1864,7 +1864,7 @@
           "options_ru": ["push()", "pop()", "shift()", "unshift()"],
           "options": ["push()", "pop()", "shift()", "unshift()"],
           "answer_ru": "push()",
-          "answer_en": "push()"
+          "answer": "push()"
         },
         {
           "id": "js_easy_4",
@@ -1883,7 +1883,7 @@
             "Deletes an object"
           ],
           "answer_ru": "Преобразует объект в строку JSON",
-          "answer_en": "Converts an object to a JSON string"
+          "answer": "Converts an object to a JSON string"
         },
         {
           "id": "js_easy_5",
@@ -1902,7 +1902,7 @@
             "parseInt()"
           ],
           "answer_ru": "Math.round()",
-          "answer_en": "Math.round()"
+          "answer": "Math.round()"
         },
         {
           "id": "js_easy_6",
@@ -1911,7 +1911,7 @@
           "options_ru": ["push()", "pop()", "shift()", "splice()"],
           "options": ["push()", "pop()", "shift()", "splice()"],
           "answer_ru": "pop()",
-          "answer_en": "pop()"
+          "answer": "pop()"
         },
         {
           "id": "js_easy_7",
@@ -1930,7 +1930,7 @@
             "Deletes a variable"
           ],
           "answer_ru": "Показывает всплывающее окно",
-          "answer_en": "Shows a popup window"
+          "answer": "Shows a popup window"
         },
         {
           "id": "js_easy_8",
@@ -1949,7 +1949,7 @@
             "string.len()"
           ],
           "answer_ru": "string.length",
-          "answer_en": "string.length"
+          "answer": "string.length"
         },
         {
           "id": "js_easy_9",
@@ -1968,7 +1968,7 @@
             "Assigns a value"
           ],
           "answer_ru": "Возвращает первое истинное значение",
-          "answer_en": "Returns the first true value"
+          "answer": "Returns the first true value"
         },
         {
           "id": "js_easy_10",
@@ -1977,7 +1977,7 @@
           "options_ru": ["concat()", "merge()", "join()", "combine()"],
           "options": ["concat()", "merge()", "join()", "combine()"],
           "answer_ru": "concat()",
-          "answer_en": "concat()"
+          "answer": "concat()"
         },
         {
           "id": "js_easy_11",
@@ -1996,7 +1996,7 @@
             "Creates an array"
           ],
           "answer_ru": "Возвращает случайное число от 0 до 1",
-          "answer_en": "Returns a random number between 0 and 1"
+          "answer": "Returns a random number between 0 and 1"
         },
         {
           "id": "js_easy_12",
@@ -2015,7 +2015,7 @@
             "array.pop()"
           ],
           "answer_ru": "array[array.length - 1]",
-          "answer_en": "array[array.length - 1]"
+          "answer": "array[array.length - 1]"
         },
         {
           "id": "js_easy_13",
@@ -2034,7 +2034,7 @@
             "Sorts the array"
           ],
           "answer_ru": "Проверяет наличие элемента",
-          "answer_en": "Checks if an element exists"
+          "answer": "Checks if an element exists"
         },
         {
           "id": "js_easy_14",
@@ -2053,7 +2053,7 @@
             "fn myFunc() {}"
           ],
           "answer_ru": "function myFunc() {}",
-          "answer_en": "function myFunc() {}"
+          "answer": "function myFunc() {}"
         },
         {
           "id": "js_easy_15",
@@ -2072,7 +2072,7 @@
             "Merges arrays"
           ],
           "answer_ru": "Создает новый массив с элементами, прошедшими проверку",
-          "answer_en": "Creates a new array with elements that pass a test"
+          "answer": "Creates a new array with elements that pass a test"
         },
 
         {
@@ -2092,7 +2092,7 @@
             "Merges arrays"
           ],
           "answer_ru": "Создает новый массив, применяя функцию к каждому элементу",
-          "answer_en": "Creates a new array by applying a function to each element"
+          "answer": "Creates a new array by applying a function to each element"
         },
         {
           "id": "js_easy_17",
@@ -2111,7 +2111,7 @@
             "A function"
           ],
           "answer_ru": "Значение переменной, которой не присвоено значение",
-          "answer_en": "A variable that has not been assigned a value"
+          "answer": "A variable that has not been assigned a value"
         },
         {
           "id": "js_easy_18",
@@ -2130,7 +2130,7 @@
             "let obj = <>"
           ],
           "answer_ru": "let obj = {}",
-          "answer_en": "let obj = {}"
+          "answer": "let obj = {}"
         },
         {
           "id": "js_easy_19",
@@ -2149,7 +2149,7 @@
             "Assigns a value"
           ],
           "answer_ru": "Возвращает первое ложное значение",
-          "answer_en": "Returns the first false value"
+          "answer": "Returns the first false value"
         },
         {
           "id": "js_easy_20",
@@ -2168,7 +2168,7 @@
             "Creates an array"
           ],
           "answer_ru": "Выполняет функцию через заданное время",
-          "answer_en": "Executes a function after a specified time"
+          "answer": "Executes a function after a specified time"
         },
         {
           "id": "js_easy_21",
@@ -2187,7 +2187,7 @@
             "Adds an element to the beginning"
           ],
           "answer_ru": "Удаляет первый элемент массива",
-          "answer_en": "Removes the first element of the array"
+          "answer": "Removes the first element of the array"
         },
         {
           "id": "js_easy_22",
@@ -2206,7 +2206,7 @@
             "Sorts the array"
           ],
           "answer_ru": "Добавляет элемент в начало массива",
-          "answer_en": "Adds an element to the beginning of the array"
+          "answer": "Adds an element to the beginning of the array"
         },
         {
           "id": "js_easy_23",
@@ -2225,7 +2225,7 @@
             "Removes spaces"
           ],
           "answer_ru": "Преобразует строку в целое число",
-          "answer_en": "Converts a string to an integer"
+          "answer": "Converts a string to an integer"
         },
         {
           "id": "js_easy_24",
@@ -2244,7 +2244,7 @@
             "Sorts the array"
           ],
           "answer_ru": "Объединяет элементы массива в строку",
-          "answer_en": "Joins array elements into a string"
+          "answer": "Joins array elements into a string"
         },
         {
           "id": "js_easy_25",
@@ -2263,7 +2263,7 @@
             "Merges arrays"
           ],
           "answer_ru": "Меняет порядок элементов массива на обратный",
-          "answer_en": "Reverses the order of array elements"
+          "answer": "Reverses the order of array elements"
         },
 
         {
@@ -2283,7 +2283,7 @@
             "Merges arrays"
           ],
           "answer_ru": "Возвращает часть массива",
-          "answer_en": "Returns a portion of the array"
+          "answer": "Returns a portion of the array"
         },
         {
           "id": "js_easy_27",
@@ -2302,7 +2302,7 @@
             "Merges arrays"
           ],
           "answer_ru": "Изменяет массив, добавляя или удаляя элементы",
-          "answer_en": "Changes the array by adding or removing elements"
+          "answer": "Changes the array by adding or removing elements"
         },
         {
           "id": "js_easy_28",
@@ -2321,7 +2321,7 @@
             "Deletes a variable"
           ],
           "answer_ru": "Проверяет, является ли значение NaN",
-          "answer_en": "Checks if a value is NaN"
+          "answer": "Checks if a value is NaN"
         },
         {
           "id": "js_easy_29",
@@ -2340,7 +2340,7 @@
             "Deletes a variable"
           ],
           "answer_ru": "Преобразует значение в число",
-          "answer_en": "Converts a value to a number"
+          "answer": "Converts a value to a number"
         },
         {
           "id": "js_easy_30",
@@ -2359,7 +2359,7 @@
             "Creates an array"
           ],
           "answer_ru": "Преобразует значение в логический тип",
-          "answer_en": "Converts a value to a boolean"
+          "answer": "Converts a value to a boolean"
         }
       ],
       "medium": [
@@ -2380,7 +2380,7 @@
             "A function that executes once"
           ],
           "answer_ru": "Функция внутри другой функции, имеющая доступ к её переменным",
-          "answer_en": "A function inside another function that has access to its variables"
+          "answer": "A function inside another function that has access to its variables"
         },
         {
           "id": "js_medium_2",
@@ -2399,7 +2399,7 @@
             "Points to the first argument"
           ],
           "answer_ru": "Ссылается на глобальный объект или текущий контекст",
-          "answer_en": "Refers to the global object or current context"
+          "answer": "Refers to the global object or current context"
         },
         {
           "id": "js_medium_3",
@@ -2418,7 +2418,7 @@
             "Creating an array from an object"
           ],
           "answer_ru": "Механизм, при котором объекты наследуют свойства от других объектов",
-          "answer_en": "A mechanism where objects inherit properties from other objects"
+          "answer": "A mechanism where objects inherit properties from other objects"
         },
         {
           "id": "js_medium_4",
@@ -2437,7 +2437,7 @@
             "DOM events"
           ],
           "answer_ru": "Объекты для обработки асинхронных операций",
-          "answer_en": "Objects for handling asynchronous operations"
+          "answer": "Objects for handling asynchronous operations"
         },
         {
           "id": "js_medium_5",
@@ -2456,7 +2456,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Позволяет писать асинхронный код в синхронном стиле",
-          "answer_en": "Allows writing asynchronous code in synchronous style"
+          "answer": "Allows writing asynchronous code in synchronous style"
         },
         {
           "id": "js_medium_6",
@@ -2475,7 +2475,7 @@
             "Merges arrays"
           ],
           "answer_ru": "Сводит массив к одному значению, применяя функцию",
-          "answer_en": "Reduces an array to a single value by applying a function"
+          "answer": "Reduces an array to a single value by applying a function"
         },
         {
           "id": "js_medium_7",
@@ -2494,7 +2494,7 @@
             "An event that cannot be stopped"
           ],
           "answer_ru": "Процесс, при котором событие поднимается от дочернего элемента к родительскому",
-          "answer_en": "Process where an event propagates from child to parent element"
+          "answer": "Process where an event propagates from child to parent element"
         },
         {
           "id": "js_medium_8",
@@ -2513,7 +2513,7 @@
             "Sort an array"
           ],
           "answer_ru": "Позволяют явно задавать контекст выполнения функции",
-          "answer_en": "Allow explicitly setting the function execution context"
+          "answer": "Allow explicitly setting the function execution context"
         },
         {
           "id": "js_medium_9",
@@ -2532,7 +2532,7 @@
             "Creating an object"
           ],
           "answer_ru": "Механизм, при котором объявления переменных и функций поднимаются в начало области видимости",
-          "answer_en": "Mechanism where variable and function declarations are moved to the top of scope"
+          "answer": "Mechanism where variable and function declarations are moved to the top of scope"
         },
         {
           "id": "js_medium_10",
@@ -2551,7 +2551,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Обрабатывает ошибки выполнения",
-          "answer_en": "Handles runtime errors"
+          "answer": "Handles runtime errors"
         },
         {
           "id": "js_medium_11",
@@ -2570,7 +2570,7 @@
             "Mode for asynchronous code"
           ],
           "answer_ru": "Режим, который делает код более безопасным и строгим",
-          "answer_en": "Mode that makes code safer and stricter"
+          "answer": "Mode that makes code safer and stricter"
         },
         {
           "id": "js_medium_12",
@@ -2589,7 +2589,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Копирует свойства одного объекта в другой",
-          "answer_en": "Copies properties from one object to another"
+          "answer": "Copies properties from one object to another"
         },
         {
           "id": "js_medium_13",
@@ -2608,7 +2608,7 @@
             "Shallow copies numbers, deep copies strings"
           ],
           "answer_ru": "Shallow копирует только верхний уровень, deep копирует все уровни",
-          "answer_en": "Shallow copies only the top level, deep copies all levels"
+          "answer": "Shallow copies only the top level, deep copies all levels"
         },
         {
           "id": "js_medium_14",
@@ -2627,7 +2627,7 @@
             "Creates an array"
           ],
           "answer_ru": "Выполняет функцию через регулярные промежутки времени",
-          "answer_en": "Executes a function at regular intervals"
+          "answer": "Executes a function at regular intervals"
         },
         {
           "id": "js_medium_15",
@@ -2646,7 +2646,7 @@
             "Creates an object"
           ],
           "answer_ru": "Ограничение частоты вызова функции",
-          "answer_en": "Limits how often a function is called"
+          "answer": "Limits how often a function is called"
         },
         {
           "id": "js_medium_16",
@@ -2665,7 +2665,7 @@
             "Creates an array"
           ],
           "answer_ru": "Хранит данные в браузере без срока действия",
-          "answer_en": "Stores data in the browser with no expiration"
+          "answer": "Stores data in the browser with no expiration"
         },
         {
           "id": "js_medium_17",
@@ -2684,7 +2684,7 @@
             "Creates an array"
           ],
           "answer_ru": "Хранит данные до закрытия вкладки",
-          "answer_en": "Stores data until the tab is closed"
+          "answer": "Stores data until the tab is closed"
         },
         {
           "id": "js_medium_18",
@@ -2703,7 +2703,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Позволяет выполнять HTTP-запросы",
-          "answer_en": "Allows performing HTTP requests"
+          "answer": "Allows performing HTTP requests"
         },
         {
           "id": "js_medium_19",
@@ -2722,7 +2722,7 @@
             "DOM event"
           ],
           "answer_ru": "Механизм контроля доступа между разными доменами",
-          "answer_en": "Mechanism for controlling access between different domains"
+          "answer": "Mechanism for controlling access between different domains"
         },
         {
           "id": "js_medium_20",
@@ -2741,7 +2741,7 @@
             "An event that cannot be stopped"
           ],
           "answer_ru": "Техника обработки событий через родительский элемент",
-          "answer_en": "Technique of handling events through a parent element"
+          "answer": "Technique of handling events through a parent element"
         },
 
         {
@@ -2761,7 +2761,7 @@
             "Mode for asynchronous code"
           ],
           "answer_ru": "Режим, который делает код более безопасным и строгим",
-          "answer_en": "Mode that makes code safer and stricter"
+          "answer": "Mode that makes code safer and stricter"
         },
         {
           "id": "js_medium_12",
@@ -2780,7 +2780,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Копирует свойства одного объекта в другой",
-          "answer_en": "Copies properties from one object to another"
+          "answer": "Copies properties from one object to another"
         },
         {
           "id": "js_medium_13",
@@ -2799,7 +2799,7 @@
             "Shallow copies numbers, deep copies strings"
           ],
           "answer_ru": "Shallow копирует только верхний уровень, deep копирует все уровни",
-          "answer_en": "Shallow copies only the top level, deep copies all levels"
+          "answer": "Shallow copies only the top level, deep copies all levels"
         },
         {
           "id": "js_medium_14",
@@ -2818,7 +2818,7 @@
             "Creates an array"
           ],
           "answer_ru": "Выполняет функцию через регулярные промежутки времени",
-          "answer_en": "Executes a function at regular intervals"
+          "answer": "Executes a function at regular intervals"
         },
         {
           "id": "js_medium_15",
@@ -2837,7 +2837,7 @@
             "Creates an object"
           ],
           "answer_ru": "Ограничение частоты вызова функции",
-          "answer_en": "Limits how often a function is called"
+          "answer": "Limits how often a function is called"
         },
         {
           "id": "js_medium_16",
@@ -2856,7 +2856,7 @@
             "Creates an array"
           ],
           "answer_ru": "Хранит данные в браузере без срока действия",
-          "answer_en": "Stores data in the browser with no expiration"
+          "answer": "Stores data in the browser with no expiration"
         },
         {
           "id": "js_medium_17",
@@ -2875,7 +2875,7 @@
             "Creates an array"
           ],
           "answer_ru": "Хранит данные до закрытия вкладки",
-          "answer_en": "Stores data until the tab is closed"
+          "answer": "Stores data until the tab is closed"
         },
         {
           "id": "js_medium_18",
@@ -2894,7 +2894,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Позволяет выполнять HTTP-запросы",
-          "answer_en": "Allows performing HTTP requests"
+          "answer": "Allows performing HTTP requests"
         },
         {
           "id": "js_medium_19",
@@ -2913,7 +2913,7 @@
             "DOM event"
           ],
           "answer_ru": "Механизм контроля доступа между разными доменами",
-          "answer_en": "Mechanism for controlling access between different domains"
+          "answer": "Mechanism for controlling access between different domains"
         },
         {
           "id": "js_medium_20",
@@ -2932,7 +2932,7 @@
             "An event that cannot be stopped"
           ],
           "answer_ru": "Техника обработки событий через родительский элемент",
-          "answer_en": "Technique of handling events through a parent element"
+          "answer": "Technique of handling events through a parent element"
         }
       ],
       "hard": [
@@ -2953,7 +2953,7 @@
             "A library for working with arrays"
           ],
           "answer_ru": "Язык надстройка над JavaScript с типизацией",
-          "answer_en": "A superset of JavaScript with typing"
+          "answer": "A superset of JavaScript with typing"
         },
         {
           "id": "ts_2",
@@ -2972,7 +2972,7 @@
             "let name: any = 'Hello'"
           ],
           "answer_ru": "let name: string = 'Hello'",
-          "answer_en": "let name: string = 'Hello'"
+          "answer": "let name: string = 'Hello'"
         },
         {
           "id": "ts_3",
@@ -2991,7 +2991,7 @@
             "A type for objects"
           ],
           "answer_ru": "Тип, который отключает проверку типов",
-          "answer_en": "A type that disables type checking"
+          "answer": "A type that disables type checking"
         },
         {
           "id": "ts_4",
@@ -3010,7 +3010,7 @@
             "A type for arrays"
           ],
           "answer_ru": "Безопасный аналог any",
-          "answer_en": "A safer alternative to any"
+          "answer": "A safer alternative to any"
         },
         {
           "id": "ts_5",
@@ -3019,7 +3019,7 @@
           "options_ru": ["any", "unknown", "never", "void"],
           "options": ["any", "unknown", "never", "void"],
           "answer_ru": "never",
-          "answer_en": "never"
+          "answer": "never"
         },
         {
           "id": "ts_6",
@@ -3038,7 +3038,7 @@
             "function User() {}"
           ],
           "answer_ru": "interface User { name: string }",
-          "answer_en": "interface User { name: string }"
+          "answer": "interface User { name: string }"
         },
         {
           "id": "ts_7",
@@ -3057,7 +3057,7 @@
             "type is only for numbers"
           ],
           "answer_ru": "type может объединять типы, interface — расширять",
-          "answer_en": "type can combine types, interface can extend"
+          "answer": "type can combine types, interface can extend"
         },
         {
           "id": "ts_8",
@@ -3076,7 +3076,7 @@
             "An object"
           ],
           "answer_ru": "Перечисление фиксированных значений",
-          "answer_en": "A set of fixed values"
+          "answer": "A set of fixed values"
         },
         {
           "id": "ts_9",
@@ -3095,7 +3095,7 @@
             "A function"
           ],
           "answer_ru": "Массив фиксированной длины с определенными типами",
-          "answer_en": "An array of fixed length with specific types"
+          "answer": "An array of fixed length with specific types"
         },
         {
           "id": "ts_10",
@@ -3114,7 +3114,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Делает свойство доступным только для чтения",
-          "answer_en": "Makes a property read-only"
+          "answer": "Makes a property read-only"
         },
 
         {
@@ -3134,7 +3134,7 @@
             "Properties only for numbers"
           ],
           "answer_ru": "Свойства, которые могут быть не указаны",
-          "answer_en": "Properties that may be omitted"
+          "answer": "Properties that may be omitted"
         },
         {
           "id": "ts_12",
@@ -3153,7 +3153,7 @@
             "A type only for objects"
           ],
           "answer_ru": "Тип, который может быть одним из нескольких",
-          "answer_en": "A type that can be one of several types"
+          "answer": "A type that can be one of several types"
         },
         {
           "id": "ts_13",
@@ -3172,7 +3172,7 @@
             "A type only for numbers"
           ],
           "answer_ru": "Тип, объединяющий несколько типов",
-          "answer_en": "A type that combines multiple types"
+          "answer": "A type that combines multiple types"
         },
         {
           "id": "ts_14",
@@ -3191,7 +3191,7 @@
             "Creating an array"
           ],
           "answer_ru": "Автоматическое определение типа компилятором",
-          "answer_en": "Automatic determination of type by the compiler"
+          "answer": "Automatic determination of type by the compiler"
         },
         {
           "id": "ts_15",
@@ -3210,7 +3210,7 @@
             "Sorting an array"
           ],
           "answer_ru": "Принудительное указание типа для значения",
-          "answer_en": "Forcing a type on a value"
+          "answer": "Forcing a type on a value"
         },
         {
           "id": "ts_16",
@@ -3229,7 +3229,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Делает значения неизменяемыми и фиксированными",
-          "answer_en": "Makes values immutable and fixed"
+          "answer": "Makes values immutable and fixed"
         },
         {
           "id": "ts_17",
@@ -3248,7 +3248,7 @@
             "Types only for objects"
           ],
           "answer_ru": "Типы, которые позволяют использовать параметры для гибкости",
-          "answer_en": "Types that allow parameters for flexibility"
+          "answer": "Types that allow parameters for flexibility"
         },
         {
           "id": "ts_18",
@@ -3267,7 +3267,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Делает все свойства типа необязательными",
-          "answer_en": "Makes all properties of a type optional"
+          "answer": "Makes all properties of a type optional"
         },
         {
           "id": "ts_19",
@@ -3286,7 +3286,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Создает тип с выбранными свойствами",
-          "answer_en": "Creates a type with selected properties"
+          "answer": "Creates a type with selected properties"
         },
         {
           "id": "ts_20",
@@ -3305,7 +3305,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Создает тип без указанных свойств",
-          "answer_en": "Creates a type without specified properties"
+          "answer": "Creates a type without specified properties"
         },
 
         {
@@ -3325,7 +3325,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Создает тип объекта с ключами K и значениями T",
-          "answer_en": "Creates an object type with keys K and values T"
+          "answer": "Creates an object type with keys K and values T"
         },
         {
           "id": "ts_22",
@@ -3344,7 +3344,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Возвращает тип, представляющий ключи объекта",
-          "answer_en": "Returns a type representing the keys of an object"
+          "answer": "Returns a type representing the keys of an object"
         },
         {
           "id": "ts_23",
@@ -3363,7 +3363,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Возвращает тип значения",
-          "answer_en": "Returns the type of a value"
+          "answer": "Returns the type of a value"
         },
         {
           "id": "ts_24",
@@ -3382,7 +3382,7 @@
             "Types only for objects"
           ],
           "answer_ru": "Типы, которые зависят от условия",
-          "answer_en": "Types that depend on a condition"
+          "answer": "Types that depend on a condition"
         },
         {
           "id": "ts_25",
@@ -3401,7 +3401,7 @@
             "Types only for numbers"
           ],
           "answer_ru": "Типы, которые создаются путем перебора ключей",
-          "answer_en": "Types created by iterating over keys"
+          "answer": "Types created by iterating over keys"
         },
         {
           "id": "ts_26",
@@ -3420,7 +3420,7 @@
             "Types only for objects"
           ],
           "answer_ru": "Готовые встроенные типы для упрощения работы",
-          "answer_en": "Built-in types that simplify work"
+          "answer": "Built-in types that simplify work"
         },
         {
           "id": "ts_27",
@@ -3439,7 +3439,7 @@
             "DOM events"
           ],
           "answer_ru": "Специальные аннотации для классов и методов",
-          "answer_en": "Special annotations for classes and methods"
+          "answer": "Special annotations for classes and methods"
         },
         {
           "id": "ts_28",
@@ -3458,7 +3458,7 @@
             "A DOM event"
           ],
           "answer_ru": "Механизм организации кода в логические блоки",
-          "answer_en": "A mechanism for organizing code into logical blocks"
+          "answer": "A mechanism for organizing code into logical blocks"
         },
         {
           "id": "ts_29",
@@ -3477,7 +3477,7 @@
             "Files for strings"
           ],
           "answer_ru": "Файлы для описания типов внешних библиотек",
-          "answer_en": "Files for describing types of external libraries"
+          "answer": "Files for describing types of external libraries"
         },
         {
           "id": "ts_30",
@@ -3496,7 +3496,7 @@
             "Sorts an array"
           ],
           "answer_ru": "Включает строгую проверку null и undefined",
-          "answer_en": "Enables strict checking for null and undefined"
+          "answer": "Enables strict checking for null and undefined"
         }
       ]
     }

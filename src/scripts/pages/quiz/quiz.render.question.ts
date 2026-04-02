@@ -30,6 +30,11 @@ export function quizRenderQuestion({
   const correctCount = getScore()
   const question = questions[index]
 
+  // added question's route
+  history.pushState({}, '', `/quiz#${index + 1}`)
+
+  // ----------------------------------------------------
+
   progressEl.textContent = `Question ${index + 1} from ${questions.length}`
   scoreEl.textContent = `Score: ${correctCount}`
   legend.textContent = question.question_en

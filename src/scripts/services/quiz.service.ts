@@ -1,26 +1,41 @@
+import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types";
 
-import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.types"
-export async function quizService(): Promise<Question[]> {
-  const res = await fetch('/data/quiz_questions.json')
-  if (!res.ok) {
-    throw new Error('Failed to load quiz questions')
-  }
+export function quizService(): Promise<Question[]> {
+  return new Promise((resolve, reject) => {
+    setTimeout( () => {
+      void (async function () {
+        try {
+          const res = await fetch('/data/quiz_questions.json')
 
-  const json: unknown = await res.json();
-  const data = json as QuizResponse;
+          if (!res.ok) {
+            throw new Error('Failed to load quiz questions')
+          }
 
-  const allQuestions: Question[] = []
+          const json: unknown = await res.json()
+          const data = json as QuizResponse
 
-  for (const category of Object.keys(data.quiz) as Category[]) {
-    for (const level of Object.keys(data.quiz[category]) as Level[]) {
-      const questions = data.quiz[category][level];
+          const allQuestions: Question[] = []
 
-      const enlarged = questions.map(q => ({...q, category, level}))
-      allQuestions.push(...enlarged);
-    }
-  }
+          for (const category of Object.keys(data.quiz) as Category[]) {
+            for (const level of Object.keys(data.quiz[category]) as Level[]) {
+              const questions = data.quiz[category][level]
 
-  return allQuestions;
+              const enlarged = questions.map((q) => ({ ...q, category, level }))
+              allQuestions.push(...enlarged)
+            }
+          }
+
+          resolve(allQuestions)
+        } catch (err) {
+          if (err instanceof Error) {
+            reject(err)
+          } else {
+            reject(new Error(String(err)))
+          }
+        }
+      })()
+    }, 2000);
+  });
 }
 
 

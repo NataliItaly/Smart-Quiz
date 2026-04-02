@@ -1,7 +1,6 @@
 export type Category = 'HTML' | 'CSS & SCSS' | 'JS & TS';
 export type Level = 'easy' | 'medium' | 'hard';
 
-
 export type QuizData = Record<Category, Record<Level, Question[]>>;
 
 export interface QuizResponse {
