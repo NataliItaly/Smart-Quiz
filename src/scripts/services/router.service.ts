@@ -5,9 +5,31 @@ import { renderQuiz } from '../pages/quiz/quiz';
 import { renderStatistic } from '../pages/statistic';
 import { render404Page } from '../pages/404/404';
 import { setIndex } from '../pages/quiz/quiz.state';
-//import { getCurrentRoute, setCurrentRoute } from '../states/routeState';
 
-let isAuth: boolean = true
+
+function checkAuth(): boolean {
+  const currentUser = localStorage.getItem('currentUser');
+  if (!currentUser) return false;
+
+  try {
+    const parsed = JSON.parse(currentUser) as unknown;
+
+    return (
+      typeof parsed === 'object' && parsed !== null && 'email' in parsed && typeof (parsed as {email?: unknown}).email === 'string'
+    );
+  } catch {
+    return false;
+  }
+}
+
+let isAuth: boolean = checkAuth();
+
+const setAuth = (value: boolean): void => {
+  isAuth = value;
+  if (!value) {
+    localStorage.removeItem('currentUser');
+  }
+};
 
 export function initRouter(): void {
   //const savedRoute = getCurrentRoute();
@@ -19,11 +41,11 @@ export function initRouter(): void {
   const routes: Route[] = [
     {
       path: '/',
-      render: () => renderLogin(router, (value) => (isAuth = value))
+      render: () => renderLogin(router, setAuth)
     },
     {
       path: '/dashboard',
-      render: () => renderDashboard(router, (value) => (isAuth = value)),
+      render: () => renderDashboard(router, setAuth),
       protected: true
     },
     {
