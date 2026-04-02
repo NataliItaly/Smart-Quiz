@@ -1,5 +1,5 @@
 import { Router } from "../services/router";
-import { filters } from "../components.ts/filters";
+import { renderFiltersForm } from "../components.ts/filters.form";
 import { createElement } from "../utils/createElement";
 import { getUser } from "../states/userState";
 
@@ -22,7 +22,7 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
   const dashboardQuizBtn = createElement({tag: 'button', className: 'btn', id: 'dashboard-quiz-btn', text: 'Go to Quiz'});
 
   // filters form
-  const filtersEl = filters();
+  const filtersEl = renderFiltersForm();
 
   dashboardContent.append(dashboardTitle, filtersEl, dashboardQuizBtn);
   dashboard.append(dashboardHeader, dashboardContent);

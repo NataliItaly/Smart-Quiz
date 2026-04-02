@@ -16,11 +16,11 @@ function enableLeaveWarning() {
 function setupFocusWarning(show: () => void) {
   const handler = () => {
     if (document.hidden) {
-  
+
       show()
 
     } else {
- 
+
     }
   }
   document.addEventListener('visibilitychange', handler)

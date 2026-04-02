@@ -1,11 +1,10 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
-import { questionFilter, QuestionsState } from "../states/questionsState";
-import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
-import { filterQuestions } from "../utils/filter.questions";
+import { questionFilter, updateQuiz } from "../states/questionsState";
+import { toCategory, toLevel } from "../utils/filter.options.types.converter";
 
 
-export function filters(): HTMLFormElement {
+export function renderFiltersForm(): HTMLFormElement {
   const filterForm = createElement({tag: 'form', className: 'form', id: 'filter-form'});
 
   const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard']};
@@ -38,16 +37,13 @@ export function filters(): HTMLFormElement {
 
     if (!choosenCategory && !choosenLevel) return;
 
-    QuestionsState.selectedCategory = toCategory(choosenCategory);
-    QuestionsState.selectedLevel = toLevel(choosenLevel);
+    updateQuiz({currentQuestions: [], selectedCategory: toCategory(choosenCategory), selectedLevel: toLevel(choosenLevel)});
 
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
-
-    const filteredQuestions = filterQuestions(QuestionsState.selectedCategory, QuestionsState.selectedLevel)
-    QuestionsState.currentQuestions = filteredQuestions;
-
-    console.log('quest state', QuestionsState)
+    /* const startingQuestions = [...getQuiz()?.currentQuestions]
+    console.log('starting questions', startingQuestions)
+    console.log('quest state', QuestionsState) */
   });
 
 

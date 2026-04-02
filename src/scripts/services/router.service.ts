@@ -1,12 +1,21 @@
-import { type Route, Router } from './router'
-import { renderLogin } from '../pages/login'
-import { renderDashboard } from '../pages/dashboard'
-import { renderQuiz } from '../pages/quiz/quiz'
-import { renderStatistic } from '../pages/statistic'
+import { type Route, Router } from './router';
+import { renderLogin } from '../pages/login';
+import { renderDashboard } from '../pages/dashboard';
+import { renderQuiz } from '../pages/quiz/quiz';
+import { renderStatistic } from '../pages/statistic';
+import { render404Page } from '../pages/404/404';
+import { setIndex } from '../pages/quiz/quiz.state';
+//import { getCurrentRoute, setCurrentRoute } from '../states/routeState';
 
 let isAuth: boolean = true
 
-export function initRouter() {
+export function initRouter(): void {
+  //const savedRoute = getCurrentRoute();
+
+ /*  if (savedRoute && savedRoute !== window.location.pathname + window.location.hash) {
+    history.replaceState({}, '', savedRoute);
+  } */
+
   const routes: Route[] = [
     {
       path: '/',
@@ -20,6 +29,11 @@ export function initRouter() {
     {
       path: '/quiz',
       render: (): void => {
+        const hash = window.location.hash.replace('#', '')
+        const indexFromHash = Number(hash) - 1
+        if (!isNaN(indexFromHash) && indexFromHash >= 0) {
+          setIndex(indexFromHash)
+        }
         void renderQuiz(router)
       },
 
@@ -32,6 +46,7 @@ export function initRouter() {
     }
   ]
 
-  const router = new Router(routes, () => isAuth)
+  const router = new Router(routes, () => isAuth, () => render404Page(router));
+
   router.init()
 }
