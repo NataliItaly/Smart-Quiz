@@ -1,5 +1,6 @@
 import { Question } from './quiz.types'
 import { applyUIState, updateUIState } from './quiz.state'
+import { setCurrentRoute } from '../../states/routeState'
 
 export interface QuizNextParams {
   nextBtn: HTMLButtonElement
@@ -38,6 +39,7 @@ export function quizNext({
     }
 
     setIndex(next)
+    setCurrentRoute(`/quiz#${next + 1}`)
 
     updateUIState({
       isChecked: false,

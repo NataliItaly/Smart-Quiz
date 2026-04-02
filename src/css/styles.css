@@ -5,6 +5,7 @@
 @import './quiz.css';
 @import './login.css';
 @import './popup.css';
+@import './loader.css';
 
 .btn {
   margin-top: 25px;

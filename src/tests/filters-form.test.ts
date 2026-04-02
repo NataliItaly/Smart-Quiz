@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { filters } from '../scripts/components.ts/filters';
+import { renderFiltersForm } from '../scripts/components.ts/filters.form';
 
 describe('filters form', () => {
   beforeEach(() => {
@@ -7,14 +7,14 @@ describe('filters form', () => {
   });
 
   it('should create form element', () => {
-    const form = filters();
+    const form = renderFiltersForm();
 
     expect(form).toBeInstanceOf(HTMLFormElement);
     expect(form.id).toBe('filter-form');
   });
 
   it('should create category and level selects', () => {
-    const form = filters();
+    const form = renderFiltersForm();
 
     const categorySelect = form.querySelector<HTMLSelectElement>('#category');
     const levelSelect = form.querySelector<HTMLSelectElement>('#level');
@@ -24,7 +24,7 @@ describe('filters form', () => {
   });
 
   it('should create correct options for category select', () => {
-    const form = filters();
+    const form = renderFiltersForm();
 
     const category = form.querySelector('#category') as HTMLSelectElement;
     const options = category.querySelectorAll('option');
@@ -38,7 +38,7 @@ describe('filters form', () => {
   });
 
   it('should create submit button', () => {
-    const form = filters();
+    const form = renderFiltersForm();
 
     const btn = form.querySelector('#filter-btn');
 
@@ -47,7 +47,7 @@ describe('filters form', () => {
   });
 
   it('should prevent submit when both filters empty', () => {
-    const form = filters();
+    const form = renderFiltersForm();
     document.body.appendChild(form);
 
     const preventDefault = vi.fn();
