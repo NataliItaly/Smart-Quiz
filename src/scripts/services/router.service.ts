@@ -1,6 +1,6 @@
 import { type Route, Router } from './router'
 import { renderLogin } from '../pages/login/index'
-import { StoredUser } from '../pages/login/types'
+//import { StoredUser } from '../pages/login/types'
 import { renderDashboard } from '../pages/dashboard'
 import { renderQuiz } from '../pages/quiz/quiz'
 import { renderStatistic } from '../pages/statistic'
@@ -11,8 +11,11 @@ function checkAuth(): boolean {
   if (!currentUser) return false;
 
   try {
-    const user = JSON.parse(currentUser) as StoredUser;
-    return !!user.email;
+    const parsed = JSON.parse(currentUser) as unknown;
+
+    return (
+      typeof parsed === 'object' && parsed !== null && 'email' in parsed && typeof (parsed as {email?: unknown}).email === 'string'
+    );
   } catch {
     return false;
   }
