@@ -3,23 +3,26 @@ import parser from "@typescript-eslint/parser";
 
 export default [
   {
-    files: ["**/*.ts"],
+    ignores: ['netlify/functions/**', '**/*.test.ts', '**/*.spec.ts']
+  },
+  {
+    files: ['**/*.ts'],
     languageOptions: {
       parser,
       parserOptions: {
-        project: "./tsconfig.json"
+        project: './tsconfig.json'
       }
     },
     plugins: {
-      "@typescript-eslint": tseslint
+      '@typescript-eslint': tseslint
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      ...tseslint.configs["recommended-type-checked"].rules,
+      ...tseslint.configs['recommended-type-checked'].rules,
 
-      "@typescript-eslint/no-explicit-any": "error",
-      "@typescript-eslint/no-unused-vars": "error",
-      "@typescript-eslint/explicit-function-return-type": "warn"
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/explicit-function-return-type': 'warn'
     }
   }
-];
+]
