@@ -22,6 +22,7 @@ export function quizService(): Promise<Question[]> {
 
               const enlarged = questions.map((q) => ({ ...q, category, level }))
               allQuestions.push(...enlarged)
+              console.log('all questions', allQuestions)
             }
           }
 
