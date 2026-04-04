@@ -1,13 +1,13 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
-import { questionFilter, updateQuiz } from "../states/questionsState";
-import { toCategory, toLevel } from "../utils/filter.options.types.converter";
+import { getQuiz, questionFilter, updateQuiz } from "../states/questionsState";
+import { toCategory, toLevel, toMode } from "../utils/filter.options.types.converter";
 
 
 export function renderFiltersForm(): HTMLFormElement {
   const filterForm = createElement({tag: 'form', className: 'form', id: 'filter-form'});
 
-  const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard']};
+  const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard'], mode: ['Train', 'Exam']};
 
   (Object.keys(filterOptions) as (keyof FilterOptions)[]).forEach(option => {
     const formRow = createElement({tag: 'div', className: 'form__row'});
@@ -32,15 +32,21 @@ export function renderFiltersForm(): HTMLFormElement {
 
     const categorySelect = document.getElementById('category') as HTMLSelectElement;
     const levelSelect = document.getElementById('level') as HTMLSelectElement;
+    const modeSelect = document.getElementById('mode') as HTMLSelectElement
+
     const choosenCategory = categorySelect.value;
     const choosenLevel = levelSelect.value;
+    const choosenMode = modeSelect.value;
+
+    console.log('choosen mode', choosenMode)
 
     if (!choosenCategory && !choosenLevel) return;
 
     updateQuiz({currentQuestions: [], selectedCategory: toCategory(choosenCategory), selectedLevel: toLevel(choosenLevel)});
-
+    console.log('quiz from state on submit', getQuiz())
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
+    questionFilter.mode = toMode(choosenMode);
     /* const startingQuestions = [...getQuiz()?.currentQuestions]
     console.log('starting questions', startingQuestions)
     console.log('quest state', QuestionsState) */
