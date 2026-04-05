@@ -45,14 +45,6 @@ const QuestionsStateSchema = z.object({
 
 export type QuestionsState = z.infer<typeof QuestionsStateSchema>
 
-/* export interface QuestionsState {
-  readonly currentQuestions: Question[] | null
-  readonly selectedCategory: Category | undefined // topic
-  readonly selectedLevel: Level | undefined // dificulty
-  readonly selectedMode: Mode
-}
- */
-
 const defaultState: QuestionsState = {
   currentQuestions: null,
   selectedCategory: undefined,
@@ -89,34 +81,6 @@ function loadQuiz(): QuestionsState {
   }
 }
 
-/* function loadQuiz(): QuestionsState {
-  try {
-    const stored = localStorage.getItem('quiz')
-
-    if (!stored) {
-      return {
-        currentQuestions: null,
-        selectedCategory: undefined,
-        selectedLevel: undefined,
-        selectedMode: 'Train'
-        //isFirstFetch: true
-      }
-    }
-
-    const parsed = JSON.parse(stored) as QuestionsState
-    return parsed
-  } catch {
-    return {
-      currentQuestions: null,
-      selectedCategory: undefined,
-      selectedLevel: undefined,
-      selectedMode: 'Train'
-      //isFirstFetch: true
-    }
-  }
-}
- */
-
 export function getQuiz(): QuestionsState {
   return {
     currentQuestions: questionsState.currentQuestions
@@ -129,6 +93,8 @@ export function getQuiz(): QuestionsState {
 }
 
 export function updateQuiz(patch: Partial<QuestionsState>): void {
+  //clearQuiz();
+
   questionsState = { ...questionsState, ...patch }
 
   localStorage.setItem('quiz', JSON.stringify(questionsState))

@@ -1,4 +1,4 @@
-import '../../../css/styles.css';
+//import '../../../css/styles.css';
 import { getQuiz } from '../../states/questionsState';
 import { renderLoader } from '../../components.ts/loader';
 import { renderQuizContainer } from './quiz.container';
