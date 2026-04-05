@@ -2,6 +2,7 @@
 @import './header.css';
 @import './dashboard.css';
 @import './form.css';
+@import './filters-popup.css';
 @import './quiz.css';
 @import './login.css';
 @import './popup.css';
@@ -195,7 +196,7 @@
   line-height: 1.4;
 }
 
- 
+
 .explain-container {
   position: fixed;
   inset: 0;
@@ -219,7 +220,7 @@
 .hidden {
     display: none;
   }
-  
+
   .quiz-warning {
   display: none;
   background: #ffdddd;

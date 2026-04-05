@@ -3,7 +3,7 @@ import { Question, QuizResponse, Category, Level } from "../pages/quiz/quiz.type
 export function quizService(): Promise<Question[]> {
   return new Promise((resolve, reject) => {
     setTimeout( () => {
-      void (async function () {
+      void (async function (): Promise<void> {
         try {
           const res = await fetch('/data/quiz_questions.json')
 
@@ -22,7 +22,6 @@ export function quizService(): Promise<Question[]> {
 
               const enlarged = questions.map((q) => ({ ...q, category, level }))
               allQuestions.push(...enlarged)
-              console.log('all questions', allQuestions)
             }
           }
 

@@ -16,7 +16,7 @@ export function renderQuiz(router: Router): void  {
   root.appendChild(quizEl)
 
   const backBtn = document.createElement('button')
-  backBtn.textContent = 'Back'
+  backBtn.textContent = 'Back to Dashboard'
   backBtn.id = 'backBtn'
 
   root.appendChild(backBtn)

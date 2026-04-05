@@ -1,13 +1,32 @@
-import { getQuiz, updateQuiz } from '../states/questionsState';
-import { filterQuestions } from '../utils/filter.questions';
-import { renderQuizContainer } from '../pages/quiz/quiz.container';
+import { getQuiz, updateQuiz } from '../states/questionsState'
+import { filterQuestions } from '../utils/filter.questions'
+import { renderQuizContainer } from '../pages/quiz/quiz.container'
+import { shuffleArray } from '../utils/shuffle.array'
 
-
-export async function quizQuestionsService(container: HTMLElement): Promise<void> {
+export async function quizQuestionsService(
+  container: HTMLElement
+): Promise<void> {
   try {
-    const questions = await filterQuestions(getQuiz()?.selectedCategory, getQuiz()?.selectedLevel);
-    updateQuiz({currentQuestions: questions});
-    renderQuizContainer(container, questions);
+    const questions = await filterQuestions(
+      getQuiz()?.selectedCategory,
+      getQuiz()?.selectedLevel
+    )
+
+    const shuffledQuestions = shuffleArray(questions)
+
+    // check quiz mode
+    const quizMode = getQuiz()?.selectedMode;
+    console.log('mode from service', quizMode)
+    let currentQuestions;
+    if (quizMode === 'Exam') {
+      currentQuestions = shuffledQuestions.slice(0, 20)
+    }
+    else {
+      currentQuestions = shuffledQuestions;
+    }
+
+    updateQuiz({ currentQuestions: currentQuestions })
+    renderQuizContainer(container, currentQuestions)
   } catch (err: unknown) {
     if (err instanceof Error) {
       container.innerHTML = `<p class="error">${err.message}</p>`

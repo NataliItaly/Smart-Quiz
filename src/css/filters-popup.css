@@ -1,0 +1,36 @@
+.filters-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: rgb(167, 165, 165);
+  border-radius: 10px;
+}
+
+.filters-popup_fading {
+  animation: fade 6s forwards;
+}
+
+.filters-popup__span {
+  font-size: 18px;
+  color: red;
+}
+
+.filters-popup__message {
+  color: yellow;
+  background: rgb(64, 64, 64);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
