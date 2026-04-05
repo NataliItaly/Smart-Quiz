@@ -2,6 +2,7 @@ import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
 import { clearQuiz, getQuiz, questionFilter, updateQuiz } from "../states/questionsState";
 import { toCategory, toLevel, toMode } from "../utils/filter.options.types.converter";
+import { filtersPopup } from "./filters.popup";
 
 
 export function renderFiltersForm(): HTMLFormElement {
@@ -50,6 +51,16 @@ export function renderFiltersForm(): HTMLFormElement {
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
     questionFilter.mode = toMode(choosenMode);
+
+    const popup = filtersPopup(toCategory(choosenCategory), toLevel(choosenLevel), toMode(choosenMode));
+    filterForm.append(popup);
+
+    window.setTimeout(function() {
+      popup.classList.add('filters-popup_fading')
+      window.setTimeout(function() {
+        popup.remove();
+      }, 0)
+    }, 5000)
   });
 
 
