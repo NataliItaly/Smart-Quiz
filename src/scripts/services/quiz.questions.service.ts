@@ -1,10 +1,12 @@
+import { Router } from './router'
 import { getQuiz, updateQuiz } from '../states/questionsState'
 import { filterQuestions } from '../utils/filter.questions'
 import { renderQuizContainer } from '../pages/quiz/quiz.container'
 import { shuffleArray } from '../utils/shuffle.array'
 
 export async function quizQuestionsService(
-  container: HTMLElement
+  container: HTMLElement,
+  router: Router
 ): Promise<void> {
   try {
     const questions = await filterQuestions(
@@ -26,7 +28,7 @@ export async function quizQuestionsService(
     }
 
     updateQuiz({ currentQuestions: currentQuestions })
-    renderQuizContainer(container, currentQuestions)
+    renderQuizContainer(container, currentQuestions, router)
   } catch (err: unknown) {
     if (err instanceof Error) {
       container.innerHTML = `<p class="error">${err.message}</p>`

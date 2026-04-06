@@ -12,9 +12,12 @@ import {
 import { quizCheck } from "./quiz.check";
 import { quizNext } from "./quiz.next";
 import { quizTryAgain } from "./quiz.try.again";
+import { getQuiz } from "../../states/questionsState";
+import { finishQuizPopup } from "../../components.ts/finish.quiz.popup";
+import { Router } from "../../services/router";
 
 
-export function renderQuizContainer(container: HTMLElement, questions: Question[]): void {
+export function renderQuizContainer(container: HTMLElement, questions: Question[], router: Router): void {
   container.innerHTML = '';
 
   // render UI inside quiz container
@@ -89,6 +92,32 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     explainBtn,
     explainEl
   )
+
+  const navBtns = document.createElement('div')
+  navBtns.className = 'quiz-nav'
+
+  if (getQuiz().selectedMode === 'Train') {
+    const prevQuestionBtn = document.createElement('button')
+    prevQuestionBtn.textContent = 'Previous Question'
+    prevQuestionBtn.className = 'btn prev-question'
+
+    const nextQuestionBtn = document.createElement('button')
+    nextQuestionBtn.textContent = 'Previous Question'
+    nextQuestionBtn.className = 'btn next-question'
+
+    navBtns.append(prevQuestionBtn, nextQuestionBtn)
+  }
+    const finishQuizBtn = document.createElement('button')
+    finishQuizBtn.textContent = 'Finish Quiz'
+    finishQuizBtn.className = 'btn quiz-finish'
+
+    finishQuizBtn.addEventListener('click', function() {
+      const popup = finishQuizPopup(router);
+      document.body.append(popup)
+    })
+
+    navBtns.append(finishQuizBtn)
+    container.append(navBtns)
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })

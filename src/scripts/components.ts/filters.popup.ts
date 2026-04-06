@@ -4,7 +4,7 @@ import { Category, Level, Mode } from "../pages/quiz/quiz.types";
 export function filtersPopup(category: Category | undefined, level: Level | undefined, mode: Mode): HTMLElement {
   const popup = createElement({
     tag: 'div',
-    className: 'filters-popup',
+    className: 'popup',
     id: 'filters-popup'
   })
   const popupContent = createElement({
