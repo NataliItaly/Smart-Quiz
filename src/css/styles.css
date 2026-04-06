@@ -8,6 +8,10 @@
 @import './popup.css';
 @import './loader.css';
 
+body {
+  position: relative;
+}
+
 .btn {
   margin-top: 25px;
   margin-right: 5px;

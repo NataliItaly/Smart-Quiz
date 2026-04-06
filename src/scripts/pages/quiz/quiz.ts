@@ -2,6 +2,7 @@ import { Router } from '../../services/router'
 import { quizScreen } from './quiz.screen'
 //------------------
 import { setIndex } from './quiz.state';
+import { getQuiz } from '../../states/questionsState';
 
 let popstateAdded = false
 //------------------
@@ -12,12 +13,13 @@ export function renderQuiz(router: Router): void  {
 
   root.innerHTML = '';
 
-  const quizEl = quizScreen()
+  const quizEl = quizScreen(router)
   root.appendChild(quizEl)
 
   const backBtn = document.createElement('button')
   backBtn.textContent = 'Back to Dashboard'
   backBtn.id = 'backBtn'
+  backBtn.disabled = getQuiz().selectedMode === 'Exam';
 
   root.appendChild(backBtn)
 
