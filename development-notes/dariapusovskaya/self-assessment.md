@@ -5,6 +5,8 @@
 | Unit Tests (Basic) | Tests for 40%+ of my code | 10 |
 | Responsive| adaptive for 320px + | 5 |
 
+ссылка на пр: https://github.com/NataliItaly/Smart-Quiz/pull/59
+
 Что было реализовано:
 
 Архитектура страницы login-page:
