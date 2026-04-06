@@ -1,5 +1,8 @@
 import { Question } from './quiz.types'
-import { applyUIState, updateUIState } from './quiz.state'
+import { applyUIState, updateUIState, getScore } from './quiz.state'
+import { statisticsService } from '../../services/statisticsService'
+import { getUser } from '../../states/userState'
+import { QuestionsState } from '../../states/questionsState'
 
 export interface QuizNextParams {
   nextBtn: HTMLButtonElement
@@ -33,6 +36,25 @@ export function quizNext({
     const next = current + 1
 
     if (next >= questions.length) {
+      const user = getUser();
+      const score = getScore();
+      const total = questions.length;
+
+      const category = QuestionsState.selectedCategory;
+      const level = QuestionsState.selectedLevel;
+      const finalCategory = category || 'JS & TS';
+      const finalLevel = level || 'medium';
+
+      statisticsService.saveAttempt({
+        userId: user.id,
+        score: score,
+        total: total,
+        category: finalCategory,
+        level: finalLevel
+      });
+
+      console.log(`quiz completed. score: ${score}/${total}`);
+      
       container.innerHTML = ''
       return
     }

@@ -40,4 +40,5 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
   document.getElementById("dashboard-quiz-btn")!.onclick = (): void => {
     router.navigate("/quiz");
   };
+
 }
