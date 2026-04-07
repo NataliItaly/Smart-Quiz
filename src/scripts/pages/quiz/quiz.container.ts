@@ -31,6 +31,10 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   const scoreEl = document.createElement('div')
   scoreEl.classList.add('quiz-score')
 
+  const statsContainer = document.createElement('div')
+  statsContainer.className = 'quiz-stats'
+  statsContainer.append(progressEl, scoreEl)
+
   const fieldset = document.createElement('fieldset')
   fieldset.className = 'quiz-fieldset'
 
@@ -48,6 +52,10 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
   checkBtn.disabled = true
+
+  const checkWrapper = document.createElement('div')
+  checkWrapper.className = 'quiz-check-wrapper'
+  checkWrapper.appendChild(checkBtn)
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
@@ -68,6 +76,10 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
 
+  const actionsWrapper = document.createElement('div')
+  actionsWrapper.className = 'quiz-actions'
+  actionsWrapper.append(nextBtn, tryBtn, explainBtn)
+
   quizRenderQuestion({
     questions,
     progressEl,
@@ -83,13 +95,10 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
 
   container.append(
     titelEl,
-    progressEl,
-    scoreEl,
+    statsContainer,
     fieldset,
-    checkBtn,
-    nextBtn,
-    tryBtn,
-    explainBtn,
+    checkWrapper,
+    actionsWrapper,
     explainEl
   )
 
@@ -102,22 +111,23 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     prevQuestionBtn.className = 'btn prev-question'
 
     const nextQuestionBtn = document.createElement('button')
-    nextQuestionBtn.textContent = 'Previous Question'
+    nextQuestionBtn.textContent = 'Next Question'
     nextQuestionBtn.className = 'btn next-question'
 
     navBtns.append(prevQuestionBtn, nextQuestionBtn)
   }
-    const finishQuizBtn = document.createElement('button')
-    finishQuizBtn.textContent = 'Finish Quiz'
-    finishQuizBtn.className = 'btn quiz-finish'
+  
+  const finishQuizBtn = document.createElement('button')
+  finishQuizBtn.textContent = 'Finish Quiz'
+  finishQuizBtn.className = 'btn quiz-finish'
 
-    finishQuizBtn.addEventListener('click', function() {
-      const popup = finishQuizPopup(router);
-      document.body.append(popup)
-    })
+  finishQuizBtn.addEventListener('click', function() {
+    const popup = finishQuizPopup(router);
+    document.body.append(popup)
+  })
 
-    navBtns.append(finishQuizBtn)
-    container.append(navBtns)
+  navBtns.append(finishQuizBtn)
+  container.append(navBtns)
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })
@@ -182,6 +192,4 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     clearSelected: () => updateUIState({ selectedOption: null }),
     explainEl
   })
-
-  //quizExplanation(explainBtn, () => questions)
 }
