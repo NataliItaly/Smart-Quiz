@@ -93,8 +93,6 @@ export function getQuiz(): QuestionsState {
 }
 
 export function updateQuiz(patch: Partial<QuestionsState>): void {
-  //clearQuiz();
-
   questionsState = { ...questionsState, ...patch }
 
   localStorage.setItem('quiz', JSON.stringify(questionsState))

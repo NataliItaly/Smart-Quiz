@@ -18,7 +18,7 @@ import { Router } from "../../services/router";
 
 
 export function renderQuizContainer(container: HTMLElement, questions: Question[], router: Router): void {
-  container.innerHTML = '';
+  container.innerHTML = ''
 
   // render UI inside quiz container
   const titelEl = document.createElement('h2')
@@ -47,12 +47,28 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
+  console.log(getIndex(), questions.length) // 19 29
   checkBtn.disabled = true
+
+  const navBtns = document.createElement('div')
+  navBtns.className = 'quiz-nav'
+
+  // set prev question navigation in train mode
+  if (getQuiz().selectedMode === 'Train') {
+    const prevQuestionBtn = document.createElement('button')
+    prevQuestionBtn.textContent = 'Prev'
+    prevQuestionBtn.className = 'btn prev-question'
+
+    navBtns.append(prevQuestionBtn)
+  }
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
   nextBtn.className = 'btn quiz-next'
-  nextBtn.style.display = 'none'
+  nextBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
+  nextBtn.disabled = getIndex() >= questions.length - 1
+
+  navBtns.append(nextBtn)
 
   const tryBtn = document.createElement('button')
   tryBtn.textContent = 'Try again'
@@ -67,6 +83,15 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   const explainEl = document.createElement('p')
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
+
+  const finishQuizBtn = document.createElement('button')
+  finishQuizBtn.textContent = 'Finish Quiz'
+  finishQuizBtn.className = 'btn quiz-finish'
+
+  finishQuizBtn.addEventListener('click', function () {
+    const popup = finishQuizPopup(router)
+    document.body.append(popup)
+  })
 
   quizRenderQuestion({
     questions,
@@ -87,37 +112,12 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     scoreEl,
     fieldset,
     checkBtn,
-    nextBtn,
+    navBtns,
     tryBtn,
     explainBtn,
-    explainEl
+    explainEl,
+    finishQuizBtn
   )
-
-  const navBtns = document.createElement('div')
-  navBtns.className = 'quiz-nav'
-
-  if (getQuiz().selectedMode === 'Train') {
-    const prevQuestionBtn = document.createElement('button')
-    prevQuestionBtn.textContent = 'Previous Question'
-    prevQuestionBtn.className = 'btn prev-question'
-
-    const nextQuestionBtn = document.createElement('button')
-    nextQuestionBtn.textContent = 'Previous Question'
-    nextQuestionBtn.className = 'btn next-question'
-
-    navBtns.append(prevQuestionBtn, nextQuestionBtn)
-  }
-    const finishQuizBtn = document.createElement('button')
-    finishQuizBtn.textContent = 'Finish Quiz'
-    finishQuizBtn.className = 'btn quiz-finish'
-
-    finishQuizBtn.addEventListener('click', function() {
-      const popup = finishQuizPopup(router);
-      document.body.append(popup)
-    })
-
-    navBtns.append(finishQuizBtn)
-    container.append(navBtns)
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })
@@ -165,7 +165,6 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
         explainBtn,
         explainEl
       }),
-    container,
     optionsEl,
     checkBtn,
     tryBtn,

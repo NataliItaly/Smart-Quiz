@@ -34,4 +34,5 @@ export interface Question {
   answer_en?: string;
   category: Category;
   level: Level;
+  wasChecked?: boolean;
 }

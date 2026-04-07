@@ -20,7 +20,7 @@ export function quizService(): Promise<Question[]> {
             for (const level of Object.keys(data.quiz[category]) as Level[]) {
               const questions = data.quiz[category][level]
 
-              const enlarged = questions.map((q) => ({ ...q, category, level }))
+              const enlarged = questions.map((q) => ({ ...q, category, level, wasChecked: false }))
               allQuestions.push(...enlarged)
             }
           }

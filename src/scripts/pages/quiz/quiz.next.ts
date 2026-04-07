@@ -1,11 +1,11 @@
 import { Question } from './quiz.types'
 import { applyUIState, updateUIState } from './quiz.state'
 import { setCurrentRoute } from '../../states/routeState'
+import { getQuiz } from '../../states/questionsState'
 
 export interface QuizNextParams {
   nextBtn: HTMLButtonElement
   questions: Question[]
-  container: HTMLElement
   getIndex: () => number
   setIndex: (value: number) => void
   quizRenderQuestion: () => void
@@ -22,7 +22,6 @@ export function quizNext({
   getIndex,
   setIndex,
   quizRenderQuestion,
-  container,
   optionsEl,
   checkBtn,
   tryBtn,
@@ -34,7 +33,8 @@ export function quizNext({
     const next = current + 1
 
     if (next >= questions.length) {
-      container.innerHTML = ''
+      //container.innerHTML = ''
+      nextBtn.disabled = true;
       return
     }
 
@@ -45,7 +45,7 @@ export function quizNext({
       isChecked: false,
       isCorrect: null,
       selectedOption: null,
-      showNext: false,
+      showNext: getQuiz().selectedMode === 'Train',
       showTryAgain: false,
       showExplain: false,
       showExplanation: false

@@ -1,3 +1,5 @@
+import { getQuiz } from "../../states/questionsState"
+
 // -----------------------------
 // UI STATE
 // -----------------------------
@@ -10,18 +12,18 @@ export interface QuizUIState {
   showExplain: boolean
   showExplanation: boolean
   isCorrect: boolean | null
-  locked: boolean 
+  locked: boolean
 }
 
 const initialUIState: QuizUIState = {
   selectedOption: null,
   isChecked: false,
-  showNext: false,
+  showNext: getQuiz().selectedMode === 'Exam',
   showTryAgain: false,
   showExplain: false,
   showExplanation: false,
   isCorrect: null,
-  locked: false 
+  locked: false
 }
 
 let uiState: QuizUIState = { ...initialUIState }
@@ -83,9 +85,9 @@ export function applyUIState({
   explainBtn: HTMLButtonElement
   explainEl: HTMLElement
 }): void {
-  
+
   const ui = getUIState()
-  
+
   // -----------------------------
   // STRICT LOCK MODE
   // -----------------------------
@@ -112,7 +114,7 @@ export function applyUIState({
   checkBtn.disabled = !ui.selectedOption
 
     // Next: if the question correct
-  nextBtn.style.display = ui.showNext ? 'block' : 'none'
+  nextBtn.style.display = (getQuiz().selectedMode === 'Train' || ui.isChecked) ? 'block' : 'none' //ui.showNext ? 'block' : 'none'
 
     // Try again:if the question not correct
   tryBtn.style.display = ui.showTryAgain ? 'block' : 'none'
