@@ -10,6 +10,7 @@ import {
   setScore
 } from './quiz.state'
 import { quizCheck } from "./quiz.check";
+import { quizPrev } from "./quiz.prev";
 import { quizNext } from "./quiz.next";
 import { quizTryAgain } from "./quiz.try.again";
 import { getQuiz } from "../../states/questionsState";
@@ -52,14 +53,12 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   const navBtns = document.createElement('div')
   navBtns.className = 'quiz-nav'
 
-  // set prev question navigation in train mode
-  if (getQuiz().selectedMode === 'Train') {
-    const prevQuestionBtn = document.createElement('button')
-    prevQuestionBtn.textContent = 'Prev'
-    prevQuestionBtn.className = 'btn prev-question'
-
-    navBtns.append(prevQuestionBtn)
-  }
+  const prevBtn = document.createElement('button')
+  prevBtn.textContent = 'Prev'
+  prevBtn.className = 'btn prev-question'
+  prevBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
+  prevBtn.disabled = getIndex() <= 0
+console.log('index', getIndex())
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
@@ -67,7 +66,7 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   nextBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
   nextBtn.disabled = getIndex() >= questions.length - 1
 
-  navBtns.append(nextBtn)
+  navBtns.append(prevBtn, nextBtn)
 
   const tryBtn = document.createElement('button')
   tryBtn.textContent = 'Try again'
@@ -144,6 +143,30 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
         scoreEl.textContent = `Score: ${getScore()}`
       }
     }
+  })
+
+  quizPrev({
+    prevBtn,
+    getIndex,
+    setIndex,
+    quizRenderQuestion: () =>
+      quizRenderQuestion({
+        questions,
+        progressEl,
+        scoreEl,
+        legend,
+        optionsEl,
+        checkBtn,
+        nextBtn,
+        tryBtn,
+        explainBtn,
+        explainEl
+      }),
+    optionsEl,
+    checkBtn,
+    tryBtn,
+    explainBtn,
+    explainEl
   })
 
   quizNext({
