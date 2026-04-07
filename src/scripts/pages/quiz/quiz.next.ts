@@ -33,7 +33,6 @@ export function quizNext({
     const next = current + 1
 
     if (next >= questions.length) {
-      //container.innerHTML = ''
       nextBtn.disabled = true;
       return
     }

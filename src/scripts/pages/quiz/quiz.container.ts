@@ -47,7 +47,6 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
-  console.log(getIndex(), questions.length) // 19 29
   checkBtn.disabled = true
 
   const navBtns = document.createElement('div')
