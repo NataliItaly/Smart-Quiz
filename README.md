@@ -14,9 +14,20 @@ Progress and history of attempts are saved in localStorage.
 
 
 ## Team members:
-- Nataliya Krylova [Git Hub](https://github.com/NataliItaly) - team lead 
+- Nataliya Krylova [Git Hub](https://github.com/NataliItaly) - team lead
+[dev notes](https://github.com/NataliItaly/Smart-Quiz/tree/main/development-notes/NataliItaly)
 - Kateryna Moskalenko [Git Hub](https://github.com/katerynamoskalenko)
+[dev notes](https://github.com/NataliItaly/Smart-Quiz/tree/main/development-notes/KaterynaMoskalenko)
 - Daria Pusovskaya [Git Hub](https://github.com/dariapusovskaya)
+[dev notes](https://github.com/NataliItaly/Smart-Quiz/tree/main/development-notes/dariapusovskaya)
+
+## Meeting notes
+- [App installation and general rules](https://github.com/NataliItaly/Smart-Quiz/blob/main/development-notes/NataliItaly/NataliItaly-2026-02-20.md)
+- [Componennts distribution](https://github.com/NataliItaly/Smart-Quiz/blob/main/development-notes/NataliItaly/NataliItaly-2026-02-24.md)
+- [Folder structure and naming](https://github.com/NataliItaly/Smart-Quiz/blob/main/instructions/topic-to-discuss-25-02-2026.md)
+- [Use GitHub: PR review, GH issue](https://github.com/NataliItaly/Smart-Quiz/blob/main/development-notes/NataliItaly/NataliItaly-2026-03-05.md)
+- [Discuss Merging conflicts](https://github.com/NataliItaly/Smart-Quiz/blob/main/development-notes/NataliItaly/NataliItaly-2026-03-26.md)
+- [Prepare on final team presentation](https://github.com/NataliItaly/Smart-Quiz/blob/main/development-notes/NataliItaly/NataliItaly-2026-03-31.md)
 
 ## How to run
 1. Clone repository:
