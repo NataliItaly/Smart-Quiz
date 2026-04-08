@@ -1,6 +1,7 @@
 # NataliItaly self-assessment +135
 
-[Self Assessment PR]()
+## Self Assessment PR
+[Self Assessment notes #65](https://github.com/NataliItaly/Smart-Quiz/pull/65)
 
 ## Components +80
 
