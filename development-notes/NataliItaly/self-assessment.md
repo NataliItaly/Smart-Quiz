@@ -1,6 +1,6 @@
-# NataliItaly self-assessment
+# NataliItaly self-assessment +135
 
-## Components
+## Components +80
 
 ### Компонент Router +20
 
@@ -220,7 +220,7 @@ Loader можно легко применять в любых других ас�
 
 ## Quality +10
 ### Unit Tests +10
-Full: Покрытие тестами 50%+ личного кода
+Покрытие тестами личного кода
 
 
 ## DevOps & Role +5
@@ -253,7 +253,7 @@ Vitest позволяет легко писать и запускать юнит
 - Будущим — инфраструктура поддерживает тестирование, CI/CD и масштабирование
 
 
-## Architecture
+## Architecture +20
 ### Design Patterns +10
 
 1. Dependency Injection - передача зависимостей извне делает компонент расширяемым и тестируемым:
@@ -273,3 +273,20 @@ FiltersForm — только ввод и трансформация данных
 
 5. Guard (Router) - Route Guard pattern
 `if (route.protected && !this.isAuth())`
+
+### API Layer: Выделение слоя работы с API (изоляция от UI компонентов) +10
+- UI / Presentation Layer (Dashboard, quizScreen, renderQuiz)
+renderQuiz — точка входа для отображения теста, отвечает только за “сборку” интерфейса, не загружая данные самостоятельно.
+quizScreen — отвечает за визуальное представление: показывает вопросы и контейнер для навигации.
+Компоненты UI не знают о том, как загружаются или сортируются вопросы. Они просто получают уже подготовленные данные.
+- API / Data Layer (quizService, filterQuestions, quizQuestionsService)
+quizService — загружает все вопросы из JSON, выполняет парсинг и трансформацию данных.
+quizQuestionsService — применяет фильтры (selectedCategory, selectedLevel), перемешивает массив, выбирает количество вопросов в зависимости от режима.
+UI не знает про fetch, shuffle или фильтрацию — оно получает готовые данные.
+- State Layer (getQuiz, updateQuiz, setIndex, setCurrentRoute)
+Управляет глобальным состоянием викторины: выбранные категории, уровень, текущий вопрос.
+Изолирует состояние от компонентов, чтобы UI мог перерисовываться при изменениях.
+- Routing Layer (Router, renderQuiz back button, popstate)
+Отвечает за навигацию между страницами (/dashboard, /quiz).
+Реализован через pushState, hash и popstate.
+UI вызывает навигацию через router.navigate, но не управляет историей напрямую.
