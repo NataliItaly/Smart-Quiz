@@ -49,11 +49,17 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
 
   fieldset.appendChild(optionsEl)
 
+  // Check button
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
   checkBtn.disabled = true
 
+  const checkWrapper = document.createElement('div')
+  checkWrapper.className = 'quiz-check-wrapper'
+  checkWrapper.appendChild(checkBtn)
+
+  // Prev and Next buttons navigation
   const navBtns = document.createElement('div')
   navBtns.className = 'quiz-nav'
 
@@ -62,11 +68,6 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   prevBtn.className = 'btn prev-question'
   prevBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
   prevBtn.disabled = getIndex() <= 0
-  const checkWrapper = document.createElement('div')
-  
-  checkWrapper.className = 'quiz-check-wrapper'
-  checkWrapper.appendChild(checkBtn)
-
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
@@ -134,10 +135,10 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     explainEl
   )*/
 
-  const navBtns = document.createElement('div')
-  navBtns.className = 'quiz-nav'
+ /*  const navBtns = document.createElement('div')
+  navBtns.className = 'quiz-nav' */
 
-  if (getQuiz().selectedMode === 'Train') {
+  /* if (getQuiz().selectedMode === 'Train') {
     const prevQuestionBtn = document.createElement('button')
     prevQuestionBtn.textContent = 'Previous Question'
     prevQuestionBtn.className = 'btn prev-question'
@@ -147,16 +148,8 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     nextQuestionBtn.className = 'btn next-question'
 
     navBtns.append(prevQuestionBtn, nextQuestionBtn)
-  }
-  
-  const finishQuizBtn = document.createElement('button')
-  finishQuizBtn.textContent = 'Finish Quiz'
-  finishQuizBtn.className = 'btn quiz-finish'
+  } */
 
-  finishQuizBtn.addEventListener('click', function() {
-    const popup = finishQuizPopup(router);
-    document.body.append(popup)
-  })
 
   navBtns.append(finishQuizBtn)
   container.append(navBtns)
