@@ -1,10 +1,10 @@
 import { Question } from './quiz.types'
-import { applyUIState, updateUIState } from './quiz.state'
+import { applyPrevUIState, updateUIState } from './quiz.state'
 import { setCurrentRoute } from '../../states/routeState'
 import { getQuiz } from '../../states/questionsState'
 
-export interface QuizNextParams {
-  nextBtn: HTMLButtonElement
+export interface QuizPrevParams {
+  prevBtn: HTMLButtonElement
   questions: Question[]
   getIndex: () => number
   setIndex: (value: number) => void
@@ -14,11 +14,11 @@ export interface QuizNextParams {
   tryBtn: HTMLButtonElement
   explainBtn: HTMLButtonElement
   explainEl: HTMLElement
-  prevBtn: HTMLButtonElement
+  nextBtn: HTMLButtonElement
 }
 
-export function quizNext({
-  nextBtn,
+export function quizPrev({
+  prevBtn,
   questions,
   getIndex,
   setIndex,
@@ -28,17 +28,17 @@ export function quizNext({
   tryBtn,
   explainBtn,
   explainEl,
-  prevBtn
-}: QuizNextParams): void {
-  nextBtn.addEventListener('click', () => {
+  nextBtn
+}: QuizPrevParams): void {
+  prevBtn.addEventListener('click', () => {
     const current = getIndex()
-    const next = current + 1
+    const prev = current - 1
+    
+    prevBtn.disabled = prev === 0
+    nextBtn.disabled = current >= questions.length
 
-    prevBtn.disabled = next === 0
-    nextBtn.disabled = next + 1 >= questions.length
-
-    setIndex(next)
-    setCurrentRoute(`/quiz#${next + 1}`)
+    setIndex(prev)
+    setCurrentRoute(`/quiz#${prev}`)
 
     updateUIState({
       isChecked: false,
@@ -60,9 +60,9 @@ export function quizNext({
 
     quizRenderQuestion()
 
-    applyUIState({
+    applyPrevUIState({
       checkBtn,
-      nextBtn,
+      prevBtn,
       tryBtn,
       explainBtn,
       explainEl

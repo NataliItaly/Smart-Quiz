@@ -10,6 +10,7 @@ import {
   setScore
 } from './quiz.state'
 import { quizCheck } from "./quiz.check";
+import { quizPrev } from "./quiz.prev";
 import { quizNext } from "./quiz.next";
 import { quizTryAgain } from "./quiz.try.again";
 import { getQuiz } from "../../states/questionsState";
@@ -18,7 +19,7 @@ import { Router } from "../../services/router";
 
 
 export function renderQuizContainer(container: HTMLElement, questions: Question[], router: Router): void {
-  container.innerHTML = '';
+  container.innerHTML = ''
 
   // render UI inside quiz container
   const titelEl = document.createElement('h2')
@@ -53,14 +54,27 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   checkBtn.className = 'btn quiz-check'
   checkBtn.disabled = true
 
+  const navBtns = document.createElement('div')
+  navBtns.className = 'quiz-nav'
+
+  const prevBtn = document.createElement('button')
+  prevBtn.textContent = 'Prev'
+  prevBtn.className = 'btn prev-question'
+  prevBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
+  prevBtn.disabled = getIndex() <= 0
   const checkWrapper = document.createElement('div')
+  
   checkWrapper.className = 'quiz-check-wrapper'
   checkWrapper.appendChild(checkBtn)
+
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
   nextBtn.className = 'btn quiz-next'
-  nextBtn.style.display = 'none'
+  nextBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
+  nextBtn.disabled = getIndex() >= questions.length - 1
+
+  navBtns.append(prevBtn, nextBtn)
 
   const tryBtn = document.createElement('button')
   tryBtn.textContent = 'Try again'
@@ -75,6 +89,15 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   const explainEl = document.createElement('p')
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
+
+  const finishQuizBtn = document.createElement('button')
+  finishQuizBtn.textContent = 'Finish Quiz'
+  finishQuizBtn.className = 'btn quiz-finish'
+
+  finishQuizBtn.addEventListener('click', function () {
+    const popup = finishQuizPopup(router)
+    document.body.append(popup)
+  })
 
   const actionsWrapper = document.createElement('div')
   actionsWrapper.className = 'quiz-actions'
@@ -97,10 +120,19 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     titelEl,
     statsContainer,
     fieldset,
+    checkBtn,
+    navBtns,
+    tryBtn,
+    explainBtn,
+    explainEl,
+    finishQuizBtn
+  )
+
+/*
     checkWrapper,
     actionsWrapper,
     explainEl
-  )
+  )*/
 
   const navBtns = document.createElement('div')
   navBtns.className = 'quiz-nav'
@@ -128,6 +160,7 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
 
   navBtns.append(finishQuizBtn)
   container.append(navBtns)
+
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })
@@ -157,6 +190,32 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     }
   })
 
+  quizPrev({
+    prevBtn,
+    questions,
+    getIndex,
+    setIndex,
+    quizRenderQuestion: () =>
+      quizRenderQuestion({
+        questions,
+        progressEl,
+        scoreEl,
+        legend,
+        optionsEl,
+        checkBtn,
+        nextBtn,
+        tryBtn,
+        explainBtn,
+        explainEl
+      }),
+    optionsEl,
+    checkBtn,
+    tryBtn,
+    explainBtn,
+    explainEl,
+    nextBtn
+  })
+
   quizNext({
     nextBtn,
     questions,
@@ -175,12 +234,12 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
         explainBtn,
         explainEl
       }),
-    container,
     optionsEl,
     checkBtn,
     tryBtn,
     explainBtn,
-    explainEl
+    explainEl,
+    prevBtn
   })
 
   quizTryAgain({

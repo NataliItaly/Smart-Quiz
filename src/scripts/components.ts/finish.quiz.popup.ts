@@ -1,6 +1,7 @@
 import { createElement } from "../utils/createElement";
 import { clearQuiz } from "../states/questionsState";
 import { Router } from "../services/router";
+import { setIndex } from "../pages/quiz/quiz.state";
 
 export function finishQuizPopup(router: Router): HTMLElement {
   const popup = createElement({tag: 'div', className: 'popup_finish', id: 'popup-finish'});
@@ -20,6 +21,7 @@ export function finishQuizPopup(router: Router): HTMLElement {
     clearQuiz();
     popup.remove()
     router.navigate('/dashboard')
+    setIndex(0)
   })
 
   const popupNoBtn = createElement({

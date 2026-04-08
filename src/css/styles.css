@@ -28,6 +28,11 @@ body {
   background: #0069d9;
 }
 
+.btn:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 /* QUIZ*/
 
 .quiz-screen {

@@ -1,8 +1,9 @@
 import { Router } from '../../services/router'
 import { quizScreen } from './quiz.screen'
 //------------------
-import { setIndex } from './quiz.state';
+import { setIndex, getIndex } from './quiz.state';
 import { getQuiz } from '../../states/questionsState';
+import { setCurrentRoute, getCurrentRoute } from '../../states/routeState';
 
 let popstateAdded = false
 //------------------
@@ -26,7 +27,9 @@ export function renderQuiz(router: Router): void  {
   backBtn.onclick = (): void => {
     router.navigate('/dashboard')
   }
-
+const newRoute = getCurrentRoute().split('#')[0]
+setCurrentRoute(newRoute)
+window.location.hash = String(getIndex() + 1)
   // restore question from hash
   const hash = location.hash.replace('#', '')
   const index = Number(hash) - 1

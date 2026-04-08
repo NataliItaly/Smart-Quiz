@@ -10,7 +10,7 @@ export async function filterQuestions(category?: Category, level?: Level): Promi
     if (level) {
       return filteredQuestions.filter(question => question.level === level);
     }
-    console.log('filtered by category', filteredQuestions)
+  
     return filteredQuestions;
   }
 
