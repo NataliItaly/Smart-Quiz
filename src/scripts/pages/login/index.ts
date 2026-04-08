@@ -70,8 +70,6 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void): 
 
         if (currentMode === 'login') {
             renderLoginForm(formContainer, (data: LoginData): void => {
-                console.log('Попытка входа:', data);
-
                 const users: StoredUser[] = JSON.parse(localStorage.getItem('quiz_users') || '[]') as StoredUser[];
 
                 if (data.email && data.password.length >= 3) {
@@ -98,8 +96,6 @@ export function renderLogin(router: Router, setAuth: (value: boolean) => void): 
             });
         } else {
             renderRegisterForm(formContainer, (data: RegisterData) => {
-                console.log('Регистрация:', data);
-
                 if (data.name && data.email && data.password.length >= 3) {
                     handleAuthSuccess({ name: data.name, email: data.email });
                 } else {

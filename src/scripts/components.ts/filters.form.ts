@@ -39,15 +39,13 @@ export function renderFiltersForm(): HTMLFormElement {
     const choosenLevel = levelSelect.value;
     const choosenMode = modeSelect.value;
 
-    console.log('choosen mode', choosenMode)
 
     // clear previous quiz
     clearQuiz();
-    console.log('get quiz befre clear', getQuiz())
 
     // set new quiz
     updateQuiz({currentQuestions: [], selectedCategory: toCategory(choosenCategory), selectedLevel: toLevel(choosenLevel), selectedMode: toMode(choosenMode)});
-    console.log('quiz from state on submit', getQuiz())
+
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
     questionFilter.mode = toMode(choosenMode);

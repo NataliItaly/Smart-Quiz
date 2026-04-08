@@ -58,7 +58,6 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   prevBtn.className = 'btn prev-question'
   prevBtn.style.display = getQuiz().selectedMode === 'Exam' ? 'none' : 'block'
   prevBtn.disabled = getIndex() <= 0
-console.log('index', getIndex())
 
   const nextBtn = document.createElement('button')
   nextBtn.textContent = 'Next'
@@ -147,6 +146,7 @@ console.log('index', getIndex())
 
   quizPrev({
     prevBtn,
+    questions,
     getIndex,
     setIndex,
     quizRenderQuestion: () =>
@@ -166,7 +166,8 @@ console.log('index', getIndex())
     checkBtn,
     tryBtn,
     explainBtn,
-    explainEl
+    explainEl,
+    nextBtn
   })
 
   quizNext({
@@ -191,7 +192,8 @@ console.log('index', getIndex())
     checkBtn,
     tryBtn,
     explainBtn,
-    explainEl
+    explainEl,
+    prevBtn
   })
 
   quizTryAgain({

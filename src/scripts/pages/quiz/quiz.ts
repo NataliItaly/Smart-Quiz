@@ -29,9 +29,6 @@ export function renderQuiz(router: Router): void  {
   }
 const newRoute = getCurrentRoute().split('#')[0]
 setCurrentRoute(newRoute)
-console.log(getCurrentRoute())
-console.log(location.hash)
-//(getCurrentRoute().split('#'))
 window.location.hash = String(getIndex() + 1)
   // restore question from hash
   const hash = location.hash.replace('#', '')

@@ -18,7 +18,7 @@ export async function quizQuestionsService(
 
     // check quiz mode
     const quizMode = getQuiz()?.selectedMode;
-    console.log('mode from service', quizMode)
+    
     let currentQuestions;
     if (quizMode === 'Exam') {
       currentQuestions = shuffledQuestions.slice(0, 20)

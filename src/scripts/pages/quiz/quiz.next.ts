@@ -14,6 +14,7 @@ export interface QuizNextParams {
   tryBtn: HTMLButtonElement
   explainBtn: HTMLButtonElement
   explainEl: HTMLElement
+  prevBtn: HTMLButtonElement
 }
 
 export function quizNext({
@@ -26,16 +27,15 @@ export function quizNext({
   checkBtn,
   tryBtn,
   explainBtn,
-  explainEl
+  explainEl,
+  prevBtn
 }: QuizNextParams): void {
   nextBtn.addEventListener('click', () => {
     const current = getIndex()
     const next = current + 1
 
-    if (next >= questions.length) {
-      nextBtn.disabled = true;
-      return
-    }
+    prevBtn.disabled = next === 0
+    nextBtn.disabled = next + 1 >= questions.length
 
     setIndex(next)
     setCurrentRoute(`/quiz#${next + 1}`)

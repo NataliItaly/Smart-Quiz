@@ -11,7 +11,7 @@ export function render404Page(router: Router): void {
     <button id="back">Back</button>
     </div>
     `
-    console.log(history)
+    
     const backBtn = document.getElementById("back");
     if (backBtn) {
       backBtn.addEventListener("click", () => {
