@@ -1,7 +1,12 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { filterQuestions } from "../scripts/utils/filter.questions";
-import { updateQuiz } from "../scripts/states/questionsState";
 import { Category, Level, Question } from "../scripts/pages/quiz/quiz.types";
+
+vi.mock('../scripts/services/quiz.service', () => ({
+  quizService: vi.fn()
+}))
+
+import { quizService } from '../scripts/services/quiz.service'
 
 describe("filterQuestions", () => {
   const mockQuestions: Question[] = [
@@ -40,9 +45,11 @@ describe("filterQuestions", () => {
       level: "hard"
     }
   ]
+
   beforeEach(() => {
-    updateQuiz({currentQuestions: mockQuestions});
-  });
+    vi.resetAllMocks()
+    ;(quizService as any).mockResolvedValue(mockQuestions)
+  })
 
   it("returns all questions when no filters provided", async () => {
     const result = await filterQuestions();
@@ -114,8 +121,8 @@ describe("filterQuestions", () => {
     expect(result.length).toBe(1);
   });
 
-  it("returns empty array when no questions match", () => {
-    const result = filterQuestions("HTML" as Category, "medium" as Level);
+  it("returns empty array when no questions match", async () => {
+    const result = await filterQuestions("HTML" as Category, "medium" as Level);
 
     expect(result).toEqual([]);
   });
