@@ -1,6 +1,6 @@
-import { Question } from "./quiz.types";
-import { quizRenderQuestion } from "./quiz.render.question";
-import { quizSelection } from "./quiz.selection";
+import { Question } from './quiz.types'
+import { quizRenderQuestion } from './quiz.render.question'
+import { quizSelection } from './quiz.selection'
 import {
   updateUIState,
   applyUIState,
@@ -9,16 +9,19 @@ import {
   getScore,
   setScore
 } from './quiz.state'
-import { quizCheck } from "./quiz.check";
-import { quizPrev } from "./quiz.prev";
-import { quizNext } from "./quiz.next";
-import { quizTryAgain } from "./quiz.try.again";
-import { getQuiz } from "../../states/questionsState";
-import { finishQuizPopup } from "../../components.ts/finish.quiz.popup";
-import { Router } from "../../services/router";
+import { quizCheck } from './quiz.check'
+import { quizPrev } from './quiz.prev'
+import { quizNext } from './quiz.next'
+import { quizTryAgain } from './quiz.try.again'
+import { getQuiz } from '../../states/questionsState'
+import { finishQuizPopup } from '../../components.ts/finish.quiz.popup'
+import { Router } from '../../services/router'
 
-
-export function renderQuizContainer(container: HTMLElement, questions: Question[], router: Router): void {
+export function renderQuizContainer(
+  container: HTMLElement,
+  questions: Question[],
+  router: Router
+): void {
   container.innerHTML = ''
 
   // render UI inside quiz container
@@ -49,7 +52,7 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
 
   fieldset.appendChild(optionsEl)
 
-  // Check button
+  // check wrapper
   const checkBtn = document.createElement('button')
   checkBtn.textContent = 'Check'
   checkBtn.className = 'btn quiz-check'
@@ -59,7 +62,7 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   checkWrapper.className = 'quiz-check-wrapper'
   checkWrapper.appendChild(checkBtn)
 
-  // Prev and Next buttons navigation
+  // prev / next navigation
   const navBtns = document.createElement('div')
   navBtns.className = 'quiz-nav'
 
@@ -77,11 +80,13 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
 
   navBtns.append(prevBtn, nextBtn)
 
+  // try
   const tryBtn = document.createElement('button')
   tryBtn.textContent = 'Try again'
   tryBtn.className = 'btn quiz-try'
   tryBtn.style.display = 'none'
 
+  // explain
   const explainBtn = document.createElement('button')
   explainBtn.textContent = 'Explain'
   explainBtn.className = 'btn quiz-explain'
@@ -91,6 +96,7 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
   explainEl.className = 'quiz-explanation'
   explainEl.style.display = 'none'
 
+  // finish current quiz
   const finishQuizBtn = document.createElement('button')
   finishQuizBtn.textContent = 'Finish Quiz'
   finishQuizBtn.className = 'btn quiz-finish'
@@ -129,31 +135,14 @@ export function renderQuizContainer(container: HTMLElement, questions: Question[
     finishQuizBtn
   )
 
-/*
+  /*
     checkWrapper,
     actionsWrapper,
     explainEl
   )*/
 
- /*  const navBtns = document.createElement('div')
-  navBtns.className = 'quiz-nav' */
 
-  /* if (getQuiz().selectedMode === 'Train') {
-    const prevQuestionBtn = document.createElement('button')
-    prevQuestionBtn.textContent = 'Previous Question'
-    prevQuestionBtn.className = 'btn prev-question'
-
-    const nextQuestionBtn = document.createElement('button')
-    nextQuestionBtn.textContent = 'Next Question'
-    nextQuestionBtn.className = 'btn next-question'
-
-    navBtns.append(prevQuestionBtn, nextQuestionBtn)
-  } */
-
-
-  navBtns.append(finishQuizBtn)
-  container.append(navBtns)
-
+  container.append(navBtns, finishQuizBtn)
 
   quizSelection(optionsEl, (value) => {
     updateUIState({ selectedOption: value })
