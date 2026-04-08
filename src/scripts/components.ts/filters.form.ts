@@ -1,6 +1,6 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
-import { clearQuiz, getQuiz, questionFilter, updateQuiz } from "../states/questionsState";
+import { clearQuiz, questionFilter, updateQuiz } from "../states/questionsState";
 import { toCategory, toLevel, toMode } from "../utils/filter.options.types.converter";
 import { filtersPopup } from "./filters.popup";
 
