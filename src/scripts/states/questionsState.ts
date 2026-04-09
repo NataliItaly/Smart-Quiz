@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import { Category, Level, Mode } from '../pages/quiz/quiz.types'
 
+export const examQuestionsQuantity = 20;
+
 export interface QuestionsFilter {
   category?: Category
   level?: Level

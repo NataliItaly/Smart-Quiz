@@ -28,6 +28,7 @@ export function renderDashboard(
     id: 'header-greeting',
     text: `Wellcome ${userName}`
   })
+  console.log(getUser())
   const logoutBtn = createElement({
     tag: 'button',
     className: 'dashboard__btn',
