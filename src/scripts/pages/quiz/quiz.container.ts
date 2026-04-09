@@ -14,7 +14,7 @@ import { quizPrev } from './quiz.prev'
 import { quizNext } from './quiz.next'
 import { quizTryAgain } from './quiz.try.again'
 import { getQuiz } from '../../states/questionsState'
-import { finishQuizPopup } from '../../components.ts/finish.quiz.popup'
+import { finishQuizPopup } from '../../components/finish.quiz.popup'
 import { Router } from '../../services/router'
 
 export function renderQuizContainer(
