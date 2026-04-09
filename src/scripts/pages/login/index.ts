@@ -1,8 +1,7 @@
 import { Router } from '../../services/router'
 import { renderLoginForm } from './LoginForm'
 import type { RegisterData } from './types'
-import { LoginData } from './types'
-import { StoredUser } from './types'
+import { LoginData, StoredUser } from './types'
 import { renderRegisterForm } from './RegisterForm'
 import { Popup } from '../../components/popup'
 
@@ -21,21 +20,21 @@ export function renderLogin(
   let currentMode: 'login' | 'register' = 'login'
 
   const title = document.createElement('h1')
-  title.textContent = 'Добро пожаловать в Smart Quiz!'
+  title.textContent = 'Wellcom to Smart Quiz!'
   container.appendChild(title)
 
   const subtitle = document.createElement('h2')
-  subtitle.textContent = currentMode === 'login' ? 'Вход' : 'Регистрация'
+  subtitle.textContent = currentMode === 'login' ? 'Enter' : 'Registration'
   container.appendChild(subtitle)
 
   const switchContainer = document.createElement('div')
   switchContainer.className = 'auth-switch'
 
   const loginSwitchBtn = document.createElement('button')
-  loginSwitchBtn.textContent = 'Вход'
+  loginSwitchBtn.textContent = 'Enter'
 
   const registerSwitchBtn = document.createElement('button')
-  registerSwitchBtn.textContent = 'Регистрация'
+  registerSwitchBtn.textContent = 'Registration'
 
   switchContainer.appendChild(loginSwitchBtn)
   switchContainer.appendChild(registerSwitchBtn)
@@ -69,7 +68,7 @@ export function renderLogin(
 
   const renderForm = (): void => {
     formContainer.innerHTML = ''
-    subtitle.textContent = currentMode === 'login' ? 'Вход' : 'Регистрация'
+    subtitle.textContent = currentMode === 'login' ? 'Enter' : 'Registration'
     loginSwitchBtn.className = currentMode === 'login' ? 'active' : ''
     registerSwitchBtn.className = currentMode === 'register' ? 'active' : ''
 
@@ -88,7 +87,7 @@ export function renderLogin(
             handleAuthSuccess(existingUser)
           } else {
             Popup.show({
-              message: 'Пользователь не найден. Попробуйте зарегистрироваться.',
+              message: 'User not found. Try to register',
               type: 'error',
               duration: 3000
             })
@@ -96,7 +95,7 @@ export function renderLogin(
         } else {
           Popup.show({
             message:
-              'Неверный формат email или пароль слишком короткий (минимум 3 символа)',
+              'The email format is incorrect or the password is too short (at least 3 characters)',
             type: 'error',
             duration: 3000
           })
@@ -108,7 +107,7 @@ export function renderLogin(
           handleAuthSuccess({ name: data.name, email: data.email })
         } else {
           Popup.show({
-            message: 'Заполните все поля (пароль минимум 3 символа)',
+            message: 'Fill in all fields (password is at least 3 characters)',
             type: 'error',
             duration: 3000
           })
