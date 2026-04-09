@@ -261,20 +261,23 @@ Vitest позволяет легко писать и запускать юнит
 
 1. Dependency Injection - передача зависимостей извне делает компонент расширяемым и тестируемым:
 `constructor(routes: Route[], isAuth: () => boolean)`
+В функции shuffleArray я использую:
+- Dependency Injection, чтобы убрать жёсткую зависимость от Math.random и сделать функцию тестируемой.
+- Strategy Pattern, потому что я могу передавать разные алгоритмы генерации случайных чисел без изменения самой функции.
 
-2. Single Responsibility Principle (из SOLID)
+3. Single Responsibility Principle (из SOLID)
 Router — только маршрутизация
 Loader — только отображение загрузки
 FiltersForm — только ввод и трансформация данных
 
-3. Factory-функция для создания DOM-элементов.
+4. Factory-функция для создания DOM-элементов.
 `createElement(...)`
 
-4. State Management (упрощённый state pattern / store)
+5. State Management (упрощённый state pattern / store)
 `updateQuiz(...)`
 `clearQuiz()`
 
-5. Guard (Router) - Route Guard pattern
+6. Guard (Router) - Route Guard pattern
 `if (route.protected && !this.isAuth())`
 
 ### API Layer: Выделение слоя работы с API (изоляция от UI компонентов) +10
