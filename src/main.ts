@@ -1,6 +1,11 @@
 import './css/styles.css';
-import './scripts/services/router.service';
+import { initRouter } from './scripts/services/router.service';
 
+function initApp(): void {
+  // start route
+  initRouter();
+}
 
+initApp()
 
 

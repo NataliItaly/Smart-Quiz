@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "vitest"],
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -17,5 +18,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "*.ts"]
 }

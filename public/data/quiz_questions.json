@@ -961,14 +961,14 @@
             "Удаляет внешние отступы (margin)",
             "Делает границы элемента невидимыми"
           ],
-          "options_en": [
+          "options": [
             "Adds a border",
             "Includes padding and border in width",
             "Removes margins",
             "Makes borders invisible"
           ],
           "answer_ru": "Включает padding и border в общую ширину и высоту элемента",
-          "answer_en": "Includes padding and border in width"
+          "answer": "Includes padding and border in width"
         },
         {
           "id": "css_mid_4",
@@ -987,13 +987,13 @@
             "em используется для шрифтов, rem для отступов",
             "Никакой разницы нет"
           ],
-          "options_en": [
+          "options": [
             "em from parent, rem from root",
             "rem from parent, em from root",
             "em for fonts, rem for margins",
             "No difference"
           ],
-          "answer_en": "em from parent, rem from root",
+          "answer": "em from parent, rem from root",
           "answer_ru": "em зависит от родителя, rem от корневого элемента (html)"
         },
         {
@@ -1025,13 +1025,13 @@
             "Для изменения стиля после клика",
             "Для применения стилей к следующему соседу"
           ],
-          "options_en": [
+          "options": [
             "Selecting last child",
             "Inserting content after content",
             "Style after click",
             "Neighbor style"
           ],
-          "answer_en": "Inserting content after content",
+          "answer": "Inserting content after content",
           "answer_ru": "Для вставки контента после содержимого элемента"
         },
         {
@@ -1051,13 +1051,13 @@
             "Все элементы <p>, которые являются соседями <div>",
             "<div> и <p> одновременно"
           ],
-          "options_en": [
+          "options": [
             "p inside div",
             "First p immediately after div",
             "All p neighbors of div",
             "div and p together"
           ],
-          "answer_en": "First p immediately after div",
+          "answer": "First p immediately after div",
           "answer_ru": "Первый элемент <p> сразу после <div>"
         },
         {
@@ -1115,13 +1115,13 @@
             "Скрывает указатель мыши",
             "Отключает тачпад"
           ],
-          "options_en": [
+          "options": [
             "Changes cursor",
             "Ignores clicks",
             "Hides mouse",
             "Disables touch"
           ],
-          "answer_en": "Ignores clicks",
+          "answer": "Ignores clicks",
           "answer_ru": "Запрещает элементу реагировать на клики мыши"
         },
         {
@@ -1174,13 +1174,13 @@
             "Он станет position: relative",
             "Браузер выдаст ошибку"
           ],
-          "options_en": [
+          "options": [
             "Will disappear",
             "Position relative to window/body",
             "Will become relative",
             "Error"
           ],
-          "answer_en": "Position relative to window/body",
+          "answer": "Position relative to window/body",
           "answer_ru": "Он будет позиционироваться относительно body/окна"
         },
         {
@@ -1224,8 +1224,8 @@
             "Для подключения шрифтов",
             "Для оптимизации изображений"
           ],
-          "options_en": ["Video", "Responsiveness", "Fonts", "Images"],
-          "answer_en": "Responsiveness",
+          "options": ["Video", "Responsiveness", "Fonts", "Images"],
+          "answer": "Responsiveness",
           "answer_ru": "Для создания адаптивного дизайна под разные экраны"
         },
         {
@@ -1245,13 +1245,13 @@
             "Делает элемент прозрачным для кликов",
             "Никакой разницы нет"
           ],
-          "options_en": [
+          "options": [
             "Deletes code",
             "Hides but keeps space",
             "Blocks clicks",
             "No difference"
           ],
-          "answer_en": "Hides but keeps space",
+          "answer": "Hides but keeps space",
           "answer_ru": "Скрывает элемент, но сохраняет занимаемое им место"
         },
         {
@@ -1285,14 +1285,14 @@
             "Выбирает соседний элемент после картинки",
             "Выбирает только первую картинку в блоке"
           ],
-          "options_en": [
+          "options": [
             "Selects all images inside a parent",
             "Selects the parent if it has a direct child img",
             "Selects the next sibling after an image",
             "Selects only the first image in a block"
           ],
           "answer_ru": "Выбирает родителя, если у него есть прямой потомок img",
-          "answer_en": "Selects the parent if it has a direct child img"
+          "answer": "Selects the parent if it has a direct child img"
         },
         {
           "id": "css_hard_2",
@@ -1304,23 +1304,23 @@
             "Container работает только для мобильных устройств",
             "Media позволяет использовать переменные"
           ],
-          "options_en": [
+          "options": [
             "Media is faster",
             "Container adapts to the parent size, not the viewport",
             "Container only works for mobile devices",
             "Media allows using variables"
           ],
           "answer_ru": "Container адаптируется под размер родителя, а не окна",
-          "answer_en": "Container adapts to the parent size, not the viewport"
+          "answer": "Container adapts to the parent size, not the viewport"
         },
         {
           "id": "css_hard_3",
           "question_ru": "Какая директива SCSS используется для создания переиспользуемых блоков кода с аргументами?",
           "question_en": "Which SCSS directive is used to create reusable code blocks with arguments?",
           "options_ru": ["@function", "@mixin", "@import", "@extend"],
-          "options_en": ["@function", "@mixin", "@import", "@extend"],
+          "options": ["@function", "@mixin", "@import", "@extend"],
           "answer_ru": "@mixin",
-          "answer_en": "@mixin"
+          "answer": "@mixin"
         },
         {
           "id": "css_hard_4",
@@ -1332,14 +1332,14 @@
             "Выбирает случайное значение",
             "Округляет значение до целого"
           ],
-          "options_en": [
+          "options": [
             "Adds three values together",
             "Limits the size within a range between min and max",
             "Selects a random value",
             "Rounds the value to an integer"
           ],
           "answer_ru": "Ограничивает размер в диапазоне между min и max",
-          "answer_en": "Limits the size within a range between min and max"
+          "answer": "Limits the size within a range between min and max"
         },
         {
           "id": "css_hard_5",
@@ -1351,14 +1351,14 @@
             "Обозначает логическое И",
             "Импортирует внешний файл"
           ],
-          "options_en": [
+          "options": [
             "Creates a new variable",
             "References the parent selector",
             "Represents a logical AND",
             "Imports an external file"
           ],
           "answer_ru": "Ссылается на родительский селектор",
-          "answer_en": "References the parent selector"
+          "answer": "References the parent selector"
         },
         {
           "id": "css_hard_6",
@@ -1370,14 +1370,14 @@
             "Изменение угла наклона",
             "Управление скоростью анимации"
           ],
-          "options_en": [
+          "options": [
             "Setting transparency",
             "Maintaining element proportions (e.g., 16/9)",
             "Changing the tilt angle",
             "Controlling animation speed"
           ],
           "answer_ru": "Поддержание пропорций элемента (например, 16/9)",
-          "answer_en": "Maintaining element proportions (e.g., 16/9)"
+          "answer": "Maintaining element proportions (e.g., 16/9)"
         },
         {
           "id": "css_hard_7",
@@ -1389,14 +1389,14 @@
             "Настройка для 3D трансформаций",
             "Способ группировки медиа запросов"
           ],
-          "options_en": [
+          "options": [
             "A new kind of z-index",
             "A tool for managing style priority",
             "A setting for 3D transformations",
             "A way to group media queries"
           ],
           "answer_ru": "Инструмент для управления приоритетом стилей",
-          "answer_en": "A tool for managing style priority"
+          "answer": "A tool for managing style priority"
         },
         {
           "id": "css_hard_8",
@@ -1408,14 +1408,14 @@
             "media-range: 400-800",
             "between(400px, 800px)"
           ],
-          "options_en": [
+          "options": [
             "(400px <= width <= 800px)",
             "(width: 400px - 800px)",
             "media-range: 400-800",
             "between(400px, 800px)"
           ],
           "answer_ru": "(400px <= width <= 800px)",
-          "answer_en": "(400px <= width <= 800px)"
+          "answer": "(400px <= width <= 800px)"
         },
         {
           "id": "css_hard_9",
@@ -1427,14 +1427,14 @@
             "Выбирает среднее значение между 100px и 1fr",
             "Создает колонку, которая всегда равна 100px"
           ],
-          "options_en": [
+          "options": [
             "Sets a fixed size of 100px",
             "Defines a size range from 100px to all available space",
             "Selects the average value between 100px and 1fr",
             "Creates a column that is always 100px"
           ],
           "answer_ru": "Задает диапазон размера от 100px до всей доступной области",
-          "answer_en": "Defines a size range from 100px to all available space"
+          "answer": "Defines a size range from 100px to all available space"
         },
         {
           "id": "css_hard_10",
@@ -1446,14 +1446,14 @@
             "Работает только в старых браузерах",
             "Поддерживает только черно-белые цвета"
           ],
-          "options_en": [
+          "options": [
             "It has a shorter syntax",
             "It is perceptually uniform in brightness",
             "It only works in old browsers",
             "It only supports black and white colors"
           ],
           "answer_ru": "Оно воспринимается глазом равномерно по яркости",
-          "answer_en": "It is perceptually uniform in brightness"
+          "answer": "It is perceptually uniform in brightness"
         },
         {
           "id": "css_hard_11",
@@ -1465,14 +1465,14 @@
             "Для математических вычислений",
             "Для подключения внешних шрифтов"
           ],
-          "options_en": [
+          "options": [
             "For creating loops",
             "For inheriting properties from one selector to another",
             "For mathematical calculations",
             "For connecting external fonts"
           ],
           "answer_ru": "Для наследования свойств одного селектора другим",
-          "answer_en": "For inheriting properties from one selector to another"
+          "answer": "For inheriting properties from one selector to another"
         },
         {
           "id": "css_hard_12",
@@ -1484,14 +1484,14 @@
             "Скрывает полосу прокрутки",
             "Автоматически прокручивает страницу вниз"
           ],
-          "options_en": [
+          "options": [
             "Speeds up page loading",
             "Enables smooth scrolling for anchor links",
             "Hides the scrollbar",
             "Automatically scrolls the page down"
           ],
           "answer_ru": "Включает плавную прокрутку по якорным ссылкам",
-          "answer_en": "Enables smooth scrolling for anchor links"
+          "answer": "Enables smooth scrolling for anchor links"
         },
         {
           "id": "css_hard_13",
@@ -1503,14 +1503,14 @@
             "Всегда возвращает 80%",
             "Удалит 20 пикселей из HTML"
           ],
-          "options_en": [
+          "options": [
             "Syntax error",
             "Calculates element width minus 20 pixels",
             "Always returns 80%",
             "Deletes 20 pixels from HTML"
           ],
           "answer_ru": "Вычислит ширину элемента минус 20 пикселей",
-          "answer_en": "Calculates element width minus 20 pixels"
+          "answer": "Calculates element width minus 20 pixels"
         },
         {
           "id": "css_hard_14",
@@ -1522,14 +1522,14 @@
             "$color: red;",
             "@color: red;"
           ],
-          "options_en": [
+          "options": [
             "var color = red;",
             "--color: red;",
             "$color: red;",
             "@color: red;"
           ],
           "answer_ru": "$color: red;",
-          "answer_en": "$color: red;"
+          "answer": "$color: red;"
         },
         {
           "id": "css_hard_15",
@@ -1541,14 +1541,14 @@
             "Выбирает три первых элемента",
             "Выбирает элемент с id='3'"
           ],
-          "options_en": [
+          "options": [
             "Selects every third child",
             "Selects the third element of the specified type",
             "Selects the first three elements",
             "Selects the element with id='3'"
           ],
           "answer_ru": "Выбирает третий элемент указанного типа",
-          "answer_en": "Selects the third element of the specified type"
+          "answer": "Selects the third element of the specified type"
         },
         {
           "id": "css_hard_16",
@@ -1560,14 +1560,14 @@
             "flex-grow",
             "grid-template"
           ],
-          "options_en": [
+          "options": [
             "grid-column",
             "column-span",
             "flex-grow",
             "grid-template"
           ],
           "answer_ru": "grid-column",
-          "answer_en": "grid-column"
+          "answer": "grid-column"
         },
         {
           "id": "css_hard_17",
@@ -1579,23 +1579,23 @@
             "Сбрасывает все текущие изменения",
             "Заменяет одну переменную на другую"
           ],
-          "options_en": [
+          "options": [
             "Changes element style in the future",
             "Hints to the browser to prepare for an animation",
             "Resets all current changes",
             "Replaces one variable with another"
           ],
           "answer_ru": "Подсказывает браузеру подготовиться к анимации свойства",
-          "answer_en": "Hints to the browser to prepare for an animation"
+          "answer": "Hints to the browser to prepare for an animation"
         },
         {
           "id": "css_hard_18",
           "question_ru": "Как в SCSS использовать цикл для генерации классов?",
           "question_en": "How to use a loop in SCSS to generate classes?",
           "options_ru": ["@for", "@loop", "@repeat", "@while"],
-          "options_en": ["@for", "@loop", "@repeat", "@while"],
+          "options": ["@for", "@loop", "@repeat", "@while"],
           "answer_ru": "@for",
-          "answer_en": "@for"
+          "answer": "@for"
         },
         {
           "id": "css_hard_19",
@@ -1607,14 +1607,14 @@
             "Добавляет белый фон",
             "Уменьшает вес шрифта"
           ],
-          "options_en": [
+          "options": [
             "Changes opacity",
             "Makes the color 10% lighter",
             "Adds a white background",
             "Reduces font weight"
           ],
           "answer_ru": "Делает цвет светлее на 10%",
-          "answer_en": "Makes the color 10% lighter"
+          "answer": "Makes the color 10% lighter"
         },
         {
           "id": "css_hard_20",
@@ -1626,14 +1626,14 @@
             "Меняет цвет всех картинок",
             "Генератор случайных цветов"
           ],
-          "options_en": [
+          "options": [
             "Selecting a palette for the site",
             "Indicates if the page supports dark/light mode",
             "Changes the color of all images",
             "A random color generator"
           ],
           "answer_ru": "Указывает браузеру, поддерживает ли страница темную тему",
-          "answer_en": "Indicates if the page supports dark/light mode"
+          "answer": "Indicates if the page supports dark/light mode"
         },
         {
           "id": "css_hard_21",
@@ -1645,14 +1645,14 @@
             "Удаляет ключ из карты",
             "Рисует карту в фоне"
           ],
-          "options_en": [
+          "options": [
             "Creates a site map",
             "Extracts a value from a map by key",
             "Remoses a key from the map",
             "Draws a map in the background"
           ],
           "answer_ru": "Извлекает значение из словаря (map) по ключу",
-          "answer_en": "Extracts a value from a map by key"
+          "answer": "Extracts a value from a map by key"
         },
         {
           "id": "css_hard_22",
@@ -1664,14 +1664,14 @@
             "Отключения JavaScript",
             "Центрирования всего контента"
           ],
-          "options_en": [
+          "options": [
             "Deleting all elements",
             "Resetting all properties of an element to default values",
             "Disabling JavaScript",
             "Centering all content"
           ],
           "answer_ru": "Сброса всех свойств элемента до начальных значений",
-          "answer_en": "Resetting all properties of an element to default values"
+          "answer": "Resetting all properties of an element to default values"
         },
         {
           "id": "css_hard_23",
@@ -1683,14 +1683,14 @@
             "Выбирает li внутри блока .active",
             "Скрывает li без класса active"
           ],
-          "options_en": [
+          "options": [
             "Selects all li with class active",
             "Selects all li that do not have the class active",
             "Selects li inside an .active block",
             "Hides li without the active class"
           ],
           "answer_ru": "Выбирает все li, у которых нет класса active",
-          "answer_en": "Selects all li that do not have the class active"
+          "answer": "Selects all li that do not have the class active"
         },
         {
           "id": "css_hard_24",
@@ -1702,14 +1702,14 @@
             "overflow",
             "shape-outside"
           ],
-          "options_en": [
+          "options": [
             "border-radius",
             "clip-path",
             "overflow",
             "shape-outside"
           ],
           "answer_ru": "clip-path",
-          "answer_en": "clip-path"
+          "answer": "clip-path"
         },
         {
           "id": "css_hard_25",
@@ -1721,14 +1721,14 @@
             "Фокусируется на тексте внутри",
             "Запрещает фокусировку"
           ],
-          "options_en": [
+          "options": [
             "Applies if the element is focused",
             "Applies to a parent if any of its descendants gain focus",
             "Focuses on internal text",
             "Disables focusing"
           ],
           "answer_ru": "Срабатывает на родителе, если любой его потомок получил фокус",
-          "answer_en": "Applies to a parent if any of its descendants gain focus"
+          "answer": "Applies to a parent if any of its descendants gain focus"
         },
         {
           "id": "css_hard_26",
@@ -1740,14 +1740,14 @@
             "Заархивировать файл",
             "Назвать файл .scss-temp"
           ],
-          "options_en": [
+          "options": [
             "Add an underscore prefix to the filename (_file.scss)",
             "Use @import-hidden",
             "Archive the file",
             "Name the file .scss-temp"
           ],
           "answer_ru": "Добавить префикс подчеркивания к имени файла (_file.scss)",
-          "answer_en": "Add an underscore prefix to the filename (_file.scss)"
+          "answer": "Add an underscore prefix to the filename (_file.scss)"
         },
         {
           "id": "css_hard_27",
@@ -1759,14 +1759,14 @@
             "Заменяет пробелы на дефисы",
             "Ничего не делает"
           ],
-          "options_en": [
+          "options": [
             "Removes all hyphens",
             "Automatically inserts hyphens for word wrapping",
             "Replaces spaces with hyphens",
             "Does nothing"
           ],
           "answer_ru": "Автоматически расставляет переносы слов в тексте",
-          "answer_en": "Automatically inserts hyphens for word wrapping"
+          "answer": "Automatically inserts hyphens for word wrapping"
         },
         {
           "id": "css_hard_28",
@@ -1788,23 +1788,23 @@
             "Скрывает элемент от поисковиков",
             "Делает элемент прозрачным"
           ],
-          "options_en": [
+          "options": [
             "Disconnects internet",
             "Creates a new stacking context for mix-blend-mode",
             "Hides the element from SEO",
             "Makes the element transparent"
           ],
           "answer_ru": "Создает новый контекст наложения для mix-blend-mode",
-          "answer_en": "Creates a new stacking context for mix-blend-mode"
+          "answer": "Creates a new stacking context for mix-blend-mode"
         },
         {
           "id": "css_hard_29",
           "question_ru": "Как в SCSS передать блок стилей внутрь миксина?",
           "question_en": "How to pass a block of styles into a mixin in SCSS?",
           "options_ru": ["@content", "@slot", "@inject", "@put"],
-          "options_en": ["@content", "@slot", "@inject", "@put"],
+          "options": ["@content", "@slot", "@inject", "@put"],
           "answer_ru": "@content",
-          "answer_en": "@content"
+          "answer": "@content"
         },
         {
           "id": "css_hard_30",
@@ -1816,14 +1816,14 @@
             "background-blur",
             "opacity"
           ],
-          "options_en": [
+          "options": [
             "filter: blur()",
             "backdrop-filter: blur()",
             "background-blur",
             "opacity"
           ],
           "answer_ru": "backdrop-filter: blur()",
-          "answer_en": "backdrop-filter: blur()"
+          "answer": "backdrop-filter: blur()"
         }
       ]
     },
@@ -1839,32 +1839,32 @@
             "Присваивает значение переменной",
             "Проверяет только тип"
           ],
-          "options_en": [
+          "options": [
             "Compares values without type",
             "Compares both values and types",
             "Assigns a value to a variable",
             "Checks only type"
           ],
           "answer_ru": "Сравнивает значения и типы",
-          "answer_en": "Compares both values and types"
+          "answer": "Compares both values and types"
         },
         {
           "id": "js_easy_2",
           "question_ru": "Что возвращает typeof null?",
           "question_en": "What does typeof null return?",
           "options_ru": ["null", "object", "undefined", "string"],
-          "options_en": ["null", "object", "undefined", "string"],
+          "options": ["null", "object", "undefined", "string"],
           "answer_ru": "object",
-          "answer_en": "object"
+          "answer": "object"
         },
         {
           "id": "js_easy_3",
           "question_ru": "Как добавить элемент в конец массива?",
           "question_en": "How do you add an element to the end of an array?",
           "options_ru": ["push()", "pop()", "shift()", "unshift()"],
-          "options_en": ["push()", "pop()", "shift()", "unshift()"],
+          "options": ["push()", "pop()", "shift()", "unshift()"],
           "answer_ru": "push()",
-          "answer_en": "push()"
+          "answer": "push()"
         },
         {
           "id": "js_easy_4",
@@ -1876,14 +1876,14 @@
             "Сохраняет данные в localStorage",
             "Удаляет объект"
           ],
-          "options_en": [
+          "options": [
             "Converts an object to a JSON string",
             "Converts a string to an object",
             "Saves data to localStorage",
             "Deletes an object"
           ],
           "answer_ru": "Преобразует объект в строку JSON",
-          "answer_en": "Converts an object to a JSON string"
+          "answer": "Converts an object to a JSON string"
         },
         {
           "id": "js_easy_5",
@@ -1895,23 +1895,23 @@
             "Math.round()",
             "parseInt()"
           ],
-          "options_en": [
+          "options": [
             "Math.floor()",
             "Math.ceil()",
             "Math.round()",
             "parseInt()"
           ],
           "answer_ru": "Math.round()",
-          "answer_en": "Math.round()"
+          "answer": "Math.round()"
         },
         {
           "id": "js_easy_6",
           "question_ru": "Как удалить последний элемент массива?",
           "question_en": "How do you remove the last element of an array?",
           "options_ru": ["push()", "pop()", "shift()", "splice()"],
-          "options_en": ["push()", "pop()", "shift()", "splice()"],
+          "options": ["push()", "pop()", "shift()", "splice()"],
           "answer_ru": "pop()",
-          "answer_en": "pop()"
+          "answer": "pop()"
         },
         {
           "id": "js_easy_7",
@@ -1923,14 +1923,14 @@
             "Сохраняет данные",
             "Удаляет переменную"
           ],
-          "options_en": [
+          "options": [
             "Logs a message to console",
             "Shows a popup window",
             "Saves data",
             "Deletes a variable"
           ],
           "answer_ru": "Показывает всплывающее окно",
-          "answer_en": "Shows a popup window"
+          "answer": "Shows a popup window"
         },
         {
           "id": "js_easy_8",
@@ -1942,14 +1942,14 @@
             "string.count()",
             "string.len()"
           ],
-          "options_en": [
+          "options": [
             "string.size",
             "string.length",
             "string.count()",
             "string.len()"
           ],
           "answer_ru": "string.length",
-          "answer_en": "string.length"
+          "answer": "string.length"
         },
         {
           "id": "js_easy_9",
@@ -1961,23 +1961,23 @@
             "Сравнивает типы",
             "Присваивает значение"
           ],
-          "options_en": [
+          "options": [
             "Returns the first false value",
             "Returns the first true value",
             "Compares types",
             "Assigns a value"
           ],
           "answer_ru": "Возвращает первое истинное значение",
-          "answer_en": "Returns the first true value"
+          "answer": "Returns the first true value"
         },
         {
           "id": "js_easy_10",
           "question_ru": "Как объединить два массива?",
           "question_en": "How do you merge two arrays?",
           "options_ru": ["concat()", "merge()", "join()", "combine()"],
-          "options_en": ["concat()", "merge()", "join()", "combine()"],
+          "options": ["concat()", "merge()", "join()", "combine()"],
           "answer_ru": "concat()",
-          "answer_en": "concat()"
+          "answer": "concat()"
         },
         {
           "id": "js_easy_11",
@@ -1989,14 +1989,14 @@
             "Округляет число",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Returns a random number between 0 and 1",
             "Returns an integer",
             "Rounds a number",
             "Creates an array"
           ],
           "answer_ru": "Возвращает случайное число от 0 до 1",
-          "answer_en": "Returns a random number between 0 and 1"
+          "answer": "Returns a random number between 0 and 1"
         },
         {
           "id": "js_easy_12",
@@ -2008,14 +2008,14 @@
             "array.end()",
             "array.pop()"
           ],
-          "options_en": [
+          "options": [
             "array.last()",
             "array[array.length - 1]",
             "array.end()",
             "array.pop()"
           ],
           "answer_ru": "array[array.length - 1]",
-          "answer_en": "array[array.length - 1]"
+          "answer": "array[array.length - 1]"
         },
         {
           "id": "js_easy_13",
@@ -2027,14 +2027,14 @@
             "Удаляет элемент",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Checks if an element exists",
             "Adds an element",
             "Removes an element",
             "Sorts the array"
           ],
           "answer_ru": "Проверяет наличие элемента",
-          "answer_en": "Checks if an element exists"
+          "answer": "Checks if an element exists"
         },
         {
           "id": "js_easy_14",
@@ -2046,14 +2046,14 @@
             "def myFunc() {}",
             "fn myFunc() {}"
           ],
-          "options_en": [
+          "options": [
             "function myFunc() {}",
             "func myFunc() {}",
             "def myFunc() {}",
             "fn myFunc() {}"
           ],
           "answer_ru": "function myFunc() {}",
-          "answer_en": "function myFunc() {}"
+          "answer": "function myFunc() {}"
         },
         {
           "id": "js_easy_15",
@@ -2065,14 +2065,14 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Creates a new array with elements that pass a test",
             "Removes all elements",
             "Sorts the array",
             "Merges arrays"
           ],
           "answer_ru": "Создает новый массив с элементами, прошедшими проверку",
-          "answer_en": "Creates a new array with elements that pass a test"
+          "answer": "Creates a new array with elements that pass a test"
         },
 
         {
@@ -2085,14 +2085,14 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Creates a new array by applying a function to each element",
             "Removes elements from the array",
             "Sorts the array",
             "Merges arrays"
           ],
           "answer_ru": "Создает новый массив, применяя функцию к каждому элементу",
-          "answer_en": "Creates a new array by applying a function to each element"
+          "answer": "Creates a new array by applying a function to each element"
         },
         {
           "id": "js_easy_17",
@@ -2104,14 +2104,14 @@
             "Тип данных",
             "Функция"
           ],
-          "options_en": [
+          "options": [
             "A variable that has not been assigned a value",
             "A runtime error",
             "A data type",
             "A function"
           ],
           "answer_ru": "Значение переменной, которой не присвоено значение",
-          "answer_en": "A variable that has not been assigned a value"
+          "answer": "A variable that has not been assigned a value"
         },
         {
           "id": "js_easy_18",
@@ -2123,14 +2123,14 @@
             "let obj = ()",
             "let obj = <>"
           ],
-          "options_en": [
+          "options": [
             "let obj = {}",
             "let obj = []",
             "let obj = ()",
             "let obj = <>"
           ],
           "answer_ru": "let obj = {}",
-          "answer_en": "let obj = {}"
+          "answer": "let obj = {}"
         },
         {
           "id": "js_easy_19",
@@ -2142,14 +2142,14 @@
             "Сравнивает типы",
             "Присваивает значение"
           ],
-          "options_en": [
+          "options": [
             "Returns the first false value",
             "Returns the first true value",
             "Compares types",
             "Assigns a value"
           ],
           "answer_ru": "Возвращает первое ложное значение",
-          "answer_en": "Returns the first false value"
+          "answer": "Returns the first false value"
         },
         {
           "id": "js_easy_20",
@@ -2161,14 +2161,14 @@
             "Удаляет переменную",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Executes a function after a specified time",
             "Stops program execution",
             "Deletes a variable",
             "Creates an array"
           ],
           "answer_ru": "Выполняет функцию через заданное время",
-          "answer_en": "Executes a function after a specified time"
+          "answer": "Executes a function after a specified time"
         },
         {
           "id": "js_easy_21",
@@ -2180,14 +2180,14 @@
             "Добавляет элемент в конец",
             "Добавляет элемент в начало"
           ],
-          "options_en": [
+          "options": [
             "Removes the first element of the array",
             "Removes the last element of the array",
             "Adds an element to the end",
             "Adds an element to the beginning"
           ],
           "answer_ru": "Удаляет первый элемент массива",
-          "answer_en": "Removes the first element of the array"
+          "answer": "Removes the first element of the array"
         },
         {
           "id": "js_easy_22",
@@ -2199,14 +2199,14 @@
             "Удаляет элемент",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Adds an element to the beginning of the array",
             "Adds an element to the end of the array",
             "Removes an element",
             "Sorts the array"
           ],
           "answer_ru": "Добавляет элемент в начало массива",
-          "answer_en": "Adds an element to the beginning of the array"
+          "answer": "Adds an element to the beginning of the array"
         },
         {
           "id": "js_easy_23",
@@ -2218,14 +2218,14 @@
             "Округляет число",
             "Удаляет пробелы"
           ],
-          "options_en": [
+          "options": [
             "Converts a string to an integer",
             "Converts a number to a string",
             "Rounds a number",
             "Removes spaces"
           ],
           "answer_ru": "Преобразует строку в целое число",
-          "answer_en": "Converts a string to an integer"
+          "answer": "Converts a string to an integer"
         },
         {
           "id": "js_easy_24",
@@ -2237,14 +2237,14 @@
             "Удаляет элементы массива",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Joins array elements into a string",
             "Merges two arrays",
             "Removes array elements",
             "Sorts the array"
           ],
           "answer_ru": "Объединяет элементы массива в строку",
-          "answer_en": "Joins array elements into a string"
+          "answer": "Joins array elements into a string"
         },
         {
           "id": "js_easy_25",
@@ -2256,14 +2256,14 @@
             "Сортирует массив по возрастанию",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Reverses the order of array elements",
             "Removes array elements",
             "Sorts the array in ascending order",
             "Merges arrays"
           ],
           "answer_ru": "Меняет порядок элементов массива на обратный",
-          "answer_en": "Reverses the order of array elements"
+          "answer": "Reverses the order of array elements"
         },
 
         {
@@ -2276,14 +2276,14 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Returns a portion of the array",
             "Removes elements from the array",
             "Sorts the array",
             "Merges arrays"
           ],
           "answer_ru": "Возвращает часть массива",
-          "answer_en": "Returns a portion of the array"
+          "answer": "Returns a portion of the array"
         },
         {
           "id": "js_easy_27",
@@ -2295,14 +2295,14 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Changes the array by adding or removing elements",
             "Creates a new array",
             "Sorts the array",
             "Merges arrays"
           ],
           "answer_ru": "Изменяет массив, добавляя или удаляя элементы",
-          "answer_en": "Changes the array by adding or removing elements"
+          "answer": "Changes the array by adding or removing elements"
         },
         {
           "id": "js_easy_28",
@@ -2314,14 +2314,14 @@
             "Преобразует строку в число",
             "Удаляет переменную"
           ],
-          "options_en": [
+          "options": [
             "Checks if a value is a number",
             "Checks if a value is NaN",
             "Converts a string to a number",
             "Deletes a variable"
           ],
           "answer_ru": "Проверяет, является ли значение NaN",
-          "answer_en": "Checks if a value is NaN"
+          "answer": "Checks if a value is NaN"
         },
         {
           "id": "js_easy_29",
@@ -2333,14 +2333,14 @@
             "Округляет число",
             "Удаляет переменную"
           ],
-          "options_en": [
+          "options": [
             "Converts a value to a number",
             "Converts a number to a string",
             "Rounds a number",
             "Deletes a variable"
           ],
           "answer_ru": "Преобразует значение в число",
-          "answer_en": "Converts a value to a number"
+          "answer": "Converts a value to a number"
         },
         {
           "id": "js_easy_30",
@@ -2352,14 +2352,14 @@
             "Удаляет переменную",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Converts a value to a boolean",
             "Converts a number to a string",
             "Deletes a variable",
             "Creates an array"
           ],
           "answer_ru": "Преобразует значение в логический тип",
-          "answer_en": "Converts a value to a boolean"
+          "answer": "Converts a value to a boolean"
         }
       ],
       "medium": [
@@ -2373,14 +2373,14 @@
             "Функция, которая возвращает объект",
             "Функция, которая выполняется один раз"
           ],
-          "options_en": [
+          "options": [
             "A function inside another function that has access to its variables",
             "A function without parameters",
             "A function that returns an object",
             "A function that executes once"
           ],
           "answer_ru": "Функция внутри другой функции, имеющая доступ к её переменным",
-          "answer_en": "A function inside another function that has access to its variables"
+          "answer": "A function inside another function that has access to its variables"
         },
         {
           "id": "js_medium_2",
@@ -2392,14 +2392,14 @@
             "Указывает на родительскую функцию",
             "Указывает на первый аргумент"
           ],
-          "options_en": [
+          "options": [
             "Refers to the global object or current context",
             "Always points to window",
             "Points to the parent function",
             "Points to the first argument"
           ],
           "answer_ru": "Ссылается на глобальный объект или текущий контекст",
-          "answer_en": "Refers to the global object or current context"
+          "answer": "Refers to the global object or current context"
         },
         {
           "id": "js_medium_3",
@@ -2411,14 +2411,14 @@
             "Копирование всех свойств объекта",
             "Создание массива из объекта"
           ],
-          "options_en": [
+          "options": [
             "A mechanism where objects inherit properties from other objects",
             "Class inheritance",
             "Copying all properties of an object",
             "Creating an array from an object"
           ],
           "answer_ru": "Механизм, при котором объекты наследуют свойства от других объектов",
-          "answer_en": "A mechanism where objects inherit properties from other objects"
+          "answer": "A mechanism where objects inherit properties from other objects"
         },
         {
           "id": "js_medium_4",
@@ -2430,14 +2430,14 @@
             "Методы для работы с объектами",
             "События DOM"
           ],
-          "options_en": [
+          "options": [
             "Objects for handling asynchronous operations",
             "Functions for working with arrays",
             "Methods for working with objects",
             "DOM events"
           ],
           "answer_ru": "Объекты для обработки асинхронных операций",
-          "answer_en": "Objects for handling asynchronous operations"
+          "answer": "Objects for handling asynchronous operations"
         },
         {
           "id": "js_medium_5",
@@ -2449,14 +2449,14 @@
             "Удаляет переменные",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Allows writing asynchronous code in synchronous style",
             "Creates a new array",
             "Deletes variables",
             "Sorts an array"
           ],
           "answer_ru": "Позволяет писать асинхронный код в синхронном стиле",
-          "answer_en": "Allows writing asynchronous code in synchronous style"
+          "answer": "Allows writing asynchronous code in synchronous style"
         },
         {
           "id": "js_medium_6",
@@ -2468,14 +2468,14 @@
             "Сортирует массив",
             "Объединяет массивы"
           ],
-          "options_en": [
+          "options": [
             "Reduces an array to a single value by applying a function",
             "Removes elements from the array",
             "Sorts the array",
             "Merges arrays"
           ],
           "answer_ru": "Сводит массив к одному значению, применяя функцию",
-          "answer_en": "Reduces an array to a single value by applying a function"
+          "answer": "Reduces an array to a single value by applying a function"
         },
         {
           "id": "js_medium_7",
@@ -2487,14 +2487,14 @@
             "Событие, которое всегда выполняется в глобальном контексте",
             "Событие, которое не может быть остановлено"
           ],
-          "options_en": [
+          "options": [
             "Process where an event propagates from child to parent element",
             "An event that executes once",
             "An event that always executes in global context",
             "An event that cannot be stopped"
           ],
           "answer_ru": "Процесс, при котором событие поднимается от дочернего элемента к родительскому",
-          "answer_en": "Process where an event propagates from child to parent element"
+          "answer": "Process where an event propagates from child to parent element"
         },
         {
           "id": "js_medium_8",
@@ -2506,14 +2506,14 @@
             "Удаляют переменные",
             "Сортируют массив"
           ],
-          "options_en": [
+          "options": [
             "Allow explicitly setting the function execution context",
             "Create a new array",
             "Delete variables",
             "Sort an array"
           ],
           "answer_ru": "Позволяют явно задавать контекст выполнения функции",
-          "answer_en": "Allow explicitly setting the function execution context"
+          "answer": "Allow explicitly setting the function execution context"
         },
         {
           "id": "js_medium_9",
@@ -2525,14 +2525,14 @@
             "Сортировка массива",
             "Создание объекта"
           ],
-          "options_en": [
+          "options": [
             "Mechanism where variable and function declarations are moved to the top of scope",
             "Deleting variables",
             "Sorting an array",
             "Creating an object"
           ],
           "answer_ru": "Механизм, при котором объявления переменных и функций поднимаются в начало области видимости",
-          "answer_en": "Mechanism where variable and function declarations are moved to the top of scope"
+          "answer": "Mechanism where variable and function declarations are moved to the top of scope"
         },
         {
           "id": "js_medium_10",
@@ -2544,14 +2544,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Handles runtime errors",
             "Deletes variables",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Обрабатывает ошибки выполнения",
-          "answer_en": "Handles runtime errors"
+          "answer": "Handles runtime errors"
         },
         {
           "id": "js_medium_11",
@@ -2563,14 +2563,14 @@
             "Режим для работы с DOM",
             "Режим для асинхронного кода"
           ],
-          "options_en": [
+          "options": [
             "Mode that makes code safer and stricter",
             "Mode for working with arrays",
             "Mode for working with DOM",
             "Mode for asynchronous code"
           ],
           "answer_ru": "Режим, который делает код более безопасным и строгим",
-          "answer_en": "Mode that makes code safer and stricter"
+          "answer": "Mode that makes code safer and stricter"
         },
         {
           "id": "js_medium_12",
@@ -2582,14 +2582,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Copies properties from one object to another",
             "Deletes an object",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Копирует свойства одного объекта в другой",
-          "answer_en": "Copies properties from one object to another"
+          "answer": "Copies properties from one object to another"
         },
         {
           "id": "js_medium_13",
@@ -2601,14 +2601,14 @@
             "Shallow копирует массивы, deep — объекты",
             "Shallow копирует числа, deep — строки"
           ],
-          "options_en": [
+          "options": [
             "Shallow copies only the top level, deep copies all levels",
             "Both copy everything fully",
             "Shallow copies arrays, deep copies objects",
             "Shallow copies numbers, deep copies strings"
           ],
           "answer_ru": "Shallow копирует только верхний уровень, deep копирует все уровни",
-          "answer_en": "Shallow copies only the top level, deep copies all levels"
+          "answer": "Shallow copies only the top level, deep copies all levels"
         },
         {
           "id": "js_medium_14",
@@ -2620,14 +2620,14 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Executes a function at regular intervals",
             "Executes a function once",
             "Deletes variables",
             "Creates an array"
           ],
           "answer_ru": "Выполняет функцию через регулярные промежутки времени",
-          "answer_en": "Executes a function at regular intervals"
+          "answer": "Executes a function at regular intervals"
         },
         {
           "id": "js_medium_15",
@@ -2639,14 +2639,14 @@
             "Сортировка массива",
             "Создание объекта"
           ],
-          "options_en": [
+          "options": [
             "Limits how often a function is called",
             "Deletes variables",
             "Sorts an array",
             "Creates an object"
           ],
           "answer_ru": "Ограничение частоты вызова функции",
-          "answer_en": "Limits how often a function is called"
+          "answer": "Limits how often a function is called"
         },
         {
           "id": "js_medium_16",
@@ -2658,14 +2658,14 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data in the browser with no expiration",
             "Stores data only until the tab is closed",
             "Deletes variables",
             "Creates an array"
           ],
           "answer_ru": "Хранит данные в браузере без срока действия",
-          "answer_en": "Stores data in the browser with no expiration"
+          "answer": "Stores data in the browser with no expiration"
         },
         {
           "id": "js_medium_17",
@@ -2677,14 +2677,14 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data until the tab is closed",
             "Stores data permanently",
             "Deletes variables",
             "Creates an array"
           ],
           "answer_ru": "Хранит данные до закрытия вкладки",
-          "answer_en": "Stores data until the tab is closed"
+          "answer": "Stores data until the tab is closed"
         },
         {
           "id": "js_medium_18",
@@ -2696,14 +2696,14 @@
             "Удаляет переменные",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Allows performing HTTP requests",
             "Creates an array",
             "Deletes variables",
             "Sorts an array"
           ],
           "answer_ru": "Позволяет выполнять HTTP-запросы",
-          "answer_en": "Allows performing HTTP requests"
+          "answer": "Allows performing HTTP requests"
         },
         {
           "id": "js_medium_19",
@@ -2715,14 +2715,14 @@
             "Функция для работы с объектами",
             "Событие DOM"
           ],
-          "options_en": [
+          "options": [
             "Mechanism for controlling access between different domains",
             "Array sorting method",
             "Function for working with objects",
             "DOM event"
           ],
           "answer_ru": "Механизм контроля доступа между разными доменами",
-          "answer_en": "Mechanism for controlling access between different domains"
+          "answer": "Mechanism for controlling access between different domains"
         },
         {
           "id": "js_medium_20",
@@ -2734,14 +2734,14 @@
             "Событие, которое всегда выполняется в глобальном контексте",
             "Событие, которое нельзя остановить"
           ],
-          "options_en": [
+          "options": [
             "Technique of handling events through a parent element",
             "An event that executes once",
             "An event that always executes in global context",
             "An event that cannot be stopped"
           ],
           "answer_ru": "Техника обработки событий через родительский элемент",
-          "answer_en": "Technique of handling events through a parent element"
+          "answer": "Technique of handling events through a parent element"
         },
 
         {
@@ -2754,14 +2754,14 @@
             "Режим для работы с DOM",
             "Режим для асинхронного кода"
           ],
-          "options_en": [
+          "options": [
             "Mode that makes code safer and stricter",
             "Mode for working with arrays",
             "Mode for working with DOM",
             "Mode for asynchronous code"
           ],
           "answer_ru": "Режим, который делает код более безопасным и строгим",
-          "answer_en": "Mode that makes code safer and stricter"
+          "answer": "Mode that makes code safer and stricter"
         },
         {
           "id": "js_medium_12",
@@ -2773,14 +2773,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Copies properties from one object to another",
             "Deletes an object",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Копирует свойства одного объекта в другой",
-          "answer_en": "Copies properties from one object to another"
+          "answer": "Copies properties from one object to another"
         },
         {
           "id": "js_medium_13",
@@ -2792,14 +2792,14 @@
             "Shallow копирует массивы, deep — объекты",
             "Shallow копирует числа, deep — строки"
           ],
-          "options_en": [
+          "options": [
             "Shallow copies only the top level, deep copies all levels",
             "Both copy everything fully",
             "Shallow copies arrays, deep copies objects",
             "Shallow copies numbers, deep copies strings"
           ],
           "answer_ru": "Shallow копирует только верхний уровень, deep копирует все уровни",
-          "answer_en": "Shallow copies only the top level, deep copies all levels"
+          "answer": "Shallow copies only the top level, deep copies all levels"
         },
         {
           "id": "js_medium_14",
@@ -2811,14 +2811,14 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Executes a function at regular intervals",
             "Executes a function once",
             "Deletes variables",
             "Creates an array"
           ],
           "answer_ru": "Выполняет функцию через регулярные промежутки времени",
-          "answer_en": "Executes a function at regular intervals"
+          "answer": "Executes a function at regular intervals"
         },
         {
           "id": "js_medium_15",
@@ -2830,14 +2830,14 @@
             "Сортировка массива",
             "Создание объекта"
           ],
-          "options_en": [
+          "options": [
             "Limits how often a function is called",
             "Deletes variables",
             "Sorts an array",
             "Creates an object"
           ],
           "answer_ru": "Ограничение частоты вызова функции",
-          "answer_en": "Limits how often a function is called"
+          "answer": "Limits how often a function is called"
         },
         {
           "id": "js_medium_16",
@@ -2849,14 +2849,14 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data in the browser with no expiration",
             "Stores data only until the tab is closed",
             "Deletes variables",
             "Creates an array"
           ],
           "answer_ru": "Хранит данные в браузере без срока действия",
-          "answer_en": "Stores data in the browser with no expiration"
+          "answer": "Stores data in the browser with no expiration"
         },
         {
           "id": "js_medium_17",
@@ -2868,14 +2868,14 @@
             "Удаляет переменные",
             "Создает массив"
           ],
-          "options_en": [
+          "options": [
             "Stores data until the tab is closed",
             "Stores data permanently",
             "Deletes variables",
             "Creates an array"
           ],
           "answer_ru": "Хранит данные до закрытия вкладки",
-          "answer_en": "Stores data until the tab is closed"
+          "answer": "Stores data until the tab is closed"
         },
         {
           "id": "js_medium_18",
@@ -2887,14 +2887,14 @@
             "Удаляет переменные",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Allows performing HTTP requests",
             "Creates an array",
             "Deletes variables",
             "Sorts an array"
           ],
           "answer_ru": "Позволяет выполнять HTTP-запросы",
-          "answer_en": "Allows performing HTTP requests"
+          "answer": "Allows performing HTTP requests"
         },
         {
           "id": "js_medium_19",
@@ -2906,14 +2906,14 @@
             "Функция для работы с объектами",
             "Событие DOM"
           ],
-          "options_en": [
+          "options": [
             "Mechanism for controlling access between different domains",
             "Array sorting method",
             "Function for working with objects",
             "DOM event"
           ],
           "answer_ru": "Механизм контроля доступа между разными доменами",
-          "answer_en": "Mechanism for controlling access between different domains"
+          "answer": "Mechanism for controlling access between different domains"
         },
         {
           "id": "js_medium_20",
@@ -2925,14 +2925,14 @@
             "Событие, которое всегда выполняется в глобальном контексте",
             "Событие, которое нельзя остановить"
           ],
-          "options_en": [
+          "options": [
             "Technique of handling events through a parent element",
             "An event that executes once",
             "An event that always executes in global context",
             "An event that cannot be stopped"
           ],
           "answer_ru": "Техника обработки событий через родительский элемент",
-          "answer_en": "Technique of handling events through a parent element"
+          "answer": "Technique of handling events through a parent element"
         }
       ],
       "hard": [
@@ -2946,14 +2946,14 @@
             "Фреймворк для работы с DOM",
             "Библиотека для работы с массивами"
           ],
-          "options_en": [
+          "options": [
             "A superset of JavaScript with typing",
             "A new language unrelated to JS",
             "A framework for working with DOM",
             "A library for working with arrays"
           ],
           "answer_ru": "Язык надстройка над JavaScript с типизацией",
-          "answer_en": "A superset of JavaScript with typing"
+          "answer": "A superset of JavaScript with typing"
         },
         {
           "id": "ts_2",
@@ -2965,14 +2965,14 @@
             "let name: number = 'Hello'",
             "let name: any = 'Hello'"
           ],
-          "options_en": [
+          "options": [
             "let name: string = 'Hello'",
             "let name = 'Hello'",
             "let name: number = 'Hello'",
             "let name: any = 'Hello'"
           ],
           "answer_ru": "let name: string = 'Hello'",
-          "answer_en": "let name: string = 'Hello'"
+          "answer": "let name: string = 'Hello'"
         },
         {
           "id": "ts_3",
@@ -2984,14 +2984,14 @@
             "Тип для чисел",
             "Тип для объектов"
           ],
-          "options_en": [
+          "options": [
             "A type that disables type checking",
             "A type for strings",
             "A type for numbers",
             "A type for objects"
           ],
           "answer_ru": "Тип, который отключает проверку типов",
-          "answer_en": "A type that disables type checking"
+          "answer": "A type that disables type checking"
         },
         {
           "id": "ts_4",
@@ -3003,23 +3003,23 @@
             "Тип для чисел",
             "Тип для массивов"
           ],
-          "options_en": [
+          "options": [
             "A safer alternative to any",
             "A type for strings",
             "A type for numbers",
             "A type for arrays"
           ],
           "answer_ru": "Безопасный аналог any",
-          "answer_en": "A safer alternative to any"
+          "answer": "A safer alternative to any"
         },
         {
           "id": "ts_5",
           "question_ru": "Какой тип используется для значений, которые никогда не возвращаются?",
           "question_en": "Which type is used for values that never return?",
           "options_ru": ["any", "unknown", "never", "void"],
-          "options_en": ["any", "unknown", "never", "void"],
+          "options": ["any", "unknown", "never", "void"],
           "answer_ru": "never",
-          "answer_en": "never"
+          "answer": "never"
         },
         {
           "id": "ts_6",
@@ -3031,14 +3031,14 @@
             "type User = { name: string }",
             "function User() {}"
           ],
-          "options_en": [
+          "options": [
             "interface User { name: string }",
             "class User { name: string }",
             "type User = { name: string }",
             "function User() {}"
           ],
           "answer_ru": "interface User { name: string }",
-          "answer_en": "interface User { name: string }"
+          "answer": "interface User { name: string }"
         },
         {
           "id": "ts_7",
@@ -3050,14 +3050,14 @@
             "interface используется только для массивов",
             "type используется только для чисел"
           ],
-          "options_en": [
+          "options": [
             "type can combine types, interface can extend",
             "They are completely identical",
             "interface is only for arrays",
             "type is only for numbers"
           ],
           "answer_ru": "type может объединять типы, interface — расширять",
-          "answer_en": "type can combine types, interface can extend"
+          "answer": "type can combine types, interface can extend"
         },
         {
           "id": "ts_8",
@@ -3069,14 +3069,14 @@
             "Массив",
             "Объект"
           ],
-          "options_en": [
+          "options": [
             "A set of fixed values",
             "A function",
             "An array",
             "An object"
           ],
           "answer_ru": "Перечисление фиксированных значений",
-          "answer_en": "A set of fixed values"
+          "answer": "A set of fixed values"
         },
         {
           "id": "ts_9",
@@ -3088,14 +3088,14 @@
             "Объект",
             "Функция"
           ],
-          "options_en": [
+          "options": [
             "An array of fixed length with specific types",
             "A regular array",
             "An object",
             "A function"
           ],
           "answer_ru": "Массив фиксированной длины с определенными типами",
-          "answer_en": "An array of fixed length with specific types"
+          "answer": "An array of fixed length with specific types"
         },
         {
           "id": "ts_10",
@@ -3107,14 +3107,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Makes a property read-only",
             "Deletes a property",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Делает свойство доступным только для чтения",
-          "answer_en": "Makes a property read-only"
+          "answer": "Makes a property read-only"
         },
 
         {
@@ -3127,14 +3127,14 @@
             "Свойства только для массивов",
             "Свойства только для чисел"
           ],
-          "options_en": [
+          "options": [
             "Properties that may be omitted",
             "Properties that are always required",
             "Properties only for arrays",
             "Properties only for numbers"
           ],
           "answer_ru": "Свойства, которые могут быть не указаны",
-          "answer_en": "Properties that may be omitted"
+          "answer": "Properties that may be omitted"
         },
         {
           "id": "ts_12",
@@ -3146,14 +3146,14 @@
             "Тип только для чисел",
             "Тип только для объектов"
           ],
-          "options_en": [
+          "options": [
             "A type that can be one of several types",
             "A type only for strings",
             "A type only for numbers",
             "A type only for objects"
           ],
           "answer_ru": "Тип, который может быть одним из нескольких",
-          "answer_en": "A type that can be one of several types"
+          "answer": "A type that can be one of several types"
         },
         {
           "id": "ts_13",
@@ -3165,14 +3165,14 @@
             "Тип только для строк",
             "Тип только для чисел"
           ],
-          "options_en": [
+          "options": [
             "A type that combines multiple types",
             "A type only for arrays",
             "A type only for strings",
             "A type only for numbers"
           ],
           "answer_ru": "Тип, объединяющий несколько типов",
-          "answer_en": "A type that combines multiple types"
+          "answer": "A type that combines multiple types"
         },
         {
           "id": "ts_14",
@@ -3184,14 +3184,14 @@
             "Удаление типа",
             "Создание массива"
           ],
-          "options_en": [
+          "options": [
             "Automatic determination of type by the compiler",
             "Manual type declaration",
             "Removing a type",
             "Creating an array"
           ],
           "answer_ru": "Автоматическое определение типа компилятором",
-          "answer_en": "Automatic determination of type by the compiler"
+          "answer": "Automatic determination of type by the compiler"
         },
         {
           "id": "ts_15",
@@ -3203,14 +3203,14 @@
             "Создание массива",
             "Сортировка массива"
           ],
-          "options_en": [
+          "options": [
             "Forcing a type on a value",
             "Removing a type",
             "Creating an array",
             "Sorting an array"
           ],
           "answer_ru": "Принудительное указание типа для значения",
-          "answer_en": "Forcing a type on a value"
+          "answer": "Forcing a type on a value"
         },
         {
           "id": "ts_16",
@@ -3222,14 +3222,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Makes values immutable and fixed",
             "Deletes variables",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Делает значения неизменяемыми и фиксированными",
-          "answer_en": "Makes values immutable and fixed"
+          "answer": "Makes values immutable and fixed"
         },
         {
           "id": "ts_17",
@@ -3241,14 +3241,14 @@
             "Типы только для чисел",
             "Типы только для объектов"
           ],
-          "options_en": [
+          "options": [
             "Types that allow parameters for flexibility",
             "Types only for strings",
             "Types only for numbers",
             "Types only for objects"
           ],
           "answer_ru": "Типы, которые позволяют использовать параметры для гибкости",
-          "answer_en": "Types that allow parameters for flexibility"
+          "answer": "Types that allow parameters for flexibility"
         },
         {
           "id": "ts_18",
@@ -3260,14 +3260,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Makes all properties of a type optional",
             "Deletes properties",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Делает все свойства типа необязательными",
-          "answer_en": "Makes all properties of a type optional"
+          "answer": "Makes all properties of a type optional"
         },
         {
           "id": "ts_19",
@@ -3279,14 +3279,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Creates a type with selected properties",
             "Deletes properties",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Создает тип с выбранными свойствами",
-          "answer_en": "Creates a type with selected properties"
+          "answer": "Creates a type with selected properties"
         },
         {
           "id": "ts_20",
@@ -3298,14 +3298,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Creates a type without specified properties",
             "Deletes all properties",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Создает тип без указанных свойств",
-          "answer_en": "Creates a type without specified properties"
+          "answer": "Creates a type without specified properties"
         },
 
         {
@@ -3318,14 +3318,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Creates an object type with keys K and values T",
             "Deletes properties",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Создает тип объекта с ключами K и значениями T",
-          "answer_en": "Creates an object type with keys K and values T"
+          "answer": "Creates an object type with keys K and values T"
         },
         {
           "id": "ts_22",
@@ -3337,14 +3337,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Returns a type representing the keys of an object",
             "Deletes keys",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Возвращает тип, представляющий ключи объекта",
-          "answer_en": "Returns a type representing the keys of an object"
+          "answer": "Returns a type representing the keys of an object"
         },
         {
           "id": "ts_23",
@@ -3356,14 +3356,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Returns the type of a value",
             "Deletes variables",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Возвращает тип значения",
-          "answer_en": "Returns the type of a value"
+          "answer": "Returns the type of a value"
         },
         {
           "id": "ts_24",
@@ -3375,14 +3375,14 @@
             "Типы только для чисел",
             "Типы только для объектов"
           ],
-          "options_en": [
+          "options": [
             "Types that depend on a condition",
             "Types only for strings",
             "Types only for numbers",
             "Types only for objects"
           ],
           "answer_ru": "Типы, которые зависят от условия",
-          "answer_en": "Types that depend on a condition"
+          "answer": "Types that depend on a condition"
         },
         {
           "id": "ts_25",
@@ -3394,14 +3394,14 @@
             "Типы только для строк",
             "Типы только для чисел"
           ],
-          "options_en": [
+          "options": [
             "Types created by iterating over keys",
             "Types only for arrays",
             "Types only for strings",
             "Types only for numbers"
           ],
           "answer_ru": "Типы, которые создаются путем перебора ключей",
-          "answer_en": "Types created by iterating over keys"
+          "answer": "Types created by iterating over keys"
         },
         {
           "id": "ts_26",
@@ -3413,14 +3413,14 @@
             "Типы только для чисел",
             "Типы только для объектов"
           ],
-          "options_en": [
+          "options": [
             "Built-in types that simplify work",
             "Types only for strings",
             "Types only for numbers",
             "Types only for objects"
           ],
           "answer_ru": "Готовые встроенные типы для упрощения работы",
-          "answer_en": "Built-in types that simplify work"
+          "answer": "Built-in types that simplify work"
         },
         {
           "id": "ts_27",
@@ -3432,14 +3432,14 @@
             "Методы для объектов",
             "События DOM"
           ],
-          "options_en": [
+          "options": [
             "Special annotations for classes and methods",
             "Functions for arrays",
             "Methods for objects",
             "DOM events"
           ],
           "answer_ru": "Специальные аннотации для классов и методов",
-          "answer_en": "Special annotations for classes and methods"
+          "answer": "Special annotations for classes and methods"
         },
         {
           "id": "ts_28",
@@ -3451,14 +3451,14 @@
             "Метод для объектов",
             "Событие DOM"
           ],
-          "options_en": [
+          "options": [
             "A mechanism for organizing code into logical blocks",
             "A function for arrays",
             "A method for objects",
             "A DOM event"
           ],
           "answer_ru": "Механизм организации кода в логические блоки",
-          "answer_en": "A mechanism for organizing code into logical blocks"
+          "answer": "A mechanism for organizing code into logical blocks"
         },
         {
           "id": "ts_29",
@@ -3470,14 +3470,14 @@
             "Файлы для массивов",
             "Файлы для строк"
           ],
-          "options_en": [
+          "options": [
             "Files for describing types of external libraries",
             "Files for storing data",
             "Files for arrays",
             "Files for strings"
           ],
           "answer_ru": "Файлы для описания типов внешних библиотек",
-          "answer_en": "Files for describing types of external libraries"
+          "answer": "Files for describing types of external libraries"
         },
         {
           "id": "ts_30",
@@ -3489,14 +3489,14 @@
             "Создает массив",
             "Сортирует массив"
           ],
-          "options_en": [
+          "options": [
             "Enables strict checking for null and undefined",
             "Deletes variables",
             "Creates an array",
             "Sorts an array"
           ],
           "answer_ru": "Включает строгую проверку null и undefined",
-          "answer_en": "Enables strict checking for null and undefined"
+          "answer": "Enables strict checking for null and undefined"
         }
       ]
     }
