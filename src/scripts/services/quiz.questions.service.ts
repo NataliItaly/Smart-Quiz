@@ -3,6 +3,7 @@ import { getQuiz, updateQuiz } from '../states/questionsState'
 import { filterQuestions } from '../utils/filter.questions'
 import { renderQuizContainer } from '../pages/quiz/quiz.container'
 import { shuffleArray } from '../utils/shuffle.array'
+import { examQuestionsQuantity } from '../states/questionsState'
 
 export async function quizQuestionsService(
   container: HTMLElement,
@@ -18,10 +19,10 @@ export async function quizQuestionsService(
 
     // check quiz mode
     const quizMode = getQuiz()?.selectedMode;
-    
+
     let currentQuestions;
     if (quizMode === 'Exam') {
-      currentQuestions = shuffledQuestions.slice(0, 20)
+      currentQuestions = shuffledQuestions.slice(0, examQuestionsQuantity)
     }
     else {
       currentQuestions = shuffledQuestions;

@@ -1,6 +1,6 @@
 import type { LoginData, LoginSubmitHandler } from "./types";
 
-export function renderLoginForm( 
+export function renderLoginForm(
     container: HTMLElement,
     onSubmit: LoginSubmitHandler
 ) {
@@ -27,13 +27,13 @@ export function renderLoginForm(
     emailGroup.appendChild(emailInput);
     form.appendChild(emailGroup);
 
-    // for password 
+    // for password
     const passwordGroup = document.createElement('div');
     passwordGroup.className = 'form-group';
 
     const passwordLabel = document.createElement('label');
     passwordLabel.htmlFor = 'password';
-    passwordLabel.textContent = 'Пароль:';
+    passwordLabel.textContent = 'Password:';
 
     const passwordInput = document.createElement('input');
     passwordInput.type = 'password';
@@ -49,7 +49,7 @@ export function renderLoginForm(
     //submit btn
     const submitBtn = document.createElement('button');
     submitBtn.type = 'submit';
-    submitBtn.textContent = 'Войти';
+    submitBtn.textContent = 'Enter';
     form.appendChild(submitBtn);
 
     //form submit handler
@@ -61,7 +61,7 @@ export function renderLoginForm(
             email: emailInput.value,
             password: passwordInput.value
         };
-        
+
         onSubmit(data);
     };
 
