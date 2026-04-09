@@ -20,7 +20,7 @@ export function quizCheck({
 }: CheckLogicParams): void {
   checkBtn.addEventListener('click', () => {
     const selected = getUIState().selectedOption
-console.log('selected', selected)
+
     if (!selected) return
 
     const isCorrect = selected === getCorrectAnswer()
@@ -38,6 +38,11 @@ console.log('selected', selected)
         if (value === selected) {
           btn.classList.add(isCorrect ? 'correct' : 'wrong')
         }
+
+        const sound = new Audio(
+          isCorrect ? '/audio/guess.mp3' : '/audio/failed.mp3'
+        )
+        sound.play().catch(() => {})
 
         input.disabled = true
       })
