@@ -1,7 +1,8 @@
 import { Router } from "../services/router";
-import { filters } from "../components.ts/filters";
+import { renderFiltersForm } from "../components.ts/filters.form";
 import { createElement } from "../utils/createElement";
 import { getUser } from "../states/userState";
+import { getQuiz } from "../states/questionsState";
 
 
 export function renderDashboard(router: Router, setAuth: (value: boolean) => void): void {
@@ -19,10 +20,15 @@ export function renderDashboard(router: Router, setAuth: (value: boolean) => voi
   const dashboardContent = createElement({tag: 'div', className: 'dashboard__content', id: 'dashboard-content'});
 
   const dashboardTitle = createElement({tag: 'h1', className: 'dashboard__title', id: 'dashboard-title', text: 'Dashboard'});
-  const dashboardQuizBtn = createElement({tag: 'button', className: 'btn', id: 'dashboard-quiz-btn', text: 'Go to Quiz'});
+  const dashboardQuizBtn = createElement({
+    tag: 'button',
+    className: 'btn',
+    id: 'dashboard-quiz-btn',
+    text: `${getQuiz().currentQuestions?.length === 0 ? 'Start New Quiz' : 'Go to Quiz'}`
+  })
 
   // filters form
-  const filtersEl = filters();
+  const filtersEl = renderFiltersForm();
 
   dashboardContent.append(dashboardTitle, filtersEl, dashboardQuizBtn);
   dashboard.append(dashboardHeader, dashboardContent);

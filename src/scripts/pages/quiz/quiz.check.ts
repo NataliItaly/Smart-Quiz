@@ -20,7 +20,7 @@ export function quizCheck({
 }: CheckLogicParams): void {
   checkBtn.addEventListener('click', () => {
     const selected = getUIState().selectedOption
-
+console.log('selected', selected)
     if (!selected) return
 
     const isCorrect = selected === getCorrectAnswer()

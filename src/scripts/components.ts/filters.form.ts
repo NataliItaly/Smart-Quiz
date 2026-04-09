@@ -1,14 +1,14 @@
 import { createElement } from "../utils/createElement";
 import { FilterOptions } from "../pages/quiz/quiz.types";
-import { questionFilter, QuestionsState } from "../states/questionsState";
-import { toCategory, toLevel } from "../utils/filterOptionsTypesConverter";
-import { filterQuestions } from "../utils/filter.questions";
+import { clearQuiz, questionFilter, updateQuiz } from "../states/questionsState";
+import { toCategory, toLevel, toMode } from "../utils/filter.options.types.converter";
+import { filtersPopup } from "./filters.popup";
 
 
-export function filters(): HTMLFormElement {
+export function renderFiltersForm(): HTMLFormElement {
   const filterForm = createElement({tag: 'form', className: 'form', id: 'filter-form'});
 
-  const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard']};
+  const filterOptions: FilterOptions = {category: ['All', 'HTML', 'CSS & SCSS', 'JS & TS'], level: ['All', 'easy', 'medium', 'hard'], mode: ['Train', 'Exam']};
 
   (Object.keys(filterOptions) as (keyof FilterOptions)[]).forEach(option => {
     const formRow = createElement({tag: 'div', className: 'form__row'});
@@ -33,21 +33,32 @@ export function filters(): HTMLFormElement {
 
     const categorySelect = document.getElementById('category') as HTMLSelectElement;
     const levelSelect = document.getElementById('level') as HTMLSelectElement;
+    const modeSelect = document.getElementById('mode') as HTMLSelectElement
+
     const choosenCategory = categorySelect.value;
     const choosenLevel = levelSelect.value;
+    const choosenMode = modeSelect.value;
 
-    if (!choosenCategory && !choosenLevel) return;
 
-    QuestionsState.selectedCategory = toCategory(choosenCategory);
-    QuestionsState.selectedLevel = toLevel(choosenLevel);
+    // clear previous quiz
+    clearQuiz();
+
+    // set new quiz
+    updateQuiz({currentQuestions: [], selectedCategory: toCategory(choosenCategory), selectedLevel: toLevel(choosenLevel), selectedMode: toMode(choosenMode)});
 
     questionFilter.category = toCategory(choosenCategory);
     questionFilter.level = toLevel(choosenLevel);
+    questionFilter.mode = toMode(choosenMode);
 
-    const filteredQuestions = filterQuestions(QuestionsState.selectedCategory, QuestionsState.selectedLevel)
-    QuestionsState.currentQuestions = filteredQuestions;
+    const popup = filtersPopup(toCategory(choosenCategory), toLevel(choosenLevel), toMode(choosenMode));
+    filterForm.append(popup);
 
-    console.log('quest state', QuestionsState)
+    window.setTimeout(function() {
+      popup.classList.add('filters-popup_fading')
+      window.setTimeout(function() {
+        popup.remove();
+      }, 0)
+    }, 5000)
   });
 
 

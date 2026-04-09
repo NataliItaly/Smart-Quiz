@@ -3,6 +3,13 @@
 @import './dashboard.css';
 @import './form.css';
 @import './quiz.css';
+@import './login.css';
+@import './popup.css';
+@import './loader.css';
+
+body {
+  position: relative;
+}
 
 .btn {
   margin-top: 25px;
@@ -19,6 +26,11 @@
 
 .btn:hover {
   background: #0069d9;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 /* QUIZ*/
@@ -192,7 +204,7 @@
   line-height: 1.4;
 }
 
- 
+
 .explain-container {
   position: fixed;
   inset: 0;
@@ -216,7 +228,7 @@
 .hidden {
     display: none;
   }
-  
+
   .quiz-warning {
   display: none;
   background: #ffdddd;

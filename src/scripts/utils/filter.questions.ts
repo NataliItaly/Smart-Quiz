@@ -1,8 +1,8 @@
 import { Category, Level, Question } from "../pages/quiz/quiz.types";
-import { QuestionsState } from "../states/questionsState";
+import { quizService } from "../services/quiz.service";
 
-export function filterQuestions(category?: Category, level?: Level): Question[] {
-  const allQuestions = QuestionsState.allQuestions;
+export async function filterQuestions(category?: Category, level?: Level): Promise<Question[]> {
+  const allQuestions = await quizService()
 
   if (category) {
     let filteredQuestions: Question[] = allQuestions.filter(question => question.category === category);
@@ -10,6 +10,7 @@ export function filterQuestions(category?: Category, level?: Level): Question[] 
     if (level) {
       return filteredQuestions.filter(question => question.level === level);
     }
+  
     return filteredQuestions;
   }
 
