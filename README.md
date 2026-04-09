@@ -39,6 +39,12 @@ Progress and history of attempts are saved in localStorage.
 - [Prepare on final team presentation](https://github.com/NataliItaly/Smart-Quiz/blob/main/development-notes/NataliItaly/NataliItaly-2026-03-31.md)
 
 
+## Coordination of Collaborative Work
+
+Our team uses GitHub Projects task tracker:
+[Smart-Quiz-Dev-Tracker](https://github.com/users/NataliItaly/projects/4)
+
+
 ## How to run
 
 1. Clone repository:
