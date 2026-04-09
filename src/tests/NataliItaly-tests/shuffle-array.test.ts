@@ -1,6 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { shuffleArray } from '../scripts/utils/shuffle.array'
-
+import { shuffleArray } from '../../scripts/utils/shuffle.array'
 
 describe('shuffleArray', () => {
   const mockData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }] as any

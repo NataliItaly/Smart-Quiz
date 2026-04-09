@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { render404Page } from '../scripts/pages/404/404'
-import { Router } from '../scripts/services/router'
+import { render404Page } from '../../scripts/pages/404/404'
+import { Router } from '../../scripts/services/router'
 
 describe('render404Page', () => {
   let router: Router
@@ -28,8 +28,10 @@ describe('render404Page', () => {
   it('should call history.back() if history length > 1 when clicking back', () => {
     render404Page(router)
 
+    // using vi.spyOn allows to avoid changing the real browser history.
     const backSpy = vi.spyOn(history, 'back').mockImplementation(() => {})
 
+    // changing the length of the history
     Object.defineProperty(history, 'length', { value: 2, writable: true })
 
     const backBtn = document.getElementById('back')!

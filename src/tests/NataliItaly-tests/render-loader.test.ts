@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { renderLoader } from '../scripts/components.ts/loader'
-
+import { renderLoader } from '../../scripts/components/loader'
 
 describe('renderLoader', () => {
   it('should create loader element with correct structure', () => {

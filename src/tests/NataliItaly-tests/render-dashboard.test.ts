@@ -1,16 +1,15 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { renderDashboard } from '../scripts/pages/dashboard'
+import { renderDashboard } from '../../scripts/pages/dashboard'
 
-
-vi.mock('../scripts/states/userState', () => ({
+vi.mock('../../scripts/states/userState', () => ({
   getUser: () => ({ name: 'John' })
 }))
 
-vi.mock('../scripts/states/questionsState', () => ({
+vi.mock('../../scripts/states/questionsState', () => ({
   getQuiz: () => ({ currentQuestions: [] })
 }))
 
-vi.mock('../scripts/components/filters.form', () => ({
+vi.mock('../../scripts/components/filters.form', () => ({
   renderFiltersForm: () => {
     const el = document.createElement('div')
     el.id = 'filters'
@@ -70,5 +69,3 @@ describe('renderDashboard', () => {
     )
   })
 })
-
-
