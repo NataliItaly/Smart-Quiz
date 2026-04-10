@@ -1,5 +1,6 @@
 import { Question } from './quiz.types'
 import { applyUIState, getIndex, getScore } from './quiz.state'
+import { shuffleArray } from '../../utils/shuffle.array'
 
 export interface QuizRenderParams {
   questions: Question[]
@@ -48,7 +49,10 @@ export function quizRenderQuestion({
   optionsEl.querySelectorAll('input').forEach((input) => {
     input.disabled = false
   })
-  question.options.forEach((opt) => {
+
+  const shuffledOptions = shuffleArray(question.options)
+
+  shuffledOptions.forEach((opt) => {
     if (!opt) return
 
     const label = document.createElement('label')
