@@ -162,6 +162,5 @@ Expected output:
 
 
 ## Week 5 Checkpoint
-![instruction](https://github.com/user-attachments/assets/22f35a56-affc-4e71-9d9e-67a1a8671f26)
 
 Implementing Page Not Found (404) functionality, loading, error handling, [YouTube demonstration link](https://youtu.be/dvX3uxiGYV0)
