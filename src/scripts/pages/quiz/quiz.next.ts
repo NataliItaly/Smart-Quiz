@@ -1,7 +1,9 @@
 import { Question } from './quiz.types'
-import { applyUIState, updateUIState } from './quiz.state'
-import { setCurrentRoute } from '../../states/routeState'
+import { applyUIState, updateUIState, getScore } from './quiz.state'
+import { statisticsService } from '../../services/statisticsService'
+import { getUser } from '../../states/userState'
 import { getQuiz } from '../../states/questionsState'
+import { setCurrentRoute } from '../../states/routeState'
 
 export interface QuizNextParams {
   nextBtn: HTMLButtonElement
@@ -15,6 +17,7 @@ export interface QuizNextParams {
   explainBtn: HTMLButtonElement
   explainEl: HTMLElement
   prevBtn: HTMLButtonElement
+  container: HTMLElement
 }
 
 export function quizNext({
@@ -28,14 +31,42 @@ export function quizNext({
   tryBtn,
   explainBtn,
   explainEl,
-  prevBtn
+  prevBtn,
+  container
 }: QuizNextParams): void {
   nextBtn.addEventListener('click', () => {
     const current = getIndex()
     const next = current + 1
 
-    prevBtn.disabled = next === 0
-    nextBtn.disabled = next + 1 >= questions.length
+// Управление кнопками (Наталья)
+prevBtn.disabled = next === 0
+nextBtn.disabled = next + 1 >= questions.length
+
+// Проверка на завершение квиза
+if (next >= questions.length) {
+  const user = getUser();
+  const score = getScore();
+  const total = questions.length;
+
+  const quizState = getQuiz();
+  const category = quizState.selectedCategory;
+  const level = quizState.selectedLevel;
+  const finalCategory = category || 'JS & TS';
+  const finalLevel = level || 'medium';
+
+  statisticsService.saveAttempt({
+    userId: user.id,
+    score: score,
+    total: total,
+    category: finalCategory,
+    level: finalLevel
+  });
+
+  console.log(`quiz completed. score: ${score}/${total}`);
+  
+  container.innerHTML = ''
+  return
+}
 
     setIndex(next)
     setCurrentRoute(`/quiz#${next + 1}`)

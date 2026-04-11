@@ -77,3 +77,4 @@ export function renderDashboard(
     router.navigate('/quiz')
   }
 }
+
