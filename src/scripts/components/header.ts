@@ -21,7 +21,7 @@ export function renderHeader(): HTMLElement {
 
   const goToStatBtn = createElement({
     tag: 'button',
-    className: 'header__btn',
+    className: 'statistic__btn',
     id: 'stat-btn',
     text: 'Statistic'
   })

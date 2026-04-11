@@ -6,6 +6,7 @@
 @import './login.css';
 @import './popup.css';
 @import './loader.css';
+@import './statistic.css';
 
 body {
   position: relative;
