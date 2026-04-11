@@ -49,7 +49,7 @@ export function renderLoginForm(
     //submit btn
     const submitBtn = document.createElement('button');
     submitBtn.type = 'submit';
-    submitBtn.textContent = 'Enter';
+    submitBtn.textContent = 'Log In';
     form.appendChild(submitBtn);
 
     //form submit handler

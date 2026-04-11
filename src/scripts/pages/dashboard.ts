@@ -1,7 +1,7 @@
 import { Router } from '../services/router'
 import { renderFiltersForm } from '../components/filters.form'
 import { createElement } from '../utils/createElement'
-import { getUser } from '../states/userState'
+import { renderHeader } from '../components/header'
 import { getQuiz } from '../states/questionsState'
 
 export function renderDashboard(
@@ -15,28 +15,7 @@ export function renderDashboard(
   })
 
   // header
-  const dashboardHeader = createElement({
-    tag: 'header',
-    className: 'header',
-    id: 'dashboard-header'
-  })
-
-  const userName = getUser().name
-  const userGreetings = createElement({
-    tag: 'h2',
-    className: 'header__greeting',
-    id: 'header-greeting',
-    text: `Wellcome ${userName}`
-  })
-  console.log(getUser())
-  const logoutBtn = createElement({
-    tag: 'button',
-    className: 'dashboard__btn',
-    id: 'dashboard-logout-btn',
-    text: 'Log Out'
-  })
-
-  dashboardHeader.append(userGreetings, logoutBtn)
+  const header = renderHeader()
 
   const dashboardContent = createElement({
     tag: 'div',
@@ -61,14 +40,18 @@ export function renderDashboard(
   const filtersEl = renderFiltersForm()
 
   dashboardContent.append(dashboardTitle, filtersEl, dashboardQuizBtn)
-  dashboard.append(dashboardHeader, dashboardContent)
+  dashboard.append(header, dashboardContent)
 
   const root = document.getElementById('app')!
   root.innerHTML = ''
 
   root.append(dashboard)
 
-  document.getElementById('dashboard-logout-btn')!.onclick = (): void => {
+  document.getElementById('stat-btn')!.onclick = (): void => {
+    router.navigate('/statistic')
+  }
+
+  document.getElementById('logout-btn')!.onclick = (): void => {
     setAuth(false)
     router.navigate('/')
   }
