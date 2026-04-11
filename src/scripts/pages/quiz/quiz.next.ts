@@ -38,11 +38,11 @@ export function quizNext({
     const current = getIndex()
     const next = current + 1
 
-// Управление кнопками (Наталья)
+// buttons state
 prevBtn.disabled = next === 0
 nextBtn.disabled = next + 1 >= questions.length
 
-// Проверка на завершение квиза
+// Check if quiz is completed
 if (next >= questions.length) {
   const user = getUser();
   console.log('User in quiz.next:', user); // 👈 ДОБАВЬ ЭТУ СТРОКУ
@@ -65,7 +65,7 @@ console.log('User ID:', user.id);        // 👈 И ЭТУ
   });
 
   console.log(`quiz completed. score: ${score}/${total}`);
-  
+
   container.innerHTML = ''
   return
 }
