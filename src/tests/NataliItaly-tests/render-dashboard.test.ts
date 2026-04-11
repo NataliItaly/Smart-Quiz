@@ -31,7 +31,7 @@ describe('renderDashboard', () => {
 
     expect(document.getElementById('dashboard')).not.toBeNull()
     expect(document.getElementById('header-greeting')?.textContent).toBe(
-      'Wellcome John'
+      'Welcome John'
     )
   })
 
