@@ -18,7 +18,7 @@ body {
   padding: 12px;
   font-size: 16px;
   width: 150px;
-  background: #007bff;
+  background: #627C8C;
   color: white;
   border: none;
   border-radius: 6px;
@@ -26,7 +26,7 @@ body {
 }
 
 .btn:hover {
-  background: #0069d9;
+  background: #e74c3c;
 }
 
 .btn:disabled {

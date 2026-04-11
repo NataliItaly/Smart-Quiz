@@ -6,7 +6,7 @@ export interface User {
 }
 
 function generateId(): string {
-  return Date.now().toString() + '-' + Math.random().toString(36).substr(2, 9);
+  return Date.now().toString() + '-' + Math.random().toString(36).substring(2, 10);
 }
 
 const defaultUser: User = {
