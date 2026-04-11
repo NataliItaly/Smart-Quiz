@@ -112,6 +112,8 @@
   min-width: 120px;
   margin-left: 25px;
   padding: 10px 20px;
+  align-self: center;
+  height: fit-content;
 }
 
 .dashboard .btn {
@@ -153,6 +155,7 @@
 
 .dashboard .filters-popup__content {
   padding: 16px 24px;
+  background-color: #fff;
 }
 
 .dashboard .filters-popup__content p {
@@ -211,19 +214,19 @@
     margin: 20px;
     padding: 24px;
   }
-  
+
   .dashboard .header {
     padding: 16px 20px;
   }
-  
+
   .dashboard .header__greeting {
     font-size: 18px;
   }
-  
+
   .dashboard .dashboard__title {
     font-size: 24px;
   }
-  
+
   .dashboard .filters-popup__content {
     padding: 24px 32px;
   }
