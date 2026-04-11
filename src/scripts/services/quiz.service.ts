@@ -34,7 +34,7 @@ export function quizService(): Promise<Question[]> {
           }
         }
       })()
-    }, 10000);
+    }, 3000);
   });
 }
 
