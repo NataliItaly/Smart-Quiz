@@ -32,7 +32,7 @@ User progress and attempt history are stored in localStorage.
 
 
 ## Demo link
-[Demo](https://www.youtube.com/watch?v=dvX3uxiGYV0)
+[Demo](https://youtu.be/SeXf3SJRRGg)
 
 
 ## Team members:
