@@ -126,7 +126,7 @@
 }
 
 .btn.quiz-check {
-  background: #E93C35;
+  background: #729969;
   color: white;
   border: none;
   padding: 12px 40px;
@@ -207,14 +207,13 @@
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s;
-  margin: 0 6px;
 }
 
 .btn.prev-question:hover,
 .btn.next-question:hover {
   background: #E93C35;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(233, 60, 53, 0.3);
+  /* box-shadow: 0 4px 12px rgba(233, 60, 53, 0.3); */
 }
 
 .btn.prev-question:active,
@@ -278,7 +277,7 @@
   width: 200px;
   margin: 20px auto 0;
   padding: 12px 24px;
-  background: #627C8C;
+  background:  #E93C35;
   color: white;
   border: none;
   border-radius: 8px;
@@ -291,7 +290,7 @@
 }
 
 #backBtn:hover:not(:disabled) {
-  background: #E93C35;
+  background: #627C8C;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(233, 60, 53, 0.3);
 }
