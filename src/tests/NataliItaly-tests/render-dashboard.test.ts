@@ -41,7 +41,7 @@ describe('renderDashboard', () => {
 
     renderDashboard(router as any, setAuth)
 
-    document.getElementById('dashboard-logout-btn')!.click()
+    document.getElementById('logout-btn')!.click()
 
     expect(setAuth).toHaveBeenCalledWith(false)
     expect(router.navigate).toHaveBeenCalledWith('/')

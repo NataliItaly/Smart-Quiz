@@ -24,17 +24,17 @@ export function renderLogin(
   container.appendChild(title)
 
   const subtitle = document.createElement('h2')
-  subtitle.textContent = currentMode === 'login' ? 'Enter' : 'Registration'
+  subtitle.textContent = currentMode === 'login' ? 'Log In' : 'Sign In'
   container.appendChild(subtitle)
 
   const switchContainer = document.createElement('div')
   switchContainer.className = 'auth-switch'
 
   const loginSwitchBtn = document.createElement('button')
-  loginSwitchBtn.textContent = 'Enter'
+  loginSwitchBtn.textContent = 'Log In'
 
   const registerSwitchBtn = document.createElement('button')
-  registerSwitchBtn.textContent = 'Registration'
+  registerSwitchBtn.textContent = 'Sign In'
 
   switchContainer.appendChild(loginSwitchBtn)
   switchContainer.appendChild(registerSwitchBtn)
@@ -68,7 +68,7 @@ export function renderLogin(
 
   const renderForm = (): void => {
     formContainer.innerHTML = ''
-    subtitle.textContent = currentMode === 'login' ? 'Enter' : 'Registration'
+    subtitle.textContent = currentMode === 'login' ? 'Log In' : 'Sign In'
     loginSwitchBtn.className = currentMode === 'login' ? 'active' : ''
     registerSwitchBtn.className = currentMode === 'register' ? 'active' : ''
 

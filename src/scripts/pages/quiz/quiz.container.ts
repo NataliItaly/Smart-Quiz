@@ -196,7 +196,8 @@ export function renderQuizContainer(
     tryBtn,
     explainBtn,
     explainEl,
-    prevBtn
+    prevBtn,
+    container
   })
 
   quizTryAgain({

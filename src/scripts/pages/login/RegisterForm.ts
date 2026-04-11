@@ -15,14 +15,14 @@ export function renderRegisterForm(
 
   const nameLabel = document.createElement('label');
   nameLabel.htmlFor = 'name';
-  nameLabel.textContent = 'Имя:';
+  nameLabel.textContent = 'Name:';
 
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
   nameInput.id = 'name';
   nameInput.name = 'name';
   nameInput.required = true;
-  nameInput.placeholder = 'Ваше имя';
+  nameInput.placeholder = 'Your name';
 
   nameGroup.appendChild(nameLabel);
   nameGroup.appendChild(nameInput);
@@ -70,7 +70,7 @@ export function renderRegisterForm(
   // submit btn
   const submitButton = document.createElement('button');
   submitButton.type = 'submit';
-  submitButton.textContent = 'Зарегистрироваться';
+  submitButton.textContent = 'Sign In';
   form.appendChild(submitButton);
 
   form.onsubmit = (e) => {

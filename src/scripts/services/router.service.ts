@@ -1,43 +1,39 @@
-import { type Route, Router } from './router';
-import { renderLogin } from '../pages/login/index';
-import { renderDashboard } from '../pages/dashboard';
-import { renderQuiz } from '../pages/quiz/quiz';
-import { renderStatistic } from '../pages/statistic';
-import { render404Page } from '../pages/404/404';
-import { setIndex } from '../pages/quiz/quiz.state';
-
+import { type Route, Router } from './router'
+import { renderLogin } from '../pages/login/index'
+import { renderDashboard } from '../pages/dashboard'
+import { renderQuiz } from '../pages/quiz/quiz'
+import { renderStatistic } from '../pages/statistic/statistic'
+import { render404Page } from '../pages/404/404'
+import { setIndex } from '../pages/quiz/quiz.state'
 
 function checkAuth(): boolean {
-  const currentUser = localStorage.getItem('currentUser');
-  if (!currentUser) return false;
+  const currentUser = localStorage.getItem('currentUser')
+  if (!currentUser) return false
 
   try {
-    const parsed = JSON.parse(currentUser) as unknown;
+    const parsed = JSON.parse(currentUser) as unknown
 
     return (
-      typeof parsed === 'object' && parsed !== null && 'email' in parsed && typeof (parsed as {email?: unknown}).email === 'string'
-    );
+      typeof parsed === 'object' &&
+      parsed !== null &&
+      'email' in parsed &&
+      typeof (parsed as { email?: unknown }).email === 'string'
+    )
   } catch {
-    return false;
+    return false
   }
 }
 
-let isAuth: boolean = checkAuth();
+let isAuth: boolean = checkAuth()
 
 const setAuth = (value: boolean): void => {
-  isAuth = value;
+  isAuth = value
   if (!value) {
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('currentUser')
   }
-};
+}
 
 export function initRouter(): void {
-  //const savedRoute = getCurrentRoute();
-
- /*  if (savedRoute && savedRoute !== window.location.pathname + window.location.hash) {
-    history.replaceState({}, '', savedRoute);
-  } */
-
   const routes: Route[] = [
     {
       path: '/',
@@ -68,7 +64,11 @@ export function initRouter(): void {
     }
   ]
 
-  const router = new Router(routes, () => isAuth, () => render404Page(router));
+  const router = new Router(
+    routes,
+    () => isAuth,
+    () => render404Page(router)
+  )
 
   router.init()
 }
