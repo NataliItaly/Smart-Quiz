@@ -57,51 +57,20 @@ User progress and attempt history are stored in localStorage.
 
 ## Coordination of Collaborative Work
 
-<<<<<<< HEAD
-=======
 We used a Kanban workflow implemented through GitHub Projects. Tasks were visualized on a board and moved through stages such as To Do, In Progress, and Done.
 
->>>>>>> develop
 Our team uses GitHub Projects task tracker:
 [Smart-Quiz-Dev-Tracker](https://github.com/users/NataliItaly/projects/4)
 
 
 ## How to run
-<<<<<<< HEAD
-
-1. Clone repository:
-`git clone https://github.com/NataliItaly/Smart-Quiz.git`
-=======
->>>>>>> develop
 
 1. Clone this repository:
    `git clone https://github.com/NataliItaly/Smart-Quiz.git`
 
 2. Go to folder
    `cd Smart-Quiz`
-
-<<<<<<< HEAD
-**Node version 18+ / 20+**
-
-
-## Project structure
-<img width="310" height="561" alt="project-structure" src="https://github.com/user-attachments/assets/3f70ac37-0184-4819-bf04-f90812a9f97c" />
-
-
-## Components presentation
-
-- Nataliya Krylova: Dashboard component
-[YouTube link](https://youtu.be/CX-lkU0616c)
-
-- Kateryna Moskalenko: ... component
-[YouTube link](https://youtu.be/BviLZIucVFM)
-
-- Daria Pusovskaya:   ... component
-[YouTube link](https://youtu.be/7Q8zDLoT4E0)
-
-
-## Testing
-=======
+   
 3. Install dependencies
    `npm install`
 
@@ -112,10 +81,15 @@ Our team uses GitHub Projects task tracker:
 
 5. App will be available at:
 `http://localhost:5173`
+**Node version 18+ / 20+**
 
+
+## Project structure
+<img width="310" height="561" alt="project-structure" src="https://github.com/user-attachments/assets/3f70ac37-0184-4819-bf04-f90812a9f97c" />
 
 
 ## Available scripts
+
 ```"start": "vite",
     "test": "vitest run",
     "dev": "vite",
@@ -127,11 +101,6 @@ Our team uses GitHub Projects task tracker:
     "check": "eslint . && tsc --noEmit",
     "prepare": "husky"
 ```
-
-
-## Project structure
-
-<img width="310" height="561" alt="project-structure" src="https://github.com/user-attachments/assets/3f70ac37-0184-4819-bf04-f90812a9f97c" />
 
 
 ## Environment variables
@@ -158,6 +127,7 @@ Windows:
 
 To facilitate team's work you can use instructions on various aspects of team work, includes team collaboration, code styles, repository settings
 [Instructions](https://github.com/NataliItaly/Smart-Quiz/tree/main/instructions)
+![instruction](https://github.com/user-attachments/assets/7d0ee497-b5a0-43de-bdfc-7f77a26d163a)
 
 
 ## Components presentation
@@ -174,7 +144,6 @@ To facilitate team's work you can use instructions on various aspects of team wo
 
 ## Testing
 
->>>>>>> develop
 To run tests locally:
 `npm test`
 
@@ -184,10 +153,7 @@ Expected output:
 
 
 ## Best PRs
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
 - [Feature/quiz screen: feat(quiz): implement Check, next Try Again, Explain, score tracking](https://github.com/NataliItaly/Smart-Quiz/pull/4)
 - [Feature/add fonts](https://github.com/NataliItaly/Smart-Quiz/pull/22)
 - [Add tests for questions filter](https://github.com/NataliItaly/Smart-Quiz/pull/40)
@@ -196,9 +162,6 @@ Expected output:
 
 
 ## Week 5 Checkpoint
-<<<<<<< HEAD
-Implementing Page Not Found (404) functionality, loading, error handling, [YouTube demonstration link](https://youtu.be/dvX3uxiGYV0)
-=======
+![instruction](https://github.com/user-attachments/assets/22f35a56-affc-4e71-9d9e-67a1a8671f26)
 
 Implementing Page Not Found (404) functionality, loading, error handling, [YouTube demonstration link](https://youtu.be/dvX3uxiGYV0)
->>>>>>> develop
