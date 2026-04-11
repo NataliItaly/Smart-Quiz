@@ -45,6 +45,8 @@ nextBtn.disabled = next + 1 >= questions.length
 // Check if quiz is completed
 if (next >= questions.length) {
   const user = getUser();
+  console.log('User in quiz.next:', user); // 👈 ДОБАВЬ ЭТУ СТРОКУ
+console.log('User ID:', user.id);        // 👈 И ЭТУ
   const score = getScore();
   const total = questions.length;
 

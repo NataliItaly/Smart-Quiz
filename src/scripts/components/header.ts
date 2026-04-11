@@ -16,7 +16,7 @@ export function renderHeader(): HTMLElement {
     tag: 'h2',
     className: 'header__greeting',
     id: 'header-greeting',
-    text: `Wellcome ${user?.name ? user.name : ''}`
+    text: `Welcome ${user?.name ? user.name : ''}`
   })
 
   const goToStatBtn = createElement({

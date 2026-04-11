@@ -4,6 +4,7 @@ import type { RegisterData } from './types'
 import { LoginData, StoredUser } from './types'
 import { renderRegisterForm } from './RegisterForm'
 import { Popup } from '../../components/popup'
+import { setUser } from '../../states/userState';
 
 export function renderLogin(
   router: Router,
@@ -45,6 +46,13 @@ export function renderLogin(
   container.appendChild(formContainer)
 
   const handleAuthSuccess = (user: StoredUser): void => {
+    setUser({
+    id: '', // пустая строка - setUser сам сгенерирует id
+    name: user.name,
+    email: user.email,
+    results: []
+  });
+  
     localStorage.setItem('currentUser', JSON.stringify(user))
 
     const users: StoredUser[] = JSON.parse(
