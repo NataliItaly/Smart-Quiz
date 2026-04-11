@@ -2,7 +2,6 @@ import { Router } from '../../services/router'
 import { createElement } from '../../utils/createElement'
 import { getUser } from '../../states/userState'
 import { statisticsService, QuizAttempt } from '../../services/statisticsService'
-import { Category, Level } from '../quiz/quiz.types'
 
 export function renderStatistic(router: Router): void {
   const root = document.getElementById("app")!;
