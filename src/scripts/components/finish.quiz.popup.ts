@@ -2,6 +2,10 @@ import { createElement } from "../utils/createElement";
 import { clearQuiz } from "../states/questionsState";
 import { Router } from "../services/router";
 import { setIndex, setScore } from "../pages/quiz/quiz.state";
+import { getQuiz } from "../states/questionsState";
+import { getScore } from "../pages/quiz/quiz.state";
+import { statisticsService } from "../services/statisticsService";
+import { getUser } from "../states/userState";
 
 export function finishQuizPopup(router: Router): HTMLElement {
   const popup = createElement({tag: 'div', className: 'popup_finish', id: 'popup-finish'});
@@ -18,6 +22,37 @@ export function finishQuizPopup(router: Router): HTMLElement {
     text: 'Yes'
   })
   popupYesBtn.addEventListener('click', function () {
+
+    const user = getUser();
+    const score = getScore();
+
+    const quizState = getQuiz();
+    const currentQuestions = quizState.currentQuestions;
+    const total = currentQuestions ? currentQuestions.length : 0;
+
+    const category = quizState.selectedCategory;
+    const level = quizState.selectedLevel;
+    const finalCategory = category || 'JS & TS';
+    const finalLevel = level || 'medium';
+
+    if (user.id && total > 0) {
+      statisticsService.saveAttempt({
+        userId: user.id,
+        score: score,
+        total: total,
+        category: finalCategory,
+        level: finalLevel
+      });
+
+      console.log(`✅ Quiz finished! Score: ${score}/${total}`);
+      console.log(`Category: ${finalCategory}, Level: ${finalLevel}`);
+    } else {
+      console.warn('⚠️ Cannot save attempt: missing user.id or questions');
+      console.log('User:', user);
+      console.log('Total questions:', total);
+    }
+
+
     clearQuiz();
     popup.remove()
     router.navigate('/dashboard')

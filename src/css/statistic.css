@@ -1,4 +1,287 @@
 .statistic__btn {
-  border-radius: 5px;
+  color: white;
+  background-color: #E93C35;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: 'Lato Black 900', 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.statistic-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.statistic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.statistic-title {
+  font-size: 1.75rem;
+  color: #333;
+  margin: 0;
+}
+
+.btn-back {
   background: #E93C35;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-back:hover {
+  background: #5a6268;
+}
+
+.stat-greeting {
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Cards */
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Overview Card */
+.overview-card {
+  text-align: center;
+}
+
+.stat-big-number {
+  margin: 1rem 0;
+}
+
+.stat-percentage {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.stat-attempts {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.stat-progress-bar {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.stat-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Best Card */
+.best-result {
+  text-align: center;
+}
+
+.best-score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.best-percentage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.best-details {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.best-date {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* Badges */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.category-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.level-badge.easy {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.level-badge.medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.level-badge.hard {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* History Card */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.history-item:hover {
+  transform: translateX(4px);
+  background: #f0f0f0;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.history-details {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.history-score {
+  text-align: right;
+  margin-left: 1rem;
+}
+
+.score-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.score-percentage {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.history-note {
+  text-align: center;
+  color: #999;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* No Data Messages */
+.stat-no-data,
+.stat-no-best,
+.stat-no-history {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+  font-size: 0.95rem;
+}
+
+.statistic-error {
+  text-align: center;
+  color: #f44336;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .statistic-container {
+    padding: 1rem;
+  }
+  
+  .statistic-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .history-score {
+    margin-left: 0;
+    margin-top: 0.75rem;
+    text-align: left;
+  }
+  
+  .best-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-percentage {
+    font-size: 2.5rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
 }
