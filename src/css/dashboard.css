@@ -106,6 +106,14 @@
 }
 
 /* Quiz btn */
+
+.dashboard .btn#filter-btn {
+  width: auto;
+  min-width: 120px;
+  margin-left: 25px;
+  padding: 10px 20px;
+}
+
 .dashboard .btn {
   width: 100%;
   padding: 14px;
@@ -132,7 +140,6 @@
 }
 
 /* flters Popup Styles */
-/* Filters Popup Styles - упрощенная версия */
 .dashboard .filters-popup {
   position: fixed;
   top: 20px;
